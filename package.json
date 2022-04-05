@@ -6,9 +6,17 @@
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "icons": "rm -rf ./icons && npx @svgr/cli --typescript -d icons assets"
+    "env": "node src/setupEnv.ts",
+    "fetch": "node src/index.ts",
+    "generate-icons": "rm -rf ./icons && npx @svgr/cli --typescript -d icons assets",
+    "test": "TZ=Asia/Singapore jest"
   },
   "dependencies": {
+    "axios": "^0.26.1",
+    "dotenv": "^16.0.0",
+    "fs": "^0.0.1-security",
+    "jest": "^27.5.1",
+    "pg": "^8.7.3",
     "react": "^18.0.0",
     "react-dom": "^18.0.0"
   },
