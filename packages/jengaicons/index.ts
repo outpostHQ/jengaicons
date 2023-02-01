@@ -1,33 +1,5 @@
 import fs from "fs";
-import * as O from "fp-ts/Option";
-import { pipe } from "fp-ts/lib/function";
 import path from "path";
-
-function getItemsInDir(dirPath: O.Option<string>): O.Option<Array<fs.Dirent>> {
-  const _path = pipe(
-    dirPath,
-    O.getOrElse(() => "") // if dirPath is none, return empty string
-  );
-
-  return O.isSome(dirPath)
-    ? O.some(fs.readdirSync(_path, { withFileTypes: true }))
-    : O.none;
-}
-
-// filter out directories from the list of items in the assets directory
-function filterOutDirectories(
-  items: O.Option<Array<fs.Dirent>>
-): O.Option<Array<fs.Dirent>> {
-  return pipe(
-    items,
-    O.map((items) => items.filter((item) => item.isDirectory()))
-  );
-}
-
-// get the first argument passed to the command
-function getFirstArg(args: Array<string>): O.Option<string> {
-  return args.length > 0 ? O.some(args[0]) : O.none;
-}
 
 async function main() {
   /**
@@ -36,39 +8,61 @@ async function main() {
    */
   const args = process.argv.slice(2);
 
-  const dirPath = getFirstArg(args);
-  const getIconDirPath = (name: O.Option<string>): O.Option<string> => {
-    const _name = pipe(
-      name,
-      O.getOrElse(() => "")
-    );
+  if (args.length === 0) {
+    throw new Error("No path provided");
+  }
 
-    return O.isSome(name)
-      ? pipe(
-          dirPath,
-          O.map((dir) => path.join(dir, _name))
-        )
-      : O.none;
-  };
+  const pathToAssets = args[0];
 
-  const iconDirectories = pipe(dirPath, getItemsInDir, filterOutDirectories);
+  // get all the directories in the assets directory
+  const itemsInDirectory = fs
+    .readdirSync(pathToAssets, { withFileTypes: true })
+    .filter((item) => item.isDirectory());
 
-  const out = pipe(
-    iconDirectories,
-    O.map((dirs) => {
-      return dirs.length > 0
-        ? O.some(
-            dirs.map((dir) => {
-              const _dir = O.some(dir.name);
-              const files = pipe(getIconDirPath(_dir), getItemsInDir);
-              return files;
-            })
-          )
-        : O.none;
-    })
-  );
+  // prepare the optimized svgs
+  // remove any exisitng optimized folder
+  const root = path.join(pathToAssets, "..");
+  const pathToOptimized = path.join(root, "optimized");
+  const allDirs = fs.readdirSync(root);
+  if (allDirs.includes("optimized")) {
+    fs.rmSync(pathToOptimized, { recursive: true });
+  }
+  // create new empty optimized folder
+  fs.mkdirSync(pathToOptimized);
+  for (const items of itemsInDirectory) {
+    fs.mkdirSync(path.join(pathToOptimized, items.name));
+  }
 
-  console.log({ out });
+  for (const item of itemsInDirectory) {
+    const variant = item.name;
+
+    const svgFiles = fs
+      .readdirSync(path.join(pathToAssets, item.name), {
+        withFileTypes: true,
+      })
+      .filter((file) => file.name.endsWith(".svg"))
+      .map((item) => item.name);
+
+    for (const svgFile of svgFiles) {
+      const svgString = fs.readFileSync(
+        path.join(pathToAssets, item.name, svgFile),
+        "utf8"
+      );
+
+      // create file in optimized folder
+      const componentName = svgFile.replace(".svg", "");
+      const reactComponent = `import React from "react";
+function ${componentName}() {
+    return (
+        ${svgString}
+    )
+}`;
+      fs.writeFileSync(
+        path.join(pathToOptimized, variant, svgFile.replace(".svg", ".tsx")),
+        reactComponent
+      );
+    }
+  }
 }
 
 main().catch((e) => console.log(e.message));
