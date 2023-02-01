@@ -4,9 +4,17 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "rm -rf dist && tsc",
+    "write-icons": "node dist/index.js"
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "fp-ts": "^2.13.1"
+  }
 }
