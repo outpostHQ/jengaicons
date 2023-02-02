@@ -1,6 +1,7 @@
 import fs from "fs";
 import path from "path";
 import { optimize } from "svgo";
+import { transform } from "@svgr/core";
 
 async function main() {
   /**
@@ -23,8 +24,8 @@ async function main() {
   // prepare the optimized svgs
   // remove any exisitng optimized folder
   const root = path.join(pathToAssets, "..");
-  const pathToOptimized = path.join(root, "optimized");
-  const allDirs = fs.readdirSync(root);
+  const pathToOptimized = path.join(root, "packages/react-icons", "optimized");
+  const allDirs = fs.readdirSync(path.join(pathToOptimized, ".."));
   if (allDirs.includes("optimized")) {
     fs.rmSync(pathToOptimized, { recursive: true });
   }
@@ -50,20 +51,53 @@ async function main() {
         "utf8"
       );
 
+      /**
+       * Optimize the svg, this will remove all the unnecessary
+       */
       const optimizedSvgString = optimize(svgString, { path: pathToOptimized });
 
-      // create file in optimized folder
+      /**
+       * create file in optimized folder
+       */
       const componentName = svgFile.replace(".svg", "");
-      const reactComponent = `import React from "react";
-export function ${componentName}() {
-    return (
-        ${optimizedSvgString.data}
-    )
-}`;
 
+      /**
+       * Transform the svg to react component,
+       * and add whatever props are required
+       */
+      const componentTransformConfig: Parameters<typeof transform>[1] = {
+        exportType: "named",
+        namedExport: componentName,
+        typescript: true,
+        icon: true,
+        prettier: true,
+        svgProps: {
+          width: "33",
+          height: "33",
+          viewBox: "0 0 33 33",
+        },
+      };
+
+      /**
+       * SVG generated component with export statement
+       */
+      const svgComponent = await transform(
+        optimizedSvgString.data,
+        componentTransformConfig,
+        { componentName }
+      );
+
+      /**
+       * Write the component to the optimized folder
+       */
       fs.writeFileSync(
         path.join(pathToOptimized, variant, svgFile.replace(".svg", ".tsx")),
-        reactComponent
+        svgComponent
+      );
+
+      fs.appendFileSync(
+        path.join(pathToOptimized, variant, "index.ts"),
+        `export { ${componentName} } from "./${componentName}";\n`
       );
     }
   }

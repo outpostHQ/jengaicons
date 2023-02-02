@@ -1,12 +1,11 @@
-import { House, CloudSun, CloudSunFill, HouseFill } from "react-icons";
+import { FillIcons, RegularIcons } from "react-icons";
 
 function App() {
   return (
     <div>
-      <House />
-      <CloudSun />
-      <CloudSunFill />
-      <HouseFill />
+      <FillIcons.ArrowArcLeft />
+      <RegularIcons.ArrowArcLeft />
+      <FillIcons.CaretDoubleLeft />
     </div>
   );
 }

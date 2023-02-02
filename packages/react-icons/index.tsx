@@ -1,4 +1,4 @@
-export * from "./icons/fill/CloudSunFill";
-export * from "./icons/fill/HouseFill";
-export * from "./icons/outline/CloudSun";
-export * from "./icons/outline/House";
+import * as FillIcons from "./optimized/fill";
+import * as RegularIcons from "./optimized/regular";
+
+export { FillIcons, RegularIcons };
