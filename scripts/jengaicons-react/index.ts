@@ -80,9 +80,9 @@ async function main() {
         icon: true,
         prettier: true,
         svgProps: {
-          width: "33",
-          height: "33",
-          viewBox: "0 0 33 33",
+          width: "32",
+          height: "32",
+          viewBox: "0 0 32 32",
         },
       };
 

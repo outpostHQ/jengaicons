@@ -1,4 +1,4 @@
 import * as React from "react";
 import { SVGProps } from "react";
-const ListBulletsRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M12.087 9.043H26M12.088 16H26m-13.912 6.956H26" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M7.304 10.348a1.304 1.304 0 1 0 0-2.609 1.304 1.304 0 0 0 0 2.609Zm0 6.956a1.304 1.304 0 1 0 0-2.608 1.304 1.304 0 0 0 0 2.608Zm0 6.956a1.304 1.304 0 1 0 0-2.608 1.304 1.304 0 0 0 0 2.609Z" fill="#1C1B1F" /></svg>;
+const ListBulletsRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M12.087 9.043H26M12.088 16H26m-13.912 6.956H26" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M7.304 10.348a1.304 1.304 0 1 0 0-2.609 1.304 1.304 0 0 0 0 2.609Zm0 6.956a1.304 1.304 0 1 0 0-2.608 1.304 1.304 0 0 0 0 2.608Zm0 6.956a1.304 1.304 0 1 0 0-2.608 1.304 1.304 0 0 0 0 2.609Z" fill="#1C1B1F" /></svg>;
 export { ListBulletsRegular };

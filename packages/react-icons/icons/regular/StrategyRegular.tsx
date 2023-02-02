@@ -1,4 +1,4 @@
 import * as React from "react";
 import { SVGProps } from "react";
-const StrategyRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M9.499 5.564v6m2.999-3h-6m12.261 12.872 5 5m0-5-5 5m-12.26 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM19.516 9.807l4.243-4.243L28 9.807" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M23.783 6.41v9.039H6.543v5.875" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+const StrategyRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M9.499 5.564v6m2.999-3h-6m12.261 12.872 5 5m0-5-5 5m-12.26 0a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5ZM19.516 9.807l4.243-4.243L28 9.807" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M23.783 6.41v9.039H6.543v5.875" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
 export { StrategyRegular };
