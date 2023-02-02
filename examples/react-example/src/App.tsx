@@ -1,10 +1,17 @@
-import { ArrowArcLeftRegular, ArrowArcLeftFill } from "react-icons";
+import {
+  ActivityRegular,
+  ActivityFill,
+  BookBookmarkRegular,
+  BookBookmarkFill,
+} from "react-icons";
 
 function App() {
   return (
     <div>
-      <ArrowArcLeftRegular />
-      <ArrowArcLeftFill />
+      <ActivityRegular />
+      <ActivityFill />
+      <BookBookmarkFill />
+      <BookBookmarkRegular />
     </div>
   );
 }

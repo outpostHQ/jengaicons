@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const TrainSimpleRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M6.308 15.077h19.384m-13.384 9.231L9.538 28m10.154-3.692L22.462 28" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M10.923 21.538a1.385 1.385 0 1 0 0-2.769 1.385 1.385 0 0 0 0 2.77Zm10.154 0a1.385 1.385 0 1 0 0-2.769 1.385 1.385 0 0 0 0 2.77Z" fill="#1C1B1F" /><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M6.308 4h19.385v20.308H6.308z" /></svg>;
+export { TrainSimpleRegular };

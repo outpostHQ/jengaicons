@@ -1,4 +1,4 @@
 import * as React from "react";
 import { SVGProps } from "react";
-const CaretRightRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M13.879 11.757 18.12 16l-4.242 4.243" stroke="#000" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+const CaretRightRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M21.646 15.646 10.854 4.854a.5.5 0 0 0-.854.353v21.586a.5.5 0 0 0 .854.353l10.792-10.792a.5.5 0 0 0 0-.708Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
 export { CaretRightRegular };

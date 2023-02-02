@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const WebhookRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="m10.206 20.075 3.566-5.885m4.022-2.147 2.883 5.387m-6.468 4.594h6.198m-6.529-7.778a5.089 5.089 0 1 1 7.511-2.423m-.707 5.626a5.089 5.089 0 1 1-1.462 8.08M7.701 17.074a5.089 5.089 0 1 0 6.476 5.05" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /><circle cx={16.646} cy={9.976} r={2.25} stroke="#1C1B1F" strokeWidth={2} /><circle cx={22.71} cy={22.024} r={2.25} transform="rotate(135 22.71 22.024)" stroke="#1C1B1F" strokeWidth={2} /><circle cx={2.25} cy={2.25} r={2.25} transform="scale(1 -1) rotate(-45 -23.633 -18.142)" stroke="#1C1B1F" strokeWidth={2} /></svg>;
+export { WebhookRegular };

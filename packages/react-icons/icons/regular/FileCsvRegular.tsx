@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const FileCsvRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M4.786 17.456V4h14.602l7.826 7.86v5.596" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M19.464 11.783v-7.64l7.646 7.64h-7.646Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="m21.922 21.507 2.247 6.242a.1.1 0 0 0 .188.003l2.438-6.245m-17.375 0H8.034a3.246 3.246 0 0 0-3.247 3.246v0A3.246 3.246 0 0 0 8.033 28H9.42m8.568-6.493h-3.01c-.897 0-1.624.727-1.624 1.623v0c0 .897.727 1.623 1.623 1.623h1.473M14.85 24.753h1.515c.896 0 1.623.727 1.623 1.624v0c0 .896-.727 1.623-1.623 1.623h-3.011" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /></svg>;
+export { FileCsvRegular };

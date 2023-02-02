@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const CodeRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M9 20.243 4.757 16 9 11.757m9.773-3.382-5.546 15.25M23 11.757 27.243 16 23 20.243" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { CodeRegular };

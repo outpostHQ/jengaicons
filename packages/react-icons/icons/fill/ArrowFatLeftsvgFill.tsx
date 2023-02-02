@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ArrowFatLeftsvgFill = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M16.96 5.49a.5.5 0 0 0-.853-.354L5.314 15.93a.5.5 0 0 0 0 .708L16.107 27.43a.5.5 0 0 0 .853-.353v-4.293a.5.5 0 0 1 .5-.5h10.5a1 1 0 0 0 1-1v-10a1 1 0 0 0-1-1h-10.5a.5.5 0 0 1-.5-.5V5.49Z" fill="#1C1B1F" /></svg>;
+export { ArrowFatLeftsvgFill };

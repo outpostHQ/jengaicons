@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ChartPieSliceRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M16.002 16V4m10.393 6L5.61 22M16.002 4A12 12 0 1 1 5.654 22.08" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M11.987 4.687C7.333 6.36 4 10.86 4 16.15c0 .697.058 1.38.169 2.045l7.818-4.504V4.687Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { ChartPieSliceRegular };

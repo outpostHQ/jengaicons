@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ThermometerColdRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M12.228 25.073a2.143 2.143 0 1 0 0-4.286 2.143 2.143 0 0 0 0 4.286Zm0-4.286v-5.143m9.858-7.715v3.428m-3.257-1.06 3.257 1.06m-2.014 2.776 2.014-2.776m2.014 2.776-2.014-2.776m3.257-1.06-3.257 1.06m-12.98 6.595V7.363c0-1.581 1.396-2.863 3.117-2.863 1.72 0 3.116 1.282 3.116 2.863v10.589" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M9.11 17.958a5.732 5.732 0 1 0 6.239 0" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /></svg>;
+export { ThermometerColdRegular };

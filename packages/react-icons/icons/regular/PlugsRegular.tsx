@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const PlugsRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M7.728 24.254 4 27.982m7.455-10.651 2.663-2.662m3.195 3.195-2.662 2.662m2.129 2.131L9.326 15.2" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M6.26 22.756a2 2 0 0 1 0-2.829l3.901-3.9 5.902 5.902-3.9 3.9a2 2 0 0 1-2.83 0L6.26 22.756Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /><path d="M24.272 7.746 28 4.018m-5.325 12.781-7.456-7.456" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M22.774 6.278a2 2 0 0 0-2.828 0l-3.901 3.901 5.902 5.902 3.9-3.9a2 2 0 0 0 0-2.83l-3.073-3.073Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /></svg>;
+export { PlugsRegular };

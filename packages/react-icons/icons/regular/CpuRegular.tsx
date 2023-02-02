@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const CpuRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M25.23 13.23H28m-2.77 5.54H28M4 13.23h2.77M4 18.77h2.77m12 6.46V28m-5.54-2.77V28m5.54-24v2.77M13.23 4v2.77" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M6.769 6.769h18.462v18.462H6.769z" /><rect x={12.769} y={12.769} width={6.462} height={6.462} rx={0.5} stroke="#1C1B1F" strokeWidth={2} /></svg>;
+export { CpuRegular };

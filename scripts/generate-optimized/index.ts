@@ -50,6 +50,7 @@ async function main() {
       .map((item) => item.name);
 
     for (const svgFile of svgFiles) {
+      const svgFileName = svgFile.split("-")[0].trim() + ".svg";
       const svgString = fs.readFileSync(
         path.join(pathToAssets, variant, svgFile),
         "utf8"
@@ -64,7 +65,7 @@ async function main() {
        * Write the component to the optimized folder
        */
       fs.writeFileSync(
-        path.join(pathToOptimized, variant, svgFile),
+        path.join(pathToOptimized, variant, svgFileName),
         optimizedSvgString.data
       );
     }

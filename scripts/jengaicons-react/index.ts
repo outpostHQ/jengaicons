@@ -64,13 +64,18 @@ async function main() {
         ""
       )}${variant[0].toUpperCase()}${variant.slice(1)}`;
 
+      let safeComponentName = componentName.replace(".", "");
+      safeComponentName = safeComponentName.replace("-", "");
+      safeComponentName = safeComponentName.replace(" ", "");
+      safeComponentName = safeComponentName.replace("&", "");
+
       /**
        * Transform the svg to react component,
        * and add whatever props are required
        */
       const componentTransformConfig: Parameters<typeof transform>[1] = {
         exportType: "named",
-        namedExport: componentName,
+        namedExport: safeComponentName,
         typescript: true,
         icon: true,
         prettier: true,
@@ -87,20 +92,21 @@ async function main() {
       const svgComponent = await transform(
         optimizedSvgString.data,
         componentTransformConfig,
-        { componentName }
+        { componentName: safeComponentName }
       );
 
       /**
        * Write the component to the optimized folder
        */
+
       fs.writeFileSync(
-        path.join(pathToOptimized, variant, `${componentName}.tsx`),
+        path.join(pathToOptimized, variant, `${safeComponentName}.tsx`),
         svgComponent
       );
 
       fs.appendFileSync(
         path.join(pathToOptimized, variant, "index.ts"),
-        `export { ${componentName} } from "./${componentName}";\n`
+        `export { ${safeComponentName} } from "./${safeComponentName}";\n`
       );
     }
   }

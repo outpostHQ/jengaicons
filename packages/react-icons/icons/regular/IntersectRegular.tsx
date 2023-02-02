@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const IntersectRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M12.308 20.615a8.308 8.308 0 1 0 0-16.615 8.308 8.308 0 0 0 0 16.615Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M19.692 28a8.308 8.308 0 1 0 0-16.615 8.308 8.308 0 0 0 0 16.615Zm-4.325-15.402 4.035 4.035m-6.804-1.266 4.035 4.035" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { IntersectRegular };

@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const EyeglassessvgFill = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M9.46 25.771a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Zm15 0a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z" fill="#1C1B1F" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M13.96 20.771h6" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M10.078 6.794H9.96a5 5 0 0 0-5 5v9.676M23.843 6.794h.117a5 5 0 0 1 5 5v9.676" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /></svg>;
+export { EyeglassessvgFill };

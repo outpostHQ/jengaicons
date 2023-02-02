@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const VaultRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M24 23.5v3m-16-3v3" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M19.925 16.13a1.63 1.63 0 1 0 0-3.26 1.63 1.63 0 0 0 0 3.26ZM7.851 12.527a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 2.945a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm3-5.945a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 2.945a1 1 0 1 0 0-2 1 1 0 0 0 0 2Zm0 3a1 1 0 1 0 0-2 1 1 0 0 0 0 2Z" fill="#1C1B1F" /><path d="M19.925 18.575a4.075 4.075 0 1 0 0-8.15 4.075 4.075 0 0 0 0 8.15Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M4 5.5h24v18H4v-18Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /></svg>;
+export { VaultRegular };

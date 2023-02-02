@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const GooglePhotosLogoRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M16.461 16.462V4a6.923 6.923 0 0 1 4.154 12.462" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M16.462 15.538H4a6.923 6.923 0 0 1 12.462-4.153m-.923 4.154V28a6.923 6.923 0 0 1-4.154-12.461m4.154.923H28a6.923 6.923 0 0 1-12.461 4.153" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { GooglePhotosLogoRegular };

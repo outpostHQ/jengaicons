@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const SquaresFourRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M4 4h9.6v9.6H4zm0 14.4h9.6V28H4zM18.4 4H28v9.6h-9.6zm0 14.4H28V28h-9.6z" /></svg>;
+export { SquaresFourRegular };

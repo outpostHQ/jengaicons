@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const SnowflakeRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M16 7.792v17.415m-3.265-20.68L16 7.793l3.265-3.266m-6.53 23.946L16 25.208l3.265 3.265M8.463 12.146l15.074 8.708M4 13.344l4.463-1.198-1.198-4.462m17.47 17.632-1.198-4.462L28 19.657M8.463 20.854l15.074-8.708M7.265 25.316l1.198-4.462L4 19.657m24-6.313-4.463-1.198 1.198-4.462" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { SnowflakeRegular };

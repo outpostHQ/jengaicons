@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ShowerRegular = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M8.552 26.345a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483Zm2.896-2.897a1.241 1.241 0 1 0 0-2.482 1.241 1.241 0 0 0 0 2.482Zm-6.207-.413a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483Zm2.897-2.897a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483Z" fill="#1C1B1F" /><path d="M28 5.655h-2.968a.827.827 0 0 0-.585.243L21.38 8.966 8.07 11.184a.827.827 0 0 0-.45 1.402l10.14 10.139a.827.827 0 0 0 1.402-.45l2.218-13.31" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export { ShowerRegular };
