@@ -1,11 +1,10 @@
-import { FillIcons, RegularIcons } from "react-icons";
+import { ArrowArcLeftRegular, ArrowArcLeftFill } from "react-icons";
 
 function App() {
   return (
     <div>
-      <FillIcons.ArrowArcLeft />
-      <RegularIcons.ArrowArcLeft />
-      <FillIcons.CaretDoubleLeft />
+      <ArrowArcLeftRegular />
+      <ArrowArcLeftFill />
     </div>
   );
 }

@@ -1,4 +1,0 @@
-import * as React from "react";
-import { SVGProps } from "react";
-const ArrowFatLineUp = (props: SVGProps<SVGSVGElement>) => <svg width="33" height="33" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 33 33" {...props}><path d="M4 16 16 4l12 12h-6v8H10v-8H4ZM22 28H10" stroke="#000" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
-export { ArrowFatLineUp };
