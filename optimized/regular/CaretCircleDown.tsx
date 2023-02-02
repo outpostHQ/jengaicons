@@ -1,10 +1,6 @@
 import React from "react";
-function CaretCircleDown() {
+export function CaretCircleDown() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 28C22.6274 28 28 22.6274 28 16C28 9.37258 22.6274 4 16 4C9.37258 4 4 9.37258 4 16C4 22.6274 9.37258 28 16 28Z" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M20.2426 13.8787L16 18.1213L11.7573 13.8787" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20.243 13.879 16 18.12l-4.243-4.242"/></svg>
     )
 }

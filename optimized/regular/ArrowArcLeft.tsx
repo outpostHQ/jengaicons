@@ -1,27 +1,6 @@
 import React from "react";
-function ArrowArcLeft() {
-  return (
-    <svg
-      width="32"
-      height="32"
-      viewBox="0 0 32 32"
-      fill="none"
-      xmlns="http://www.w3.org/2000/svg"
-    >
-      <path
-        d="M28 22C28 19.6266 27.3102 17.3066 26.0177 15.3332C24.7253 13.3598 22.8883 11.8217 20.739 10.9135C18.5898 10.0052 16.2248 9.76756 13.9431 10.2306C11.6615 10.6936 9.56569 11.8365 7.92072 13.5147L4 17.5147"
-        stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-      <path
-        d="M4 11.5148V17.5148H10"
-        stroke="black"
-        stroke-width="2"
-        stroke-linecap="round"
-        stroke-linejoin="round"
-      />
-    </svg>
-  );
+export function ArrowArcLeft() {
+    return (
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28 22c0-2.373-.69-4.693-1.982-6.667a11.815 11.815 0 0 0-5.279-4.42 11.545 11.545 0 0 0-6.796-.682 11.692 11.692 0 0 0-6.022 3.284l-3.921 4"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 11.515v6h6"/></svg>
+    )
 }

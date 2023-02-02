@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowSquareDownLeft() {
+export function ArrowSquareDownLeft() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="4" y="4" width="24" height="24" stroke="black" stroke-width="2" stroke-linejoin="round"/>
-<path d="M12.4646 13.5355V19.5355H18.4646" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19.5356 12.4645L12.4646 19.5355" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linejoin="round" stroke-width="2" d="M4 4h24v24H4z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.465 13.536v6h6M19.536 12.464l-7.071 7.071"/></svg>
     )
 }

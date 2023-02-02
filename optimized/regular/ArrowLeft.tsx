@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowLeft() {
+export function ArrowLeft() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M12.2427 11.7574L8.00004 16L12.2427 20.2427" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8 16H24" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12.243 11.757 8 16l4.243 4.243M8 16h16"/></svg>
     )
 }

@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowFatLinesLeft() {
+export function ArrowFatLinesLeft() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16 4L4 16L16 28V22H20V10H16V4Z" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28 22V10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24 22V10" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 4 4 16l12 12v-6h4V10h-4V4ZM28 22V10M24 22V10"/></svg>
     )
 }

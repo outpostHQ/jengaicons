@@ -1,14 +1,6 @@
 import React from "react";
-function Recycle() {
+export function Recycle() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M19.9602 29.283L16.9602 26.282L19.9602 23.283" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.2887 9.68201L24.1898 13.7806L20.0925 12.682" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M10.8296 17.8791L9.73055 13.7806L5.6333 14.8791" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.9602 26.2821H27.9572C28.3085 26.2821 28.6536 26.1895 28.9577 26.0138C29.2619 25.8381 29.5144 25.5854 29.6898 25.2811C29.8653 24.9768 29.9575 24.6317 29.9572 24.2804C29.957 23.9291 29.8642 23.5842 29.6882 23.2801L26.6943 18.1078" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.73071 13.7805L4.23219 23.28C4.05622 23.584 3.96343 23.929 3.96314 24.2803C3.96284 24.6316 4.05507 24.9767 4.23053 25.281C4.406 25.5853 4.65851 25.838 4.96266 26.0137C5.26681 26.1894 5.61188 26.282 5.96314 26.282H11.9602" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.1895 13.7806L18.691 4.28105C18.5153 3.97753 18.2629 3.72554 17.9591 3.55036C17.6553 3.37517 17.3108 3.28296 16.9601 3.28296C16.6094 3.28296 16.2648 3.37517 15.961 3.55036C15.6572 3.72554 15.4048 3.97753 15.2291 4.28105L12.2354 9.45321" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.96 29.283-3-3.001 3-2.999M25.289 9.682l-1.1 4.099-4.096-1.099M10.83 17.88l-1.1-4.1-4.097 1.1"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.96 26.282h10.997a2 2 0 0 0 1.731-3.002l-2.994-5.172M9.73 13.78l-5.498 9.5a2 2 0 0 0 1.731 3.002h5.997M24.19 13.78 18.69 4.282a2 2 0 0 0-3.462 0l-2.994 5.172"/></svg>
     )
 }

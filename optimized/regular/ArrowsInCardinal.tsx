@@ -1,16 +1,6 @@
 import React from "react";
-function ArrowsInCardinal() {
+export function ArrowsInCardinal() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M15.7893 20V28" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.5466 24.2426L15.7893 20L20.0319 24.2426" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.5466 7.75732L15.7893 12L20.0319 7.75732" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M15.7893 4V12" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19.7893 15.5525H27.7893" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.032 11.3099L19.7893 15.5525L24.032 19.7952" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M7.54663 11.3078L11.7893 15.5504L7.30774 19.5399" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.7893 15.5505H3.78931" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M15.79 20v8M11.547 24.243 15.789 20l4.243 4.243M11.547 7.757 15.789 12l4.243-4.243M15.79 4v8M19.79 15.553h8M24.032 11.31l-4.243 4.242 4.243 4.243M7.547 11.308l4.242 4.242-4.481 3.99M11.79 15.55h-8"/></svg>
     )
 }

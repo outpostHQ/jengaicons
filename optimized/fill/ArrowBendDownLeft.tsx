@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowBendDownLeft() {
+export function ArrowBendDownLeft() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M28.9602 8.16162C28.9602 11.3442 27.6959 14.3965 25.4455 16.6469C23.195 18.8973 20.1428 20.1616 16.9602 20.1616H4.96021" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.20288 15.919L4.96024 20.1616L9.20288 24.4043" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M28.96 8.162a12 12 0 0 1-12 12h-12"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9.203 15.919 4.96 20.162l4.243 4.242"/></svg>
     )
 }

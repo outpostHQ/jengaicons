@@ -1,13 +1,6 @@
 import React from "react";
-function ArrowsOutLineHorizontal() {
+export function ArrowsOutLineHorizontal() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.9602 6.28296V26.283" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M4.81128 16.283H12.8113" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.05396 12.0383L4.81131 16.281L9.05396 20.5236" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M24.688 12.0383L28.9306 16.281L24.4491 20.2704" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M28.688 16.281H20.688" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.96 6.283v20M4.811 16.283h8M9.054 12.038l-4.243 4.243 4.243 4.243M24.688 12.038l4.243 4.243-4.482 3.99M28.688 16.281h-8"/></svg>
     )
 }

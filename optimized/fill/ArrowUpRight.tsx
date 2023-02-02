@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowUpRight() {
+export function ArrowUpRight() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M18.9602 8.28299H24.9602V14.283" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.96021 24.2829L24.9601 8.28299" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M18.96 8.283h6v6M8.96 24.283l16-16"/></svg>
     )
 }

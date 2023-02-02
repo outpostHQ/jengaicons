@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowLineDownLeft() {
+export function ArrowLineDownLeft() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26.9602 6.15698H6.96021" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M9.96021 20.4089V26.4089H15.9602" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M23.9602 12.4089L9.9602 26.4089" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26.96 6.157h-20M9.96 20.409v6h6M23.96 12.409l-14 14"/></svg>
     )
 }

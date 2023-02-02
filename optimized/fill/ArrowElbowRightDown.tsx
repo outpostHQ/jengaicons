@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowElbowRightDown() {
+export function ArrowElbowRightDown() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M5.83887 7.2829H23.8389V25.2829" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M19.5962 21.0403L23.8388 25.2829L28.0815 21.0403" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5.839 7.283h18v18"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m19.596 21.04 4.243 4.243 4.242-4.243"/></svg>
     )
 }

@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowURightDown() {
+export function ArrowURightDown() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.87866 22V11C6.87866 9.14348 7.61616 7.36301 8.92892 6.05025C10.2417 4.7375 12.0221 4 13.8787 4H13.8787C14.7979 4 15.7082 4.18106 16.5575 4.53284C17.4067 4.88462 18.1784 5.40024 18.8284 6.05025C19.4784 6.70026 19.994 7.47193 20.3458 8.32121C20.6976 9.17048 20.8787 10.0807 20.8787 11V28" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.636 23.7574L20.8786 28L25.1213 23.7574" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.879 22V11a7 7 0 0 1 7-7h0a7 7 0 0 1 7 7v17"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16.636 23.757 20.879 28l4.242-4.243"/></svg>
     )
 }

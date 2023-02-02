@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowCircleLeft() {
+export function ArrowCircleLeft() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M16.9602 28.2829C23.5876 28.2829 28.9602 22.9103 28.9602 16.2829C28.9602 9.65548 23.5876 4.2829 16.9602 4.2829C10.3328 4.2829 4.96021 9.65548 4.96021 16.2829C4.96021 22.9103 10.3328 28.2829 16.9602 28.2829Z" fill="black" stroke="black" stroke-width="2" stroke-miterlimit="10"/>
-<path d="M16.2029 12.0403L11.9602 16.2829L16.2029 20.5255" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.9602 16.2829H21.9602" stroke="white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path fill="#000" stroke="#000" stroke-miterlimit="10" stroke-width="2" d="M16.96 28.283c6.628 0 12-5.373 12-12 0-6.628-5.372-12-12-12-6.627 0-12 5.372-12 12 0 6.627 5.373 12 12 12Z"/><path stroke="#fff" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m16.203 12.04-4.243 4.243 4.243 4.242M11.96 16.283h10"/></svg>
     )
 }

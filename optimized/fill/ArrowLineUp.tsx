@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowLineUp() {
+export function ArrowLineUp() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M6.95996 4.85455H26.96" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16.96 8.85504V27.7112" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M12.7173 13.0977L16.9599 8.85502L21.2026 13.0977" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6.96 4.855h20M16.96 8.855v18.856M12.717 13.098l4.243-4.243 4.243 4.243"/></svg>
     )
 }

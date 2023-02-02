@@ -1,10 +1,6 @@
 import React from "react";
-function ArrowFatLineUp() {
+export function ArrowFatLineUp() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M4.95996 16.2829L16.96 4.2829L28.96 16.2829H22.96V24.2829H10.96V16.2829H4.95996Z" fill="black" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M22.96 28.2829H10.96" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path fill="#000" stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="m4.96 16.283 12-12 12 12h-6v8h-12v-8h-6Z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M22.96 28.283h-12"/></svg>
     )
 }

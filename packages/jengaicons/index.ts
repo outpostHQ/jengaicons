@@ -1,5 +1,6 @@
 import fs from "fs";
 import path from "path";
+import { optimize } from "svgo";
 
 async function main() {
   /**
@@ -49,14 +50,17 @@ async function main() {
         "utf8"
       );
 
+      const optimizedSvgString = optimize(svgString, { path: pathToOptimized });
+
       // create file in optimized folder
       const componentName = svgFile.replace(".svg", "");
       const reactComponent = `import React from "react";
-function ${componentName}() {
+export function ${componentName}() {
     return (
-        ${svgString}
+        ${optimizedSvgString.data}
     )
 }`;
+
       fs.writeFileSync(
         path.join(pathToOptimized, variant, svgFile.replace(".svg", ".tsx")),
         reactComponent

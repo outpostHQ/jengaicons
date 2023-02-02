@@ -1,11 +1,6 @@
 import React from "react";
-function ArrowSquareUp() {
+export function ArrowSquareUp() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<rect x="4" y="4" width="24" height="24" stroke="black" stroke-width="2" stroke-linejoin="round"/>
-<path d="M16 11V21" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.7573 15.2426L16 11L20.2426 15.2426" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linejoin="round" stroke-width="2" d="M4 4h24v24H4z"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 11v10M11.757 15.243 16 11l4.243 4.243"/></svg>
     )
 }

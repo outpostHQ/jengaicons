@@ -1,13 +1,6 @@
 import React from "react";
-function ArrowsInLineVertical() {
+export function ArrowsInLineVertical() {
     return (
-        <svg width="32" height="32" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M26 16H6" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 19V27" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.7573 23.2426L16 19L20.2426 23.2426" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.7573 8.75732L16 13L20.2426 8.75732" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M16 4.99994V12.9999" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M26 16H6M16 19v8M11.757 23.243 16 19l4.243 4.243M11.757 8.757 16 13l4.243-4.243M16 5v8"/></svg>
     )
 }

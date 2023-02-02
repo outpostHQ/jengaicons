@@ -1,12 +1,6 @@
 import React from "react";
-function ArrowsClockwise() {
+export function ArrowsClockwise() {
     return (
-        <svg width="33" height="33" viewBox="0 0 33 33" fill="none" xmlns="http://www.w3.org/2000/svg">
-<path d="M21.96 12.7474H27.96V6.74738" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M8.16113 8.50472C9.18258 7.48328 10.3952 6.67303 11.7298 6.12022C13.0644 5.56742 14.4948 5.2829 15.9393 5.2829C17.3838 5.2829 18.8142 5.56742 20.1488 6.12022C21.4834 6.67303 22.696 7.48328 23.7175 8.50472L27.9601 12.7474" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M11.96 19.8184H5.95996V25.8184" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-<path d="M25.759 24.0611C24.7375 25.0825 23.5249 25.8928 22.1903 26.4456C20.8557 26.9984 19.4253 27.2829 17.9808 27.2829C16.5362 27.2829 15.1058 26.9984 13.7713 26.4456C12.4367 25.8928 11.224 25.0825 10.2026 24.0611L5.95996 19.8184" stroke="black" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-</svg>
-
+        <svg xmlns="http://www.w3.org/2000/svg" width="33" height="33" fill="none"><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21.96 12.747h6v-6"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8.161 8.505a11 11 0 0 1 15.557 0l4.242 4.242M11.96 19.818h-6v6"/><path stroke="#000" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M25.759 24.061a11.001 11.001 0 0 1-15.556 0L5.96 19.818"/></svg>
     )
 }
