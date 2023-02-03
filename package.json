@@ -2,20 +2,14 @@
   "name": "jenga-icons",
   "version": "0.0.0",
   "scripts": {
-    "dev": "vite",
     "build": "turbo build",
-    "build-packages": "pnpm -r --filter react-icons build",
-    "preview": "vite preview",
-    "env": "node src/setupEnv.ts",
-    "fetch": "node src/index.ts",
-    "generate-icons": "rm -rf ./icons && npx @svgr/cli --typescript -d icons assets",
-    "test": "TZ=Asia/Singapore jest",
-    "clean": "turbo clean && rm -rf node_modules"
+    "clean": "turbo clean && rm -rf node_modules",
+    "generate-optimized": "pnpm --filter generate-optimized build && pnpm --filter generate-optimized write-icons ../../assets",
+    "generate-react": "pnpm --filter jengaicons-react build && pnpm --filter jengaicons-react write-icons ../../optimized"
   },
   "dependencies": {
     "react": "^18.0.0",
-    "react-dom": "^18.0.0",
-    "react-icons": "^4.7.1"
+    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@parcel/packager-ts": "^2.8.3",

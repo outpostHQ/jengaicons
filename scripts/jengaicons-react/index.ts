@@ -24,7 +24,7 @@ async function main() {
   // prepare the optimized svgs
   // remove any exisitng optimized folder
   const root = path.join(pathToAssets, "..");
-  const pathToOptimized = path.join(root, "packages/react-icons", "icons");
+  const pathToOptimized = path.join(root, "packages/jengaicons-react", "icons");
   const allDirs = fs.readdirSync(path.join(pathToOptimized, ".."));
   if (allDirs.includes("icons")) {
     fs.rmSync(pathToOptimized, { recursive: true });
