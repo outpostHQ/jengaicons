@@ -15,7 +15,7 @@
     "dev": "vite",
     "build": "parcel build",
     "preview": "vite preview",
-    "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules"
+    "clean": "rimraf .turbo && rimraf dist && rimraf node_modules"
   },
   "dependencies": {
     "react": "^18.2.0",
@@ -26,6 +26,7 @@
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "parcel": "^2.8.3",
+    "rimraf": "4.1.2",
     "typescript": "^4.9.3"
   }
 }
