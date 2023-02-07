@@ -18,8 +18,6 @@ const getCLIArgs = () => {
       'Root Path for react package',
       '../../packages/jengaicons-react'
     )
-    .option('--no-clean', 'Clean the "write-to" path before writing the icons')
-    .option('--optimize', 'Optimize the SVG before writing', true)
     .option(
       '--output-folder-name <name>',
       'Output Folder name for writing the "icons"',
