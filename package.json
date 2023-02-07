@@ -5,7 +5,7 @@
     "build": "turbo build",
     "clean": "turbo clean && rm -rf node_modules",
     "generate-optimized": "pnpm --filter generate-optimized build && pnpm --filter generate-optimized write-icons ../../assets",
-    "generate-react": "pnpm --filter jengaicons-react build && pnpm --filter jengaicons-react write-icons ../../optimized"
+    "generate-react": "pnpm --filter generate-jengaicons-react write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react --output-folder-name icons"
   },
   "dependencies": {
     "react": "^18.0.0",
