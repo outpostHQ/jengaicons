@@ -11,13 +11,15 @@ jobs:
 
       - name: PNPM Package manager install
         uses: pnpm/action-setup@v2
+        with:
+          version: 7
+          run_install: false
 
       - name: Install Node.js 16
         uses: actions/setup-node@v3
         with:
           node-version: '16'
           cache: 'pnpm'
-          run_install: false
 
       - name: Perform Size limit Checkup
         uses: andresz1/size-limit-action@v1
