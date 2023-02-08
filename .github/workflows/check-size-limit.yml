@@ -13,7 +13,6 @@ jobs:
         uses: pnpm/action-setup@v2
         with:
           version: 7
-          run_install: false
 
       - name: Install Node.js 16
         uses: actions/setup-node@v3
