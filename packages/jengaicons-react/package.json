@@ -1,8 +1,17 @@
 {
   "name": "@jengaicons/react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.1.0",
+  "keywords": [
+    "jenga-icons",
+    "react-icons",
+    "icons",
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://github.com/OutpostHQ/jenga-icons",
+  "bugs": "https://github.com/OutpostHQ/tasty/jenga-icons",
+  "repository": "OutpostHQ/jenga-icons",
+  "license": "MIT",
   "sideEffects": false,
   "source": "src/index.tsx",
   "main": "dist/src/index.js",
@@ -17,13 +26,6 @@
     "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
     "size": "size-limit"
   },
-  "size-limit": [
-    {
-      "limit": "10 kb",
-      "path": "dist/index.js",
-      "import": "{ ActivityFill, ActivityRegular }"
-    }
-  ],
   "dependencies": {
     "@babel/runtime": "7.20.13",
     "react": "^18.2.0",
@@ -56,5 +58,15 @@
     "rollup-plugin-uglify": "6.0.4",
     "size-limit": "8.1.2",
     "typescript": "^4.9.3"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "size-limit": [
+    {
+      "limit": "3 kb",
+      "path": "dist/src/index.js",
+      "import": "{ ActivityRegular }"
+    }
+  ]
 }
