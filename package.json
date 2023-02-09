@@ -1,9 +1,9 @@
 {
   "name": "jenga-icons",
-  "version": "0.0.0",
+  "private": true,
   "scripts": {
-    "changeset": "changeset",
     "build": "turbo build",
+    "changeset": "changeset",
     "clean": "turbo clean && rm -rf node_modules",
     "generate-optimized": "pnpm --filter generate-optimized build && pnpm --filter generate-optimized write-icons ../../assets",
     "generate-react": "pnpm --filter generate-jengaicons-react write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react --output-folder-name icons",
@@ -12,10 +12,6 @@
     "test": "turbo test",
     "version": "changeset version",
     "version:dev": "changeset version --snapshot dev"
-  },
-  "dependencies": {
-    "react": "^18.0.0",
-    "react-dom": "^18.0.0"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.8",
