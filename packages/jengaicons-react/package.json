@@ -30,8 +30,6 @@
     "react-dom": "^18.2.0"
   },
   "devDependencies": {
-    "@size-limit/preset-big-lib": "8.1.2",
-    "@size-limit/webpack-why": "8.1.2",
     "@babel/core": "7.20.12",
     "@babel/plugin-transform-runtime": "7.19.6",
     "@babel/preset-env": "7.20.2",
@@ -43,17 +41,20 @@
     "@rollup/plugin-node-resolve": "15.0.1",
     "@rollup/plugin-terser": "0.4.0",
     "@rollup/plugin-typescript": "11.0.0",
+    "@size-limit/preset-big-lib": "8.1.2",
+    "@size-limit/webpack-why": "8.1.2",
     "@types/node": "^18.11.18",
     "@types/react": "^18.0.27",
     "@types/react-dom": "^18.0.10",
     "cross-env": "7.0.3",
     "parcel": "^2.8.3",
-    "size-limit": "8.1.2",
     "rollup": "3.14.0",
     "rollup-plugin-dts": "5.1.1",
     "rollup-plugin-includepaths": "0.2.4",
+    "rollup-plugin-progress": "1.1.2",
     "rollup-plugin-summary": "2.0.0",
     "rollup-plugin-uglify": "6.0.4",
+    "size-limit": "8.1.2",
     "typescript": "^4.9.3"
   }
 }

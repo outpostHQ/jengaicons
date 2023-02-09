@@ -104,6 +104,7 @@ importers:
       rollup: 3.14.0
       rollup-plugin-dts: 5.1.1
       rollup-plugin-includepaths: 0.2.4
+      rollup-plugin-progress: 1.1.2
       rollup-plugin-summary: 2.0.0
       rollup-plugin-uglify: 6.0.4
       size-limit: 8.1.2
@@ -134,6 +135,7 @@ importers:
       rollup: 3.14.0
       rollup-plugin-dts: 5.1.1_2za6rqstu4xegr2hrsgsskkobi
       rollup-plugin-includepaths: 0.2.4
+      rollup-plugin-progress: 1.1.2
       rollup-plugin-summary: 2.0.0_rollup@3.14.0
       rollup-plugin-uglify: 6.0.4_rollup@3.14.0
       size-limit: 8.1.2
@@ -6159,6 +6161,12 @@ packages:
 
   /rollup-plugin-includepaths/0.2.4:
     resolution: {integrity: sha512-iZen+XKVExeCzk7jeSZPJKL7B67slZNr8GXSC5ROBXtDGXDBH8wdjMfdNW5hf9kPt+tHyIvWh3wlE9bPrZL24g==}
+    dev: true
+
+  /rollup-plugin-progress/1.1.2:
+    resolution: {integrity: sha512-6ehSZOMTZdAlRpe45kf56BnIOsDYC2GKWhGlK/Dh/Ae/AMUneMDyKdiv9ZlRrW/HVc986frTZcc2Zka+oF6W7Q==}
+    dependencies:
+      chalk: 2.4.2
     dev: true
 
   /rollup-plugin-summary/2.0.0_rollup@3.14.0:

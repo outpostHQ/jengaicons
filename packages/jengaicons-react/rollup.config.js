@@ -5,6 +5,7 @@ import typescript from '@rollup/plugin-typescript'
 import clean from '@rollup-extras/plugin-clean'
 import terser from '@rollup/plugin-terser'
 import summary from 'rollup-plugin-summary'
+import progress from 'rollup-plugin-progress'
 
 let includePathOptions = {
   paths: ['./'],
@@ -22,6 +23,9 @@ const prodConfig = {
   },
   external: ['react', 'tslib'],
   plugins: [
+    progress({
+      clearLine: false, // default: true
+    }),
     clean(),
     resolve(),
     includePaths(includePathOptions),
