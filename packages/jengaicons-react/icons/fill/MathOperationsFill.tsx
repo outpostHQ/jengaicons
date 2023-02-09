@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const MathOperationsFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M26.758 6.03a1 1 0 0 1 0 1.415l-2.02 2.02 2.02 2.02a1 1 0 1 1-1.414 1.414l-2.02-2.02-2.02 2.02a1 1 0 0 1-1.414-1.414l2.02-2.02-2.02-2.02a1 1 0 1 1 1.414-1.415l2.02 2.02 2.02-2.02a1 1 0 0 1 1.414 0ZM6.96 8.465a1 1 0 0 0 0 2h7.273a1 1 0 1 0 0-2H6.96Zm3.637 9.09a1 1 0 0 1 1 1v2.637h2.636a1 1 0 1 1 0 2h-2.636v2.636a1 1 0 1 1-2 0v-2.636H6.96a1 1 0 1 1 0-2h2.637v-2.636a1 1 0 0 1 1-1Zm8.09 2.826a1 1 0 0 1 1-1h7.273a1 1 0 1 1 0 2h-7.273a1 1 0 0 1-1-1Zm1 2.622a1 1 0 1 0 0 2h7.273a1 1 0 1 0 0-2h-7.273Z" fill="#1C1B1F" /></svg>;
+export default MathOperationsFill;

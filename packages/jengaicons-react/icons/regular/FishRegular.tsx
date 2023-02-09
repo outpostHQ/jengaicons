@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const FishRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M20.66 10.489a1.35 1.35 0 1 0 0-2.702 1.35 1.35 0 0 0 0 2.702Z" fill="#1C1B1F" /><path d="M24.072 19.483h-.26a5.404 5.404 0 0 1-5.403-5.403 5.403 5.403 0 0 1-5.403-5.393 1.999 1.999 0 0 1 .011-.259" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M10.101 17.828 4 20.395l6.304 1.801 1.801 6.304 2.567-6.101C30.252 22.027 28.18 8.564 27.55 5.637a.924.924 0 0 0-.687-.687c-2.927-.63-16.39-2.702-16.762 12.878Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export default FishRegular;

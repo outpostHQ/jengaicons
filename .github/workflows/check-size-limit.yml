@@ -1,0 +1,30 @@
+name: Check Size Limit
+on: push
+jobs:
+  check-size-limit-react:
+    runs-on: ubuntu-latest
+    env:
+      CI_JOB_NUMBER: 1
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v1
+
+      - name: PNPM Package manager install
+        uses: pnpm/action-setup@v2
+        with:
+          version: 7
+
+      - name: Install Node.js 16
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+          cache: 'pnpm'
+
+      - name: Install Dependencies
+        run: pnpm install
+
+      - name: Perform Size limit Checkup
+        uses: andresz1/size-limit-action@v1
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          directory: packages/jengaicons-react/

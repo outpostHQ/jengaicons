@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const ChatTeardropTextFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M28.96 16.283c0 6.627-5.38 12-12.015 12H5.96a1 1 0 0 1-1-1V15.426A11.927 11.927 0 0 1 7.2 9.263a12.004 12.004 0 0 1 9.745-4.98c6.636 0 12.015 5.372 12.015 12Zm-17-2.001a1 1 0 0 1 1-1h7.5a1 1 0 0 1 0 2h-7.5a1 1 0 0 1-1-1Zm0 4a1 1 0 0 1 1-1h7.5a1 1 0 0 1 0 2h-7.5a1 1 0 0 1-1-1Z" fill="#1C1B1F" /></svg>;
+export default ChatTeardropTextFill;

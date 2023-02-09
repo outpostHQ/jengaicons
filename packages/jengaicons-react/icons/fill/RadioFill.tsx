@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const RadioFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M5.96 11.283a1 1 0 0 0-1 1v14a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-14a1 1 0 0 0-1-1h-22Zm2 4a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-4a1 1 0 0 1-1-1Zm13 1a3 3 0 1 0 0 6 3 3 0 0 0 0-6Zm-5 3a5 5 0 1 1 10 0 5 5 0 0 1-10 0Zm-7-1a1 1 0 1 0 0 2h4a1 1 0 0 0 0-2h-4Zm-1 5a1 1 0 0 1 1-1h4a1 1 0 0 1 0 2h-4a1 1 0 0 1-1-1Z" fill="#1C1B1F" /><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M8.457 7.283h17.006v4H8.457z" /></svg>;
+export default RadioFill;

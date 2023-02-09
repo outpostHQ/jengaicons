@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const TextboxRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M14.286 7.429V24.57M7.643 14.286h3M9.143 14.286v3.857" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M4 10h10.286v12H4V10Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /><path d="M17.714 10H28v12H17.714" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export default TextboxRegular;

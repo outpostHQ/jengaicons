@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const HourglassHighFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M7.71 4.783a1 1 0 0 1 1-1h16.5a1 1 0 0 1 1 1v.812a11 11 0 0 1-4.4 8.8l-3.183 2.388 3.184 2.388a11 11 0 0 1 4.4 8.8v.812a1 1 0 0 1-1 1H8.709a1 1 0 0 1-1-1v-.812a11 11 0 0 1 4.4-8.8l3.184-2.388-3.183-2.388a11 11 0 0 1-4.4-8.8v-.812Zm2.001 1a8.995 8.995 0 0 0 .582 3h13.334c.36-.95.56-1.962.582-3H9.71Zm3.598 14.988a9 9 0 0 0-3.598 7.012H24.21a9 9 0 0 0-3.599-7.012l-3.65-2.738-3.65 2.738Z" fill="#1C1B1F" /></svg>;
+export default HourglassHighFill;

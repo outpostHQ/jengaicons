@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const SpeakerHighFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M19.097 26.422V7.179a.5.5 0 0 0-.813-.39l-6.255 5.023v10.251l6.266 4.757a.5.5 0 0 0 .802-.398Zm-9.068-4.994v-8.944h-.597a4.472 4.472 0 0 0 0 8.944h.597Zm15.86-11.089a1 1 0 0 1 1.414 0 9.069 9.069 0 0 1 0 12.828 1 1 0 0 1-1.414-1.414 7.072 7.072 0 0 0 0-10 1 1 0 0 1 0-1.414Zm-3.17 3.17a1 1 0 0 1 1.414 0 4.587 4.587 0 0 1 0 6.488 1 1 0 1 1-1.414-1.415 2.587 2.587 0 0 0 0-3.658 1 1 0 0 1 0-1.414Z" fill="#1C1B1F" /></svg>;
+export default SpeakerHighFill;

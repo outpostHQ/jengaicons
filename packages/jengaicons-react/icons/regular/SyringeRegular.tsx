@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const SyringeRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M22.592 4.065 28 9.473M16.283 6.77l9.013 9.013M13.353 12.403l2.93 2.929M10.199 15.557l2.929 2.93M20.79 11.276l4.506-4.507M7.092 24.851l-2.704 2.704" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M23.813 14.287 17.648 8.12 6.933 18.836l.15 6.016 6.015.15 10.715-10.715Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /></svg>;
+export default SyringeRegular;

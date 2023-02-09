@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const CurrencyEthsvgFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M17.014 4.688v22.686M7.627 15.92 16.96 4.282l9.334 11.636-9.334 12.364-9.333-12.364Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="m7.887 16.023 9.116 4.198 9.156-4.198" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="m7.7 15.882 9.158-11.511v15.526l-9.159-4.015Z" fill="#1C1B1F" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export default CurrencyEthsvgFill;

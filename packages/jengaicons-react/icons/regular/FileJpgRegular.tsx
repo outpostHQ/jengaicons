@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const FileJpgRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M4.416 17.901V4H19.5l8.084 8.119V17.9" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M19.579 12.04V4.148l7.898 7.892H19.58Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M8.592 21.508v4.575A1.917 1.917 0 0 1 6.675 28v0a1.917 1.917 0 0 1-1.916-1.917v-.269M13.284 25.116h2.483a1.958 1.958 0 0 0 1.958-1.958v0a1.958 1.958 0 0 0-1.958-1.958h-2.46a.022.022 0 0 0-.023.022V28M26.756 21.2h-1.922a3.4 3.4 0 0 0-3.4 3.4v0a3.4 3.4 0 0 0 3.4 3.4h1.895a.026.026 0 0 0 .027-.026v-2.746a.5.5 0 0 0-.5-.5h-1.598" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /></svg>;
+export default FileJpgRegular;
