@@ -1,12 +1,11 @@
 {
-  "name": "jengaicons-react",
+  "name": "generate-jengaicons-react",
   "private": true,
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "main": "index.ts",
   "scripts": {
-    "build": "rm -rf dist && tsc",
-    "write-icons": "node dist/index.js"
+    "write-icons": "ts-node index"
   },
   "keywords": [],
   "author": "",
@@ -17,7 +16,8 @@
   },
   "dependencies": {
     "@svgr/core": "^6.5.1",
-    "fp-ts": "^2.13.1",
-    "svgo": "^2.8.0"
+    "commander": "10.0.0",
+    "svgo": "^3.0.2",
+    "ts-node": "10.9.1"
   }
 }
