@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const UsersFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M12.813 18.56a5.351 5.351 0 1 0-.074 0 7.148 7.148 0 0 0-7.04 6.15c-.077.547.379.997.93.997h12.293c.552 0 1.007-.45.93-.997a7.148 7.148 0 0 0-7.04-6.15Zm7.2.015a4.682 4.682 0 0 1-.091-.034c2.068-.8 2.535-2.806 2.535-5.157a5.527 5.527 0 0 0-3.535-5.156 5.525 5.525 0 0 1 7.515 5.156c0 2.375-.893 4.4-2.727 5.182 2.656.744 4.245 3.16 4.533 6.142.053.55-.4.999-.953.999h-2.98c0-3.386-1.28-6.24-4.388-7.108l.09-.024Z" fill="#1C1B1F" /></svg>;
+export default UsersFill;

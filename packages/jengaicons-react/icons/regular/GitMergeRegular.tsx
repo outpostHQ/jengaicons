@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const GitMergeRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M7.818 28a3.818 3.818 0 1 0 0-7.636 3.818 3.818 0 0 0 0 7.636ZM7.818 11.636a3.818 3.818 0 1 0 0-7.636 3.818 3.818 0 0 0 0 7.636ZM24.182 21.454a3.818 3.818 0 1 0 0-7.636 3.818 3.818 0 0 0 0 7.636Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M20.346 17.962h-2.417a10 10 0 0 1-7.447-3.326l-2.674-2.983v8.72" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+export default GitMergeRegular;

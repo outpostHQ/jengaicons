@@ -1,0 +1,4 @@
+import * as React from "react";
+import { SVGProps } from "react";
+const RepeatOnceRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M4 17.5a8 8 0 0 1 8-8h16" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M23.757 5.257 28 9.5l-4.243 4.243M28 16.5a8 8 0 0 1-8 8H4" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M8.243 20.257 4 24.5l4.243 4.243" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M16.767 20v-5.089a.5.5 0 0 0-.769-.421l-.765.487" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" /></svg>;
+export default RepeatOnceRegular;

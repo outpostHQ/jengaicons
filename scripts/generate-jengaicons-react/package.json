@@ -1,0 +1,23 @@
+{
+  "name": "generate-jengaicons-react",
+  "private": true,
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "write-icons": "ts-node index"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^18.11.18",
+    "typescript": "^4.9.5"
+  },
+  "dependencies": {
+    "@svgr/core": "^6.5.1",
+    "commander": "10.0.0",
+    "svgo": "^3.0.2",
+    "ts-node": "10.9.1"
+  }
+}
