@@ -16,6 +16,7 @@
   "source": "src/index.tsx",
   "main": "dist/src/index.js",
   "types": "dist/src/index.d.ts",
+  "type": "module",
   "files": [
     "dist/**"
   ],
@@ -57,7 +58,8 @@
     "rollup-plugin-summary": "2.0.0",
     "rollup-plugin-uglify": "6.0.4",
     "size-limit": "8.1.2",
-    "typescript": "^4.9.3"
+    "typescript": "^4.9.3",
+    "generate-jengaicons-react": "workspace:*"
   },
   "publishConfig": {
     "access": "public"

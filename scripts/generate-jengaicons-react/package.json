@@ -12,7 +12,8 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "typescript": "^4.9.5"
+    "typescript": "^4.9.5",
+    "generate-optimized": "workspace:*"
   },
   "dependencies": {
     "@svgr/core": "^6.5.1",
