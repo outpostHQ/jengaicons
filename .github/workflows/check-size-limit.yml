@@ -1,5 +1,5 @@
 name: Check Size Limit
-on: [pull_request]
+on: push
 jobs:
   check-size-limit-react:
     runs-on: ubuntu-latest
