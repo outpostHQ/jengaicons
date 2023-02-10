@@ -1,30 +1,33 @@
 {
   "name": "@jengaicons/react",
-  "private": true,
-  "version": "0.0.0",
-  "type": "module",
+  "version": "0.1.0",
+  "keywords": [
+    "jenga-icons",
+    "react-icons",
+    "icons",
+    "react",
+    "typescript"
+  ],
+  "homepage": "https://github.com/OutpostHQ/jenga-icons",
+  "bugs": "https://github.com/OutpostHQ/tasty/jenga-icons",
+  "repository": "OutpostHQ/jenga-icons",
+  "license": "MIT",
   "sideEffects": false,
-  "source": "src/index.tsx",
+  "type": "module",
   "main": "dist/index.js",
   "module": "dist/module.js",
+  "source": "src/index.tsx",
   "types": "dist/index.d.ts",
   "files": [
     "dist/**"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "parcel build",
-    "preview": "vite preview",
     "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
+    "dev": "vite",
+    "preview": "vite preview",
     "size": "size-limit"
   },
-  "size-limit": [
-    {
-      "limit": "10 kb",
-      "path": "dist/index.js",
-      "import": "{ ActivityFill, ActivityRegular }"
-    }
-  ],
   "dependencies": {
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -38,5 +41,15 @@
     "parcel": "^2.8.3",
     "size-limit": "8.1.2",
     "typescript": "^4.9.3"
-  }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "size-limit": [
+    {
+      "limit": "3 kb",
+      "path": "dist/index.js",
+      "import": "{ ActivityRegular }"
+    }
+  ]
 }
