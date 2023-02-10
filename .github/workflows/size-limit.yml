@@ -7,6 +7,10 @@ concurrency:
   group: ci-size-limit=${{github.ref}}-1
   cancel-in-progress: true
 
+env:
+  SL_BASELINE_REPORT_FOLDER: size-limit-report
+  REPORT_OUTPUT_DIR: ./size-report
+
 jobs:
   generate-size-limit-react:
     runs-on: ubuntu-latest
@@ -17,35 +21,37 @@ jobs:
       - name: Install
         uses: ./.github/composite-actions/install
 
-      - name: Download baseline stats
-        uses: dawidd6/action-download-artifact@v2
+      - name: Generate Size Report
+        id: generate_report
+        run: node ./scripts/ci/generate-size-report.mjs
+
+      - name: Upload Pull Request Specific Reports
         if: github.event.number
-        with:
-          workflow: check-size-limit.yml
-          branch: ${{ github.event.pull_request.base.ref }}
-          path: ./__compare
+        uses: actions/upload-artifact@v3
+          with:
+            name: size-report-artifact-pr-${{ github.event.number }}
+            branch: ${{ github.event.pull_request.base.ref }}
+            path: ./size-report
 
-      - name: Build react icon package
-        run: pnpm --filter @jengaicons/react build
-
-      - name: Measure size
-        id: measure_size
-        continue-on-error: true
-        run: node ./scripts/ci/measure-size.mjs
-        env:
-          BASELINE: './__compare/${{ vars.SL_BASELINE_REPORT_FOLDER }}/metrics.json'
-
-      - name: Save stats
-        run: | 
-        echo '${{ steps.measure_size.outputs.metricsJSON }}' > ./size-limit-report/metrics.json
-        echo '${{ steps.measure_size.outputs.webpackStatsJSON }}' > ./size-limit-report/webpackStats.json
-  
   create-or-update-size-report-comment:
     runs-on: ubuntu-latest
     if: github.event.number
     needs: generate-size-limit-react
-    
+
     steps:
+      - name: Download Pull Request Report Artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          name: size-report-artifact-pr-${{ github.event.number }}
+          path: ${{ env.REPORT_OUTPUT_DIR }}
+
+      - name: Generate Size Report Comparison Table
+        id: compare
+        run: node ./scripts/ci/get-mark-down-table.mjs
+        env:
+          COMPARING_REPORT_FILE_PATH: ${{ env.REPORT_OUTPUT_DIR }}/size-report.json
+          BASELINE_REPORT_FILE_PATH: ./__compare/size-report.json
+
       - name: Find Size Report Comment
         uses: peter-evans/find-comment@v2
         id: find_comment
@@ -63,7 +69,7 @@ jobs:
             ### Size Report
             ---
             Created Comment
-        
+
       - name: Update Size Report Comment
         if: steps.find_comment.outputs.comment-id != ''
         uses: peter-evans/create-or-update-comment@v2
@@ -73,4 +79,3 @@ jobs:
             ### Size Report
             ---
             This comment has been updated!
-          
