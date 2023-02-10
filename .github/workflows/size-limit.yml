@@ -1,0 +1,78 @@
+name: Size Limit
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+
+concurrency:
+  group: ci-size-limit=${{github.ref}}-1
+  cancel-in-progress: true
+
+jobs:
+  generate-size-limit-react:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Git Checkout
+        uses: actions/checkout@v3
+
+      - name: Install
+        uses: ./.github/composite-actions/install
+
+      - name: Download baseline stats
+        uses: dawidd6/action-download-artifact@v2
+        if: github.event.number
+        with:
+          workflow: check-size-limit.yml
+          branch: ${{ github.event.pull_request.base.ref }}
+          path: ./__compare
+
+      - name: Build react icon package
+        run: pnpm --filter @jengaicons/react build
+
+      - name: Measure size
+        id: measure_size
+        continue-on-error: true
+        run: node ./scripts/ci/measure-size.mjs
+        env:
+          BASELINE: './__compare/${{ vars.SL_BASELINE_REPORT_FOLDER }}/metrics.json'
+
+      - name: Save stats
+        run: | 
+        echo '${{ steps.measure_size.outputs.metricsJSON }}' > ./size-limit-report/metrics.json
+        echo '${{ steps.measure_size.outputs.webpackStatsJSON }}' > ./size-limit-report/webpackStats.json
+  
+  create-or-update-size-report-comment:
+    runs-on: ubuntu-latest
+    if: github.event.number
+    needs: generate-size-limit-react
+    
+    steps:
+      - name: Find Size Report Comment
+        uses: peter-evans/find-comment@v2
+        id: find_comment
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          comment-author: 'github-actions[bot]'
+          body-includes: Size Report
+
+      - name: Create Size Report Comment
+        if: steps.find_comment.outputs.comment-id == ''
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          issue-number: ${{ github.event.pull_request.number }}
+          body: |
+            ### Size Report
+            ---
+            Created Comment
+        
+      - name: Update Size Report Comment
+        if: steps.find_comment.outputs.comment-id != ''
+        uses: peter-evans/create-or-update-comment@v2
+        with:
+          comment-id: ${{ steps.find_comment.outputs.comment-id }}
+          body: |
+            ### Size Report
+            ---
+            This comment has been updated!
+          
