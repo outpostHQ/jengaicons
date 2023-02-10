@@ -41,6 +41,13 @@ jobs:
     needs: generate-size-limit-react
 
     steps:
+      - name: Download Baseline Report Artifacts
+        uses: dawidd6/action-download-artifact@v2
+        with:
+          workflow: size-limit.yml
+          branch: ${{ github.event.pull_request.base.ref }}
+          path: ./__compare
+
       - name: Download Pull Request Report Artifacts
         uses: dawidd6/action-download-artifact@v2
         with:
