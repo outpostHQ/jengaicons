@@ -16,5 +16,41 @@ jobs:
       - name: Install
         uses: ./.github/composite-actions/install
 
+      - name: Upload stats
+        uses: actions/upload-artifact@v3
+        with:
+          name: size-limit-report
+          path: ${{ vars.SL_BASELINE_REPORT_FOLDER }}
+
+      - name: Build Statoscope Report
+        if: github.event.number
+        run: npx statoscope generate --input ${{ vars.SL_BASELINE_REPORT_FOLDER }}/stats.json -r ./__compare/${{ vars.SL_BASELINE_REPORT_FOLDER }}/stats.json --output ${{ vars.SL_BASELINE_REPORT_FOLDER }}/report.html
+
+      - name: Comment PR
+        uses: actions/github-script@v6
+        if: github.event.number
+        with:
+          github-token: ${{ secrets.GITHUB_TOKEN }}
+          script: |
+            const setMessage = require('${{ github.workspace }}/scripts/ci/set-message')
+
+            await setMessage({
+              header: "## 🏋️ Size limit report",
+              body: `
+                ${{ steps.measure_size.outputs.table }}
+                ---
+                [Click here if you want to find out what is changed in this build](${{ steps.deploy_report.outputs.preview-url }}/report.html)
+              `,
+              github,
+              repo: context.repo,
+              prNumber: context.payload.pull_request.number
+            })
+
+      - name: Throw error
+        if: steps.measure_size.outcome != 'success'
+        run: |
+          echo "Size limit has been exceeded"
+          exit 1
+
       - name: Build packages
         run: pnpm build
