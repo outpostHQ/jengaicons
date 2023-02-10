@@ -11,7 +11,10 @@
     "release:dev": "changeset publish --tag dev",
     "test": "turbo test",
     "version": "changeset version",
-    "version:dev": "changeset version --snapshot dev"
+    "version:dev": "changeset version --snapshot dev",
+    "example:build": "pnpm --filter next-ts-example build",
+    "example:dev": "pnpm --filter next-ts-example dev",
+    "example:start": "pnpm --filter next-ts-example start"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.8",
