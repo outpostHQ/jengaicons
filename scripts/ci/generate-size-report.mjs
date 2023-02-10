@@ -1,34 +1,40 @@
 import { writeFile } from 'node:fs/promises'
 import { setFailed, setOutput } from '@actions/core'
 import { getExecOutput } from '@actions/exec'
+import path from 'path'
 
 async function run() {
+  let output
   try {
-    const { stdout: SLstats } = await getExecOutput(
-      'npx size-limit',
-      [
-        '--clean-dir',
-        `--save-bundle ${process.env.REPORT_OUTPUT_DIR}`,
-        '--json',
-      ],
-      {
-        ignoreReturnCode: true,
-      }
-    )
+    output = (
+      await getExecOutput(
+        'npx size-limit',
+        [
+          `--save-bundle`,
+          process.env.REPORT_OUTPUT_DIR,
+          '--clean-dir',
+          '--json',
+        ],
+        {
+          ignoreReturnCode: true,
+        }
+      )
+    ).stdout
+
+    setOutput('reportJSON', JSON.parse(output))
   } catch (e) {
     console.error(e)
     setFailed('Failed to execute `npx size-limit`')
+    return
   }
-
-  setOutput('reportJSON', JSON.parse(SLstats))
 
   try {
     // WRITE REPORT JSON
     await writeFile(
       path.join(process.env.REPORT_OUTPUT_DIR, 'size-report.json'),
-      SLstats
+      output
     )
-  } catch (error) {
+  } catch (e) {
     console.error(e)
     setFailed('Failed to write the report file')
   }

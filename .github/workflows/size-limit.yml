@@ -24,14 +24,16 @@ jobs:
       - name: Generate Size Report
         id: generate_report
         run: node ./scripts/ci/generate-size-report.mjs
+        env:
+          REPORT_OUTPUT_DIR: ./size-report
 
       - name: Upload Pull Request Specific Reports
         if: github.event.number
         uses: actions/upload-artifact@v3
-          with:
-            name: size-report-artifact-pr-${{ github.event.number }}
-            branch: ${{ github.event.pull_request.base.ref }}
-            path: ./size-report
+        with:
+          name: size-report-artifact-pr-${{ github.event.number }}
+          branch: ${{ github.event.pull_request.base.ref }}
+          path: ./size-report
 
   create-or-update-size-report-comment:
     runs-on: ubuntu-latest
