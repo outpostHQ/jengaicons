@@ -1,6 +1,6 @@
 import fs from 'fs'
 import path from 'path'
-import { transform } from '@svgr/core'
+import transform from './transform'
 import { getCLIArgs } from './cli'
 
 const args = getCLIArgs()
@@ -35,11 +35,14 @@ const getSVGFileNames = (variant: string) => {
     .map((item) => item.name)
 }
 
-const getSVGContent = (svgFileName: string, variant: string) => {
-  return fs.readFileSync(
-    path.join(PATH_TO_ASSETS, variant, svgFileName),
-    'utf8'
-  )
+const getReactSVGContent = (svgFileName: string, variant: string) => {
+  return fs
+    .readFileSync(path.join(PATH_TO_ASSETS, variant, svgFileName), 'utf8')
+    .replace(/fill\-rule/g, 'fillRule')
+    .replace(/stroke-linecap/g, 'strokeLinecap')
+    .replace(/stroke-linejoin/g, 'strokeLinejoin')
+    .replace(/stroke-width/g, 'strokeWidth')
+    .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
@@ -75,39 +78,22 @@ async function main() {
     if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
   }
 
-  for (const item of itemsInDirectory) {
+  const promises = itemsInDirectory.map(async (item) => {
     const variant = item.name
 
-    for (const svgFileName of getSVGFileNames(variant)) {
-      const svgFileContent = getSVGContent(svgFileName, variant)
+    const tasks = getSVGFileNames(variant).map(async (svgFileName) => {
+      const svgFileContent = getReactSVGContent(svgFileName, variant)
 
       const componentName = getSafeComponentName(svgFileName, variant)
 
       /**
-       * Transform the svg to react component,
-       * and add whatever props are required
-       */
-      const componentTransformConfig: Parameters<typeof transform>[1] = {
-        exportType: 'default',
-        namedExport: componentName,
-        typescript: true,
-        icon: true,
-        prettier: true,
-        svgProps: {
-          width: '32',
-          height: '32',
-          viewBox: '0 0 32 32',
-        },
-      }
-
-      /**
        * SVG generated component with export statement
        */
-      const svgComponent = await transform(
-        svgFileContent,
-        componentTransformConfig,
-        { componentName: componentName }
-      )
+      const svgComponent = transform({
+        componentName,
+        defaultSize: 32,
+        svgContent: svgFileContent,
+      })
 
       /**
        * Write the component to the optimized folder
@@ -121,8 +107,12 @@ async function main() {
         PATH_TO_SRC_INDEX_FILE,
         `export { default as ${componentName} } from "../${args.outputFolderName}/${variant}/${componentName}";\n`
       )
-    }
-  }
+    })
+
+    await Promise.all(tasks)
+  })
+
+  await Promise.all(promises)
 }
 
 main()
