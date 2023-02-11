@@ -4,7 +4,7 @@ export default function Home() {
   return (
     <>
       <main>
-        <ActivityFill />
+        <ActivityFill size={100} />
       </main>
     </>
   )
