@@ -90,13 +90,13 @@ async function run() {
     resultEntries,
   ])
 
-  // Store the stats
-  setOutput('sizeReportTable', formattedTable)
-
   // check if atleast one of the file(s) failed to made the size check
   if (currentOutput.some((entry) => entry.passed === false)) {
     setFailed('Size limit has been exceeded.')
   }
+
+  // Store the stats
+  setOutput('report-table', formattedTable)
 }
 
 await run()
