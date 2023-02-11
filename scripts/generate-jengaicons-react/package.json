@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "pnpm write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react --output-folder-name icons",
     "write-icons": "ts-node index"
   },
   "keywords": [],
