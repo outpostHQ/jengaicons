@@ -170,6 +170,7 @@ importers:
       '@types/node': ^18.11.18
       '@types/prettier': 2.7.2
       commander: 10.0.0
+      generate-optimized: workspace:*
       prettier: 2.8.4
       svgo: ^3.0.2
       svgson: 5.2.1
@@ -183,6 +184,7 @@ importers:
     devDependencies:
       '@types/node': 18.11.18
       '@types/prettier': 2.7.2
+      generate-optimized: link:../generate-optimized
       prettier: 2.8.4
       svgson: 5.2.1
       typescript: 4.9.5
