@@ -1,17 +1,33 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const ChevronRightFill = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="m11.96 6.283 10 10-10 10"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const ChevronRightFill =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+ChevronRightFill.displayName = "ChevronRightFill";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="m11.96 6.283 10 10-10 10" stroke="#1C1B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-    });
-
-    ChevronRightFill.displayName = "ChevronRightFill";
-
-    export default ChevronRightFill;
-    
+export default ChevronRightFill;

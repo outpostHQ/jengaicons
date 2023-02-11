@@ -1,17 +1,33 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const ForkKnifeRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="M10.75 4v5M10.75 14.5V28M14.25 4l1 6a4.5 4.5 0 1 1-9 0l1-6M25.75 20h-7s1.5-14 7-16v24"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const ForkKnifeRegular =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+ForkKnifeRegular.displayName = "ForkKnifeRegular";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M10.75 4v5M10.75 14.5V28M14.25 4l1 6a4.5 4.5 0 1 1-9 0l1-6M25.75 20h-7s1.5-14 7-16v24" stroke="#1C1B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-    });
-
-    ForkKnifeRegular.displayName = "ForkKnifeRegular";
-
-    export default ForkKnifeRegular;
-    
+export default ForkKnifeRegular;

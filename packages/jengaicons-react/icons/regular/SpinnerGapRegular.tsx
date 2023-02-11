@@ -1,17 +1,33 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const SpinnerGapRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="M16 4v4M28 16h-4M24.485 24.485l-2.828-2.828M16 28v-4M7.515 24.485l2.828-2.828M4 16h4M7.515 7.515l2.828 2.828"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const SpinnerGapRegular =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+SpinnerGapRegular.displayName = "SpinnerGapRegular";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M16 4v4M28 16h-4M24.485 24.485l-2.828-2.828M16 28v-4M7.515 24.485l2.828-2.828M4 16h4M7.515 7.515l2.828 2.828" stroke="#1C1B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
-    });
-
-    SpinnerGapRegular.displayName = "SpinnerGapRegular";
-
-    export default SpinnerGapRegular;
-    
+export default SpinnerGapRegular;

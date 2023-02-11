@@ -1,17 +1,39 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const ToiletRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="M12.16 7.84h1.92"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M8.32 4h15.36v9.6H8.32V4ZM12.307 23.2h7.386l.96 4.8h-9.306l.96-4.8ZM5.44 13.6h21.12v1.6a8 8 0 0 1-8 8h-5.12a8 8 0 0 1-8-8v-1.6Z"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const ToiletRegular =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+ToiletRegular.displayName = "ToiletRegular";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M12.16 7.84h1.92" stroke="#1C1B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M8.32 4h15.36v9.6H8.32V4ZM12.307 23.2h7.386l.96 4.8h-9.306l.96-4.8ZM5.44 13.6h21.12v1.6a8 8 0 0 1-8 8h-5.12a8 8 0 0 1-8-8v-1.6Z" stroke="#1C1B1F" strokeWidth="2" strokeLinejoin="round"/></svg>
-    });
-
-    ToiletRegular.displayName = "ToiletRegular";
-
-    export default ToiletRegular;
-    
+export default ToiletRegular;

@@ -1,17 +1,39 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const CheckSquareRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="m22 12.727-8 7.637-4-3.819"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+        <path
+          d="M4 4h24v24H4V4Z"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const CheckSquareRegular =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+CheckSquareRegular.displayName = "CheckSquareRegular";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="m22 12.727-8 7.637-4-3.819" stroke="#1C1B1F" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/><path d="M4 4h24v24H4V4Z" stroke="#1C1B1F" strokeWidth="2" strokeLinejoin="round"/></svg>
-    });
-
-    CheckSquareRegular.displayName = "CheckSquareRegular";
-
-    export default CheckSquareRegular;
-    
+export default CheckSquareRegular;

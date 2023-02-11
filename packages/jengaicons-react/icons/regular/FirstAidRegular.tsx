@@ -1,17 +1,32 @@
+import * as React from "react";
+import { forwardRef } from "react";
+import type { SVGSVGElement } from "react";
+import type { JengaIconProps } from "../../src/base";
 
-    import * as React from 'react'
-    import { forwardRef } from 'react'
-    import type { SVGSVGElement } from 'react'
-    import type { JengaIconProps } from '../../src/base'
+const FirstAidRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size = 32 } = props;
 
+    return (
+      <svg
+        style={{ width: size, height: size }}
+        ref={ref}
+        fill="none"
+        xmlns="http://www.w3.org/2000/svg"
+        viewBox="0 0 32 32"
+        {...props}
+      >
+        <path
+          d="M12.056 11.888V4.112h8.168v7.776H28v7.888h-7.776v8.112h-8.168v-8.112H4v-7.888h8.056Z"
+          stroke="#1C1B1F"
+          strokeWidth="2"
+          strokeLinejoin="round"
+        />
+      </svg>
+    );
+  }
+);
 
-    const FirstAidRegular =  forwardRef<SVGSVGElement, JengaIconProps>(( props, ref )=>{
-        const { size = 32} = props;
+FirstAidRegular.displayName = "FirstAidRegular";
 
-        return  <svg style={{width: size, height: size}} ref={ref} fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M12.056 11.888V4.112h8.168v7.776H28v7.888h-7.776v8.112h-8.168v-8.112H4v-7.888h8.056Z" stroke="#1C1B1F" strokeWidth="2" strokeLinejoin="round"/></svg>
-    });
-
-    FirstAidRegular.displayName = "FirstAidRegular";
-
-    export default FirstAidRegular;
-    
+export default FirstAidRegular;
