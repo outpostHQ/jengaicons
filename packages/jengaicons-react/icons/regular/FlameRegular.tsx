@@ -1,4 +1,52 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const FlameRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M25.6 18.9c0-8.64-9.6-14.4-9.6-14.4s-9.6 5.76-9.6 14.4a9.6 9.6 0 1 0 19.2 0Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M11.2 23.7a4.8 4.8 0 1 0 9.6 0c0-4.8-4.8-7.68-4.8-7.68s-4.8 2.88-4.8 7.68Z" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const FlameRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
+  const { size, color, alt, children, mirrored } = props;
+
+  const {
+    alt: altCtx,
+    children: childrenCtx,
+    color: colorCtx,
+    mirrored: mirroredCtx,
+    size: sizeCtx,
+  } = useContext(JengaIconContext);
+
+  return (
+    <svg
+      width={size || sizeCtx || 32}
+      height={size || sizeCtx || 32}
+      transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 32 32"
+    >
+      {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+      <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M25.6 18.9c0-8.64-9.6-14.4-9.6-14.4s-9.6 5.76-9.6 14.4a9.6 9.6 0 1 0 19.2 0Z"
+      />
+      <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="M11.2 23.7a4.8 4.8 0 1 0 9.6 0c0-4.8-4.8-7.68-4.8-7.68s-4.8 2.88-4.8 7.68Z"
+      />
+
+      {children || childrenCtx}
+    </svg>
+  );
+});
+
+FlameRegular.displayName = "FlameRegular";
+
 export default FlameRegular;

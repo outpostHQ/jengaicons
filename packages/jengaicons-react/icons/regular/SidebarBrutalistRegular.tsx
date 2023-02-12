@@ -1,4 +1,69 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const SidebarBrutalistRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M11 6.5v20" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M4 6.5h24v20H4z" /><path d="M21.837 14.99V12.58a.5.5 0 0 0-.5-.5H15.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /><rect x={17.666} y={14.864} width={6.957} height={6.977} rx={0.5} stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const SidebarBrutalistRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
+
+    return (
+      <svg
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11 6.5v20"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 6.5h24v20H4z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21.837 14.99V12.58a.5.5 0 0 0-.5-.5H15.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
+        />
+        <rect
+          width="6.957"
+          height="6.977"
+          x="17.666"
+          y="14.864"
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
+          rx=".5"
+        />
+
+        {children || childrenCtx}
+      </svg>
+    );
+  }
+);
+
+SidebarBrutalistRegular.displayName = "SidebarBrutalistRegular";
+
 export default SidebarBrutalistRegular;

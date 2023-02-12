@@ -1,4 +1,44 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const StampFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M14.822 17.143 12.473 6.3a3 3 0 0 1 2.932-3.635h3.589a3 3 0 0 1 2.904 3.752l-2.779 10.726h8.595a1 1 0 0 1 1 1v5.48a1 1 0 0 1-1 1H6.206a1 1 0 0 1-1-1v-5.48a1 1 0 0 1 1-1h8.615Zm-9.615 11.39a1 1 0 0 1 1-1h21.506a1 1 0 1 1 0 2H6.207a1 1 0 0 1-1-1Z" fill="#1C1B1F" /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const StampFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
+  const { size, color, alt, children, mirrored } = props;
+
+  const {
+    alt: altCtx,
+    children: childrenCtx,
+    color: colorCtx,
+    mirrored: mirroredCtx,
+    size: sizeCtx,
+  } = useContext(JengaIconContext);
+
+  return (
+    <svg
+      width={size || sizeCtx || 32}
+      height={size || sizeCtx || 32}
+      transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 32 32"
+    >
+      {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+      <path
+        fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M14.822 17.143 12.473 6.3a3 3 0 0 1 2.932-3.635h3.589a3 3 0 0 1 2.904 3.752l-2.779 10.726h8.595a1 1 0 0 1 1 1v5.48a1 1 0 0 1-1 1H6.206a1 1 0 0 1-1-1v-5.48a1 1 0 0 1 1-1h8.615Zm-9.615 11.39a1 1 0 0 1 1-1h21.506a1 1 0 1 1 0 2H6.207a1 1 0 0 1-1-1Z"
+        clip-rule="evenodd"
+      />
+
+      {children || childrenCtx}
+    </svg>
+  );
+});
+
+StampFill.displayName = "StampFill";
+
 export default StampFill;

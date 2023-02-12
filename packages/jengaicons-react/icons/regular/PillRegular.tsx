@@ -1,4 +1,53 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const PillRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="m12.573 12.568 6.859 6.859M19.44 14.29l2.616-2.527" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><rect width={24.245} height={9.696} rx={4.848} transform="scale(-1 1) rotate(45 -15.4 -23.523)" stroke="#1C1B1F" strokeWidth={2} /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const PillRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
+  const { size, color, alt, children, mirrored } = props;
+
+  const {
+    alt: altCtx,
+    children: childrenCtx,
+    color: colorCtx,
+    mirrored: mirroredCtx,
+    size: sizeCtx,
+  } = useContext(JengaIconContext);
+
+  return (
+    <svg
+      width={size || sizeCtx || 32}
+      height={size || sizeCtx || 32}
+      transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 32 32"
+    >
+      {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+      <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m12.573 12.568 6.859 6.859M19.44 14.29l2.616-2.527"
+      />
+      <rect
+        width="24.245"
+        height="9.696"
+        stroke={color || colorCtx || "#000000"}
+        strokeWidth="2"
+        rx="4.848"
+        transform="scale(-1 1) rotate(45 -15.4 -23.523)"
+      />
+
+      {children || childrenCtx}
+    </svg>
+  );
+});
+
+PillRegular.displayName = "PillRegular";
+
 export default PillRegular;

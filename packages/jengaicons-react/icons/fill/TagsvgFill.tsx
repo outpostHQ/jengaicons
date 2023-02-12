@@ -1,4 +1,44 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const TagsvgFill = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path fillRule="evenodd" clipRule="evenodd" d="M17.437 28.139 5.106 15.808a.498.498 0 0 1-.138-.44l1.634-9.2a.498.498 0 0 1 .41-.405l9.036-1.475a.498.498 0 0 1 .432.14L28.814 16.76a.498.498 0 0 1 0 .704L18.141 28.14a.498.498 0 0 1-.704 0ZM12.835 9.233a1.36 1.36 0 1 1-2.72 0 1.36 1.36 0 0 1 2.72 0Z" fill="#1C1B1F" /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const TagsvgFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
+  const { size, color, alt, children, mirrored } = props;
+
+  const {
+    alt: altCtx,
+    children: childrenCtx,
+    color: colorCtx,
+    mirrored: mirroredCtx,
+    size: sizeCtx,
+  } = useContext(JengaIconContext);
+
+  return (
+    <svg
+      width={size || sizeCtx || 32}
+      height={size || sizeCtx || 32}
+      transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+      ref={ref}
+      xmlns="http://www.w3.org/2000/svg"
+      fill="none"
+      viewBox="0 0 32 32"
+    >
+      {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+      <path
+        fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M17.437 28.139 5.106 15.808a.498.498 0 0 1-.138-.44l1.634-9.2a.498.498 0 0 1 .41-.405l9.036-1.475a.498.498 0 0 1 .432.14L28.814 16.76a.498.498 0 0 1 0 .704L18.141 28.14a.498.498 0 0 1-.704 0ZM12.835 9.233a1.36 1.36 0 1 1-2.72 0 1.36 1.36 0 0 1 2.72 0Z"
+        clip-rule="evenodd"
+      />
+
+      {children || childrenCtx}
+    </svg>
+  );
+});
+
+TagsvgFill.displayName = "TagsvgFill";
+
 export default TagsvgFill;

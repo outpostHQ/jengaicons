@@ -5,6 +5,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
+    "build": "pnpm write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react --output-folder-name icons",
     "write-icons": "ts-node index"
   },
   "keywords": [],
@@ -12,7 +13,11 @@
   "license": "ISC",
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "typescript": "^4.9.5"
+    "@types/prettier": "2.7.2",
+    "prettier": "2.8.4",
+    "svgson": "5.2.1",
+    "typescript": "^4.9.5",
+    "generate-optimized": "workspace:*"
   },
   "dependencies": {
     "@svgr/core": "^6.5.1",

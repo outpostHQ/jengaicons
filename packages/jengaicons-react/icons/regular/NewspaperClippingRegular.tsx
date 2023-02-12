@@ -1,4 +1,59 @@
 import * as React from "react";
-import { SVGProps } from "react";
-const NewspaperClippingRegular = (props: SVGProps<SVGSVGElement>) => <svg width="32" height="32" fill="none" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32" {...props}><path d="M18 14.099h6M18 18.099h6" stroke="#1C1B1F" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round" /><path d="M28 6.099H4V26.9l3.885-1.941 3.95 1.941 4.286-1.941 3.817 1.941 4.151-1.941L28 26.9V6.1Z" stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" /><path stroke="#1C1B1F" strokeWidth={2} strokeLinejoin="round" d="M8 12.099h6v8H8z" /></svg>;
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const NewspaperClippingRegular = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
+
+    return (
+      <svg
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M18 14.099h6M18 18.099h6"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 6.099H4V26.9l3.885-1.941 3.95 1.941 4.286-1.941 3.817 1.941 4.151-1.941L28 26.9V6.1Z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M8 12.099h6v8H8z"
+        />
+
+        {children || childrenCtx}
+      </svg>
+    );
+  }
+);
+
+NewspaperClippingRegular.displayName = "NewspaperClippingRegular";
+
 export default NewspaperClippingRegular;
