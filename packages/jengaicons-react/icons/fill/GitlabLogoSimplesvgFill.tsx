@@ -22,19 +22,19 @@ const GitlabLogoSimplesvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M22.172 13.215h-10.12l-3.716-7.43-3.459 12.81 12.299 8.456 11.786-8.456-3.587-12.81-3.203 7.43Z"
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.172 13.215h-10.12l-3.716-7.43-3.459 12.81 12.299 8.456 11.786-8.456-3.587-12.81-3.203 7.43Z"
         />
 
         {children || childrenCtx}

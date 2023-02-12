@@ -22,24 +22,24 @@ const VideoCameraSlashRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M22 23.786H9a5 5 0 0 1-5-5V9.214h5.3m5.71 0H17a5 5 0 0 1 5 5v3.38M5.09 4.5l21.82 24"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22 23.786H9a5 5 0 0 1-5-5V9.214h5.3m5.71 0H17a5 5 0 0 1 5 5v3.38M5.09 4.5l21.82 24"
         />
         <path
-          d="M28 21.643V11.357l-6 3.806v2.674l6 3.806Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 21.643V11.357l-6 3.806v2.674l6 3.806Z"
         />
 
         {children || childrenCtx}

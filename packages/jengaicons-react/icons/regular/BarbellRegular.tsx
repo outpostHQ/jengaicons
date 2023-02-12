@@ -22,23 +22,23 @@ const BarbellRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M12.8 16h6.4M26.4 16H28M4 16h1.6"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12.8 16h6.4M26.4 16H28M4 16h1.6"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M8.8 8.8h4v14.4h-4zM19.2 8.8h4v14.4h-4zM23.2 11.2h3.2v9.6h-3.2zM5.6 11.2h3.2v9.6H5.6z"
         />
 

@@ -22,17 +22,17 @@ const FolderSimplePlusFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M17.35 10.744h10.61a1 1 0 0 1 1 1v12.77a1 1 0 0 1-1 1h-22a1 1 0 0 1-1-1V8.052a1 1 0 0 1 1-1h6.609a1 1 0 0 1 .678.265l3.426 3.162a1 1 0 0 0 .678.265Zm-.39 3.039a1 1 0 0 1 1 1v2h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M17.35 10.744h10.61a1 1 0 0 1 1 1v12.77a1 1 0 0 1-1 1h-22a1 1 0 0 1-1-1V8.052a1 1 0 0 1 1-1h6.609a1 1 0 0 1 .678.265l3.426 3.162a1 1 0 0 0 .678.265Zm-.39 3.039a1 1 0 0 1 1 1v2h2a1 1 0 0 1 0 2h-2v2a1 1 0 0 1-2 0v-2h-2a1 1 0 1 1 0-2h2v-2a1 1 0 0 1 1-1Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

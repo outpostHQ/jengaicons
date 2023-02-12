@@ -22,17 +22,17 @@ const AlignTopSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M7.32 5.283a1 1 0 0 1 0-2H24.6a1 1 0 1 1 0 2H7.32Zm4.84 23a1 1 0 0 1-1-1V9.123a1 1 0 0 1 1-1h7.6a1 1 0 0 1 1 1v18.16a1 1 0 0 1-1 1h-7.6Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M7.32 5.283a1 1 0 0 1 0-2H24.6a1 1 0 1 1 0 2H7.32Zm4.84 23a1 1 0 0 1-1-1V9.123a1 1 0 0 1 1-1h7.6a1 1 0 0 1 1 1v18.16a1 1 0 0 1-1 1h-7.6Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

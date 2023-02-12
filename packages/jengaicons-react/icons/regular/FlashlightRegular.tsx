@@ -22,18 +22,18 @@ const FlashlightRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.02 15.254v3.797M8.588 10.081h14.824M11.14 24h9.541M23.412 4H8.588v6.177l2.404 3.573V28h9.796V13.75l2.624-3.573V4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.02 15.254v3.797M8.588 10.081h14.824M11.14 24h9.541M23.412 4H8.588v6.177l2.404 3.573V28h9.796V13.75l2.624-3.573V4Z"
         />
 
         {children || childrenCtx}

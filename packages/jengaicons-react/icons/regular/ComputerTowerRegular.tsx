@@ -22,28 +22,28 @@ const ComputerTowerRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M20 9h-8M20 13h-8"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path
-          d="M16 24a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          fill={color || colorCtx || "#000000"}
-        />
-        <path
-          d="M7 4h18v24H7V4Z"
-          stroke={color || colorCtx || "#000000"}
           strokeWidth="2"
+          d="M20 9h-8M20 13h-8"
+        />
+        <path
+          fill={color || colorCtx || "#000000"}
+          d="M16 24a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7 4h18v24H7V4Z"
         />
 
         {children || childrenCtx}

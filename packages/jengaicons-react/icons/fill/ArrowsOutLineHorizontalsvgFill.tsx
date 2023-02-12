@@ -24,18 +24,18 @@ const ArrowsOutLineHorizontalsvgFill = forwardRef<
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16.96 6.283v20M4.811 16.283h8M9.054 12.038l-4.243 4.243 4.243 4.243M24.688 12.038l4.243 4.243-4.482 3.99M28.688 16.281h-8"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16.96 6.283v20M4.811 16.283h8M9.054 12.038l-4.243 4.243 4.243 4.243M24.688 12.038l4.243 4.243-4.482 3.99M28.688 16.281h-8"
       />
 
       {children || childrenCtx}

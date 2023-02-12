@@ -22,25 +22,25 @@ const ArrowULeftUpRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M25.121 10v11a7 7 0 0 1-7 7h0a7.002 7.002 0 0 1-7-7V4"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M25.121 10v11a7 7 0 0 1-7 7h0a7.002 7.002 0 0 1-7-7V4"
         />
         <path
-          d="M6.879 8.243 11.12 4l4.243 4.243"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6.879 8.243 11.12 4l4.243 4.243"
         />
 
         {children || childrenCtx}

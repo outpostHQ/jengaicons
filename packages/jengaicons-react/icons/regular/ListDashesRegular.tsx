@@ -22,18 +22,18 @@ const ListDashesRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M12.364 8.727H26M12.364 16H26M12.364 23.273H26M6 8.727h1.818M6 16h1.818M6 23.273h1.818"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12.364 8.727H26M12.364 16H26M12.364 23.273H26M6 8.727h1.818M6 16h1.818M6 23.273h1.818"
         />
 
         {children || childrenCtx}

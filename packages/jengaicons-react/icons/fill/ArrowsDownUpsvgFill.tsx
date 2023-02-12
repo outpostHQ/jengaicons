@@ -22,18 +22,18 @@ const ArrowsDownUpsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M9.765 4.283v24M25.2 28.283v-24M20.931 8.603l4.218-4.268 4.217 4.268M5.497 23.963l4.217 4.268 4.217-4.268"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9.765 4.283v24M25.2 28.283v-24M20.931 8.603l4.218-4.268 4.217 4.268M5.497 23.963l4.217 4.268 4.217-4.268"
         />
 
         {children || childrenCtx}

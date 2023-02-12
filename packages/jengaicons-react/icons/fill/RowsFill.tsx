@@ -21,17 +21,17 @@ const RowsFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        fillRule="evenodd"
-        clip-rule="evenodd"
-        d="M5.96 6.465a1 1 0 0 0-1 1V13.1a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V7.465a1 1 0 0 0-1-1h-22Zm0 12a1 1 0 0 0-1 1V25.1a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-5.636a1 1 0 0 0-1-1h-22Z"
         fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M5.96 6.465a1 1 0 0 0-1 1V13.1a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V7.465a1 1 0 0 0-1-1h-22Zm0 12a1 1 0 0 0-1 1V25.1a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-5.636a1 1 0 0 0-1-1h-22Z"
+        clip-rule="evenodd"
       />
 
       {children || childrenCtx}

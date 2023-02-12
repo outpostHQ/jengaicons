@@ -22,18 +22,18 @@ const NumberNineRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M21.051 14.75 14.307 26M16 17.667A5.833 5.833 0 1 0 16 6a5.833 5.833 0 0 0 0 11.667Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21.051 14.75 14.307 26M16 17.667A5.833 5.833 0 1 0 16 6a5.833 5.833 0 0 0 0 11.667Z"
         />
 
         {children || childrenCtx}

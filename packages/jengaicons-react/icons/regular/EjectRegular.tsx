@@ -21,16 +21,16 @@ const EjectRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
         d="M4 22.787h24v5.455H4zM15.845 4.759 27.69 18.423H4L15.845 4.76Z"
       />
 

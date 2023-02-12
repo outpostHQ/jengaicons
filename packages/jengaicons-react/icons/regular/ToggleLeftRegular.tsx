@@ -22,24 +22,24 @@ const ToggleLeftRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.858 19.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.858 19.75a3.75 3.75 0 1 0 0-7.5 3.75 3.75 0 0 0 0 7.5Z"
         />
         <path
-          d="M4 16a6.857 6.857 0 0 1 6.857-6.857h10.286a6.857 6.857 0 1 1 0 13.714H10.857A6.857 6.857 0 0 1 4 16Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 16a6.857 6.857 0 0 1 6.857-6.857h10.286a6.857 6.857 0 1 1 0 13.714H10.857A6.857 6.857 0 0 1 4 16Z"
         />
 
         {children || childrenCtx}

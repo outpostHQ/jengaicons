@@ -22,25 +22,25 @@ const ArrowBendDoubleUpLeftRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28 24.121a12 12 0 0 0-12-12h-6"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 24.121a12 12 0 0 0-12-12h-6"
         />
         <path
-          d="M14.243 7.879 10 12.12l4.243 4.243M8.243 7.879 4 12.12l4.243 4.243"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M14.243 7.879 10 12.12l4.243 4.243M8.243 7.879 4 12.12l4.243 4.243"
         />
 
         {children || childrenCtx}

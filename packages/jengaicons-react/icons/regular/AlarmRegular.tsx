@@ -21,31 +21,31 @@ const AlarmRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M16 10.715v6.6h6.6"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
       <path
-        d="M16 27.685c5.728 0 10.37-4.643 10.37-10.37 0-5.728-4.642-10.371-10.37-10.371-5.728 0-10.37 4.643-10.37 10.37 0 5.728 4.642 10.371 10.37 10.371Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeMiterlimit="10"
+        strokeWidth="2"
+        d="M16 27.685c5.728 0 10.37-4.643 10.37-10.37 0-5.728-4.642-10.371-10.37-10.371-5.728 0-10.37 4.643-10.37 10.37 0 5.728 4.642 10.371 10.37 10.371Z"
       />
       <path
-        d="m24 5.315 4 4M4 9.315l4-4"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="m24 5.315 4 4M4 9.315l4-4"
       />
 
       {children || childrenCtx}

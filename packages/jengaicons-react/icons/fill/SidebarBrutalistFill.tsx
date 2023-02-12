@@ -22,51 +22,51 @@ const SidebarBrutalistFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M11.96 6.283v20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.96 6.283v20"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4.96 6.283h24v20h-24z"
         />
         <path
-          d="M12 6.283v20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 6.283v20"
         />
         <path
           fill={color || colorCtx || "#000000"}
           d="M4.96 6.283H12v20H4.96z"
         />
         <path
-          d="M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
         />
         <rect
-          x="18.666"
-          y="14.864"
           width="6.957"
           height="6.977"
-          rx=".5"
+          x="18.666"
+          y="14.864"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          rx=".5"
         />
 
         {children || childrenCtx}

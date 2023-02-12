@@ -21,17 +21,17 @@ const ExpandFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M4.96 27.166 27.844 4.283M13.704 28.283 28.96 13.028"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
+        strokeWidth="2"
+        d="M4.96 27.166 27.844 4.283M13.704 28.283 28.96 13.028"
       />
 
       {children || childrenCtx}

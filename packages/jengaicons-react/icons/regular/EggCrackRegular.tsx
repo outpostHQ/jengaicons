@@ -22,24 +22,24 @@ const EggCrackRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M25.23 18.77a9.23 9.23 0 1 1-18.46 0C6.77 11.384 12.307 4 16 4s9.23 7.385 9.23 14.77Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M25.23 18.77a9.23 9.23 0 1 1-18.46 0C6.77 11.384 12.307 4 16 4s9.23 7.385 9.23 14.77Z"
         />
         <path
-          d="m21.09 7.546-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="m21.09 7.546-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45"
         />
 
         {children || childrenCtx}

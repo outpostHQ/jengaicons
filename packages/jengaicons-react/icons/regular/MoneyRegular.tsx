@@ -21,23 +21,23 @@ const MoneyRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16 19.428a3.429 3.429 0 1 0 0-6.857 3.429 3.429 0 0 0 0 6.857ZM21.143 9.143l6.857 6M21.143 22.857l6.857-6M10.857 9.143l-6.857 6M10.857 22.857l-6.857-6"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16 19.428a3.429 3.429 0 1 0 0-6.857 3.429 3.429 0 0 0 0 6.857ZM21.143 9.143l6.857 6M21.143 22.857l6.857-6M10.857 9.143l-6.857 6M10.857 22.857l-6.857-6"
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
         d="M4 9.143h24v13.714H4z"
       />
 

@@ -22,38 +22,38 @@ const FolderUserRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M28 13.016V10H4v16h9.99"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 6h8l4 4H4V6Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M22.994 21.994a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
-          d="M27 26a4.006 4.006 0 0 0-8.013 0"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M27 26a4.006 4.006 0 0 0-8.013 0"
         />
 
         {children || childrenCtx}

@@ -22,30 +22,30 @@ const HourglassHighRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.75 4.5h16.5v.812a10 10 0 0 1-4 8L16 16.5l-4.25-3.188a10 10 0 0 1-4-8V4.5Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.75 4.5h16.5v.812a10 10 0 0 1-4 8L16 16.5l-4.25-3.188a10 10 0 0 1-4-8V4.5Z"
         />
         <path
-          d="M8.396 8.5h15.208"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M8.396 8.5h15.208"
         />
         <path
-          d="M7.75 28.5h16.5v-.812a10 10 0 0 0-4-8L16 16.5l-4.25 3.188a10 10 0 0 0-4 8v.812Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.75 28.5h16.5v-.812a10 10 0 0 0-4-8L16 16.5l-4.25 3.188a10 10 0 0 0-4 8v.812Z"
         />
 
         {children || childrenCtx}

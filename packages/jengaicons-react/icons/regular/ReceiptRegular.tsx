@@ -22,18 +22,18 @@ const ReceiptRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M9.5 13h13M9.5 17h13M4 26V7a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v19l-4-2-4 2-4-2-4 2-4-2-4 2Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9.5 13h13M9.5 17h13M4 26V7a1 1 0 0 1 1-1h22a1 1 0 0 1 1 1v19l-4-2-4 2-4-2-4 2-4-2-4 2Z"
         />
 
         {children || childrenCtx}

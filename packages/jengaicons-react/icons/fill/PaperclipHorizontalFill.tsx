@@ -22,17 +22,17 @@ const PaperclipHorizontalFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.846 18.04h12.867c.966 0 1.75-.782 1.75-1.748v0c0-.966-.784-1.749-1.75-1.749H8.45a3.489 3.489 0 0 0-3.489 3.489v0a3.489 3.489 0 0 0 3.489 3.488h15.273a5.238 5.238 0 0 0 5.238-5.237v0a5.238 5.238 0 0 0-5.238-5.238H11.62"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M10.846 18.04h12.867c.966 0 1.75-.782 1.75-1.748v0c0-.966-.784-1.749-1.75-1.749H8.45a3.489 3.489 0 0 0-3.489 3.489v0a3.489 3.489 0 0 0 3.489 3.488h15.273a5.238 5.238 0 0 0 5.238-5.237v0a5.238 5.238 0 0 0-5.238-5.238H11.62"
         />
 
         {children || childrenCtx}

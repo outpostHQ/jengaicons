@@ -22,18 +22,18 @@ const AppStoreLogosvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m19.106 14.59 7.085 11.988M14.19 6.27l2.77 4.685M8.826 24.732l-1.097 1.846M19.73 6.27l-8.724 14.77M22.914 21.04h6.046M4.96 21.04h13.673"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m19.106 14.59 7.085 11.988M14.19 6.27l2.77 4.685M8.826 24.732l-1.097 1.846M19.73 6.27l-8.724 14.77M22.914 21.04h6.046M4.96 21.04h13.673"
         />
 
         {children || childrenCtx}

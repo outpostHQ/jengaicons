@@ -22,18 +22,18 @@ const ListChecksRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M15.973 16H26M15.973 8.708H26M15.973 23.293H26M6 8.807l1.95 1.95 4.1-4.1M6 16.1l1.95 1.95 4.1-4.1M6 23.392l1.95 1.95 4.1-4.1"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.973 16H26M15.973 8.708H26M15.973 23.293H26M6 8.807l1.95 1.95 4.1-4.1M6 16.1l1.95 1.95 4.1-4.1M6 23.392l1.95 1.95 4.1-4.1"
         />
 
         {children || childrenCtx}

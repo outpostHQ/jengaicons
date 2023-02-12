@@ -22,29 +22,29 @@ const PhosphorLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m7.515 4 8 16"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m7.515 4 8 16"
         />
         <path
-          d="M7.515 4.12v15.97a.1.1 0 0 0 .1.1H16.4a8.085 8.085 0 1 0 0-16.17H7.615a.1.1 0 0 0-.1.1Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M7.515 4.12v15.97a.1.1 0 0 0 .1.1H16.4a8.085 8.085 0 1 0 0-16.17H7.615a.1.1 0 0 0-.1.1Z"
         />
         <path
-          d="M7.515 20.19a7.81 7.81 0 0 0 7.81 7.81h.15a.04.04 0 0 0 .04-.04V4.21"
           stroke={color || colorCtx || "#000000"}
           strokeWidth="2"
+          d="M7.515 20.19a7.81 7.81 0 0 0 7.81 7.81h.15a.04.04 0 0 0 .04-.04V4.21"
         />
 
         {children || childrenCtx}

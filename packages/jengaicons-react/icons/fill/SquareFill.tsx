@@ -21,19 +21,19 @@ const SquareFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <rect
-        x="4.96"
-        y="4.283"
         width="24"
         height="24"
-        rx="1"
+        x="4.96"
+        y="4.283"
         fill={color || colorCtx || "#000000"}
+        rx="1"
       />
 
       {children || childrenCtx}

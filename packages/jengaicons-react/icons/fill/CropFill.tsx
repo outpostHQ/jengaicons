@@ -21,25 +21,25 @@ const CropFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M9.574 8.899H4.96M9.576 4.283v19.385H28.96"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9.574 8.899H4.96M9.576 4.283v19.385H28.96"
       />
       <path
-        d="M24.345 19.976V8.899H13.267M24.344 28.283v-4.616"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M24.345 19.976V8.899H13.267M24.344 28.283v-4.616"
       />
 
       {children || childrenCtx}

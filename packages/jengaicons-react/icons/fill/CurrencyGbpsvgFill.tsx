@@ -22,18 +22,18 @@ const CurrencyGbpsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M9.341 17.235h9.524M24.58 26.283H9.34a4.286 4.286 0 0 0 4.286-4.286V11.521a5.238 5.238 0 0 1 8.942-3.704"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9.341 17.235h9.524M24.58 26.283H9.34a4.286 4.286 0 0 0 4.286-4.286V11.521a5.238 5.238 0 0 1 8.942-3.704"
         />
 
         {children || childrenCtx}

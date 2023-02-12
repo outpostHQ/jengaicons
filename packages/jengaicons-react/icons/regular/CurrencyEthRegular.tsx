@@ -22,25 +22,25 @@ const CurrencyEthRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.054 4.405v22.686M6.667 15.636 16 4l9.333 11.636L16 28 6.666 15.636Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.054 4.405v22.686M6.667 15.636 16 4l9.333 11.636L16 28 6.666 15.636Z"
         />
         <path
-          d="m6.927 15.74 9.116 4.198 9.155-4.198"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m6.927 15.74 9.116 4.198 9.155-4.198"
         />
 
         {children || childrenCtx}

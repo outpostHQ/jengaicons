@@ -22,24 +22,24 @@ const PaperPlaneRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 22.98v-7.486"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 22.98v-7.486"
         />
         <path
-          d="M15.995 5.183 4 26.817l12-3.743 12 3.743L15.995 5.183Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.995 5.183 4 26.817l12-3.743 12 3.743L15.995 5.183Z"
         />
 
         {children || childrenCtx}

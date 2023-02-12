@@ -22,22 +22,22 @@ const ArrowFatLinesDownsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6.167 16.283a.5.5 0 0 0-.353.854l10.793 10.792a.5.5 0 0 0 .707 0l10.793-10.792a.5.5 0 0 0-.354-.854H23.46a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-.5.5H6.167Z"
           fill={color || colorCtx || "#000000"}
+          d="M6.167 16.283a.5.5 0 0 0-.353.854l10.793 10.792a.5.5 0 0 0 .707 0l10.793-10.792a.5.5 0 0 0-.354-.854H23.46a.5.5 0 0 1-.5-.5v-3a.5.5 0 0 0-.5-.5h-11a.5.5 0 0 0-.5.5v3a.5.5 0 0 1-.5.5H6.167Z"
         />
         <path
-          d="M22.96 4.283h-12M22.96 8.283h-12"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.96 4.283h-12M22.96 8.283h-12"
         />
 
         {children || childrenCtx}

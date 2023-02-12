@@ -22,34 +22,34 @@ const ResponsiveRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M15.467 22.743h12.535V4H9.092v12.498"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.467 22.743h12.535V4H9.092v12.498"
         />
         <rect
-          x="3.998"
-          y="16.537"
           width="11.43"
           height="11.463"
-          rx=".5"
+          x="3.998"
+          y="16.537"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          rx=".5"
         />
         <path
-          d="M17.166 8.36h6.616v6.615M15.404 16.737l8.377-8.377"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M17.166 8.36h6.616v6.615M15.404 16.737l8.377-8.377"
         />
 
         {children || childrenCtx}

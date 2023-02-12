@@ -22,28 +22,28 @@ const BatteryWarningRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28 12.51v6.98M14.036 11v5"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path
-          d="M14.036 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          fill={color || colorCtx || "#000000"}
-        />
-        <path
-          d="M4 8.145h20.073v15.71H4V8.145Z"
-          stroke={color || colorCtx || "#000000"}
           strokeWidth="2"
+          d="M28 12.51v6.98M14.036 11v5"
+        />
+        <path
+          fill={color || colorCtx || "#000000"}
+          d="M14.036 22a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 8.145h20.073v15.71H4V8.145Z"
         />
 
         {children || childrenCtx}

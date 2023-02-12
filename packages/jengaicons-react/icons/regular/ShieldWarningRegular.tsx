@@ -22,28 +22,28 @@ const ShieldWarningRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 10.522v5"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path
-          d="M16 21.522a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          fill={color || colorCtx || "#000000"}
-        />
-        <path
-          d="M27.424 14.627V4H4.576v10.627C4.576 21.692 8.639 24.238 16 28c7.176-3.298 11.424-6.122 11.424-13.373Z"
-          stroke={color || colorCtx || "#000000"}
           strokeWidth="2"
+          d="M16 10.522v5"
+        />
+        <path
+          fill={color || colorCtx || "#000000"}
+          d="M16 21.522a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M27.424 14.627V4H4.576v10.627C4.576 21.692 8.639 24.238 16 28c7.176-3.298 11.424-6.122 11.424-13.373Z"
         />
 
         {children || childrenCtx}

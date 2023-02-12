@@ -22,31 +22,31 @@ const MicrosoftExcelLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M20 12h7M20 20h7M18 23v5M18 4v5M10.25 13l4.5 6M14.75 13l-4.5 6"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20 12h7M20 20h7M18 23v5M18 4v5M10.25 13l4.5 6M14.75 13l-4.5 6"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M5 9h15v14H5z"
         />
         <path
-          d="M9 8.903V4h18v24H9v-4.952"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9 8.903V4h18v24H9v-4.952"
         />
 
         {children || childrenCtx}

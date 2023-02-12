@@ -22,31 +22,31 @@ const SidebarPlayfulFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <rect
-          x="15.683"
-          y="14.724"
           width="5.165"
           height="5.165"
+          x="15.683"
+          y="14.724"
+          fill={color || colorCtx || "#000000"}
           rx=".5"
           transform="rotate(-60 15.683 14.724)"
-          fill={color || colorCtx || "#000000"}
         />
         <path
+          fill={color || colorCtx || "#000000"}
           d="M23.948 19.191a.5.5 0 0 1 .837-.224l4.845 4.846a.5.5 0 0 1-.224.837l-6.62 1.773a.5.5 0 0 1-.612-.612l1.774-6.62Z"
-          fill={color || colorCtx || "#000000"}
         />
         <path
-          d="M28.96 19.073V6.283h-24v20h15.17M12 6.5v19.784"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28.96 19.073V6.283h-24v20h15.17M12 6.5v19.784"
         />
         <path
           fill={color || colorCtx || "#000000"}

@@ -22,24 +22,24 @@ const UmbrellaSimpleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M4 17.037c0-6.627 5.373-12 12-12s12 5.373 12 12v.732H4v-.732Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 17.037c0-6.627 5.373-12 12-12s12 5.373 12 12v.732H4v-.732Z"
         />
         <path
-          d="M16.01 17.898v7.297a2.768 2.768 0 0 0 2.768 2.768v0a2.768 2.768 0 0 0 2.768-2.768v-.252"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.01 17.898v7.297a2.768 2.768 0 0 0 2.768 2.768v0a2.768 2.768 0 0 0 2.768-2.768v-.252"
         />
 
         {children || childrenCtx}

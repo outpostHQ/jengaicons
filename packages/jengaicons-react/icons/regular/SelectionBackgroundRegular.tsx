@@ -22,26 +22,26 @@ const SelectionBackgroundRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 10.545h17.454v17.454H4z"
         />
         <path
-          d="M10.545 10.573V4H28v17.454h-6.548"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
+          stroke-dasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          d="M10.545 10.573V4H28v17.454h-6.548"
         />
 
         {children || childrenCtx}

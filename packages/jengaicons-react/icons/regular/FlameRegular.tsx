@@ -21,25 +21,25 @@ const FlameRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M25.6 18.9c0-8.64-9.6-14.4-9.6-14.4s-9.6 5.76-9.6 14.4a9.6 9.6 0 1 0 19.2 0Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M25.6 18.9c0-8.64-9.6-14.4-9.6-14.4s-9.6 5.76-9.6 14.4a9.6 9.6 0 1 0 19.2 0Z"
       />
       <path
-        d="M11.2 23.7a4.8 4.8 0 1 0 9.6 0c0-4.8-4.8-7.68-4.8-7.68s-4.8 2.88-4.8 7.68Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M11.2 23.7a4.8 4.8 0 1 0 9.6 0c0-4.8-4.8-7.68-4.8-7.68s-4.8 2.88-4.8 7.68Z"
       />
 
       {children || childrenCtx}

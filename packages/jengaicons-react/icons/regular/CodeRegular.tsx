@@ -21,18 +21,18 @@ const CodeRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M9 20.243 4.757 16 9 11.757M18.773 8.375l-5.546 15.25M23 11.757 27.243 16 23 20.243"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9 20.243 4.757 16 9 11.757M18.773 8.375l-5.546 15.25M23 11.757 27.243 16 23 20.243"
       />
 
       {children || childrenCtx}

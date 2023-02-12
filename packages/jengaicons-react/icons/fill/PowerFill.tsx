@@ -21,17 +21,17 @@ const PowerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        fillRule="evenodd"
-        clip-rule="evenodd"
-        d="M17.96 7.473a1 1 0 1 0-2 0v7.972a1 1 0 0 0 2 0V7.473Zm-5.49 1.491a1 1 0 0 0-1.09-1.676 10.23 10.23 0 1 0 11.16 0 1 1 0 0 0-1.09 1.676 8.23 8.23 0 1 1-8.98 0Z"
         fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M17.96 7.473a1 1 0 1 0-2 0v7.972a1 1 0 0 0 2 0V7.473Zm-5.49 1.491a1 1 0 0 0-1.09-1.676 10.23 10.23 0 1 0 11.16 0 1 1 0 0 0-1.09 1.676 8.23 8.23 0 1 1-8.98 0Z"
+        clip-rule="evenodd"
       />
 
       {children || childrenCtx}

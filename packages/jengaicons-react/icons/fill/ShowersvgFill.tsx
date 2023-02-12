@@ -22,30 +22,30 @@ const ShowersvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          fill={color || colorCtx || "#000000"}
           d="M9.512 26.628a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483ZM12.408 23.731a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483ZM6.202 23.317a1.241 1.241 0 1 0 0-2.483 1.241 1.241 0 0 0 0 2.483ZM9.098 20.42a1.241 1.241 0 1 0 0-2.482 1.241 1.241 0 0 0 0 2.483Z"
-          fill={color || colorCtx || "#000000"}
         />
         <path
+          fill={color || colorCtx || "#000000"}
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m9.03 11.467 13.31-2.219-2.219 13.31a.828.828 0 0 1-1.401.45L8.58 12.868a.828.828 0 0 1 .45-1.401Z"
-          fill={color || colorCtx || "#000000"}
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
-          d="M28.96 5.938h-2.967a.828.828 0 0 0-.585.242L22.34 9.248"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28.96 5.938h-2.967a.828.828 0 0 0-.585.242L22.34 9.248"
         />
 
         {children || childrenCtx}

@@ -21,24 +21,24 @@ const CopyRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M4 10.546h17.454V28H4V10.546Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M4 10.546h17.454V28H4V10.546Z"
       />
       <path
-        d="M10.546 10.492V4H28v17.454h-6.515"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M10.546 10.492V4H28v17.454h-6.515"
       />
 
       {children || childrenCtx}

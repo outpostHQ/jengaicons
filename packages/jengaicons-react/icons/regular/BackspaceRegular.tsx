@@ -22,18 +22,18 @@ const BackspaceRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m20.598 13.126-5.555 5.556M20.598 18.681l-5.555-5.555M28 6.725H9.714L4 15.956l5.714 9.319H28V6.725Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m20.598 13.126-5.555 5.556M20.598 18.681l-5.555-5.555M28 6.725H9.714L4 15.956l5.714 9.319H28V6.725Z"
         />
 
         {children || childrenCtx}

@@ -22,35 +22,35 @@ const QuotesRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 7.847h9.5v9.5H4z"
         />
         <path
-          d="M13.486 15.54v1.558c0 1.936 0 6.83-5.024 7.055"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M13.486 15.54v1.558c0 1.936 0 6.83-5.024 7.055"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M18.5 7.847H28v9.5h-9.5z"
         />
         <path
-          d="M27.986 15.54v1.558c0 1.936 0 6.83-5.024 7.055"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M27.986 15.54v1.558c0 1.936 0 6.83-5.024 7.055"
         />
 
         {children || childrenCtx}

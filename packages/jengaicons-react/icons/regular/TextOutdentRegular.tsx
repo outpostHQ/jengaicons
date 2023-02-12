@@ -22,18 +22,18 @@ const TextOutdentRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M14.696 16.273H26M14.696 9.317H26M6.87 23.23H26M10.024 16.82 6 12.795l4.024-4.025"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M14.696 16.273H26M14.696 9.317H26M6.87 23.23H26M10.024 16.82 6 12.795l4.024-4.025"
         />
 
         {children || childrenCtx}

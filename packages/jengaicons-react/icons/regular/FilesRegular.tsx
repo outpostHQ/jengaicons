@@ -21,31 +21,31 @@ const FilesRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M11 19h6M11 23h6"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M6 28h16V13.84L16.417 8H6v20Z"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinejoin="round"
       />
       <path
-        d="M10 7.984V4h10.417L26 9.84V24h-3.966"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M10 7.984V4h10.417L26 9.84V24h-3.966"
       />
 
       {children || childrenCtx}

@@ -22,24 +22,24 @@ const BluetoothXRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m5 10 8 6M5 22l8-6M27 7l-6 6M27 13l-6-6M17 7l-4-3v12l4-3"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m5 10 8 6M5 22l8-6M27 7l-6 6M27 13l-6-6M17 7l-4-3v12l4-3"
         />
         <path
-          d="m21 22-8-6v12l8-6Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m21 22-8-6v12l8-6Z"
         />
 
         {children || childrenCtx}

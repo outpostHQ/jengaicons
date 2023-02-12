@@ -22,22 +22,22 @@ const DivideRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 16h20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 16h20"
         />
         <path
-          d="M16 10.546a1.818 1.818 0 1 0 0-3.637 1.818 1.818 0 0 0 0 3.637ZM16 25.091a1.818 1.818 0 1 0 0-3.636 1.818 1.818 0 0 0 0 3.636Z"
           fill={color || colorCtx || "#000000"}
+          d="M16 10.546a1.818 1.818 0 1 0 0-3.637 1.818 1.818 0 0 0 0 3.637ZM16 25.091a1.818 1.818 0 1 0 0-3.636 1.818 1.818 0 0 0 0 3.636Z"
         />
 
         {children || childrenCtx}

@@ -22,18 +22,18 @@ const CornersOutRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.131 4.587H4.087v6.044M22.044 4.587h6.043v6.044M4.087 22.544v6.043h6.044M28.087 22.544v6.043h-6.043"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.131 4.587H4.087v6.044M22.044 4.587h6.043v6.044M4.087 22.544v6.043h6.044M28.087 22.544v6.043h-6.043"
         />
 
         {children || childrenCtx}

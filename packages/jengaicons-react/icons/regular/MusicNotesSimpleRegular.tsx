@@ -22,25 +22,25 @@ const MusicNotesSimpleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M23.681 24.66a3.36 3.36 0 1 0 0-6.722 3.36 3.36 0 0 0 0 6.721ZM8.319 28.5a3.36 3.36 0 1 0 0-6.721 3.36 3.36 0 0 0 0 6.721Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M23.681 24.66a3.36 3.36 0 1 0 0-6.722 3.36 3.36 0 0 0 0 6.721ZM8.319 28.5a3.36 3.36 0 1 0 0-6.721 3.36 3.36 0 0 0 0 6.721Z"
         />
         <path
-          d="M11.68 25.195V8.51L27.041 4.5v16.614"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.68 25.195V8.51L27.041 4.5v16.614"
         />
 
         {children || childrenCtx}

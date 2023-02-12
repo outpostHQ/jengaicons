@@ -22,24 +22,24 @@ const FileArrowDownRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 28h20V11.008L19.021 4H6v24Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 28h20V11.008L19.021 4H6v24Z"
         />
         <path
-          d="M19.09 10.94V4.129l6.818 6.813h-6.819ZM16 15v7.803M12.388 19.192 16 22.803l3.612-3.611"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M19.09 10.94V4.129l6.818 6.813h-6.819ZM16 15v7.803M12.388 19.192 16 22.803l3.612-3.611"
         />
 
         {children || childrenCtx}

@@ -22,15 +22,15 @@ const SpeakerSimpleNoneFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M24.028 26.422V7.179a.5.5 0 0 0-.813-.39l-7.092 5.695h-1.76a4.472 4.472 0 0 0 0 8.944h1.76l7.103 5.392a.5.5 0 0 0 .802-.398Z"
           fill={color || colorCtx || "#000000"}
+          d="M24.028 26.422V7.179a.5.5 0 0 0-.813-.39l-7.092 5.695h-1.76a4.472 4.472 0 0 0 0 8.944h1.76l7.103 5.392a.5.5 0 0 0 .802-.398Z"
         />
 
         {children || childrenCtx}

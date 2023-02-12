@@ -22,24 +22,24 @@ const HeadlightsRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M20.286 21.143H28M20.286 10.857H28M20.286 16H28"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20.286 21.143H28M20.286 10.857H28M20.286 16H28"
         />
         <path
-          d="M11.714 23.714a7.714 7.714 0 1 1 0-15.429h5.143v15.43h-5.143Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.714 23.714a7.714 7.714 0 1 1 0-15.429h5.143v15.43h-5.143Z"
         />
 
         {children || childrenCtx}

@@ -21,23 +21,23 @@ const EjectFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <rect
-        x="4.96"
-        y="23.07"
         width="24"
         height="5.455"
-        rx=".5"
+        x="4.96"
+        y="23.07"
         fill={color || colorCtx || "#000000"}
+        rx=".5"
       />
       <path
-        d="M16.427 5.478a.5.5 0 0 1 .756 0l10.75 12.4a.5.5 0 0 1-.378.828h-21.5a.5.5 0 0 1-.378-.828l10.75-12.4Z"
         fill={color || colorCtx || "#000000"}
+        d="M16.427 5.478a.5.5 0 0 1 .756 0l10.75 12.4a.5.5 0 0 1-.378.828h-21.5a.5.5 0 0 1-.378-.828l10.75-12.4Z"
       />
 
       {children || childrenCtx}

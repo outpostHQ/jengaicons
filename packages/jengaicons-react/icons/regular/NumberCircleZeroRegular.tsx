@@ -22,25 +22,25 @@ const NumberCircleZeroRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 22c2.21 0 4-2.686 4-6s-1.79-6-4-6-4 2.686-4 6 1.79 6 4 6Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 22c2.21 0 4-2.686 4-6s-1.79-6-4-6-4 2.686-4 6 1.79 6 4 6Z"
         />
         <path
-          d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeMiterlimit="10"
           strokeLinejoin="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12Z"
         />
 
         {children || childrenCtx}

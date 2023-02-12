@@ -22,25 +22,25 @@ const BookmarkRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.652 21.74V4h16.696v17.74l-8.306-5.22-8.39 5.22Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.652 21.74V4h16.696v17.74l-8.306-5.22-8.39 5.22Z"
         />
         <path
-          d="M7.652 20.696V28l8.39-5.219L24.348 28v-7.304"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.652 20.696V28l8.39-5.219L24.348 28v-7.304"
         />
 
         {children || childrenCtx}

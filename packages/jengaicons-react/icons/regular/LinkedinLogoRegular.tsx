@@ -22,27 +22,27 @@ const LinkedinLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M14.956 13.913v8.348M10.783 13.913v8.348M14.956 17.565a3.652 3.652 0 0 1 7.305 0v4.696"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M14.956 13.913v8.348M10.783 13.913v8.348M14.956 17.565a3.652 3.652 0 0 1 7.305 0v4.696"
         />
         <path
-          d="M10.783 11.304a1.565 1.565 0 1 0 0-3.13 1.565 1.565 0 0 0 0 3.13Z"
           fill={color || colorCtx || "#000000"}
+          d="M10.783 11.304a1.565 1.565 0 1 0 0-3.13 1.565 1.565 0 0 0 0 3.13Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 4h24v24H4z"
         />
 

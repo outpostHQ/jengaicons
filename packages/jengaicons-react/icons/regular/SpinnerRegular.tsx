@@ -22,18 +22,18 @@ const SpinnerRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 4v4M24.485 7.515l-2.828 2.828M28 16h-4M24.485 24.485l-2.828-2.828M16 28v-4M7.515 24.485l2.828-2.828M4 16h4M7.515 7.515l2.828 2.828"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 4v4M24.485 7.515l-2.828 2.828M28 16h-4M24.485 24.485l-2.828-2.828M16 28v-4M7.515 24.485l2.828-2.828M4 16h4M7.515 7.515l2.828 2.828"
         />
 
         {children || childrenCtx}

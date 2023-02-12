@@ -22,23 +22,23 @@ const TrafficSignalRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 24a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM24 9h3M24 19h3M5 9h3M5 19h3"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 14a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM16 24a3 3 0 1 0 0-6 3 3 0 0 0 0 6ZM24 9h3M24 19h3M5 9h3M5 19h3"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M8 4h16v24H8z"
         />
 

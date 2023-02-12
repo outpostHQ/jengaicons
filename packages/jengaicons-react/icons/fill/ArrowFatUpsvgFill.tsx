@@ -22,15 +22,15 @@ const ArrowFatUpsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6.167 16.283a.5.5 0 0 1-.353-.854L16.607 4.636a.5.5 0 0 1 .707 0L28.107 15.43a.5.5 0 0 1-.354.854H23.46a.5.5 0 0 0-.5.5v10.5a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-10.5a.5.5 0 0 0-.5-.5H6.167Z"
           fill={color || colorCtx || "#000000"}
+          d="M6.167 16.283a.5.5 0 0 1-.353-.854L16.607 4.636a.5.5 0 0 1 .707 0L28.107 15.43a.5.5 0 0 1-.354.854H23.46a.5.5 0 0 0-.5.5v10.5a1 1 0 0 1-1 1h-10a1 1 0 0 1-1-1v-10.5a.5.5 0 0 0-.5-.5H6.167Z"
         />
 
         {children || childrenCtx}

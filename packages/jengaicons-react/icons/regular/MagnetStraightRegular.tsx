@@ -22,18 +22,18 @@ const MagnetStraightRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M5.087 10.494h7.626M19.272 10.494h7.64M12.766 15.987V4H5.087v13.087C5.087 23.114 9.973 28 16 28s10.913-4.886 10.913-10.913V4h-7.637v11.987a3.255 3.255 0 1 1-6.51 0Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M5.087 10.494h7.626M19.272 10.494h7.64M12.766 15.987V4H5.087v13.087C5.087 23.114 9.973 28 16 28s10.913-4.886 10.913-10.913V4h-7.637v11.987a3.255 3.255 0 1 1-6.51 0Z"
         />
 
         {children || childrenCtx}

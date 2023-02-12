@@ -22,25 +22,25 @@ const ChartLineUpRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m4 19.955 7.91-6.963 8.248 6.963L27.99 9.922"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m4 19.955 7.91-6.963 8.248 6.963L27.99 9.922"
         />
         <path
-          d="M4 5.893v20.214h24M21.865 9.924H28v6.135"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 5.893v20.214h24M21.865 9.924H28v6.135"
         />
 
         {children || childrenCtx}

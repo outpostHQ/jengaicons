@@ -21,17 +21,17 @@ const EqualsFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        fillRule="evenodd"
-        clip-rule="evenodd"
-        d="M6.96 11.647a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Zm0 7.272a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Z"
         fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M6.96 11.647a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Zm0 7.272a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Z"
+        clip-rule="evenodd"
       />
 
       {children || childrenCtx}

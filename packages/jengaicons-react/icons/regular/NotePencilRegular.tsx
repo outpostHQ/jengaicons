@@ -22,30 +22,30 @@ const NotePencilRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.626 4H4.5a.5.5 0 0 0-.5.5v23a.5.5 0 0 0 .5.5h23a.5.5 0 0 0 .5-.5V14.008"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M16.626 4H4.5a.5.5 0 0 0-.5.5v23a.5.5 0 0 0 .5.5h23a.5.5 0 0 0 .5-.5V14.008"
         />
         <path
-          d="M28 8.866 23.134 4l-10.46 10.424-.483 4.962h5.387L28 8.866Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 8.866 23.134 4l-10.46 10.424-.483 4.962h5.387L28 8.866Z"
         />
         <path
-          d="m20.631 6.522 4.852 4.852"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="m20.631 6.522 4.852 4.852"
         />
 
         {children || childrenCtx}

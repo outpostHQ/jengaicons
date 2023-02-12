@@ -22,17 +22,17 @@ const PaperPlaneFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M5.562 26.01 16.48 6.255a.5.5 0 0 1 .875-.002L28.35 26.007a.5.5 0 0 1-.585.72L17.96 23.67v-7.892a1 1 0 0 0-2 0v7.892l-9.811 3.06a.5.5 0 0 1-.587-.72Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M5.562 26.01 16.48 6.255a.5.5 0 0 1 .875-.002L28.35 26.007a.5.5 0 0 1-.585.72L17.96 23.67v-7.892a1 1 0 0 0-2 0v7.892l-9.811 3.06a.5.5 0 0 1-.587-.72Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

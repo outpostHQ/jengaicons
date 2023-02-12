@@ -21,17 +21,17 @@ const PathFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        fillRule="evenodd"
-        clip-rule="evenodd"
-        d="M10.477 5.303a1 1 0 1 0 0 2h11.896a3.02 3.02 0 0 1 0 6.038H10.396a5.936 5.936 0 0 0 0 11.873h13.03c.057 0 .114-.005.17-.014a3.01 3.01 0 0 0 5.864-.945 3.008 3.008 0 0 0-5.838-1.021 1.006 1.006 0 0 0-.197-.02H10.396a3.936 3.936 0 1 1 0-7.873h11.977a5.02 5.02 0 1 0 0-10.038H10.477Z"
         fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M10.477 5.303a1 1 0 1 0 0 2h11.896a3.02 3.02 0 0 1 0 6.038H10.396a5.936 5.936 0 0 0 0 11.873h13.03c.057 0 .114-.005.17-.014a3.01 3.01 0 0 0 5.864-.945 3.008 3.008 0 0 0-5.838-1.021 1.006 1.006 0 0 0-.197-.02H10.396a3.936 3.936 0 1 1 0-7.873h11.977a5.02 5.02 0 1 0 0-10.038H10.477Z"
+        clip-rule="evenodd"
       />
 
       {children || childrenCtx}

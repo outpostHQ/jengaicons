@@ -22,18 +22,18 @@ const TextHFourRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 8.548v12.245M16.612 14.67H6M16.612 8.548v12.245M26 16.754v6.698M23.452 13.038l-2.515 7.005H26"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 8.548v12.245M16.612 14.67H6M16.612 8.548v12.245M26 16.754v6.698M23.452 13.038l-2.515 7.005H26"
         />
 
         {children || childrenCtx}

@@ -22,24 +22,24 @@ const DownloadSimpleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6.398 20.799v3.902a.5.5 0 0 0 .5.5h18.203a.5.5 0 0 0 .5-.5V20.8"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M6.398 20.799v3.902a.5.5 0 0 0 .5.5h18.203a.5.5 0 0 0 .5-.5V20.8"
         />
         <path
-          d="M16 18.799v-12M11.757 14.556 16 18.8l4.242-4.243"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 18.799v-12M11.757 14.556 16 18.8l4.242-4.243"
         />
 
         {children || childrenCtx}

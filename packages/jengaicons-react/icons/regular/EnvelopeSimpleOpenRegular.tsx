@@ -22,24 +22,24 @@ const EnvelopeSimpleOpenRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28 27.003v-14L15.972 4.996 4 13.002v14h24Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 27.003v-14L15.972 4.996 4 13.002v14h24Z"
         />
         <path
-          d="m4.065 13.069 9.447 6.62h4.545l9.484-6.62"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m4.065 13.069 9.447 6.62h4.545l9.484-6.62"
         />
 
         {children || childrenCtx}

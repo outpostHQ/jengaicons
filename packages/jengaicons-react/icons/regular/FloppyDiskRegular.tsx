@@ -22,30 +22,30 @@ const FloppyDiskRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M19.273 8.365h-7.637"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M19.273 8.365h-7.637"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 28h24V11.008L20.717 4H4v24Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
-          d="M9.455 18.183h13.09V28H9.456v-9.817Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9.455 18.183h13.09V28H9.456v-9.817Z"
         />
 
         {children || childrenCtx}

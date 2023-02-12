@@ -21,24 +21,24 @@ const TrashRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M27 8H5M13 14v8M19 14v8"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M27 8H5M13 14v8M19 14v8"
       />
       <path
-        d="M7 8h18v20H7V8ZM11 4h10v4H11V4Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7 8h18v20H7V8ZM11 4h10v4H11V4Z"
       />
 
       {children || childrenCtx}

@@ -22,18 +22,18 @@ const HeadphonesRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28 17.925V26.984h-6.117v-9.059H28Zm0 0A11.911 11.911 0 0 0 16 6.016a11.91 11.91 0 0 0-12 11.91m0 0v9.058h5.935v-9.059H4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 17.925V26.984h-6.117v-9.059H28Zm0 0A11.911 11.911 0 0 0 16 6.016a11.91 11.91 0 0 0-12 11.91m0 0v9.058h5.935v-9.059H4Z"
         />
 
         {children || childrenCtx}

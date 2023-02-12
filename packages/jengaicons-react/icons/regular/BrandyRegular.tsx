@@ -22,18 +22,18 @@ const BrandyRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 21.74V28M10.783 28h10.434M25.622 4A11.478 11.478 0 1 1 6.378 4h19.244ZM5.565 13.392h20.87"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 21.74V28M10.783 28h10.434M25.622 4A11.478 11.478 0 1 1 6.378 4h19.244ZM5.565 13.392h20.87"
         />
 
         {children || childrenCtx}

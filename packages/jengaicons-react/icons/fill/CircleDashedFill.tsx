@@ -22,19 +22,19 @@ const CircleDashedFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.96 28.283c6.627 0 12-5.373 12-12s-5.373-12-12-12c-6.628 0-12 5.373-12 12s5.372 12 12 12Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeMiterlimit="10"
-          strokeLinecap="round"
           stroke-dasharray="4 4"
+          strokeLinecap="round"
+          strokeMiterlimit="10"
+          strokeWidth="2"
+          d="M16.96 28.283c6.627 0 12-5.373 12-12s-5.373-12-12-12c-6.628 0-12 5.373-12 12s5.372 12 12 12Z"
         />
 
         {children || childrenCtx}

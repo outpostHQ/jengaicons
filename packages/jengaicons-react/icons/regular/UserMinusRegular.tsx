@@ -22,25 +22,25 @@ const UserMinusRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M22.256 18.98H28M11.213 18.295a5.401 5.401 0 1 0 0-10.803 5.401 5.401 0 0 0 0 10.803Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.256 18.98H28M11.213 18.295a5.401 5.401 0 1 0 0-10.803 5.401 5.401 0 0 0 0 10.803Z"
         />
         <path
-          d="M18.426 25.508a7.213 7.213 0 0 0-14.426 0"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M18.426 25.508a7.213 7.213 0 0 0-14.426 0"
         />
 
         {children || childrenCtx}

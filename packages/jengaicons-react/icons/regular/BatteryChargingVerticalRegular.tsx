@@ -24,24 +24,24 @@ const BatteryChargingVerticalRegular = forwardRef<
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M12.51 4h6.98M15.998 13.462l-1.779 4.42h3.504l-1.725 4.474"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M12.51 4h6.98M15.998 13.462l-1.779 4.42h3.504l-1.725 4.474"
       />
       <path
-        d="M8.145 28V7.927h15.71V28H8.145Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M8.145 28V7.927h15.71V28H8.145Z"
       />
 
       {children || childrenCtx}

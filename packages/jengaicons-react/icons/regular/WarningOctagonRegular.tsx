@@ -22,28 +22,28 @@ const WarningOctagonRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 10v7"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path
-          d="M16 23a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          fill={color || colorCtx || "#000000"}
-        />
-        <path
-          d="m28 11.045-.011 9.937L20.955 28l-9.937-.011L4 20.955l.011-9.937L11.045 4l9.937.011L28 11.045Z"
-          stroke={color || colorCtx || "#000000"}
           strokeWidth="2"
+          d="M16 10v7"
+        />
+        <path
+          fill={color || colorCtx || "#000000"}
+          d="M16 23a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m28 11.045-.011 9.937L20.955 28l-9.937-.011L4 20.955l.011-9.937L11.045 4l9.937.011L28 11.045Z"
         />
 
         {children || childrenCtx}

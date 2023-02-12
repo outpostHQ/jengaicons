@@ -22,17 +22,17 @@ const TextOutdentFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M10.737 8.902a1 1 0 1 1 1.414 1.415l-3.008 3.007 3.008 3.008a1 1 0 0 1-1.414 1.415L7.022 14.03a1 1 0 0 1 0-1.414l3.715-3.715Zm5.019.212a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H15.756Zm0 6.421a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H15.756Zm-8.224 7.421a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H8.53a1 1 0 0 1-1-1Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M10.737 8.902a1 1 0 1 1 1.414 1.415l-3.008 3.007 3.008 3.008a1 1 0 0 1-1.414 1.415L7.022 14.03a1 1 0 0 1 0-1.414l3.715-3.715Zm5.019.212a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H15.756Zm0 6.421a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H15.756Zm-8.224 7.421a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H8.53a1 1 0 0 1-1-1Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

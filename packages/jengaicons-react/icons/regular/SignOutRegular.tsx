@@ -22,18 +22,18 @@ const SignOutRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M11.201 26.101H6.799V6.9H11.2M25.201 16.5h-12M20.958 20.743l4.243-4.243-4.243-4.243"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.201 26.101H6.799V6.9H11.2M25.201 16.5h-12M20.958 20.743l4.243-4.243-4.243-4.243"
         />
 
         {children || childrenCtx}

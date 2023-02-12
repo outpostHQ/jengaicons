@@ -22,23 +22,23 @@ const BuildingsRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M4 25.857h24M10 10.429h3.428M10 15.572h3.428M10 20.714h3.428M21.142 21.572h1.715M21.142 17.286h1.715"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 25.857h24M10 10.429h3.428M10 15.572h3.428M10 20.714h3.428M21.142 21.572h1.715M21.142 17.286h1.715"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M5.714 6.18h12v19.677h-12zM17.714 13h8.572v12.857h-8.572z"
         />
 

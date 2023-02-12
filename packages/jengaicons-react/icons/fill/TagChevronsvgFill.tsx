@@ -22,19 +22,19 @@ const TagChevronsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M23.234 8.203H4.96l5.208 8.199-5.208 7.96h18.274l5.726-7.96-5.726-8.199Z"
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M23.234 8.203H4.96l5.208 8.199-5.208 7.96h18.274l5.726-7.96-5.726-8.199Z"
         />
 
         {children || childrenCtx}

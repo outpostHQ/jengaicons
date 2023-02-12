@@ -22,18 +22,18 @@ const AsteriskSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.96 4.87v12.617M4.96 13.588l12 3.9M9.548 27.695l7.412-10.208M24.372 27.695 16.96 17.487M28.96 13.588l-12 3.9"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.96 4.87v12.617M4.96 13.588l12 3.9M9.548 27.695l7.412-10.208M24.372 27.695 16.96 17.487M28.96 13.588l-12 3.9"
         />
 
         {children || childrenCtx}

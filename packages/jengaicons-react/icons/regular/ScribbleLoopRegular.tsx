@@ -22,18 +22,18 @@ const ScribbleLoopRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M4 12.089S7.556 7.11 12.889 7.11c11.555 0 10.667 17.778 0 17.778-7.111 0-7.111-10.667 3.555-10.667 7.112 0 11.556 5.333 11.556 5.333"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 12.089S7.556 7.11 12.889 7.11c11.555 0 10.667 17.778 0 17.778-7.111 0-7.111-10.667 3.555-10.667 7.112 0 11.556 5.333 11.556 5.333"
         />
 
         {children || childrenCtx}

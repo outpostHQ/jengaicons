@@ -21,25 +21,25 @@ const DropRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M25.23 19.27C25.23 10.96 16 4.5 16 4.5s-9.23 6.461-9.23 14.77a9.23 9.23 0 1 0 18.46 0Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M25.23 19.27C25.23 10.96 16 4.5 16 4.5s-9.23 6.461-9.23 14.77a9.23 9.23 0 1 0 18.46 0Z"
       />
       <path
-        d="M16.935 24.715a5.527 5.527 0 0 0 4.523-4.511"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16.935 24.715a5.527 5.527 0 0 0 4.523-4.511"
       />
 
       {children || childrenCtx}

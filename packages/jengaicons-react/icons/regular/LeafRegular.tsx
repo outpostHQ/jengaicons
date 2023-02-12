@@ -21,18 +21,18 @@ const LeafRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M20.312 12.188 4 28.5M7.262 25.238C.738 14.363 9.437 3.488 27.925 4.575c1.087 18.488-9.788 27.188-20.663 20.663Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M20.312 12.188 4 28.5M7.262 25.238C.738 14.363 9.437 3.488 27.925 4.575c1.087 18.488-9.788 27.188-20.663 20.663Z"
       />
 
       {children || childrenCtx}

@@ -22,26 +22,26 @@ const StarHalfRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.05 4.635v17.252M15.95 4.635l-4.82 8.682H4l7.386 5.366-2.821 8.682L15.95 22"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.05 4.635v17.252M15.95 4.635l-4.82 8.682H4l7.386 5.366-2.821 8.682L15.95 22"
         />
         <path
-          d="m16.05 4.635 4.82 8.682H28l-7.386 5.366 2.821 8.682L16.05 22"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
+          stroke-dasharray="6 6"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="6 6"
+          strokeWidth="2"
+          d="m16.05 4.635 4.82 8.682H28l-7.386 5.366 2.821 8.682L16.05 22"
         />
 
         {children || childrenCtx}

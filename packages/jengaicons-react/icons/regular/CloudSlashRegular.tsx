@@ -22,18 +22,18 @@ const CloudSlashRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M22.772 24.573H9.996a6.002 6.002 0 1 1 1.491-11.816M10.853 16c0-1.359.323-2.698.942-3.907m2.619-3.048a8.574 8.574 0 0 1 11.872 12.1c-.234.3-.484.59-.74.867M6.716 4.947 25.285 27"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.772 24.573H9.996a6.002 6.002 0 1 1 1.491-11.816M10.853 16c0-1.359.323-2.698.942-3.907m2.619-3.048a8.574 8.574 0 0 1 11.872 12.1c-.234.3-.484.59-.74.867M6.716 4.947 25.285 27"
         />
 
         {children || childrenCtx}

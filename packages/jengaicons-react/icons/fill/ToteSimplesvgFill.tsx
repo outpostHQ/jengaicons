@@ -22,25 +22,25 @@ const ToteSimplesvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M12.303 10.228a4.657 4.657 0 1 1 9.314 0"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12.303 10.228a4.657 4.657 0 1 1 9.314 0"
         />
         <path
-          d="M6.823 26.995h20.274l1.863-16.767h-24l1.863 16.767Z"
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6.823 26.995h20.274l1.863-16.767h-24l1.863 16.767Z"
         />
 
         {children || childrenCtx}

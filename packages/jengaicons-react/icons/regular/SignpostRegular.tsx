@@ -22,24 +22,24 @@ const SignpostRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.04 4v4.846M16.04 19v9"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16.04 4v4.846M16.04 19v9"
         />
         <path
-          d="M3.96 8.846h21.447l4.578 5.077L25.407 19H3.96V8.846Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M3.96 8.846h21.447l4.578 5.077L25.407 19H3.96V8.846Z"
         />
 
         {children || childrenCtx}

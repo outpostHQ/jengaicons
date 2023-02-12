@@ -21,24 +21,24 @@ const LampRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16 18.593v6.915M12.543 25.508h6.915M23.78 18.593v4.322"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16 18.593v6.915M12.543 25.508h6.915M23.78 18.593v4.322"
       />
       <path
-        d="M9.186 6.492h13.628L28 18.593H4L9.186 6.492Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M9.186 6.492h13.628L28 18.593H4L9.186 6.492Z"
       />
 
       {children || childrenCtx}

@@ -22,24 +22,24 @@ const BitbucketLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M19.967 12.24H12.09l1.486 7.52h5.052l1.338-7.52Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M19.967 12.24H12.09l1.486 7.52h5.052l1.338-7.52Z"
         />
         <path
-          d="M2.7 4h26.6l-3.82 24H6.59L2.7 4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M2.7 4h26.6l-3.82 24H6.59L2.7 4Z"
         />
 
         {children || childrenCtx}

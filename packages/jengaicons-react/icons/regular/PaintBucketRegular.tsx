@@ -22,24 +22,24 @@ const PaintBucketRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M15.672 17.342a1.988 1.988 0 1 0 0-3.977 1.988 1.988 0 0 0 0 3.977ZM24.023 24.102c0-1.988 1.989-3.977 1.989-3.977S28 22.115 28 24.102a1.988 1.988 0 1 1-3.977 0v0ZM14.266 13.948 7.107 6.789"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.672 17.342a1.988 1.988 0 1 0 0-3.977 1.988 1.988 0 0 0 0 3.977ZM24.023 24.102c0-1.988 1.989-3.977 1.989-3.977S28 22.115 28 24.102a1.988 1.988 0 1 1-3.977 0v0ZM14.266 13.948 7.107 6.789"
         />
         <path
-          d="M4 16 14.686 5.314 25.372 16 14.686 26.686 4 16Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 16 14.686 5.314 25.372 16 14.686 26.686 4 16Z"
         />
 
         {children || childrenCtx}

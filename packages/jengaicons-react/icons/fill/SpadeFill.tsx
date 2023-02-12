@@ -21,15 +21,15 @@ const SpadeFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16.695 4.457a.472.472 0 0 1 .53 0c1.722 1.147 11.273 7.752 11.273 13.21a6 6 0 0 1-9.85 4.602l1.785 5.356a.5.5 0 0 1-.475.658h-5.997a.5.5 0 0 1-.474-.658l1.785-5.356a6 6 0 0 1-9.85-4.601c0-5.46 9.55-12.064 11.273-13.211Z"
         fill={color || colorCtx || "#000000"}
+        d="M16.695 4.457a.472.472 0 0 1 .53 0c1.722 1.147 11.273 7.752 11.273 13.21a6 6 0 0 1-9.85 4.602l1.785 5.356a.5.5 0 0 1-.475.658h-5.997a.5.5 0 0 1-.474-.658l1.785-5.356a6 6 0 0 1-9.85-4.601c0-5.46 9.55-12.064 11.273-13.211Z"
       />
 
       {children || childrenCtx}

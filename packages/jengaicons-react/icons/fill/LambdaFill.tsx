@@ -21,18 +21,18 @@ const LambdaFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M8.593 4.424h4.777l9.637 23.854 4.926-1.575M5.96 28.424l10.285-16.459"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M8.593 4.424h4.777l9.637 23.854 4.926-1.575M5.96 28.424l10.285-16.459"
       />
 
       {children || childrenCtx}

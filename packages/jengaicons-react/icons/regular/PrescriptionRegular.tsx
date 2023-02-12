@@ -22,24 +22,24 @@ const PrescriptionRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m12.727 16 12 12M24.727 20.364 17.091 28"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m12.727 16 12 12M24.727 20.364 17.091 28"
         />
         <path
-          d="M7.273 16h6.545a6 6 0 0 0 6-6v0a6 6 0 0 0-6-6H7.335a.062.062 0 0 0-.062.062v20.776"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M7.273 16h6.545a6 6 0 0 0 6-6v0a6 6 0 0 0-6-6H7.335a.062.062 0 0 0-.062.062v20.776"
         />
 
         {children || childrenCtx}

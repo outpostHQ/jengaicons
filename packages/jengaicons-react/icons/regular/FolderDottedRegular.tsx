@@ -22,25 +22,25 @@ const FolderDottedRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M4 10h24v16H4V10Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
+          stroke-dasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          d="M4 10h24v16H4V10Z"
         />
         <path
-          d="M4 6h8l4 4H4V6Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 6h8l4 4H4V6Z"
         />
 
         {children || childrenCtx}

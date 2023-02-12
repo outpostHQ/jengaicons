@@ -21,27 +21,27 @@ const PauseFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <rect
+        width="7.091"
+        height="24"
         x="6.051"
         y="4.783"
-        width="7.091"
-        height="24"
-        rx=".5"
         fill={color || colorCtx || "#000000"}
+        rx=".5"
       />
       <rect
-        x="20.778"
-        y="4.783"
         width="7.091"
         height="24"
-        rx=".5"
+        x="20.778"
+        y="4.783"
         fill={color || colorCtx || "#000000"}
+        rx=".5"
       />
 
       {children || childrenCtx}

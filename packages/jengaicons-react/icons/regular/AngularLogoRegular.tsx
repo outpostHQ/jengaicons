@@ -22,30 +22,30 @@ const AngularLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M12.961 16.876h6.124"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M16.047 4 4.422 9.063l1.781 14.062L16.047 28l9.562-4.875 1.97-14.062L16.046 4Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
-          d="m11.64 19.469 4.284-8.544a.1.1 0 0 1 .178-.001l4.445 8.545"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="m11.64 19.469 4.284-8.544a.1.1 0 0 1 .178-.001l4.445 8.545"
         />
 
         {children || childrenCtx}

@@ -22,24 +22,24 @@ const KeyboardRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.692 16h16.616M7.692 12.308h16.616M7.692 19.692h.923M12.308 19.692h7.384M23.385 19.692h.923"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.692 16h16.616M7.692 12.308h16.616M7.692 19.692h.923M12.308 19.692h7.384M23.385 19.692h.923"
         />
         <path
-          d="M4 7.692h24v16.616H4V7.692Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 7.692h24v16.616H4V7.692Z"
         />
 
         {children || childrenCtx}

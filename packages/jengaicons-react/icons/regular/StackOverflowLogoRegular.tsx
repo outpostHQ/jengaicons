@@ -22,18 +22,18 @@ const StackOverflowLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.788 22.788h10.424M11.7 15.909l10.06 2.697M14.345 9.498l9.03 5.212M18.58 4l7.362 7.362M5.577 20.704V28h20.846v-7.296"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.788 22.788h10.424M11.7 15.909l10.06 2.697M14.345 9.498l9.03 5.212M18.58 4l7.362 7.362M5.577 20.704V28h20.846v-7.296"
         />
 
         {children || childrenCtx}

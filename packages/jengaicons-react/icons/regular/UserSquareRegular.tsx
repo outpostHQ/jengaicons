@@ -22,31 +22,31 @@ const UserSquareRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 4.5h24v24H4v-24Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M16 22.11a4.784 4.784 0 1 0 0-9.568 4.784 4.784 0 0 0 0 9.569Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
-          d="M22.39 28.5a6.39 6.39 0 0 0-12.78 0"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.39 28.5a6.39 6.39 0 0 0-12.78 0"
         />
 
         {children || childrenCtx}

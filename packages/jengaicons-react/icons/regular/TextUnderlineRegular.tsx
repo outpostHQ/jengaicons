@@ -22,24 +22,24 @@ const TextUnderlineRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 25.09h20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 25.09h20"
         />
         <path
-          d="M8.727 6.91v7.272A7.273 7.273 0 0 0 16 21.454v0a7.273 7.273 0 0 0 7.273-7.272V6.909"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M8.727 6.91v7.272A7.273 7.273 0 0 0 16 21.454v0a7.273 7.273 0 0 0 7.273-7.272V6.909"
         />
 
         {children || childrenCtx}

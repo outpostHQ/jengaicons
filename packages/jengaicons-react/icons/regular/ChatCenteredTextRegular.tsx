@@ -22,24 +22,24 @@ const ChatCenteredTextRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M12 11h8M12 15h8"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 11h8M12 15h8"
         />
         <path
-          d="M28 4H4v17.935h8.03L15.993 28l4.023-6.065H28V4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 4H4v17.935h8.03L15.993 28l4.023-6.065H28V4Z"
         />
 
         {children || childrenCtx}

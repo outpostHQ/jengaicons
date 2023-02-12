@@ -22,30 +22,30 @@ const MusicNoteFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          fill={color || colorCtx || "#000000"}
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M11.718 28.783a5.21 5.21 0 1 0 0-10.419 5.21 5.21 0 0 0 0 10.419Z"
-          fill={color || colorCtx || "#000000"}
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          fill={color || colorCtx || "#000000"}
           d="M27.411 8.042 16.928 4.783v6.294l10.483 2.978V8.042Z"
-          fill={color || colorCtx || "#000000"}
         />
         <path
-          d="m16.928 11.077 10.483 2.978V8.042L16.928 4.783v18.993"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m16.928 11.077 10.483 2.978V8.042L16.928 4.783v18.993"
         />
 
         {children || childrenCtx}

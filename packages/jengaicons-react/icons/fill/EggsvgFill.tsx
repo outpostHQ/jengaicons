@@ -21,19 +21,19 @@ const EggsvgFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M26.191 19.052a9.23 9.23 0 0 1-18.462 0c0-7.384 5.539-14.769 9.231-14.769 3.693 0 9.231 7.385 9.231 14.77Z"
         fill={color || colorCtx || "#000000"}
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M26.191 19.052a9.23 9.23 0 0 1-18.462 0c0-7.384 5.539-14.769 9.231-14.769 3.693 0 9.231 7.385 9.231 14.77Z"
       />
 
       {children || childrenCtx}

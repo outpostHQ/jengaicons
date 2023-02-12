@@ -21,15 +21,15 @@ const CaretUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16.607 10.636 5.814 21.43a.5.5 0 0 0 .353.854h21.586a.5.5 0 0 0 .354-.854L17.314 10.637a.5.5 0 0 0-.707 0Z"
         fill={color || colorCtx || "#000000"}
+        d="M16.607 10.636 5.814 21.43a.5.5 0 0 0 .353.854h21.586a.5.5 0 0 0 .354-.854L17.314 10.637a.5.5 0 0 0-.707 0Z"
       />
 
       {children || childrenCtx}

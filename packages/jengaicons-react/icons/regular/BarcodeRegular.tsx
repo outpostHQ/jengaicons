@@ -22,18 +22,18 @@ const BarcodeRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10 11v10M22 11v10M18 11v10M14 11v10M10 6H4v6M22 6h6v6M28 20v6h-6M4 20v6h6"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10 11v10M22 11v10M18 11v10M14 11v10M10 6H4v6M22 6h6v6M28 20v6h-6M4 20v6h6"
         />
 
         {children || childrenCtx}

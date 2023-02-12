@@ -22,18 +22,18 @@ const LambdaRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.646 4h4.777l9.637 23.854 4.927-1.576M5.013 28l10.285-16.46"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.646 4h4.777l9.637 23.854 4.927-1.576M5.013 28l10.285-16.46"
         />
 
         {children || childrenCtx}

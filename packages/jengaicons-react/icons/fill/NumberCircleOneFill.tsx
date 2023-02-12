@@ -22,17 +22,17 @@ const NumberCircleOneFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M28.96 16.283c0 6.627-5.373 12-12 12-6.628 0-12-5.373-12-12s5.372-12 12-12c6.627 0 12 5.373 12 12Zm-10.574-6a1 1 0 0 0-1.537-.843l-3.068 1.954a1 1 0 1 0 1.074 1.687l1.531-.975v10.177a1 1 0 0 0 2 0v-12Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M28.96 16.283c0 6.627-5.373 12-12 12-6.628 0-12-5.373-12-12s5.372-12 12-12c6.627 0 12 5.373 12 12Zm-10.574-6a1 1 0 0 0-1.537-.843l-3.068 1.954a1 1 0 1 0 1.074 1.687l1.531-.975v10.177a1 1 0 0 0 2 0v-12Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

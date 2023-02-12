@@ -22,18 +22,18 @@ const TextStrikethroughRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 16h20M10.129 12.364a2.895 2.895 0 0 1-.14-.91c0-2.51 2.496-4.545 6.01-4.545 2.703 0 4.803 1.203 5.63 2.9M9.636 20.545c0 2.51 2.85 4.546 6.364 4.546 3.515 0 6.364-2.035 6.364-4.546 0-2.7-2.457-3.746-5.182-4.545"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 16h20M10.129 12.364a2.895 2.895 0 0 1-.14-.91c0-2.51 2.496-4.545 6.01-4.545 2.703 0 4.803 1.203 5.63 2.9M9.636 20.545c0 2.51 2.85 4.546 6.364 4.546 3.515 0 6.364-2.035 6.364-4.546 0-2.7-2.457-3.746-5.182-4.545"
         />
 
         {children || childrenCtx}

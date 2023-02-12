@@ -21,37 +21,37 @@ const StarHalfFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M17.01 4.917V22.17"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
       <path
-        d="m9.525 27.648 7.385-5.366V4.917L12.09 13.6H4.96l7.386 5.366-2.821 8.682Z"
         fill={color || colorCtx || "#000000"}
-      />
-      <path
         d="m9.525 27.648 7.385-5.366V4.917L12.09 13.6H4.96l7.386 5.366-2.821 8.682Z"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
       <path
-        d="m17.01 4.917 4.82 8.683h7.13l-7.386 5.366 2.821 8.682-7.385-5.366"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="m9.525 27.648 7.385-5.366V4.917L12.09 13.6H4.96l7.386 5.366-2.821 8.682Z"
+      />
+      <path
+        stroke={color || colorCtx || "#000000"}
         stroke-dasharray="6 6"
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
+        d="m17.01 4.917 4.82 8.683h7.13l-7.386 5.366 2.821 8.682-7.385-5.366"
       />
 
       {children || childrenCtx}

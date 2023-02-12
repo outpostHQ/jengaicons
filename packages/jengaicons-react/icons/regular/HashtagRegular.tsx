@@ -22,18 +22,18 @@ const HashtagRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.212 12.667H26M21 6.833l-3.333 18.334M14.333 6.833 11 25.167M6 19.333h18.788"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.212 12.667H26M21 6.833l-3.333 18.334M14.333 6.833 11 25.167M6 19.333h18.788"
         />
 
         {children || childrenCtx}

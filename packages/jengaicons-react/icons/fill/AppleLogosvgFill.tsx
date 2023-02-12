@@ -22,22 +22,22 @@ const AppleLogosvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M18.71 6.837a3.766 3.766 0 0 1 3.514-2.413"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M18.71 6.837a3.766 3.766 0 0 1 3.514-2.413"
         />
         <path
-          d="M28.167 22.181c-1.48 3.614-4.166 6.243-6.413 6.243h-8.47c-3.295 0-7.53-5.647-7.53-11.764a7.06 7.06 0 0 1 11.765-5.261 7.06 7.06 0 0 1 10.255.898 5.65 5.65 0 0 0 .392 9.884Z"
           fill={color || colorCtx || "#000000"}
+          d="M28.167 22.181c-1.48 3.614-4.166 6.243-6.413 6.243h-8.47c-3.295 0-7.53-5.647-7.53-11.764a7.06 7.06 0 0 1 11.765-5.261 7.06 7.06 0 0 1 10.255.898 5.65 5.65 0 0 0 .392 9.884Z"
         />
 
         {children || childrenCtx}

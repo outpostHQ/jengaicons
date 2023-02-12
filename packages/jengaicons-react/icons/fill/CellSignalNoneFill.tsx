@@ -22,15 +22,15 @@ const CellSignalNoneFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28.96 27.783V5.49a.5.5 0 0 0-.854-.354L5.814 27.43a.5.5 0 0 0 .353.854H28.46a.5.5 0 0 0 .5-.5Z"
           fill={color || colorCtx || "#000000"}
+          d="M28.96 27.783V5.49a.5.5 0 0 0-.854-.354L5.814 27.43a.5.5 0 0 0 .353.854H28.46a.5.5 0 0 0 .5-.5Z"
         />
 
         {children || childrenCtx}

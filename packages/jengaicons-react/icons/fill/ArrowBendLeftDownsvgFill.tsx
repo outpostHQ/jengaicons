@@ -22,25 +22,25 @@ const ArrowBendLeftDownsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M25.081 4.283a12 12 0 0 0-12 12v12"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M25.081 4.283a12 12 0 0 0-12 12v12"
         />
         <path
-          d="m8.839 24.04 4.242 4.243 4.243-4.243"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m8.839 24.04 4.242 4.243 4.243-4.243"
         />
 
         {children || childrenCtx}

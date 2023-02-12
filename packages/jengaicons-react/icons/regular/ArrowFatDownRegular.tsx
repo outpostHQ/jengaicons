@@ -22,18 +22,18 @@ const ArrowFatDownRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m4 16 12 12 12-12h-6V5a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v11H4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m4 16 12 12 12-12h-6V5a1 1 0 0 0-1-1H11a1 1 0 0 0-1 1v11H4Z"
         />
 
         {children || childrenCtx}

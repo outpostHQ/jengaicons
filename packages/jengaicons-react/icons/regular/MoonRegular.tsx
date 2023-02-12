@@ -21,18 +21,18 @@ const MoonRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M28 19.554A12.211 12.211 0 0 1 12.946 4.5 12.224 12.224 0 1 0 28 19.554Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M28 19.554A12.211 12.211 0 0 1 12.946 4.5 12.224 12.224 0 1 0 28 19.554Z"
       />
 
       {children || childrenCtx}

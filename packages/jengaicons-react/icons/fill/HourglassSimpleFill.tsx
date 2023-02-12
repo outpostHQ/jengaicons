@@ -22,15 +22,15 @@ const HourglassSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M24.21 4.783H9.71a1 1 0 0 0-1 1v1.54a10 10 0 0 0 4.373 8.268l1.752 1.192-1.752 1.192a10 10 0 0 0-4.374 8.267v1.541a1 1 0 0 0 1 1h14.502a1 1 0 0 0 1-1v-1.54a10 10 0 0 0-4.374-8.268l-1.752-1.192 1.752-1.192a10 10 0 0 0 4.373-8.267V5.783a1 1 0 0 0-1-1Z"
           fill={color || colorCtx || "#000000"}
+          d="M24.21 4.783H9.71a1 1 0 0 0-1 1v1.54a10 10 0 0 0 4.373 8.268l1.752 1.192-1.752 1.192a10 10 0 0 0-4.374 8.267v1.541a1 1 0 0 0 1 1h14.502a1 1 0 0 0 1-1v-1.54a10 10 0 0 0-4.374-8.268l-1.752-1.192 1.752-1.192a10 10 0 0 0 4.373-8.267V5.783a1 1 0 0 0-1-1Z"
         />
 
         {children || childrenCtx}

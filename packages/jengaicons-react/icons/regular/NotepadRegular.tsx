@@ -22,24 +22,24 @@ const NotepadRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M12.308 16h7.384M12.308 19.692h7.384M10.461 4v3.692M16 4v3.692M21.538 4v3.692"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12.308 16h7.384M12.308 19.692h7.384M10.461 4v3.692M16 4v3.692M21.538 4v3.692"
         />
         <path
-          d="M6.596 5.846h18.808V28H6.596V5.846Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6.596 5.846h18.808V28H6.596V5.846Z"
         />
 
         {children || childrenCtx}

@@ -22,31 +22,31 @@ const TreeEvergreenRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M16 23.357V28.5"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m16 4.5 6.973 11.158H9.027L16 4.5Z"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
-          d="m13.15 15.832-5.904 7.525h17.508l-5.904-7.525"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m13.15 15.832-5.904 7.525h17.508l-5.904-7.525"
         />
 
         {children || childrenCtx}

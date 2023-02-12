@@ -21,15 +21,15 @@ const FunnelFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M26.78 5.524H7.153a1 1 0 0 0-.755 1.656l7.338 8.448a1 1 0 0 1 .245.656v8.882a1 1 0 0 0 1.557.83l4.041-2.712a1 1 0 0 0 .443-.83v-6.172a1 1 0 0 1 .242-.653l7.274-8.452a1 1 0 0 0-.758-1.653Z"
         fill={color || colorCtx || "#000000"}
+        d="M26.78 5.524H7.153a1 1 0 0 0-.755 1.656l7.338 8.448a1 1 0 0 1 .245.656v8.882a1 1 0 0 0 1.557.83l4.041-2.712a1 1 0 0 0 .443-.83v-6.172a1 1 0 0 1 .242-.653l7.274-8.452a1 1 0 0 0-.758-1.653Z"
       />
 
       {children || childrenCtx}

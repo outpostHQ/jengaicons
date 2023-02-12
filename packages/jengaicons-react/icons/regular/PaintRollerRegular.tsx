@@ -22,23 +22,23 @@ const PaintRollerRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M6.537 6.324h17.948v8.547H6.537z"
         />
         <path
-          d="M4 10.618h2.466M16 25.676v-4.321a.5.5 0 0 1 .345-.476l10.275-3.347A2 2 0 0 0 28 15.63v-4.512a.5.5 0 0 0-.5-.5h-2.984"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M4 10.618h2.466M16 25.676v-4.321a.5.5 0 0 1 .345-.476l10.275-3.347A2 2 0 0 0 28 15.63v-4.512a.5.5 0 0 0-.5-.5h-2.984"
         />
 
         {children || childrenCtx}

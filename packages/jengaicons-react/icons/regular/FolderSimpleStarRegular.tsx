@@ -22,31 +22,31 @@ const FolderSimpleStarRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 10.077v15.538h9.57M16 10.077h12v2.841"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m16 10.077-4-3.692H4v3.692"
-          stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
-          d="m20.27 18.457 1.775-3.82 1.504 3.82 4.451.241-3.338 3.038.992 3.88-3.609-2.256-3.91 2.255 1.264-3.88L16 18.699l4.27-.24Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m20.27 18.457 1.775-3.82 1.504 3.82 4.451.241-3.338 3.038.992 3.88-3.609-2.256-3.91 2.255 1.264-3.88L16 18.699l4.27-.24Z"
         />
 
         {children || childrenCtx}

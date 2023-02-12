@@ -21,24 +21,24 @@ const MouseRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M7.814 14h16.372M16 10.672V7.328"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7.814 14h16.372M16 10.672V7.328"
       />
       <path
-        d="M7.814 12a8 8 0 0 1 8-8h.372a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8h-.372a8 8 0 0 1-8-8v-8Z"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M7.814 12a8 8 0 0 1 8-8h.372a8 8 0 0 1 8 8v8a8 8 0 0 1-8 8h-.372a8 8 0 0 1-8-8v-8Z"
       />
 
       {children || childrenCtx}

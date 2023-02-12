@@ -22,23 +22,23 @@ const StickerRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28 4H4v24h13.21L28 17.307V4Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28 4H4v24h13.21L28 17.307V4Z"
         />
         <path
-          d="M17.09 27v-4.91a5 5 0 0 1 5-5h4.86"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M17.09 27v-4.91a5 5 0 0 1 5-5h4.86"
         />
 
         {children || childrenCtx}

@@ -22,18 +22,18 @@ const GenderMaleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M13.391 28.5a9.391 9.391 0 1 0 0-18.783 9.391 9.391 0 1 0 0 18.783ZM20.032 12.468 28 4.5M21.74 4.5H28v6.26"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M13.391 28.5a9.391 9.391 0 1 0 0-18.783 9.391 9.391 0 1 0 0 18.783ZM20.032 12.468 28 4.5M21.74 4.5H28v6.26"
         />
 
         {children || childrenCtx}

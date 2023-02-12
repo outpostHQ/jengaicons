@@ -21,25 +21,25 @@ const LampsvgFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16.96 18.876v6.915M13.502 25.791h6.915M24.74 18.876v4.322"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M16.96 18.876v6.915M13.502 25.791h6.915M24.74 18.876v4.322"
       />
       <path
-        d="M10.146 6.775h13.628l5.186 12.101h-24l5.186-12.101Z"
         fill={color || colorCtx || "#000000"}
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M10.146 6.775h13.628l5.186 12.101h-24l5.186-12.101Z"
       />
 
       {children || childrenCtx}

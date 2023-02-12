@@ -22,18 +22,18 @@ const ArrowsOutSimpleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M21.85 4.15h6v6M19.425 12.575l8.426-8.426M4 22v6h6M12.425 19.575 4 28"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21.85 4.15h6v6M19.425 12.575l8.426-8.426M4 22v6h6M12.425 19.575 4 28"
         />
 
         {children || childrenCtx}

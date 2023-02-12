@@ -22,15 +22,15 @@ const CaretDownFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16.606 21.93 5.814 11.136a.5.5 0 0 1 .353-.854h21.586a.5.5 0 0 1 .353.854L17.313 21.928a.5.5 0 0 1-.707 0Z"
           fill={color || colorCtx || "#000000"}
+          d="M16.606 21.93 5.814 11.136a.5.5 0 0 1 .353-.854h21.586a.5.5 0 0 1 .353.854L17.313 21.928a.5.5 0 0 1-.707 0Z"
         />
 
         {children || childrenCtx}

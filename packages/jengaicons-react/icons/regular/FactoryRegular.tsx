@@ -22,25 +22,25 @@ const FactoryRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.857 22h3M18.143 22h3M25.429 26.286v-8.572h-8.007l-3.775-5.142-1.933 5.142-5.142-5.142v13.714M4 26.284h24"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.857 22h3M18.143 22h3M25.429 26.286v-8.572h-8.007l-3.775-5.142-1.933 5.142-5.142-5.142v13.714M4 26.284h24"
         />
         <path
-          d="M25.428 17.714 23.82 6.45a.857.857 0 0 0-.848-.736h-1.942a.857.857 0 0 0-.849.736l-2.44 11.265"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M25.428 17.714 23.82 6.45a.857.857 0 0 0-.848-.736h-1.942a.857.857 0 0 0-.849.736l-2.44 11.265"
         />
 
         {children || childrenCtx}

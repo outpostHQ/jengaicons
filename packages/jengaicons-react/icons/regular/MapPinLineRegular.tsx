@@ -22,25 +22,25 @@ const MapPinLineRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M7.692 28h16.616M16 16.923a3.692 3.692 0 1 0 0-7.385 3.692 3.692 0 0 0 0 7.385Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.692 28h16.616M16 16.923a3.692 3.692 0 1 0 0-7.385 3.692 3.692 0 0 0 0 7.385Z"
         />
         <path
-          d="M25.23 13.23C25.23 21.539 16 28 16 28s-9.23-6.462-9.23-14.77a9.23 9.23 0 1 1 18.46 0v0Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M25.23 13.23C25.23 21.539 16 28 16 28s-9.23-6.462-9.23-14.77a9.23 9.23 0 1 1 18.46 0v0Z"
         />
 
         {children || childrenCtx}

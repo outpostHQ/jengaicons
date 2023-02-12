@@ -22,17 +22,17 @@ const PlayCircleFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M28.96 16.783c0 6.627-5.373 12-12 12-6.628 0-12-5.373-12-12 0-6.628 5.372-12 12-12 6.627 0 12 5.372 12 12Zm-15.197-5.526 8.212 5.101a.5.5 0 0 1 0 .85l-8.212 5.1a.5.5 0 0 1-.764-.424V11.682a.5.5 0 0 1 .764-.425Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M28.96 16.783c0 6.627-5.373 12-12 12-6.628 0-12-5.373-12-12 0-6.628 5.372-12 12-12 6.627 0 12 5.372 12 12Zm-15.197-5.526 8.212 5.101a.5.5 0 0 1 0 .85l-8.212 5.1a.5.5 0 0 1-.764-.424V11.682a.5.5 0 0 1 .764-.425Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

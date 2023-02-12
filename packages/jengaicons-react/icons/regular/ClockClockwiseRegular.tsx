@@ -22,25 +22,25 @@ const ClockClockwiseRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M15.468 10.245V16.5M20.885 19.628 15.468 16.5M23.577 24.61a11.468 11.468 0 1 1 0-16.219L28 12.814"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.468 10.245V16.5M20.885 19.628 15.468 16.5M23.577 24.61a11.468 11.468 0 1 1 0-16.219L28 12.814"
         />
         <path
-          d="M21.745 12.814H28V6.56"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21.745 12.814H28V6.56"
         />
 
         {children || childrenCtx}

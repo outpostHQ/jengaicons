@@ -22,17 +22,17 @@ const CopySimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fillRule="evenodd"
-          clip-rule="evenodd"
-          d="M8.935 3.783a1 1 0 1 0 0 2H27.46v18.525a1 1 0 1 0 2 0V4.783a1 1 0 0 0-1-1H8.935ZM5.46 9.257a1 1 0 0 0-1 1v17.526a1 1 0 0 0 1 1h17.525a1 1 0 0 0 1-1V10.257a1 1 0 0 0-1-1H5.46Z"
           fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M8.935 3.783a1 1 0 1 0 0 2H27.46v18.525a1 1 0 1 0 2 0V4.783a1 1 0 0 0-1-1H8.935ZM5.46 9.257a1 1 0 0 0-1 1v17.526a1 1 0 0 0 1 1h17.525a1 1 0 0 0 1-1V10.257a1 1 0 0 0-1-1H5.46Z"
+          clip-rule="evenodd"
         />
 
         {children || childrenCtx}

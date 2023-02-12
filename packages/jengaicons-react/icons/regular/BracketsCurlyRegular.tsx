@@ -22,18 +22,18 @@ const BracketsCurlyRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.194 7.484C4 7.484 10.194 16 4 16c6.194 0 0 8.516 6.194 8.516M21.806 7.484C28 7.484 21.806 16 28 16c-6.194 0 0 8.516-6.194 8.516"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.194 7.484C4 7.484 10.194 16 4 16c6.194 0 0 8.516 6.194 8.516M21.806 7.484C28 7.484 21.806 16 28 16c-6.194 0 0 8.516-6.194 8.516"
         />
 
         {children || childrenCtx}

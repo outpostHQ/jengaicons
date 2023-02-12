@@ -22,18 +22,18 @@ const ChevronDoubleUpRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.201 14.799 16.001 9l5.798 5.799M10.201 23l5.8-5.799L21.798 23"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.201 14.799 16.001 9l5.798 5.799M10.201 23l5.8-5.799L21.798 23"
         />
 
         {children || childrenCtx}

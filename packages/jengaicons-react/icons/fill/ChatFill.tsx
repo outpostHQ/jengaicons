@@ -21,15 +21,15 @@ const ChatFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M27.96 4.781h-22a1 1 0 0 0-1 1v19.904a1 1 0 0 0 1.63.777l4.399-3.569a1 1 0 0 1 .63-.224H27.96a1 1 0 0 0 1-1V5.781a1 1 0 0 0-1-1Z"
         fill={color || colorCtx || "#000000"}
+        d="M27.96 4.781h-22a1 1 0 0 0-1 1v19.904a1 1 0 0 0 1.63.777l4.399-3.569a1 1 0 0 1 .63-.224H27.96a1 1 0 0 0 1-1V5.781a1 1 0 0 0-1-1Z"
       />
 
       {children || childrenCtx}

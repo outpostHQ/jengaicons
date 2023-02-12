@@ -22,18 +22,18 @@ const CaretLeftRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.354 15.646 21.146 4.854a.5.5 0 0 1 .854.353v21.586a.5.5 0 0 1-.854.353L10.354 16.354a.5.5 0 0 1 0-.708Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.354 15.646 21.146 4.854a.5.5 0 0 1 .854.353v21.586a.5.5 0 0 1-.854.353L10.354 16.354a.5.5 0 0 1 0-.708Z"
         />
 
         {children || childrenCtx}

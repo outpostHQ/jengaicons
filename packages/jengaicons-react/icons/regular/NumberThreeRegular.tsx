@@ -22,18 +22,18 @@ const NumberThreeRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M10.188 25.567a6.536 6.536 0 0 0 11.624-4.102c0-3.61-3.932-6.536-7.541-6.536L21.812 4H10.188"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M10.188 25.567a6.536 6.536 0 0 0 11.624-4.102c0-3.61-3.932-6.536-7.541-6.536L21.812 4H10.188"
         />
 
         {children || childrenCtx}

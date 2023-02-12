@@ -22,17 +22,17 @@ const ChatTeardropRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M16 28c6.636 0 12.015-5.373 12.015-12S22.635 4 16 4a12.004 12.004 0 0 0-9.746 4.98 11.927 11.927 0 0 0-2.239 6.163V28H16Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M16 28c6.636 0 12.015-5.373 12.015-12S22.635 4 16 4a12.004 12.004 0 0 0-9.746 4.98 11.927 11.927 0 0 0-2.239 6.163V28H16Z"
         />
 
         {children || childrenCtx}

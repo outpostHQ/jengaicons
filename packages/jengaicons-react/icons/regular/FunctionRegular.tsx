@@ -22,24 +22,24 @@ const FunctionRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M24.571 6h-2.844a5 5 0 0 0-4.929 4.159l-1.993 11.682A5 5 0 0 1 9.876 26H7.43"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
+          strokeWidth="2"
+          d="M24.571 6h-2.844a5 5 0 0 0-4.929 4.159l-1.993 11.682A5 5 0 0 1 9.876 26H7.43"
         />
         <path
-          d="M24.571 20.338 18.91 26M24.571 26l-5.662-5.662"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M24.571 20.338 18.91 26M24.571 26l-5.662-5.662"
         />
 
         {children || childrenCtx}

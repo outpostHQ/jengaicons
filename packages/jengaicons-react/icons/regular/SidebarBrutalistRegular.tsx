@@ -22,40 +22,40 @@ const SidebarBrutalistRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M11 6.5v20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11 6.5v20"
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 6.5h24v20H4z"
         />
         <path
-          d="M21.837 14.99V12.58a.5.5 0 0 0-.5-.5H15.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M21.837 14.99V12.58a.5.5 0 0 0-.5-.5H15.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
         />
         <rect
-          x="17.666"
-          y="14.864"
           width="6.957"
           height="6.977"
-          rx=".5"
+          x="17.666"
+          y="14.864"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          rx=".5"
         />
 
         {children || childrenCtx}

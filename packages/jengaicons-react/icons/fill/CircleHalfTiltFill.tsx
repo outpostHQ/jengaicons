@@ -22,22 +22,22 @@ const CircleHalfTiltFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M8.474 24.768c4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0-4.686 4.686-4.686 12.284 0 16.97Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M8.474 24.768c4.687 4.686 12.285 4.686 16.97 0 4.687-4.686 4.687-12.284 0-16.97-4.685-4.687-12.283-4.687-16.97 0-4.686 4.686-4.686 12.284 0 16.97Z"
         />
         <path
-          d="M8.475 24.768c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97l-16.97 16.97Z"
           fill={color || colorCtx || "#000000"}
+          d="M8.475 24.768c4.686 4.687 12.284 4.687 16.97 0 4.686-4.686 4.686-12.284 0-16.97l-16.97 16.97Z"
         />
 
         {children || childrenCtx}

@@ -21,18 +21,18 @@ const ShareRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M6.399 20.799v4.402h19.203V20.8M16 6.799v12M11.757 11.042 16 6.799l4.243 4.243"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M6.399 20.799v4.402h19.203V20.8M16 6.799v12M11.757 11.042 16 6.799l4.243 4.243"
       />
 
       {children || childrenCtx}

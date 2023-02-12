@@ -22,32 +22,32 @@ const AlignBottomFill = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M28.96 28.283h-24"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M28.96 28.283h-24"
         />
         <rect
           width="7.318"
           height="19.826"
+          fill={color || colorCtx || "#000000"}
           rx="1"
           transform="matrix(1 0 0 -1 7.55 24.108)"
-          fill={color || colorCtx || "#000000"}
         />
         <rect
           width="7.318"
           height="14.608"
+          fill={color || colorCtx || "#000000"}
           rx="1"
           transform="matrix(1 0 0 -1 19.05 24.108)"
-          fill={color || colorCtx || "#000000"}
         />
 
         {children || childrenCtx}

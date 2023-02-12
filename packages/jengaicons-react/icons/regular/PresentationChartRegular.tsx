@@ -22,24 +22,24 @@ const PresentationChartRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m19.84 23.2 3.84 4.8M12.16 23.2 8.32 28M12.16 15.52v2.88M16 13.6v4.8M19.84 11.68v6.72M16 6.88V4"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m19.84 23.2 3.84 4.8M12.16 23.2 8.32 28M12.16 15.52v2.88M16 13.6v4.8M19.84 11.68v6.72M16 6.88V4"
         />
         <path
-          d="M4.48 6.88h23.04V23.2H4.48V6.88Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4.48 6.88h23.04V23.2H4.48V6.88Z"
         />
 
         {children || childrenCtx}

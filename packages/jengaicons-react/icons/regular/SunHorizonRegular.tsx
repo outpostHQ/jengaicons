@@ -22,18 +22,18 @@ const SunHorizonRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m12.229 9.937-.825-1.982M6.893 15.273l-1.982-.825M25.107 15.273l1.982-.825M19.771 9.937l.825-1.982M28 20.759H4M24.571 25.045H7.43M9.807 20.759a6.429 6.429 0 1 1 12.386 0"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m12.229 9.937-.825-1.982M6.893 15.273l-1.982-.825M25.107 15.273l1.982-.825M19.771 9.937l.825-1.982M28 20.759H4M24.571 25.045H7.43M9.807 20.759a6.429 6.429 0 1 1 12.386 0"
         />
 
         {children || childrenCtx}

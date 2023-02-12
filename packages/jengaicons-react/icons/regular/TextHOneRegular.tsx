@@ -22,18 +22,18 @@ const TextHOneRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M6 7.896V21.23M17.556 14.563H6M17.555 7.896V21.23M26 24.104v-10.43l-2.667 1.699"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M6 7.896V21.23M17.556 14.563H6M17.555 7.896V21.23M26 24.104v-10.43l-2.667 1.699"
         />
 
         {children || childrenCtx}

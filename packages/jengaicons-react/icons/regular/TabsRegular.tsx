@@ -21,31 +21,31 @@ const TabsRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M4 11.714h15.429v8.572H4v-8.572Z"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinejoin="round"
       />
       <path
+        stroke={color || colorCtx || "#000000"}
+        strokeLinecap="round"
+        strokeLinejoin="round"
+        strokeWidth="2"
         d="M22 11.714h1.714v8.572h-5.143"
-        stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
-        strokeLinecap="round"
-        strokeLinejoin="round"
       />
       <path
-        d="M26.286 11.714H28v8.572h-5.143"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="M26.286 11.714H28v8.572h-5.143"
       />
 
       {children || childrenCtx}

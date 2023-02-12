@@ -22,18 +22,18 @@ const CellSignalSlashRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M26.782 28H4l12-12m2.678-2.678L28 4v20.071M6 5l20.83 22.912"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M26.782 28H4l12-12m2.678-2.678L28 4v20.071M6 5l20.83 22.912"
         />
 
         {children || childrenCtx}

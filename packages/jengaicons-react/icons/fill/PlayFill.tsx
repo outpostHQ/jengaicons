@@ -21,15 +21,15 @@ const PlayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M26.244 17.212a.5.5 0 0 0 0-.858L7.719 5.24a.5.5 0 0 0-.758.428v22.231a.5.5 0 0 0 .758.43l18.525-11.116Z"
         fill={color || colorCtx || "#000000"}
+        d="M26.244 17.212a.5.5 0 0 0 0-.858L7.719 5.24a.5.5 0 0 0-.758.428v22.231a.5.5 0 0 0 .758.43l18.525-11.116Z"
       />
 
       {children || childrenCtx}

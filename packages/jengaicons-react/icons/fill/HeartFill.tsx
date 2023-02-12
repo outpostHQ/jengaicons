@@ -21,15 +21,15 @@ const HeartFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="M16.96 26.843s-12-6.72-12-14.88a6.241 6.241 0 0 1 12-2.404 6.242 6.242 0 0 1 12 2.404c0 8.16-12 14.88-12 14.88Z"
         fill={color || colorCtx || "#000000"}
+        d="M16.96 26.843s-12-6.72-12-14.88a6.241 6.241 0 0 1 12-2.404 6.242 6.242 0 0 1 12 2.404c0 8.16-12 14.88-12 14.88Z"
       />
 
       {children || childrenCtx}

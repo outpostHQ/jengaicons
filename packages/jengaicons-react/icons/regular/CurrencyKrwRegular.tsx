@@ -22,18 +22,18 @@ const CurrencyKrwRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="m6.714 10.286 4.643 11.428L16 10.286l4.643 11.428 4.643-11.428M6 16h20"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m6.714 10.286 4.643 11.428L16 10.286l4.643 11.428 4.643-11.428M6 16h20"
         />
 
         {children || childrenCtx}

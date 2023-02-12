@@ -22,25 +22,25 @@ const ScreencastRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M4 24.5a2 2 0 0 1 2 2M4 20.5a6 6 0 0 1 6 6M4 16.5a10 10 0 0 1 10 10"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 24.5a2 2 0 0 1 2 2M4 20.5a6 6 0 0 1 6 6M4 16.5a10 10 0 0 1 10 10"
         />
         <path
-          d="M4 12.518V6.5h24v20h-9.995"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 12.518V6.5h24v20h-9.995"
         />
 
         {children || childrenCtx}

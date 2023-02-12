@@ -22,21 +22,21 @@ const HardDrivesRegular = forwardRef<SVGSVGElement, JengaIconProps>(
         height={size || sizeCtx || 32}
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          d="M23.09 11.091a1.636 1.636 0 1 0 0-3.273 1.636 1.636 0 0 0 0 3.273ZM23.09 24.182a1.636 1.636 0 1 0 .001-3.273 1.636 1.636 0 0 0 0 3.273Z"
           fill={color || colorCtx || "#000000"}
+          d="M23.09 11.091a1.636 1.636 0 1 0 0-3.273 1.636 1.636 0 0 0 0 3.273ZM23.09 24.182a1.636 1.636 0 1 0 .001-3.273 1.636 1.636 0 0 0 0 3.273Z"
         />
         <path
-          d="M4 5.09h24v8.728H4V5.091ZM4 18.182h24v8.727H4v-8.727Z"
           stroke={color || colorCtx || "#000000"}
-          strokeWidth="2"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 5.09h24v8.728H4V5.091ZM4 18.182h24v8.727H4v-8.727Z"
         />
 
         {children || childrenCtx}

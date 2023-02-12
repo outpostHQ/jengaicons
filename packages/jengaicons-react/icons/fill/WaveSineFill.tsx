@@ -21,17 +21,17 @@ const WaveSineFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        d="m6.96 16.96 2.554-4.015c1.176-1.847 3.87-1.854 5.054-.013l4.97 7.723c1.181 1.835 3.866 1.835 5.046-.001l2.376-3.695"
         stroke={color || colorCtx || "#000000"}
-        strokeWidth="2"
         strokeLinecap="round"
+        strokeWidth="2"
+        d="m6.96 16.96 2.554-4.015c1.176-1.847 3.87-1.854 5.054-.013l4.97 7.723c1.181 1.835 3.866 1.835 5.046-.001l2.376-3.695"
       />
 
       {children || childrenCtx}
