@@ -3,6 +3,7 @@
   "private": true,
   "scripts": {
     "build": "turbo build",
+    "build:react": "pnpm generate-react && pnpm --filter @jengaicons/react build",
     "changeset": "changeset",
     "clean": "turbo clean && rm -rf node_modules",
     "generate-optimized": "pnpm --filter generate-optimized build",
