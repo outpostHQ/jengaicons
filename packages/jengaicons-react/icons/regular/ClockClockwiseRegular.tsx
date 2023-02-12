@@ -1,35 +1,49 @@
 import * as React from "react";
-import { forwardRef } from "react";
+import { forwardRef, useContext } from "react";
 import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 
 const ClockClockwiseRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color } = props;
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
 
     return (
       <svg
-        style={{ width: size || 32, height: size || 32 }}
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        xmlns="http://www.w3.org/2000/svg"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
-        {...props}
       >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
         <path
-          stroke={color || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
           d="M15.468 10.245V16.5M20.885 19.628 15.468 16.5M23.577 24.61a11.468 11.468 0 1 1 0-16.219L28 12.814"
-        />
-        <path
-          stroke={color || "#000000"}
+          stroke={color || colorCtx || "#000000"}
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M21.745 12.814H28V6.56"
         />
+        <path
+          d="M21.745 12.814H28V6.56"
+          stroke={color || colorCtx || "#000000"}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {children || childrenCtx}
       </svg>
     );
   }

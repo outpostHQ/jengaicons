@@ -1,27 +1,41 @@
 import * as React from "react";
-import { forwardRef } from "react";
+import { forwardRef, useContext } from "react";
 import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 
 const DeviceMobileFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color } = props;
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
 
     return (
       <svg
-        style={{ width: size || 32, height: size || 32 }}
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        xmlns="http://www.w3.org/2000/svg"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
-        {...props}
       >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
         <path
-          fill={color || "#000000"}
           fillRule="evenodd"
-          d="M11.575 4.283a2 2 0 0 0-2 2v.692h14.77v-.692a2 2 0 0 0-2-2h-10.77Zm-2 17.384V8.975h14.77v12.693H9.574Zm0 2v2.616a2 2 0 0 0 2 2h10.77a2 2 0 0 0 2-2v-2.616H9.574Zm5.936.812a1 1 0 1 0 0 2h2.897a1 1 0 1 0 0-2h-2.897Z"
           clip-rule="evenodd"
+          d="M11.575 4.283a2 2 0 0 0-2 2v.692h14.77v-.692a2 2 0 0 0-2-2h-10.77Zm-2 17.384V8.975h14.77v12.693H9.574Zm0 2v2.616a2 2 0 0 0 2 2h10.77a2 2 0 0 0 2-2v-2.616H9.574Zm5.936.812a1 1 0 1 0 0 2h2.897a1 1 0 1 0 0-2h-2.897Z"
+          fill={color || colorCtx || "#000000"}
         />
+
+        {children || childrenCtx}
       </svg>
     );
   }

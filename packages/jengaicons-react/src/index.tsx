@@ -2128,3 +2128,5 @@ export { default as XCircleRegular } from "../icons/regular/XCircleRegular";
 export { default as XSquareRegular } from "../icons/regular/XSquareRegular";
 export { default as YinYangRegular } from "../icons/regular/YinYangRegular";
 export { default as YoutubeLogoRegular } from "../icons/regular/YoutubeLogoRegular";
+export { JengaIconContext } from './base';
+export type { JengaIconProps }  from './base'

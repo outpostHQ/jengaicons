@@ -1,35 +1,49 @@
 import * as React from "react";
-import { forwardRef } from "react";
+import { forwardRef, useContext } from "react";
 import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 
 const MusicNotesSimpleRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color } = props;
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
 
     return (
       <svg
-        style={{ width: size || 32, height: size || 32 }}
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         ref={ref}
-        xmlns="http://www.w3.org/2000/svg"
         fill="none"
+        xmlns="http://www.w3.org/2000/svg"
         viewBox="0 0 32 32"
-        {...props}
       >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
         <path
-          stroke={color || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
           d="M23.681 24.66a3.36 3.36 0 1 0 0-6.722 3.36 3.36 0 0 0 0 6.721ZM8.319 28.5a3.36 3.36 0 1 0 0-6.721 3.36 3.36 0 0 0 0 6.721Z"
-        />
-        <path
-          stroke={color || "#000000"}
+          stroke={color || colorCtx || "#000000"}
+          strokeWidth="2"
           strokeLinecap="round"
           strokeLinejoin="round"
-          strokeWidth="2"
-          d="M11.68 25.195V8.51L27.041 4.5v16.614"
         />
+        <path
+          d="M11.68 25.195V8.51L27.041 4.5v16.614"
+          stroke={color || colorCtx || "#000000"}
+          strokeWidth="2"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+        />
+
+        {children || childrenCtx}
       </svg>
     );
   }

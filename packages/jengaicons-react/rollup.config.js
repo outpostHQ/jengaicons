@@ -6,10 +6,20 @@ import clean from '@rollup-extras/plugin-clean'
 import terser from '@rollup/plugin-terser'
 import summary from 'rollup-plugin-summary'
 import progress from 'rollup-plugin-progress'
+import externals from 'rollup-plugin-node-externals'
 
 let includePathOptions = {
   paths: ['./'],
   extensions: ['.js', '.ts', '.tsx', '.jsx'],
+}
+
+// import rollup from 'rollup'
+
+/** @type {rollup.ExternalOption} */
+const externalsCustom = (id, parentId, isResolved) => {
+  console.log(id, parentId, isResolved)
+
+  return !id.match(/.*(src|icons).*/)
 }
 
 /**@type {rollup.RollupOptions} */
@@ -21,10 +31,14 @@ const prodConfig = {
     dir: 'dist',
     preserveModules: true,
   },
-  external: ['react', 'tslib'],
+  external: [/node_modules/],
   plugins: [
     progress({
       clearLine: false, // default: true
+    }),
+    externals({
+      deps: true,
+      devDeps: true,
     }),
     clean(),
     resolve(),

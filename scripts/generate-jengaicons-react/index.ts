@@ -78,7 +78,7 @@ async function main() {
     if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
   }
 
-  const promises = itemsInDirectory.map(async (item) => {
+  for (let item of itemsInDirectory) {
     const variant = item.name
 
     const tasks = getSVGFileNames(variant).map(async (svgFileName) => {
@@ -111,9 +111,15 @@ async function main() {
     })
 
     await Promise.all(tasks)
-  })
+  }
 
-  await Promise.all(promises)
+  fs.appendFileSync(
+    PATH_TO_SRC_INDEX_FILE,
+    [
+      `export { JengaIconContext } from './base';`,
+      `export type { JengaIconProps }  from './base'`,
+    ].join('\n')
+  )
 }
 
 main()
