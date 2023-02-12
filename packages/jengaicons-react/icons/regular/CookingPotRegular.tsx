@@ -5,29 +5,29 @@ import type { JengaIconProps } from "../../src/base";
 
 const CookingPotRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M12.8 6.4v3.2M16 6.4v3.2M19.2 6.4v3.2M28 14.4l-3.2 2.4M4 14.4l3.2 2.4"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12.8 6.4v3.2M16 6.4v3.2M19.2 6.4v3.2M28 14.4l-3.2 2.4M4 14.4l3.2 2.4"
         />
         <path
-          d="M7.2 12.8h17.6v10.8a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V12.8Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.2 12.8h17.6v10.8a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V12.8Z"
         />
       </svg>
     );

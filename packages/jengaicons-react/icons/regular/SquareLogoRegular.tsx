@@ -5,28 +5,28 @@ import type { JengaIconProps } from "../../src/base";
 
 const SquareLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M20.76 11.24h-9.52v9.52h9.52v-9.52Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20.76 11.24h-9.52v9.52h9.52v-9.52Z"
         />
         <path
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 4h24v24H4z"
         />
       </svg>

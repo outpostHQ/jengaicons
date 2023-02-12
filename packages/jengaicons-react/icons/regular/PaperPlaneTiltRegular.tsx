@@ -5,29 +5,29 @@ import type { JengaIconProps } from "../../src/base";
 
 const PaperPlaneTiltRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="m15.403 16.582 5.151-5.15"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m15.403 16.582 5.151-5.15"
         />
         <path
-          d="m4 11.236 24-7.205-7.201 23.938-5.39-11.375L4 11.236Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m4 11.236 24-7.205-7.201 23.938-5.39-11.375L4 11.236Z"
         />
       </svg>
     );

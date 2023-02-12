@@ -5,34 +5,34 @@ import type { JengaIconProps } from "../../src/base";
 
 const LockLaminatedRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M5 17.478h22M5 21.052h22M5 24.68h22"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M5 17.478h22M5 21.052h22M5 24.68h22"
         />
         <path
-          d="M4.632 14.105h22.736V28H4.632V14.105Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4.632 14.105h22.736V28H4.632V14.105Z"
         />
         <path
-          d="M9.684 9a5 5 0 0 1 5-5h2.632a5 5 0 0 1 5 5v4.605a.5.5 0 0 1-.5.5H10.184a.5.5 0 0 1-.5-.5V9Z"
-          stroke="#1C1B1F"
+          stroke={color || "#000000"}
           strokeWidth="2"
+          d="M9.684 9a5 5 0 0 1 5-5h2.632a5 5 0 0 1 5 5v4.605a.5.5 0 0 1-.5.5H10.184a.5.5 0 0 1-.5-.5V9Z"
         />
       </svg>
     );

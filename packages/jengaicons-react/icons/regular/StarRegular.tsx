@@ -4,22 +4,22 @@ import type { SVGSVGElement } from "react";
 import type { JengaIconProps } from "../../src/base";
 
 const StarRegular = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size = 32 } = props;
+  const { size, color } = props;
 
   return (
     <svg
-      style={{ width: size, height: size }}
+      style={{ width: size || 32, height: size || 32 }}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
       {...props}
     >
       <path
-        d="m16 4 2.694 8.292h8.719l-7.054 5.124 2.694 8.292L16 20.584l-7.053 5.124 2.694-8.292-7.054-5.124h8.719L16 4Z"
-        stroke="#1C1B1F"
-        strokeWidth="2"
+        stroke={color || "#000000"}
         strokeLinejoin="round"
+        strokeWidth="2"
+        d="m16 4 2.694 8.292h8.719l-7.054 5.124 2.694 8.292L16 20.584l-7.053 5.124 2.694-8.292-7.054-5.124h8.719L16 4Z"
       />
     </svg>
   );

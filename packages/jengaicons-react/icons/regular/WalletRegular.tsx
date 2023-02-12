@@ -5,34 +5,34 @@ import type { JengaIconProps } from "../../src/base";
 
 const WalletRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
+          stroke={color || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 7.476V26.46h24V9.677H6.6"
-          stroke="#1C1B1F"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          stroke={color || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="M23.065 5.54H6a2 2 0 0 0-2 2v2.137h21.996"
-          stroke="#1C1B1F"
-          strokeWidth="2"
-          strokeLinecap="round"
-          strokeLinejoin="round"
         />
         <path
+          fill={color || "#000000"}
           d="M23.5 23.46a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          fill="#1C1B1F"
         />
       </svg>
     );

@@ -5,43 +5,43 @@ import type { JengaIconProps } from "../../src/base";
 
 const MicrosoftWordLogoRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M20 12h7M20 20h7"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20 12h7M20 20h7"
         />
         <path
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M5 9h15v14H5z"
         />
         <path
-          d="M9 8.903V4h18v24H9v-4.952"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M9 8.903V4h18v24H9v-4.952"
         />
         <path
-          d="m8.957 13.102 1.4 5.938 2.045-4.734 2.017 4.734 1.624-5.938"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m8.957 13.102 1.4 5.938 2.045-4.734 2.017 4.734 1.624-5.938"
         />
       </svg>
     );

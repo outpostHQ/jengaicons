@@ -5,29 +5,29 @@ import type { JengaIconProps } from "../../src/base";
 
 const FolderOpenRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M4 10.461v14.77h19.91m-8.833-14.77h11.077v3.701"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 10.461v14.77h19.91m-8.833-14.77h11.077v3.701"
         />
         <path
-          d="M15.077 10.461 11.385 6.77H4v3.692M7.692 14.154H28L24.308 25.23H4l3.692-11.077Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.077 10.461 11.385 6.77H4v3.692M7.692 14.154H28L24.308 25.23H4l3.692-11.077Z"
         />
       </svg>
     );

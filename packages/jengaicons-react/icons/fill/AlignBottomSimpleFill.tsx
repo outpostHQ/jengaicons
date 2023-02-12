@@ -5,22 +5,22 @@ import type { JengaIconProps } from "../../src/base";
 
 const AlignBottomSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
+          fill={color || "#000000"}
           fillRule="evenodd"
-          clip-rule="evenodd"
           d="M13.16 4.283a1 1 0 0 0-1 1v18.16a1 1 0 0 0 1 1h7.6a1 1 0 0 0 1-1V5.283a1 1 0 0 0-1-1h-7.6Zm-4.84 23a1 1 0 1 0 0 2H25.6a1 1 0 0 0 0-2H8.32Z"
-          fill="#1C1B1F"
+          clip-rule="evenodd"
         />
       </svg>
     );

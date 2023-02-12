@@ -5,23 +5,23 @@ import type { JengaIconProps } from "../../src/base";
 
 const CaretDownRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M15.646 21.646 4.854 10.854A.5.5 0 0 1 5.207 10h21.586a.5.5 0 0 1 .353.854L16.354 21.646a.5.5 0 0 1-.708 0Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M15.646 21.646 4.854 10.854A.5.5 0 0 1 5.207 10h21.586a.5.5 0 0 1 .353.854L16.354 21.646a.5.5 0 0 1-.708 0Z"
         />
       </svg>
     );

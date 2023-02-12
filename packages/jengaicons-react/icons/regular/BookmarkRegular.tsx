@@ -5,30 +5,30 @@ import type { JengaIconProps } from "../../src/base";
 
 const BookmarkRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M7.652 21.74V4h16.696v17.74l-8.306-5.22-8.39 5.22Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.652 21.74V4h16.696v17.74l-8.306-5.22-8.39 5.22Z"
         />
         <path
-          d="M7.652 20.696V28l8.39-5.219L24.348 28v-7.304"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M7.652 20.696V28l8.39-5.219L24.348 28v-7.304"
         />
       </svg>
     );

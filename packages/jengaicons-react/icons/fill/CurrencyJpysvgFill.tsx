@@ -5,23 +5,23 @@ import type { JengaIconProps } from "../../src/base";
 
 const CurrencyJpysvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M11.246 20.569h11.428M11.246 16.759h11.428M16.96 16.759v9.524M25.532 6.283 16.96 16.759 8.39 6.283"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.246 20.569h11.428M11.246 16.759h11.428M16.96 16.759v9.524M25.532 6.283 16.96 16.759 8.39 6.283"
         />
       </svg>
     );

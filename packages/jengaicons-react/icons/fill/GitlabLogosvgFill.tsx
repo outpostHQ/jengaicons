@@ -5,36 +5,36 @@ import type { JengaIconProps } from "../../src/base";
 
 const GitlabLogosvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="m27.5 13.142 1.462 5.454-11.786 8.455-12.299-8.455L6.5 13.142"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path
-          d="M12 13.142H6.5l2-7 3.5 7ZM22 13.142h5.5l-2-7-3.5 7Z"
-          fill="#1C1B1F"
-          stroke="#1C1B1F"
           strokeWidth="2"
-          strokeLinejoin="round"
+          d="m27.5 13.142 1.462 5.454-11.786 8.455-12.299-8.455L6.5 13.142"
         />
         <path
-          d="M22 13.142H12l5 14 5-14Z"
-          fill="#1C1B1F"
-          stroke="#1C1B1F"
+          fill={color || "#000000"}
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M12 13.142H6.5l2-7 3.5 7ZM22 13.142h5.5l-2-7-3.5 7Z"
+        />
+        <path
+          fill={color || "#000000"}
+          stroke={color || "#000000"}
+          strokeLinejoin="round"
+          d="M22 13.142H12l5 14 5-14Z"
         />
       </svg>
     );

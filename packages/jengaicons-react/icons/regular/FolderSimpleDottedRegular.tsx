@@ -5,29 +5,29 @@ import type { JengaIconProps } from "../../src/base";
 
 const FolderSimpleDottedRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M4 11.23V26h24V11.23H16"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
+          stroke-dasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          d="M4 11.23V26h24V11.23H16"
         />
         <path
-          d="m16 11.23-3.856-3.559a.5.5 0 0 0-.34-.133H4.5a.5.5 0 0 0-.5.5v3.193"
-          stroke="#1C1B1F"
+          stroke={color || "#000000"}
           strokeWidth="2"
+          d="m16 11.23-3.856-3.559a.5.5 0 0 0-.34-.133H4.5a.5.5 0 0 0-.5.5v3.193"
         />
       </svg>
     );

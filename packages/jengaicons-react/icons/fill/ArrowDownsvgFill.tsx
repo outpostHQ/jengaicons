@@ -5,23 +5,23 @@ import type { JengaIconProps } from "../../src/base";
 
 const ArrowDownsvgFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="m10.596 21.919 6.364 6.364 6.364-6.364M16.96 4.283v24"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="m10.596 21.919 6.364 6.364 6.364-6.364M16.96 4.283v24"
         />
       </svg>
     );

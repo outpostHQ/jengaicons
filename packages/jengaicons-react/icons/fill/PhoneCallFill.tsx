@@ -5,27 +5,27 @@ import type { JengaIconProps } from "../../src/base";
 
 const PhoneCallFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M20.564 5.286a10.472 10.472 0 0 1 7.393 7.393M19.481 9.326a6.284 6.284 0 0 1 4.436 4.436"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20.564 5.286a10.472 10.472 0 0 1 7.393 7.393M19.481 9.326a6.284 6.284 0 0 1 4.436 4.436"
         />
         <path
+          fill={color || "#000000"}
           d="M11.817 16.368a11.021 11.021 0 0 0 5.103 5.08 1.036 1.036 0 0 0 1.023-.077l3.27-2.182a1.045 1.045 0 0 1 .992-.09l6.12 2.622a1.042 1.042 0 0 1 .627 1.084 6.272 6.272 0 0 1-6.222 5.478 17.77 17.77 0 0 1-17.77-17.77 6.273 6.273 0 0 1 5.478-6.223 1.042 1.042 0 0 1 1.084.627l2.625 6.126a1.044 1.044 0 0 1-.086.984l-2.174 3.321a1.035 1.035 0 0 0-.07 1.02Z"
-          fill="#1C1B1F"
         />
       </svg>
     );

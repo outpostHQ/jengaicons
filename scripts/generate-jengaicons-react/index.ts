@@ -93,6 +93,7 @@ async function main() {
         componentName,
         defaultSize: 32,
         svgContent: svgFileContent,
+        defaultColor: '#000000', // BLACK COLOR
       })
 
       /**

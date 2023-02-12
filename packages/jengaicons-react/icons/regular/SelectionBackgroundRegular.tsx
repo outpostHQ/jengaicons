@@ -5,31 +5,31 @@ import type { JengaIconProps } from "../../src/base";
 
 const SelectionBackgroundRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4 10.545h17.454v17.454H4z"
         />
         <path
-          d="M10.545 10.573V4H28v17.454h-6.548"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
+          stroke-dasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
-          stroke-dasharray="4 4"
+          strokeWidth="2"
+          d="M10.545 10.573V4H28v17.454h-6.548"
         />
       </svg>
     );

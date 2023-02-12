@@ -5,23 +5,23 @@ import type { JengaIconProps } from "../../src/base";
 
 const BracketsCurlyFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M11.153 7.767c-6.193 0 0 8.516-6.193 8.516 6.193 0 0 8.516 6.193 8.516M22.767 7.767c6.193 0 0 8.516 6.193 8.516-6.193 0 0 8.516-6.193 8.516"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.153 7.767c-6.193 0 0 8.516-6.193 8.516 6.193 0 0 8.516 6.193 8.516M22.767 7.767c6.193 0 0 8.516 6.193 8.516-6.193 0 0 8.516-6.193 8.516"
         />
       </svg>
     );

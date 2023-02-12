@@ -5,53 +5,53 @@ import type { JengaIconProps } from "../../src/base";
 
 const SidebarBrutalistFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M11.96 6.283v20"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.96 6.283v20"
         />
         <path
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
           d="M4.96 6.283h24v20h-24z"
         />
         <path
-          d="M12 6.283v20"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
-        />
-        <path fill="#1C1B1F" d="M4.96 6.283H12v20H4.96z" />
-        <path
-          d="M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
-          stroke="#1C1B1F"
           strokeWidth="2"
+          d="M12 6.283v20"
+        />
+        <path fill={color || "#000000"} d="M4.96 6.283H12v20H4.96z" />
+        <path
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
         />
         <rect
-          x="18.666"
-          y="14.864"
           width="6.957"
           height="6.977"
-          rx=".5"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          x="18.666"
+          y="14.864"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          rx=".5"
         />
       </svg>
     );

@@ -4,18 +4,25 @@ import type { SVGSVGElement } from "react";
 import type { JengaIconProps } from "../../src/base";
 
 const SquareFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size = 32 } = props;
+  const { size, color } = props;
 
   return (
     <svg
-      style={{ width: size, height: size }}
+      style={{ width: size || 32, height: size || 32 }}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
       {...props}
     >
-      <rect x="4.96" y="4.283" width="24" height="24" rx="1" fill="#1C1B1F" />
+      <rect
+        width="24"
+        height="24"
+        x="4.96"
+        y="4.283"
+        fill={color || "#000000"}
+        rx="1"
+      />
     </svg>
   );
 });

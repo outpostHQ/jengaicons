@@ -5,23 +5,23 @@ import type { JengaIconProps } from "../../src/base";
 
 const NotificationRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M24.348 11.304a3.652 3.652 0 1 0 0-7.304 3.652 3.652 0 0 0 0 7.304ZM14.957 6.087H4V28h21.913V17.043"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M24.348 11.304a3.652 3.652 0 1 0 0-7.304 3.652 3.652 0 0 0 0 7.304ZM14.957 6.087H4V28h21.913V17.043"
         />
       </svg>
     );

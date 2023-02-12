@@ -4,7 +4,9 @@ export default function Home() {
   return (
     <>
       <main>
-        <ActivityFill size={100} />
+        <div style={{ color: 'green' }}>
+          <ActivityFill size='5rem' color='currentColor' />
+        </div>
       </main>
     </>
   )

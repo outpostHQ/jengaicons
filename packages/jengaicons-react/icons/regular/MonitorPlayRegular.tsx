@@ -5,35 +5,35 @@ import type { JengaIconProps } from "../../src/base";
 
 const MonitorPlayRegular = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
-          d="M20 27h-8"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M20 27h-8"
         />
         <path
+          stroke={color || "#000000"}
+          strokeLinejoin="round"
+          strokeWidth="2"
           d="m19.322 14-6.643 3.835v-7.67L19.322 14Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
-          strokeLinejoin="round"
         />
         <path
-          d="M4 5h24v18H4V5Z"
-          stroke="#1C1B1F"
-          strokeWidth="2"
+          stroke={color || "#000000"}
           strokeLinejoin="round"
+          strokeWidth="2"
+          d="M4 5h24v18H4V5Z"
         />
       </svg>
     );

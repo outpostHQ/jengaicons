@@ -4,20 +4,20 @@ import type { SVGSVGElement } from "react";
 import type { JengaIconProps } from "../../src/base";
 
 const HeartFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size = 32 } = props;
+  const { size, color } = props;
 
   return (
     <svg
-      style={{ width: size, height: size }}
+      style={{ width: size || 32, height: size || 32 }}
       ref={ref}
-      fill="none"
       xmlns="http://www.w3.org/2000/svg"
+      fill="none"
       viewBox="0 0 32 32"
       {...props}
     >
       <path
+        fill={color || "#000000"}
         d="M16.96 26.843s-12-6.72-12-14.88a6.241 6.241 0 0 1 12-2.404 6.242 6.242 0 0 1 12 2.404c0 8.16-12 14.88-12 14.88Z"
-        fill="#1C1B1F"
       />
     </svg>
   );

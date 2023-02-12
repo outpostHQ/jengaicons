@@ -5,22 +5,22 @@ import type { JengaIconProps } from "../../src/base";
 
 const LightningSlashFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size = 32 } = props;
+    const { size, color } = props;
 
     return (
       <svg
-        style={{ width: size, height: size }}
+        style={{ width: size || 32, height: size || 32 }}
         ref={ref}
-        fill="none"
         xmlns="http://www.w3.org/2000/svg"
+        fill="none"
         viewBox="0 0 32 32"
         {...props}
       >
         <path
+          fill={color || "#000000"}
           fillRule="evenodd"
-          clip-rule="evenodd"
           d="M5.938 5.21a1 1 0 0 1 1.415 0l20 20a1 1 0 0 1-1.415 1.414l-6.073-6.073L13.714 27c-.349.365-.957.043-.851-.45l1.381-6.41a.5.5 0 0 0-.315-.574l-6.045-2.243a.5.5 0 0 1-.187-.814l3.967-4.16-5.726-5.725a1 1 0 0 1 0-1.414Zm11.986 6.975 1.132-6.246c.09-.49-.514-.794-.855-.433l-3.843 4.068a.5.5 0 0 0 .007.694l7.44 7.558a.5.5 0 0 0 .721-.01l1.73-1.855a.5.5 0 0 0-.175-.803l-5.857-2.422a.5.5 0 0 1-.3-.551Z"
-          fill="#1C1B1F"
+          clip-rule="evenodd"
         />
       </svg>
     );
