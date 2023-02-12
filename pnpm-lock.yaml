@@ -112,6 +112,7 @@ importers:
       rollup: 3.14.0
       rollup-plugin-dts: 5.1.1
       rollup-plugin-includepaths: 0.2.4
+      rollup-plugin-node-externals: 5.1.2
       rollup-plugin-progress: 1.1.2
       rollup-plugin-summary: 2.0.0
       rollup-plugin-uglify: 6.0.4
@@ -144,6 +145,7 @@ importers:
       rollup: 3.14.0
       rollup-plugin-dts: 5.1.1_2za6rqstu4xegr2hrsgsskkobi
       rollup-plugin-includepaths: 0.2.4
+      rollup-plugin-node-externals: 5.1.2_rollup@3.14.0
       rollup-plugin-progress: 1.1.2
       rollup-plugin-summary: 2.0.0_rollup@3.14.0
       rollup-plugin-uglify: 6.0.4_rollup@3.14.0
@@ -6930,6 +6932,15 @@ packages:
 
   /rollup-plugin-includepaths/0.2.4:
     resolution: {integrity: sha512-iZen+XKVExeCzk7jeSZPJKL7B67slZNr8GXSC5ROBXtDGXDBH8wdjMfdNW5hf9kPt+tHyIvWh3wlE9bPrZL24g==}
+    dev: true
+
+  /rollup-plugin-node-externals/5.1.2_rollup@3.14.0:
+    resolution: {integrity: sha512-M32v8yPeVT0dYOYHfd6SNyl0X1xskB15jYFlwUPzIIVpLQ200KVlilbFsoNMUho4SnQuT7Di3s/aLm79bnP48w==}
+    engines: {node: '>=14.0.0'}
+    peerDependencies:
+      rollup: ^2.60.0 || ^3.0.0
+    dependencies:
+      rollup: 3.14.0
     dev: true
 
   /rollup-plugin-progress/1.1.2:
