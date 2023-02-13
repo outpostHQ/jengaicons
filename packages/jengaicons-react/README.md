@@ -81,7 +81,7 @@ You may create multiple Contexts for styling icons differently in separate regio
 
 ### Composability
 
-<img src="/meta/cube-rotate.svg" width="128" align="right" />
+<img src="../../meta/cube-rotate.svg" width="128" align="right" />
 
 Components can accept arbitrary SVG elements as children, so long as they are valid children of the `<svg>` element. This can be used to modify an icon with background layers or shapes, filters, animations and more. The children will be placed _below_ the normal icon contents.
 
@@ -90,7 +90,7 @@ The following will cause the Cube icon to rotate and pulse:
 ```jsx
 const RotatingCube = () => {
   return (
-    <Cube color='red'>
+    <Cube color='darkorchid' weight='duotone'>
       <animate
         attributeName='opacity'
         values='0;1;0'
