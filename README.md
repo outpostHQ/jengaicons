@@ -45,6 +45,6 @@ Figma API has a fixed number of requests (rate limits) you can call per minute. 
 
 ## License
 
-Jenga-UI is a project by [Forneu](https://outpost.run).
+Jenga-UI is a project by [Outpost](https://outpost.run).
 
 Released under the MIT License.
