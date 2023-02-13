@@ -17,6 +17,14 @@ export interface JengaIconProps {
   children?: SVGProps<SVGSVGElement>['children']
 }
 
-type TJenIconContext = Partial<JengaIconProps>
+export interface JengaIconRegularProps extends JengaIconProps {
+  /**
+   * Sets the thinkness / `strokeWidth` of the Icon \
+   * Only applies to `Regular` icons
+   * */
+  weight?: SVGProps<SVGSVGElement>['strokeWidth']
+}
 
-export const JengaIconContext = createContext<TJenIconContext>({})
+type TJengaIconContext = Partial<JengaIconProps | JengaIconRegularProps>
+
+export const JengaIconContext = createContext<TJengaIconContext>({})

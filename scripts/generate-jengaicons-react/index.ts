@@ -2,6 +2,7 @@ import fs from 'fs'
 import path from 'path'
 import transform from './transform'
 import { getCLIArgs } from './cli'
+import { TVariants } from './types'
 
 const args = getCLIArgs()
 const PATH_TO_ASSETS = args.assets
@@ -46,10 +47,9 @@ const getReactSVGContent = (svgFileName: string, variant: string) => {
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
-  const componentName = `${svgFileName.replace(
-    '.svg',
-    ''
-  )}${variant[0].toUpperCase()}${variant.slice(1)}`
+  const componentName = `${svgFileName.replace('.svg', '')}${capitalize(
+    variant
+  )}`
 
   let safeComponentName = componentName.replace('.', '')
   safeComponentName = safeComponentName.replace('-', '')
@@ -58,6 +58,8 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
 
   return safeComponentName
 }
+
+const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 async function main() {
   const itemsInDirectory = getIconDirs()
@@ -79,12 +81,17 @@ async function main() {
   }
 
   for (let item of itemsInDirectory) {
-    const variant = item.name
+    const variantFolder = item.name as TVariants
 
-    const tasks = getSVGFileNames(variant).map(async (svgFileName) => {
-      const svgFileContent = getReactSVGContent(svgFileName, variant)
+    const tasks = getSVGFileNames(variantFolder).map(async (svgFileName) => {
+      const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
-      const componentName = getSafeComponentName(svgFileName, variant)
+      let componentName = getSafeComponentName(svgFileName, variantFolder)
+
+      // If variant = regular then strip Regular, ActivityRegular -> Activity
+      if (variantFolder.match(/regular$/i)) {
+        componentName = componentName.replace(/regular$/i, '')
+      }
 
       /**
        * SVG generated component with export statement
@@ -94,19 +101,21 @@ async function main() {
         defaultSize: 32,
         svgContent: svgFileContent,
         defaultColor: '#000000', // BLACK COLOR
+        defaultWeight: '2',
+        variant: capitalize(variantFolder) as TVariants,
       })
 
       /**
        * Write the component to the optimized folder
        */
       fs.writeFileSync(
-        path.join(PATH_TO_WRITE_FOLDER, variant, `${componentName}.tsx`),
+        path.join(PATH_TO_WRITE_FOLDER, variantFolder, `${componentName}.tsx`),
         svgComponent
       )
 
       fs.appendFileSync(
         PATH_TO_SRC_INDEX_FILE,
-        `export { default as ${componentName} } from "../${args.outputFolderName}/${variant}/${componentName}";\n`
+        `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`
       )
     })
 
@@ -116,8 +125,9 @@ async function main() {
   fs.appendFileSync(
     PATH_TO_SRC_INDEX_FILE,
     [
-      `export { JengaIconContext } from './base';`,
-      `export type { JengaIconProps }  from './base'`,
+      `export { JengaIconContext } from "./base";`,
+      `export type { JengaIconProps }  from "./base"`,
+      `export type { JengaIconRegularProps } from "./base"`,
     ].join('\n')
   )
 }
