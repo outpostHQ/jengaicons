@@ -29,10 +29,17 @@ const StackOverflowLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
-          fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M18.833 3.717a1 1 0 0 1 1.414 0l7.362 7.362a1 1 0 0 1-1.415 1.414l-7.361-7.361a1 1 0 0 1 0-1.415Zm-3.028 5.34a1 1 0 0 0-1 1.732L23.835 16a1 1 0 0 0 1-1.733l-9.03-5.211Zm-4.11 7.017a1 1 0 0 1 1.224-.707l10.059 2.697a1 1 0 0 1-.518 1.932L12.4 17.3a1 1 0 0 1-.707-1.225Zm-.947 7.139a1 1 0 0 1 1-1h10.424a1 1 0 1 1 0 2H11.748a1 1 0 0 1-1-1Zm-3.211-2.085a1 1 0 1 0-2 0v7.296a1 1 0 0 0 1 1h20.847a1 1 0 0 0 1-1v-7.296a1 1 0 1 0-2 0v6.296H7.537v-6.296Z"
-          clip-rule="evenodd"
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="2"
+          d="M11.748 23.213h10.424M12.66 16.333 22.72 19.03M15.305 9.923l9.03 5.212M19.54 4.424l7.362 7.362"
+        />
+        <path
+          stroke={color || colorCtx || "#000000"}
+          strokeLinecap="round"
+          strokeWidth="2"
+          d="M6.537 21.128v6.796a.5.5 0 0 0 .5.5h19.847a.5.5 0 0 0 .5-.5v-6.796"
         />
 
         {children || childrenCtx}
