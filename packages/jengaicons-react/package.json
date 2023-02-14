@@ -13,7 +13,7 @@
     "icon-font"
   ],
   "homepage": "https://github.com/outposthq/jengaicons",
-  "bugs": "https://github.com/OutpostHQ/tasty/jenga-icons",
+  "bugs": "https://github.com/outposthq/jengaicons",
   "repository": "outposthq/jengaicons",
   "license": "MIT",
   "sideEffects": false,
@@ -73,7 +73,7 @@
     {
       "limit": "3 kb",
       "path": "dist/src/index.js",
-      "import": "{ ActivityRegular }"
+      "import": "{ Activity }"
     }
   ]
 }
