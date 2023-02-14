@@ -6,11 +6,15 @@
     "react-icons",
     "icons",
     "react",
-    "typescript"
+    "typescript",
+    "svg",
+    "svg-icons",
+    "icon-pack",
+    "icon-font"
   ],
-  "homepage": "https://github.com/OutpostHQ/jenga-icons",
+  "homepage": "https://github.com/outposthq/jengaicons",
   "bugs": "https://github.com/OutpostHQ/tasty/jenga-icons",
-  "repository": "OutpostHQ/jenga-icons",
+  "repository": "outposthq/jengaicons",
   "license": "MIT",
   "sideEffects": false,
   "source": "src/index.tsx",

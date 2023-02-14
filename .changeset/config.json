@@ -2,7 +2,7 @@
     "$schema": "https://unpkg.com/@changesets/config@1.4.0/schema.json",
     "changelog": [
       "@changesets/changelog-github",
-      { "repo": "outposthq/jenga-icons" }
+      { "repo": "outposthq/jengaicons" }
     ],
     "commit": false,
     "linked": [],
