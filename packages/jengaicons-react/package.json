@@ -6,7 +6,11 @@
     "react-icons",
     "icons",
     "react",
-    "typescript"
+    "typescript",
+    "svg",
+    "svg-icons",
+    "icon-pack",
+    "icon-font"
   ],
   "homepage": "https://github.com/outposthq/jengaicons",
   "bugs": "https://github.com/OutpostHQ/tasty/jenga-icons",
