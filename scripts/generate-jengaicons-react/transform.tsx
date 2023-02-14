@@ -51,7 +51,7 @@ const getRegularComponent = (
   return `
     import * as React from 'react'
     import { forwardRef, useContext } from 'react'
-    import type { Context, SVGSVGElement } from 'react'
+    import type { Context } from 'react'
     import { JengaIconContext } from '../../src/base'
     import type { JengaIconRegularProps } from '../../src/base'
 
@@ -103,7 +103,6 @@ const getVariantComponent = (
   return `
     import * as React from 'react'
     import { forwardRef, useContext } from 'react'
-    import type { SVGSVGElement } from 'react'
     import { JengaIconContext } from '../../src/base'
     import type { JengaIconProps } from '../../src/base'
 
