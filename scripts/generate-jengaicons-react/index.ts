@@ -11,6 +11,7 @@ const PATH_TO_SRC_FOLDER = path.join(args.rootPath, 'src')
 const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, 'index.tsx')
 
 const pathPresent = (path: string) => fs.existsSync(path)
+const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 /**
  * Get all the directories in the assets directory
@@ -39,11 +40,12 @@ const getSVGFileNames = (variant: string) => {
 const getReactSVGContent = (svgFileName: string, variant: string) => {
   return fs
     .readFileSync(path.join(PATH_TO_ASSETS, variant, svgFileName), 'utf8')
-    .replace(/fill\-rule/g, 'fillRule')
+    .replace(/fill-rule/g, 'fillRule')
     .replace(/stroke-linecap/g, 'strokeLinecap')
     .replace(/stroke-linejoin/g, 'strokeLinejoin')
     .replace(/stroke-width/g, 'strokeWidth')
     .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
+    .replace(/clip-rule/g, 'clipRule')
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
@@ -58,8 +60,6 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
 
   return safeComponentName
 }
-
-const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 async function main() {
   const itemsInDirectory = getIconDirs()
@@ -80,7 +80,7 @@ async function main() {
     if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
   }
 
-  for (let item of itemsInDirectory) {
+  for (const item of itemsInDirectory) {
     const variantFolder = item.name as TVariants
 
     const tasks = getSVGFileNames(variantFolder).map(async (svgFileName) => {

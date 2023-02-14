@@ -50,8 +50,10 @@ async function main() {
       .map((item) => item.name)
 
     for (const svgFile of svgFiles) {
-      const svgFileName =
-        svgFile.split('-')[0].trim().replace(/\.svg/i, '') + '.svg'
+      const svgFileName = `${svgFile
+        .split('-')[0]
+        .trim()
+        .replace(/\.svg$/i, '')}.svg`
 
       const svgString = fs.readFileSync(
         path.join(pathToAssets, variant, svgFile),
