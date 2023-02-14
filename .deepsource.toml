@@ -10,6 +10,7 @@ name = "javascript"
   plugins = [
     "react"
   ]
+  style_guide = "standard"
 
 [[transformers]]
 name = "prettier"
