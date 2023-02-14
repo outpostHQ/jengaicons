@@ -30,7 +30,7 @@ const BooksFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M11.09 4.225a1 1 0 0 0-1 1v22.478a1 1 0 0 0 1 1h6.13a1 1 0 0 0 1-1V5.225a1 1 0 0 0-1-1h-6.13Zm5.13 17.37V6.225h-4.13v15.37h4.13Zm-4.13 2h4.13v3.108h-4.13v-3.108Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}
@@ -51,7 +51,7 @@ const BooksFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M11.09 5.225H4.96v22.478h6.13v-17.37H4.995V5.226h6.095Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}

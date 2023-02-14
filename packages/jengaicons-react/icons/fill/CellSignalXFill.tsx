@@ -31,7 +31,7 @@ const CellSignalXFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M6.167 26.95h19.626a.5.5 0 0 0 .5-.5V19.11l-1.252 1.253a2 2 0 0 1-2.829-2.829l1.253-1.252-1.252-1.253a2 2 0 0 1 2.828-2.828l1.252 1.252v-6.63a.5.5 0 0 0-.853-.354L5.814 26.096a.5.5 0 0 0 .353.854Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

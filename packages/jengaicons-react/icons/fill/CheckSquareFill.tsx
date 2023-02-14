@@ -31,7 +31,7 @@ const CheckSquareFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.96 4.283a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-22a1 1 0 0 0-1-1h-22Zm17.69 9.45a1 1 0 0 0-1.38-1.446l-7.31 6.977-3.31-3.159a1 1 0 0 0-1.38 1.447l4 3.818a1 1 0 0 0 1.38 0l8-7.636Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

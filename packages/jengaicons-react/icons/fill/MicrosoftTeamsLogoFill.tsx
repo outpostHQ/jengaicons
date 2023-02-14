@@ -50,7 +50,7 @@ const MicrosoftTeamsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.441 11.186a1 1 0 0 1 1-1H18.84a1 1 0 0 1 1 1v11.439a1 1 0 0 1-1 1H6.441a1 1 0 0 1-1-1v-11.44Zm4.04 2.84a1 1 0 0 1 1-1h4.32a1 1 0 1 1 0 2h-1.16v-.002h-2v.002h-1.16a1 1 0 0 1-1-1Zm2.16 1v4.76a1 1 0 0 0 2 0v-4.76h-2Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

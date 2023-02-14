@@ -31,7 +31,7 @@ const PencilSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M22.467 4.307 28.96 10.8 14.787 24.973 8.293 18.48 22.467 4.307Zm.126.161 6.331 6.332-3.35 3.35-6.331-6.332 3.35-3.35Zm-7.855 20.527-6.852-.169.42-6.287 6.432 6.456Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}

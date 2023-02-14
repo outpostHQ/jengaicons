@@ -31,7 +31,7 @@ const TextAlignJustifyFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M7.729 8.99a1 1 0 1 0 0 2H26.19a1 1 0 0 0 0-2H7.73Zm0 4.195a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H7.73Zm-1 5.196a1 1 0 0 1 1-1h18.462a1 1 0 0 1 0 2H7.73a1 1 0 0 1-1-1Zm1 3.196a1 1 0 1 0 0 2h18.462a1 1 0 0 0 0-2H7.73Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

@@ -30,7 +30,7 @@ const BookmarkFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M8.64 3.28a1 1 0 0 0-1 1l-.028 24.002a1 1 0 0 0 1.528.85L17 24.244l7.776 4.886a1 1 0 0 0 1.532-.846l.028-24.002a1 1 0 0 0-1-1.001H8.64Zm.98 18.115-.006 5.087 6.86-4.267a1 1 0 0 1 1.06.003l6.776 4.257.006-5.076-7.313-4.596-7.383 4.592Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

@@ -44,7 +44,7 @@ const WalletFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M28.96 26.743V9.96h-24V7.76v18.984h24Zm-3-4.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

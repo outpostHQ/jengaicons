@@ -31,7 +31,7 @@ const PaperPlaneFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.562 26.01 16.48 6.255a.5.5 0 0 1 .875-.002L28.35 26.007a.5.5 0 0 1-.585.72L17.96 23.67v-7.892a1 1 0 0 0-2 0v7.892l-9.811 3.06a.5.5 0 0 1-.587-.72Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

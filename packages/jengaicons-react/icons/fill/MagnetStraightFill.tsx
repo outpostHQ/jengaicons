@@ -31,7 +31,7 @@ const MagnetStraightFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M13.726 16.27V4.283H6.047V17.37c0 6.027 4.886 10.913 10.913 10.913s10.913-4.886 10.913-10.913V4.283h-7.636V16.27a3.255 3.255 0 0 1-6.51 0Zm0-5.576h-7.68l.001-6.41 7.68-.003v6.413Zm6.515-.005 7.63.005.002-6.41h-7.636l.004 6.405Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

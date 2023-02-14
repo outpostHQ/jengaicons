@@ -30,7 +30,7 @@ const EqualsFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M6.96 11.647a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Zm0 7.272a1 1 0 1 0 0 2h20a1 1 0 0 0 0-2h-20Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

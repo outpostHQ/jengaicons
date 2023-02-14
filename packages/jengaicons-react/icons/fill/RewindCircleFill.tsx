@@ -31,7 +31,7 @@ const RewindCircleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M16.96 28.783c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.627 5.372 12 12 12Zm.031-11.575a.5.5 0 0 1 0-.85l5.035-3.127a.5.5 0 0 1 .764.425v6.254a.5.5 0 0 1-.764.425l-5.035-3.127Zm-6.9-.85a.5.5 0 0 0 0 .85l5.034 3.127a.5.5 0 0 0 .764-.425v-6.254a.5.5 0 0 0-.764-.425l-5.034 3.127Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

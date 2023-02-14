@@ -31,7 +31,7 @@ const ShoppingBagOpenFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M28.96 10.283h-24v16h24v-16Zm-16 4a1 1 0 0 0-2 0 6 6 0 1 0 12 0 1 1 0 0 0-2 0 4 4 0 0 1-8 0Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

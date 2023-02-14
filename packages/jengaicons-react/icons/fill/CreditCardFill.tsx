@@ -37,7 +37,7 @@ const CreditCardFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M4.96 12.69h24v11.9h-24v-11.9Zm15.615 8.208a1 1 0 0 1 1-1h3.692a1 1 0 1 1 0 2h-3.692a1 1 0 0 1-1-1Zm-4.538-1a1 1 0 1 0 0 2h1.846a1 1 0 1 0 0-2h-1.846Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

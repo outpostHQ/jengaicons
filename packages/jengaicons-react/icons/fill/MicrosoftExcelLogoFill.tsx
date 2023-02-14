@@ -38,7 +38,7 @@ const MicrosoftExcelLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M6.96 9.424a1 1 0 0 0-1 1v12a1 1 0 0 0 1 1h13a1 1 0 0 0 1-1v-12a1 1 0 0 0-1-1h-13Zm3.65 3.2a1 1 0 0 1 1.4.2l1.45 1.934 1.45-1.934a1 1 0 0 1 1.6 1.2l-1.8 2.4 1.8 2.4a1 1 0 1 1-1.6 1.2l-1.45-1.933-1.45 1.933a1 1 0 1 1-1.6-1.2l1.8-2.4-1.8-2.4a1 1 0 0 1 .2-1.4Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

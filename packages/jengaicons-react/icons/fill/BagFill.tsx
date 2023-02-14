@@ -34,7 +34,7 @@ const BagFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M10.84 9.5H6.482a1 1 0 0 0-1 1v16.783a1 1 0 0 0 1 1h20.956a1 1 0 0 0 1-1V10.5a1 1 0 0 0-1-1h-4.355v4.174a1 1 0 1 1-2 0V9.5H12.84v4.174a1 1 0 1 1-2 0V9.5Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

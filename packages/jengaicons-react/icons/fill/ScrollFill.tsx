@@ -37,13 +37,13 @@ const ScrollFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M8.802 3.773h15.684a2 2 0 0 1 2 2v16.125c0 .594.48 1.075 1.074 1.075.572 0 1.05.45 1.027 1.021-.155 3.76-2.398 4.783-3.799 4.806H10.802a2 2 0 0 1-2-2V3.773Zm4.219 9.03a1 1 0 0 1 1-1h8.31a1 1 0 1 1 0 2h-8.31a1 1 0 0 1-1-1Zm0 4.515a1 1 0 0 1 1-1h8.31a1 1 0 1 1 0 2h-8.31a1 1 0 0 1-1-1Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M28.96 22.436a.01.01 0 0 0-.01-.01H11.948a.01.01 0 0 0-.01.01v.312c0 .006.005.01.01.01 1.369.006 2.476 1.132 2.476 2.52 0 1.386-1.101 2.51-2.464 2.521h14a3 3 0 0 0 3-3v-2.363Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}

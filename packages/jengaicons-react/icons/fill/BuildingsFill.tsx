@@ -38,7 +38,7 @@ const BuildingsFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M7.674 6.463a1 1 0 0 0-1 1V25.14a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1V7.463a1 1 0 0 0-1-1h-10Zm3.285 3.249a1 1 0 0 0 0 2h3.429a1 1 0 1 0 0-2H10.96Zm-1 6.143a1 1 0 0 1 1-1h3.429a1 1 0 1 1 0 2H10.96a1 1 0 0 1-1-1Zm1 4.142a1 1 0 1 0 0 2h3.429a1 1 0 1 0 0-2H10.96Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

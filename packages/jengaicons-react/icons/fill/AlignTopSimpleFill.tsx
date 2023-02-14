@@ -31,7 +31,7 @@ const AlignTopSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M7.32 5.283a1 1 0 0 1 0-2H24.6a1 1 0 1 1 0 2H7.32Zm4.84 23a1 1 0 0 1-1-1V9.123a1 1 0 0 1 1-1h7.6a1 1 0 0 1 1 1v18.16a1 1 0 0 1-1 1h-7.6Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

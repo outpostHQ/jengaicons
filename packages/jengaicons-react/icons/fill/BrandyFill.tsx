@@ -37,7 +37,7 @@ const BrandyFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M5.955 13.835c1.263 4.81 5.711 8.363 11.005 8.363 5.294 0 9.742-3.553 11.005-8.363H5.955Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}

@@ -31,7 +31,7 @@ const MouseSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M16.773 4.283a8 8 0 0 0-8 8v8a8 8 0 0 0 8 8h.373a8 8 0 0 0 8-8v-8a8 8 0 0 0-8-8h-.373Zm1.187 3.328a1 1 0 0 0-2 0v3.344a1 1 0 1 0 2 0V7.61Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

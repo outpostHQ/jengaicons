@@ -38,7 +38,7 @@ const FlyingSaucerFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M22.046 13.395a.468.468 0 0 0 .303-.34 5.555 5.555 0 1 0-10.856-.002c.034.16.15.286.303.34 3.242 1.15 6.763 1.248 10.25.002Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}

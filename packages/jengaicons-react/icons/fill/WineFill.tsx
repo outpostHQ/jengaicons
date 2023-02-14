@@ -37,7 +37,7 @@ const WineFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M8.575 13.156a8.418 8.418 0 1 0 16.777-.168l-.002.002c-1.536.634-5.67 2.004-8.489 0-3.124-2.222-6.77-.546-8.286.166Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}

@@ -30,7 +30,7 @@ const LockFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M15.644 3.283a6 6 0 0 0-6 6v5.105H6.592a1 1 0 0 0-1 1v11.895a1 1 0 0 0 1 1h20.737a1 1 0 0 0 1-1V15.388a1 1 0 0 0-1-1h-3.053V9.283a6 6 0 0 0-6-6h-2.632Zm6.632 11.105V9.283a4 4 0 0 0-4-4h-2.632a4 4 0 0 0-4 4v5.105h10.632Zm-5.316 8.447a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

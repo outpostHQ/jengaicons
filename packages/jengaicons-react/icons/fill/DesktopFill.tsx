@@ -30,7 +30,7 @@ const DesktopFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M4.96 4.283a1 1 0 0 0-1 1v18a1 1 0 0 0 1 1h11v2h-3a1 1 0 1 0 0 2h8a1 1 0 0 0 0-2h-3v-2h11a1 1 0 0 0 1-1v-18a1 1 0 0 0-1-1h-24Zm12 18h11v-4h-22v4h11Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

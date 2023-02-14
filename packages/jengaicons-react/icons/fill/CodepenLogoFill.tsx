@@ -31,7 +31,7 @@ const CodepenLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M17.488 4.931a1 1 0 0 0-.976 0l-12 6.715a1 1 0 0 0-.506.98c-.004.034-.006.07-.006.106v6.928a1 1 0 0 0 2 0v-5.382l3.989 2.373.859.512 1.023-1.719-.86-.511-4.01-2.387 8.96-5.014v6.556a1 1 0 1 0 2 0v-6.6L27 12.545l-4.012 2.387-.859.511 1.023 1.719.86-.512L28 14.278v5.578a1 1 0 1 0 2 0v-7.124a1.02 1.02 0 0 0-.006-.107 1 1 0 0 0-.506-.979l-12-6.715Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}

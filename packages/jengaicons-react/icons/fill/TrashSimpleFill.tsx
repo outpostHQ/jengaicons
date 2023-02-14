@@ -31,7 +31,7 @@ const TrashSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M10.96 4.783a1 1 0 0 1 1-1h10a1 1 0 1 1 0 2h-10a1 1 0 0 1-1-1Zm-5 3h22a1 1 0 0 1 0 2h-2v19h-18v-19h-2a1 1 0 1 1 0-2Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

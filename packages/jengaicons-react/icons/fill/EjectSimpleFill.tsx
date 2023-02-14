@@ -31,7 +31,7 @@ const EjectSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M17.305 5.878a.5.5 0 0 0-.79 0L5.584 19.977a.5.5 0 0 0 .395.806H27.84a.5.5 0 0 0 .395-.806L17.304 5.878ZM4.96 25.783a1 1 0 0 0 0 2h24a1 1 0 0 0 0-2h-24Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

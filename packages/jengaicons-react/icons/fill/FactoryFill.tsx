@@ -30,7 +30,7 @@ const FactoryFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M25.889 26.569a.5.5 0 0 0 .5-.5v-7.572a.5.5 0 0 0-.5-.5h-7.254a.5.5 0 0 1-.403-.204l-3.078-4.194a.5.5 0 0 0-.871.12l-1.335 3.552a.5.5 0 0 1-.822.177l-3.74-3.74a.5.5 0 0 0-.854.353V26.07a.5.5 0 0 0 .5.5h17.857Zm-15.072-4.286a1 1 0 0 1 1-1h3a1 1 0 1 1 0 2h-3a1 1 0 0 1-1-1Zm8.286-1a1 1 0 1 0 0 2h3a1 1 0 1 0 0-2h-3Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         stroke={color || colorCtx || "#000000"}

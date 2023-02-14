@@ -31,7 +31,7 @@ const PlaceholderFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M4.96 5.698v21.585a1 1 0 0 0 1 1h21.585L4.96 5.698Zm24 21.171V5.283a1 1 0 0 0-1-1H6.374L28.96 26.869Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

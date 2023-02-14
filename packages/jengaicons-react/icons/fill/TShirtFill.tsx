@@ -30,7 +30,7 @@ const TShirtFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M16.998 10.751a3.182 3.182 0 0 0 3.182-3.22h2.992c-.817 6.294-.541 10.071-.103 16.083l.103 1.42H10.748l.052-.571c.584-6.414.926-10.181-.052-16.931h3.068v.037a3.182 3.182 0 0 0 3.182 3.182Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}
