@@ -11,7 +11,7 @@ npm install @jengaicons/react
 # with yarn
 yarn add @jengaicons/react
 
-# with pnpm# with pnpm
+# with pnpm
 pnpm add @jengaicons/react
 ```
 
