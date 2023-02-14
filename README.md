@@ -34,6 +34,15 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
+## Props
+
+The icon components can receive all the props that a standard SVG element can, which includes inline `style` objects, `onClick` handlers, and other properties. Generally, the key props used to style the icons are:
+
+- **color?**: `string` determines the color of the icon's stroke and fill. It accepts CSS color strings, including `hex`, `rgb`, `rgba`, `hsl`, `hsla`, named colors, and `currentColor`.
+- **size?**: `number | string` specifies the height and width of the icon. It accepts values as a number or a string with units in `px`, `%`, `em`, `rem`, `pt`, `cm`, `mm`, or `in`.
+- **mirrored?**: `boolean` flips the icon horizontally, which can be helpful in languages that use RTL text orientation.
+- **alt?**: `string` provides accessible alt text for the icon.
+
 ## License
 
 Jenga Icons is a project by [Outpost](https://outpost.run).
