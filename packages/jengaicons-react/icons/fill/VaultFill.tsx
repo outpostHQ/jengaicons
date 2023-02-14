@@ -1,6 +1,5 @@
 import * as React from "react";
 import { forwardRef, useContext } from "react";
-import type { SVGSVGElement } from "react";
 import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 

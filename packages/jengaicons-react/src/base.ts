@@ -1,5 +1,5 @@
 import { createContext } from 'react'
-import type { SVGProps, SVGSVGElement } from 'react'
+import type { SVGProps } from 'react'
 
 export interface JengaIconProps {
   /** Set the size of the Svg in px*/
