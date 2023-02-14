@@ -4,15 +4,11 @@ version = 1
 name = "secrets"
 
 [[analyzers]]
-name = "test-coverage"
-
-[[analyzers]]
 name = "javascript"
 
   [analyzers.meta]
   plugins = [
-    "react",
-    "vue"
+    "react"
   ]
 
 [[transformers]]

@@ -23,7 +23,7 @@ export { default as AlignTopSimpleFill } from "../icons/fill/AlignTopSimpleFill"
 export { default as AnchorFill } from "../icons/fill/AnchorFill";
 export { default as AnchorSimpleFill } from "../icons/fill/AnchorSimpleFill";
 export { default as AndroidLogoFill } from "../icons/fill/AndroidLogoFill";
-export { default as AngularlogoFill } from "../icons/fill/AngularlogoFill";
+export { default as AngularLogoFill } from "../icons/fill/AngularLogoFill";
 export { default as ApertureFill } from "../icons/fill/ApertureFill";
 export { default as AppStoreLogoFill } from "../icons/fill/AppStoreLogoFill";
 export { default as AppWindowFill } from "../icons/fill/AppWindowFill";

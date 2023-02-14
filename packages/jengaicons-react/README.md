@@ -2,6 +2,9 @@
 
 Jenga Icons is a collection of adaptable icons designed for use in interfaces, diagrams, and other applications.
 
+[![NPM Version](https://img.shields.io/npm/v/@jengaicons/react.svg?style=flat)](https://www.npmjs.com/package/@jengaicons/react)
+[![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
+
 ## Installation
 
 ```sh
@@ -18,20 +21,20 @@ pnpm add @jengaicons/react
 ## Usage
 
 ```js
-import React from 'react'
-import ReactDOM from 'react-dom'
-import { Activity, ActivityFill } from '@jengaicons/react'
+import React from "react";
+import ReactDOM from "react-dom";
+import { Activity, ActivityFill } from "@jengaicons/react";
 
 const App = () => {
   return (
     <div>
       <Activity />
-      <ActivityFill color='#6864d4' size={32} />
+      <ActivityFill color="#6864d4" size={32} />
     </div>
-  )
-}
+  );
+};
 
-ReactDOM.render(<App />, document.getElementById('root'))
+ReactDOM.render(<App />, document.getElementById("root"));
 ```
 
 ## Props
