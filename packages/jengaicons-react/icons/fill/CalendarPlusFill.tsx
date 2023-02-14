@@ -1,0 +1,46 @@
+import * as React from "react";
+import { forwardRef, useContext } from "react";
+import type { SVGSVGElement } from "react";
+import { JengaIconContext } from "../../src/base";
+import type { JengaIconProps } from "../../src/base";
+
+const CalendarPlusFill = forwardRef<SVGSVGElement, JengaIconProps>(
+  (props, ref) => {
+    const { size, color, alt, children, mirrored } = props;
+
+    const {
+      alt: altCtx,
+      children: childrenCtx,
+      color: colorCtx,
+      mirrored: mirroredCtx,
+      size: sizeCtx,
+    } = useContext(JengaIconContext);
+
+    return (
+      <svg
+        width={size || sizeCtx || 32}
+        height={size || sizeCtx || 32}
+        transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
+        ref={ref}
+        xmlns="http://www.w3.org/2000/svg"
+        fill="none"
+        viewBox="0 0 32 32"
+      >
+        {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+
+        <path
+          fill={color || colorCtx || "#000000"}
+          fillRule="evenodd"
+          d="M10.96 3.783a1 1 0 0 1 1 1v2h10v-2a1 1 0 1 1 2 0v2h3a1 1 0 0 1 1 1v4h-22v-4a1 1 0 0 1 1-1h3v-2a1 1 0 0 1 1-1Zm-5 10h22v14a1 1 0 0 1-1 1h-20a1 1 0 0 1-1-1v-14Zm6.5 7a1 1 0 0 1 1-1h2.5v-2.5a1 1 0 1 1 2 0v2.5h2.5a1 1 0 0 1 0 2h-2.5v2.5a1 1 0 0 1-2 0v-2.5h-2.5a1 1 0 0 1-1-1Z"
+          clip-rule="evenodd"
+        />
+
+        {children || childrenCtx}
+      </svg>
+    );
+  }
+);
+
+CalendarPlusFill.displayName = "CalendarPlusFill";
+
+export default CalendarPlusFill;
