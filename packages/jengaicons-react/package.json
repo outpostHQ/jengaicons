@@ -25,9 +25,7 @@
     "dist/**"
   ],
   "scripts": {
-    "dev": "vite",
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.js",
-    "preview": "vite preview",
     "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
     "size-limit": "size-limit --clean-dir --save-bundle ./dist/size-report --json"
   },
