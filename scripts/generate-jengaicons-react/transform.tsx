@@ -23,7 +23,7 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
             case 'stroke':
             case 'fill':
               // check if the value is a hex color
-              if (attrVal.match(/^#.+/))
+              if (/^#.+/.test(attrVal))
                 _attrVal = `{color || colorCtx || "${data.defaultColor}"}`
               break
 

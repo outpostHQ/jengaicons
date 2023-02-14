@@ -89,7 +89,7 @@ async function main() {
       let componentName = getSafeComponentName(svgFileName, variantFolder)
 
       // If variant = regular then strip Regular, ActivityRegular -> Activity
-      if (variantFolder.match(/regular$/i)) {
+      if (/regular$/i.test(variantFolder)) {
         componentName = componentName.replace(/regular$/i, '')
       }
 
