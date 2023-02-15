@@ -9,7 +9,8 @@ export default function Home() {
   return (
     <JengaIconContext.Provider
       value={{
-        color: 'red',
+        color: 'var(--icn-color)', // or color: 'red',
+      
       }}
     >
       <main>
@@ -18,7 +19,7 @@ export default function Home() {
           <Activity weight={0.5} size='300px' color='currentColor' />
         </div>
 
-        <Cube color='blue' size={300} weight='1'>
+        <Cube size={300} weight='1'>
           <animate
             attributeName='opacity'
             values='0;1;0'

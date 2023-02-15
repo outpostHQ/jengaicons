@@ -6,7 +6,7 @@ import type { JengaIconRegularProps } from "../../src/base";
 
 const PaintBrush = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props;
 
     const {
       alt: altCtx,
@@ -15,6 +15,7 @@ const PaintBrush = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       weight: weightCtx,
+      style: styleCtx,
     } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
 
     return (
@@ -24,6 +25,10 @@ const PaintBrush = forwardRef<SVGSVGElement, JengaIconRegularProps>(
         transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
         strokeWidth={weight || weightCtx || 2}
         ref={ref}
+        style={{
+          ...styleCtx,
+          ...style,
+        }}
         xmlns="http://www.w3.org/2000/svg"
         fill="none"
         viewBox="0 0 32 32"

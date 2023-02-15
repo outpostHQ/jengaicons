@@ -4,7 +4,7 @@ import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 
 const UsersFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored } = props;
+  const { size, color, alt, children, mirrored, style } = props;
 
   const {
     alt: altCtx,
@@ -12,6 +12,7 @@ const UsersFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     color: colorCtx,
     mirrored: mirroredCtx,
     size: sizeCtx,
+    style: styleCtx,
   } = useContext(JengaIconContext);
 
   return (
@@ -20,6 +21,10 @@ const UsersFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       height={size || sizeCtx || 32}
       transform={mirrored || mirroredCtx ? "scale(-1, 1)" : undefined}
       ref={ref}
+      style={{
+        ...styleCtx,
+        ...style,
+      }}
       xmlns="http://www.w3.org/2000/svg"
       fill="none"
       viewBox="0 0 32 32"
