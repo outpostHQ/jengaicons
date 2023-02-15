@@ -10,6 +10,7 @@ export default function Home() {
     <JengaIconContext.Provider
       value={{
         color: 'var(--icn-color)', // or color: 'red',
+      
       }}
     >
       <main>
