@@ -30,7 +30,7 @@ const NeedleFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M17.635 9.891c-.719 2.684-3.744 9.334-10.364 16.262a70.38 70.38 0 0 0-2.145 2.13 57.837 57.837 0 0 0 2.145-2.13c4.285-4.086 11.147-9.748 15.59-10.38a.099.099 0 0 0 .056-.03l3.087-3.086a3.946 3.946 0 1 0-5.583-5.577l-2.76 2.768a.096.096 0 0 0-.026.043Zm7.45 1.075a2 2 0 0 0-2.828-2.828l-2.042 2.042a2 2 0 1 0 2.828 2.829l2.043-2.043Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         fill={color || colorCtx || "#000000"}

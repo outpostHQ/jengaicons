@@ -30,7 +30,7 @@ const PlusFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M17.96 9.28a1 1 0 1 0-2 0v6.003H9.957a1 1 0 1 0 0 2h6.003v6.003a1 1 0 1 0 2 0v-6.003h6.003a1 1 0 0 0 0-2H17.96V9.28Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

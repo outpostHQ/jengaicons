@@ -30,7 +30,7 @@ const TestTubeFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M29.667 10.342a1 1 0 0 1-.44 1.67l-2.599.723-12.357 12.357a5.056 5.056 0 0 1-7.15-7.15L21.487 3.575a1 1 0 0 1 1.414 0l6.766 6.766Zm-3.828.536 1.202-.334-4.847-4.847-9.292 9.292c.716.144 1.396.506 2.15.908.522.277 1.08.573 1.709.83.915.374 2.06.228 3.074-.027l5.565-5.565a1 1 0 0 1 .44-.257Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

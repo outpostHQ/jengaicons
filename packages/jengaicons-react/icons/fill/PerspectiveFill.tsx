@@ -35,7 +35,7 @@ const PerspectiveFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M7.47 10.367a1 1 0 0 0-.796.979v4.187h20.572V7.477a1 1 0 0 0-1.204-.979L7.47 10.368Zm19.776 7.166H6.674v4.187a1 1 0 0 0 .796.979l18.572 3.869a1 1 0 0 0 1.204-.98v-8.055Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

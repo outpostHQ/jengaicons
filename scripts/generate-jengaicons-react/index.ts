@@ -11,6 +11,7 @@ const PATH_TO_SRC_FOLDER = path.join(args.rootPath, 'src')
 const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, 'index.tsx')
 
 const pathPresent = (path: string) => fs.existsSync(path)
+const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 /**
  * Get all the directories in the assets directory
@@ -22,6 +23,7 @@ const getIconDirs = () => {
   return fs
     .readdirSync(PATH_TO_ASSETS, { withFileTypes: true })
     .filter((item) => item.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))
 }
 
 /**
@@ -34,16 +36,18 @@ const getSVGFileNames = (variant: string) => {
     })
     .filter((file) => file.name.endsWith('.svg'))
     .map((item) => item.name)
+    .sort((a, b) => a.localeCompare(b))
 }
 
 const getReactSVGContent = (svgFileName: string, variant: string) => {
   return fs
     .readFileSync(path.join(PATH_TO_ASSETS, variant, svgFileName), 'utf8')
-    .replace(/fill\-rule/g, 'fillRule')
+    .replace(/fill-rule/g, 'fillRule')
     .replace(/stroke-linecap/g, 'strokeLinecap')
     .replace(/stroke-linejoin/g, 'strokeLinejoin')
     .replace(/stroke-width/g, 'strokeWidth')
     .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
+    .replace(/clip-rule/g, 'clipRule')
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
@@ -51,15 +55,14 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
     variant
   )}`
 
-  let safeComponentName = componentName.replace('.', '')
-  safeComponentName = safeComponentName.replace('-', '')
-  safeComponentName = safeComponentName.replace(' ', '')
-  safeComponentName = safeComponentName.replace('&', '')
+  let safeComponentName = componentName
+    .replace(/\./g, '')
+    .replace(/-/g, '')
+    .replace(/\s*/g, '')
+    .replace(/&/g, '')
 
   return safeComponentName
 }
-
-const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 async function main() {
   const itemsInDirectory = getIconDirs()
@@ -80,16 +83,16 @@ async function main() {
     if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
   }
 
-  for (let item of itemsInDirectory) {
+  for (const item of itemsInDirectory) {
     const variantFolder = item.name as TVariants
 
-    const tasks = getSVGFileNames(variantFolder).map(async (svgFileName) => {
+    getSVGFileNames(variantFolder).map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
 
       // If variant = regular then strip Regular, ActivityRegular -> Activity
-      if (variantFolder.match(/regular$/i)) {
+      if (/regular$/i.test(variantFolder)) {
         componentName = componentName.replace(/regular$/i, '')
       }
 
@@ -118,8 +121,6 @@ async function main() {
         `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`
       )
     })
-
-    await Promise.all(tasks)
   }
 
   fs.appendFileSync(

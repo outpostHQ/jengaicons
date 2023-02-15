@@ -31,7 +31,7 @@ const HardDriveFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.96 9.821a1 1 0 0 0-1 1v10.923a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1V10.821a1 1 0 0 0-1-1h-22Zm19.308 6.462a1.385 1.385 0 1 1-2.77 0 1.385 1.385 0 0 1 2.77 0Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

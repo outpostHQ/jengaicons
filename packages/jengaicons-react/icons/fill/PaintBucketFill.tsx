@@ -35,7 +35,7 @@ const PaintBucketFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.667 15.576a1 1 0 0 0 0 1.414l9.271 9.272a1 1 0 0 0 1.415 0l9.271-9.272a1 1 0 0 0 0-1.414l-9.271-9.272a1 1 0 0 0-1.415 0l-3.112 3.113 3.521 3.52a2.988 2.988 0 1 1-1.414 1.414l-3.521-3.52-4.745 4.745Zm10.266-.638-.005.005a.988.988 0 1 0 .011-.011l-.006.006Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

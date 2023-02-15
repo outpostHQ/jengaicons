@@ -30,7 +30,7 @@ const DiceFiveFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M28.96 5.283a1 1 0 0 0-1-1h-22a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-22Zm-15 6.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm7.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm-7.5 7.5a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm3-3a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm6 3a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

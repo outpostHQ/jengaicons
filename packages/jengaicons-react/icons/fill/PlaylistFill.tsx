@@ -38,7 +38,7 @@ const PlaylistFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M4.96 6.663a1 1 0 1 0 0 2h21.12a1 1 0 1 0 0-2H4.96Zm0 7.68a1 1 0 1 0 0 2h13.4a1 1 0 1 0 0-2H4.96Zm-1 8.68a1 1 0 0 1 1-1h7.64a1 1 0 0 1 0 2H4.96a1 1 0 0 1-1-1Zm19.227-11.97a1 1 0 0 0-1.297.955v10.996a1 1 0 0 0 2 0v-9.638l4.773 1.484a1 1 0 0 0 .594-1.91l-6.07-1.887Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

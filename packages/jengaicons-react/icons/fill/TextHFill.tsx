@@ -30,7 +30,7 @@ const TextHFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M7.958 6.28a1 1 0 0 1 1 1v8.003h16.004V7.28a1 1 0 1 1 2 0V25.285a1 1 0 1 1-2 0v-8.002H8.958v8.002a1 1 0 1 1-2 0V7.281a1 1 0 0 1 1-1Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

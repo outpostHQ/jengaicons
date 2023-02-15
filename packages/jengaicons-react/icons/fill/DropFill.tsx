@@ -30,7 +30,7 @@ const DropFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M17.516 5.2c1.996 1.555 8.675 7.286 8.675 14.352a9.23 9.23 0 0 1-18.462 0c0-7.066 6.679-12.797 8.674-14.352a.896.896 0 0 1 1.113 0Zm5.887 15.457a1 1 0 0 0-1.97-.34 4.527 4.527 0 0 1-3.706 3.695 1 1 0 0 0 .335 1.972 6.527 6.527 0 0 0 5.341-5.328Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

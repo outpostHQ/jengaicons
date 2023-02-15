@@ -31,13 +31,13 @@ const PencilLineFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M12.082 24.96a.996.996 0 0 1 1-.992h14.53c.553 0 1 .444 1 .993a.996.996 0 0 1-1 .992h-14.53c-.552 0-1-.444-1-.992Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M22.467 4.307 28.96 10.8 14.787 24.973 8.293 18.48 22.467 4.307Zm.126.161 6.331 6.332-3.35 3.35-6.331-6.332 3.35-3.35Zm-7.855 20.527-6.852-.169.42-6.287 6.432 6.456Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}

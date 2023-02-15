@@ -31,7 +31,7 @@ const TelevisionSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M13.424 4.455a1 1 0 1 0-1.414 1.414l3.536 3.535H5.96a1 1 0 0 0-1 1v16a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-16a1 1 0 0 0-1-1h-9.586L21.91 5.87a1 1 0 0 0-1.415-1.414L16.96 7.99l-3.536-3.535Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

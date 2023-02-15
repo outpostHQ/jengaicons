@@ -37,7 +37,7 @@ const npmlogo = forwardRef<SVGSVGElement, JengaIconRegularProps>(
         <path
           stroke={color || colorCtx || "#000000"}
           d="M10.366 11.037h8.365v8.365h-3.663v1.561h-4.702v-9.926Zm3.966 2.56h1.654v3.215H14.33v-3.216Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           stroke={color || colorCtx || "#000000"}

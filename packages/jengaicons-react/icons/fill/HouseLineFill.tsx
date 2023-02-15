@@ -31,7 +31,7 @@ const HouseLineFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M16.192 6.999 7.44 14.687a1 1 0 0 0-.34.752v9.701H4.96a1 1 0 1 0 0 2h24a1 1 0 0 0 0-2h-2.14v-9.695a1 1 0 0 0-.348-.758l-8.97-7.696a1 1 0 0 0-1.31.008Zm3.552 18.141v-4.67a1 1 0 0 0-1-1h-3.723a1 1 0 0 0-1 1v4.67h5.723Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

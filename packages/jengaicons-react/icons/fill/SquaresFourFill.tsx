@@ -31,7 +31,7 @@ const SquaresFourFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.96 4.283a1 1 0 0 0-1 1v7.6a1 1 0 0 0 1 1h7.6a1 1 0 0 0 1-1v-7.6a1 1 0 0 0-1-1h-7.6Zm0 14.4a1 1 0 0 0-1 1v7.6a1 1 0 0 0 1 1h7.6a1 1 0 0 0 1-1v-7.6a1 1 0 0 0-1-1h-7.6Zm13.4-13.4a1 1 0 0 1 1-1h7.6a1 1 0 0 1 1 1v7.6a1 1 0 0 1-1 1h-7.6a1 1 0 0 1-1-1v-7.6Zm1 13.4a1 1 0 0 0-1 1v7.6a1 1 0 0 0 1 1h7.6a1 1 0 0 0 1-1v-7.6a1 1 0 0 0-1-1h-7.6Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

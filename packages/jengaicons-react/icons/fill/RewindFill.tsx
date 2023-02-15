@@ -30,7 +30,7 @@ const RewindFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M5.644 16.358a.5.5 0 0 0 0 .85l10.177 6.321a.5.5 0 0 0 .764-.425V10.462a.5.5 0 0 0-.764-.425L5.644 16.358Zm12.375 0a.5.5 0 0 0 0 .85l10.177 6.321a.5.5 0 0 0 .764-.425V10.462a.5.5 0 0 0-.764-.425L18.02 16.358Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

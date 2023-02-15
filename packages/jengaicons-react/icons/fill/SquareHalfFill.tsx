@@ -31,7 +31,7 @@ const SquareHalfFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M4.96 3.291a1 1 0 0 0-1 1v23.984a1 1 0 0 0 1 1h24a1 1 0 0 0 1-1V4.29a1 1 0 0 0-1-1h-24Zm1 23.984V5.29h11v21.984h-11Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

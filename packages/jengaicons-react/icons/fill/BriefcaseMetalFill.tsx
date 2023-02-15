@@ -31,7 +31,7 @@ const BriefcaseMetalFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M11.96 4.283a1 1 0 0 0-1 1v4h-5a1 1 0 0 0-1 1v3h24v-3a1 1 0 0 0-1-1h-5v-4a1 1 0 0 0-1-1h-10Zm1 4.74v-2.74h8v2.74h-8Zm-8 12.26v-6h24v6h-24Zm24 2h-24v3a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-3Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

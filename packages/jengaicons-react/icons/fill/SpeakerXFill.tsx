@@ -30,7 +30,7 @@ const SpeakerXFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M19.097 26.422V7.179a.5.5 0 0 0-.813-.39l-6.255 5.023v10.251l6.266 4.757a.5.5 0 0 0 .802-.398Zm-9.068-4.994v-8.944h-.597a4.472 4.472 0 0 0 0 8.944h.597Zm19.638-7.852a1 1 0 0 1 0 1.414l-1.793 1.793 1.793 1.793a1 1 0 0 1-1.414 1.414l-1.793-1.793-1.793 1.793a1 1 0 0 1-1.414-1.414l1.793-1.793-1.793-1.793a1 1 0 1 1 1.414-1.414l1.793 1.793 1.793-1.793a1 1 0 0 1 1.414 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

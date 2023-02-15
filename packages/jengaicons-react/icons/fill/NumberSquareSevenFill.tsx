@@ -31,7 +31,7 @@ const NumberSquareSevenFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.96 4.283a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-22a1 1 0 0 0-1-1h-22Zm8.01 5a1 1 0 1 0 0 2h4.605l-3.458 10.692a1 1 0 0 0 1.903.616l3.881-12a1 1 0 0 0-.951-1.308h-5.98Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

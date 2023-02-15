@@ -44,7 +44,7 @@ const SunglassesFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M20.317 18.283a.357.357 0 0 0-.357.357v2.643a4.5 4.5 0 0 0 9 0V18.64a.357.357 0 0 0-.357-.357h-8.286Zm5.215.743a2 2 0 1 0-2.829 2.829l1.61 1.61a2 2 0 0 0 2.829-2.829l-1.61-1.61Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}
@@ -54,7 +54,7 @@ const SunglassesFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M5.317 18.283a.357.357 0 0 0-.357.357v2.643a4.5 4.5 0 0 0 9 0V18.64a.357.357 0 0 0-.357-.357H5.317Zm5.215.743a2 2 0 1 0-2.829 2.829l1.61 1.61a2 2 0 0 0 2.829-2.829l-1.61-1.61Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}

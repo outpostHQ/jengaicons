@@ -31,7 +31,7 @@ const NoteBlankFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M27.96 4.283h-22a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h14.262a1 1 0 0 0 .642-.233l7.738-6.476a1 1 0 0 0 .358-.767V5.283a1 1 0 0 0-1-1Zm-7.642 22.56v-4.895a1 1 0 0 1 1-1h6.08l-7.08 5.895Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

@@ -30,7 +30,7 @@ const SkipBackFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M8.46 5.783a1 1 0 1 0-2 0v22a1 1 0 0 0 2 0V17.414l17.232 10.883a.5.5 0 0 0 .767-.423V5.691a.5.5 0 0 0-.767-.422L8.461 16.15V5.783Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

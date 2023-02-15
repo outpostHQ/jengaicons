@@ -30,7 +30,7 @@ const PercentFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M24.667 8.575a1 1 0 0 1 0 1.415l-14 14a1 1 0 0 1-1.415-1.414l14.001-14a1 1 0 0 1 1.414 0ZM11.904 13.95a2.722 2.722 0 1 0 0-5.445 2.722 2.722 0 0 0 0 5.445Zm12.834 7.389a2.722 2.722 0 1 1-5.445 0 2.722 2.722 0 0 1 5.445 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

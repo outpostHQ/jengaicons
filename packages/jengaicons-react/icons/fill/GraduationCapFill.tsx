@@ -38,13 +38,13 @@ const GraduationCapFill = forwardRef<SVGSVGElement, JengaIconProps>(
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="m28.693 11.27-11-6.156a1.5 1.5 0 0 0-1.466 0l-11 6.156a1.5 1.5 0 0 0-.034 2.598l11 6.546a1.5 1.5 0 0 0 1.533 0l4.192-2.792-.002-.927-.005-.008.006-.003v-.507l-.506-.266-.005-.008-.005.002-4.923-2.593a1 1 0 0 1 .933-1.77l5.972 3.147a1 1 0 0 1 .53.806l-.005 1.459 4.821-3.087a1.5 1.5 0 0 0-.036-2.597Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
         <path
           fill={color || colorCtx || "#000000"}
           fillRule="evenodd"
           d="M21.916 26.786v-9.153l2-.692v9.845a1 1 0 1 1-2 0Z"
-          clip-rule="evenodd"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

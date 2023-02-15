@@ -41,7 +41,7 @@ const YinYangFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M22.96 10.283a6 6 0 0 1-6 6 6 6 0 0 0 0 12c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12a6 6 0 0 1 6 6Zm-4.5 12a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

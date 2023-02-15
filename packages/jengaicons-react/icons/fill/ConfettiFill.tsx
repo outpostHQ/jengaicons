@@ -37,7 +37,7 @@ const ConfettiFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="m10.374 12.496 1.36-3.84a.5.5 0 0 1 .825-.188l12.109 12.035a.5.5 0 0 1-.186.826l-3.899 1.376-10.21-10.209Zm-.74 2.088-2.166 6.114 4.905 4.905 6.12-2.16-8.86-8.859Zm.649 11.757-3.555-3.555-1.598 4.51a.5.5 0 0 0 .638.639l4.515-1.594Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

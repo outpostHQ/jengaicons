@@ -33,7 +33,7 @@ const AlignCenterHorizontalSimpleFill = forwardRef<
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M16.96 4.374a1 1 0 0 1 1 1v5.454h10a1 1 0 0 1 1 1v8.91a1 1 0 0 1-1 1h-10v5.454a1 1 0 0 1-2 0v-5.455h-10a1 1 0 0 1-1-1v-8.909a1 1 0 0 1 1-1h10V5.374a1 1 0 0 1 1-1Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

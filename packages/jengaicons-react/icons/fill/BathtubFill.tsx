@@ -37,7 +37,7 @@ const BathtubFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         fill={color || colorCtx || "#000000"}
         fillRule="evenodd"
         d="M5.46 14.14a.5.5 0 0 0-.5.5v3.929a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V14.64a.5.5 0 0 0-.5-.5h-23Zm17.84.498h-4.108v2.451H23.3v-2.45Z"
-        clip-rule="evenodd"
+        clipRule="evenodd"
       />
       <path
         stroke={color || colorCtx || "#000000"}
