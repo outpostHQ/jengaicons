@@ -14,6 +14,9 @@ export interface JengaIconProps {
   /** Mirror the icon for RTL support */
   mirrored?: boolean
 
+  /** Change the style prop of svg element */
+  style?: SVGProps<SVGSVGElement>['style']
+
   children?: SVGProps<SVGSVGElement>['children']
 }
 

@@ -58,7 +58,7 @@ const getRegularComponent = (
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconRegularProps>(
       
             ( props, ref )=>{
-              const { size, color, alt, children, mirrored, weight } = props;
+              const { size, color, alt, children, mirrored, weight, style } = props;
 
                           
               const {
@@ -67,7 +67,8 @@ const getRegularComponent = (
                 color: colorCtx,
                 mirrored: mirroredCtx,
                 size: sizeCtx,
-                weight: weightCtx
+                weight: weightCtx,
+                style: styleCtx
               } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
 
@@ -77,6 +78,12 @@ const getRegularComponent = (
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        strokeWidth={weight || weightCtx || ${defaultWeight}}
                        ref={ref} 
+
+                       style={{
+                        ...styleCtx,
+                        ...style,
+                       }}
+
                        ${genAttrString(svgAST.attributes)} 
                         >
                             {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
@@ -109,7 +116,7 @@ const getVariantComponent = (
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconProps>(
       
             ( props, ref )=>{
-              const { size, color, alt, children, mirrored } = props;
+              const { size, color, alt, children, mirrored, style } = props;
 
                           
               const {
@@ -117,7 +124,8 @@ const getVariantComponent = (
                 children: childrenCtx,
                 color: colorCtx,
                 mirrored: mirroredCtx,
-                size: sizeCtx
+                size: sizeCtx,
+                style: styleCtx
               } = useContext(JengaIconContext)
 
 
@@ -126,6 +134,12 @@ const getVariantComponent = (
                        height={size || sizeCtx || ${defaultSize}}
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        ref={ref} 
+
+                       style={{
+                        ...styleCtx,
+                        ...style,
+                       }}
+
                        ${genAttrString(svgAST.attributes)} 
                         >
                             {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
