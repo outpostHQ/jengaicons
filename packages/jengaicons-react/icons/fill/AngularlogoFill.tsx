@@ -3,7 +3,7 @@ import { forwardRef, useContext } from "react";
 import { JengaIconContext } from "../../src/base";
 import type { JengaIconProps } from "../../src/base";
 
-const AngularlogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
+const AngularLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
     const { size, color, alt, children, mirrored, style } = props;
 
@@ -45,6 +45,6 @@ const AngularlogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   }
 );
 
-AngularlogoFill.displayName = "AngularlogoFill";
+AngularLogoFill.displayName = "AngularLogoFill";
 
-export default AngularlogoFill;
+export default AngularLogoFill;
