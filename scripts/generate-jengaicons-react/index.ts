@@ -23,6 +23,7 @@ const getIconDirs = () => {
   return fs
     .readdirSync(PATH_TO_ASSETS, { withFileTypes: true })
     .filter((item) => item.isDirectory())
+    .sort((a, b) => a.name.localeCompare(b.name))
 }
 
 /**
@@ -35,6 +36,7 @@ const getSVGFileNames = (variant: string) => {
     })
     .filter((file) => file.name.endsWith('.svg'))
     .map((item) => item.name)
+    .sort((a, b) => a.localeCompare(b))
 }
 
 const getReactSVGContent = (svgFileName: string, variant: string) => {
@@ -53,10 +55,11 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
     variant
   )}`
 
-  let safeComponentName = componentName.replace('.', '')
-  safeComponentName = safeComponentName.replace('-', '')
-  safeComponentName = safeComponentName.replace(' ', '')
-  safeComponentName = safeComponentName.replace('&', '')
+  let safeComponentName = componentName
+    .replace(/\./g, '')
+    .replace(/-/g, '')
+    .replace(/\s*/g, '')
+    .replace(/&/g, '')
 
   return safeComponentName
 }
@@ -83,7 +86,7 @@ async function main() {
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as TVariants
 
-    const tasks = getSVGFileNames(variantFolder).map(async (svgFileName) => {
+    getSVGFileNames(variantFolder).map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
@@ -118,8 +121,6 @@ async function main() {
         `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`
       )
     })
-
-    await Promise.all(tasks)
   }
 
   fs.appendFileSync(
