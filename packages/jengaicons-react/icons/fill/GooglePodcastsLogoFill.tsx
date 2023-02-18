@@ -37,7 +37,7 @@ const GooglePodcastsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 4.424v2.77M22.499 9.501v2.77M16.96 25.655v2.77M16.96 10.886v11.077M11.422 9.501v7.385M22.499 15.963v7.385M5.883 15.04v2.769M11.422 20.578v2.77M28.037 15.04v2.769"
+          d="M16.96 4.283v2.77M22.499 9.36v2.77M16.96 25.514v2.769M16.96 10.745V21.82M11.422 9.36v7.384M22.499 15.821v7.385M5.883 14.898v2.77M11.422 20.437v2.769M28.037 14.898v2.77"
         />
 
         {children || childrenCtx}

@@ -37,7 +37,7 @@ const GoogleLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 16.424h11a11 11 0 1 1-3.222-7.778"
+          d="M16.96 16.283h11a11 11 0 1 1-3.222-7.778"
         />
 
         {children || childrenCtx}

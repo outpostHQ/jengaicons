@@ -40,7 +40,7 @@ const Barcode = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M10 11v10M22 11v10M18 11v10M14 11v10M10 6H4v6M22 6h6v6M28 20v6h-6M4 20v6h6"
+          d="M10 11.5v10M22 11.5v10M18 11.5v10M14 11.5v10M10 6.5H4v6M22 6.5h6v6M28 20.5v6h-6M4 20.5v6h6"
         />
 
         {children || childrenCtx}

@@ -37,7 +37,7 @@ const AppStoreLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m19.106 14.59 7.085 11.988M14.19 6.27l2.77 4.685M8.826 24.732l-1.097 1.846M19.73 6.27l-8.724 14.77M22.914 21.04h6.046M4.96 21.04h13.673"
+          d="m19.106 14.448 7.085 11.989M14.19 6.13l2.77 4.684M8.826 24.59l-1.097 1.847M19.73 6.13l-8.724 14.768M22.914 20.898h6.046M4.96 20.898h13.673"
         />
 
         {children || childrenCtx}

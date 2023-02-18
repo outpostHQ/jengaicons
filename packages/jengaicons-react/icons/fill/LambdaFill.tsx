@@ -32,11 +32,10 @@ const LambdaFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
-        stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M8.593 4.424h4.777l9.637 23.854 4.926-1.575M5.96 28.424l10.285-16.459"
+        fill={color || colorCtx || "#000000"}
+        fillRule="evenodd"
+        d="M9.593 4.283a1 1 0 1 0 0 2h4.102l2.536 6.276L6.112 28.753a1 1 0 0 0 1.696 1.06l9.35-14.961 5.922 14.66a1 1 0 0 0 1.232.577l4.926-1.575a1 1 0 0 0-.61-1.905L24.588 27.9l-9.29-22.993a1 1 0 0 0-.927-.625H9.593Z"
+        clipRule="evenodd"
       />
 
       {children || childrenCtx}

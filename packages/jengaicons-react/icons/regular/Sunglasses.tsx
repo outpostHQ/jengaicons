@@ -40,18 +40,18 @@ const Sunglasses = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M28 18H4M21 18l5.925 5.925M6 18l5.925 5.925"
+          d="M28 18.5H4M21 18.5l5.925 5.925M6 18.5l5.925 5.925"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M9.117 6.5H9a5 5 0 0 0-5 5v9.675M22.883 6.5H23a5 5 0 0 1 5 5v9.675"
+          d="M9.117 7H9a5 5 0 0 0-5 5v9.675M22.883 7H23a5 5 0 0 1 5 5v9.675"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 18.357c0-.197.16-.357.357-.357h8.286c.197 0 .357.16.357.357V21a4.5 4.5 0 1 1-9 0v-2.643ZM19 18.357c0-.197.16-.357.357-.357h8.286c.197 0 .357.16.357.357V21a4.5 4.5 0 1 1-9 0v-2.643Z"
+          d="M4 18.857c0-.197.16-.357.357-.357h8.286c.197 0 .357.16.357.357V21.5a4.5 4.5 0 1 1-9 0v-2.643ZM19 18.857c0-.197.16-.357.357-.357h8.286c.197 0 .357.16.357.357V21.5a4.5 4.5 0 1 1-9 0v-2.643Z"
         />
 
         {children || childrenCtx}

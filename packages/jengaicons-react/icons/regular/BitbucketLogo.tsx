@@ -40,13 +40,13 @@ const BitbucketLogo = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M19.967 12.24H12.09l1.486 7.52h5.052l1.338-7.52Z"
+          d="M19.58 12.607h-7.107l1.341 6.786h4.558l1.207-6.786Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M2.7 4h26.6l-3.82 24H6.59L2.7 4Z"
+          d="M4 5.173h24l-3.447 21.654H7.51L4 5.173Z"
         />
 
         {children || childrenCtx}

@@ -39,13 +39,13 @@ const Tote = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M11.342 13.671V9.945a4.657 4.657 0 0 1 9.315 0v3.726"
+        d="M11.342 14.171v-3.726a4.657 4.657 0 0 1 9.315 0v3.726"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M5.863 26.712h20.274L28 9.946H4l1.863 16.766Z"
+        d="M5.863 27.212h20.274L28 10.445H4l1.863 16.767Z"
       />
 
       {children || childrenCtx}

@@ -39,21 +39,21 @@ const Cake = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 13.23v-2.769M16 10.461C21.333 8.615 16 4 16 4s-5.539 4.615 0 6.461ZM19.923 17.615a3.923 3.923 0 0 1-7.846 0"
+        d="M16 13.73v-2.769M16 10.961C21.333 9.115 16 4.5 16 4.5s-5.539 4.615 0 6.461ZM19.923 18.116a3.923 3.923 0 0 1-7.846 0"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M12.077 17.615a3.923 3.923 0 0 1-3.847 3.923c-2.2.042-4-1.8-4-4V16A2.77 2.77 0 0 1 7 13.23h18A2.77 2.77 0 0 1 27.77 16v1.538c0 2.2-1.801 4.042-4 4a3.924 3.924 0 0 1-3.847-3.923"
+        d="M12.077 18.115a3.923 3.923 0 0 1-3.847 3.923c-2.2.042-4-1.8-4-4V16.5A2.77 2.77 0 0 1 7 13.73h18a2.77 2.77 0 0 1 2.77 2.77v1.538c0 2.2-1.801 4.042-4 4a3.924 3.924 0 0 1-3.847-3.923"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M26.154 20.762v6.315a.923.923 0 0 1-.923.923H6.769a.923.923 0 0 1-.923-.923v-6.315"
+        d="M26.154 21.262v6.315a.923.923 0 0 1-.923.923H6.769a.923.923 0 0 1-.923-.923v-6.315"
       />
 
       {children || childrenCtx}

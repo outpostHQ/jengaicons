@@ -40,7 +40,7 @@ const CurrencyRub = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M7.818 21.455h10M11.454 26V6h6.819a5.91 5.91 0 0 1 0 11.818H7.818"
+          d="M7.818 21.955h10M11.454 26.5v-20h6.819a5.91 5.91 0 0 1 0 11.818H7.818"
         />
 
         {children || childrenCtx}

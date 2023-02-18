@@ -40,7 +40,7 @@ const LadderSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M8 4v24M24 4v24M8 9h16M8 16h16M8 23h16"
+          d="M8 4.5v24M24 4.5v24M8 9.5h16M8 16.5h16M8 23.5h16"
         />
 
         {children || childrenCtx}

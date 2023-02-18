@@ -40,7 +40,7 @@ const CurrencyDollarSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M16 6v2.308M16 23.692V26M21.385 12.154a3.846 3.846 0 0 0-3.847-3.846h-3.461a3.846 3.846 0 1 0 0 7.692h4.23a3.846 3.846 0 1 1 0 7.692h-4.615a3.846 3.846 0 0 1-3.846-3.846"
+          d="M16 6.5v2.308M16 24.192V26.5M21.385 12.654a3.846 3.846 0 0 0-3.847-3.846h-3.461a3.846 3.846 0 1 0 0 7.692h4.23a3.846 3.846 0 1 1 0 7.692h-4.615a3.846 3.846 0 0 1-3.846-3.846"
         />
 
         {children || childrenCtx}

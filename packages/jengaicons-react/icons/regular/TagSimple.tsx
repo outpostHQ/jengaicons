@@ -40,7 +40,7 @@ const TagSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M22.274 7.92H4v16.16h18.274L28 16.119 22.274 7.92Z"
+          d="M22.274 8.42H4v16.16h18.274L28 16.619 22.274 8.42Z"
         />
 
         {children || childrenCtx}

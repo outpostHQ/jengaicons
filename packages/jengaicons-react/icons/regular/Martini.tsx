@@ -40,13 +40,13 @@ const Martini = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M16.343 17.793v8.07M11.86 25.863h8.967M8.273 9.723h16.14"
+          d="M16.343 18.293v8.07M11.86 26.363h8.967M8.273 10.223h16.14"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 6.136h24L16.35 17.793 4 6.136Z"
+          d="M4 6.636h24L16.35 18.293 4 6.636Z"
         />
 
         {children || childrenCtx}

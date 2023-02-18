@@ -39,13 +39,13 @@ const Money = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 19.428a3.429 3.429 0 1 0 0-6.857 3.429 3.429 0 0 0 0 6.857ZM21.143 9.143l6.857 6M21.143 22.857l6.857-6M10.857 9.143l-6.857 6M10.857 22.857l-6.857-6"
+        d="M16 19.928a3.429 3.429 0 1 0 0-6.857 3.429 3.429 0 0 0 0 6.857ZM21.143 9.643l6.857 6M21.143 23.357l6.857-6M10.857 9.643l-6.857 6M10.857 23.357l-6.857-6"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M4 9.143h24v13.714H4z"
+        d="M4 9.643h24v13.714H4z"
       />
 
       {children || childrenCtx}

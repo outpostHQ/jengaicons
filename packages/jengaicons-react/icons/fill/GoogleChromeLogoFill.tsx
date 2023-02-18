@@ -37,7 +37,7 @@ const GoogleChromeLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 28.424c6.627 0 12-5.372 12-12 0-6.627-5.373-12-12-12-6.628 0-12 5.373-12 12 0 6.628 5.372 12 12 12Z"
+          d="M16.96 28.283c6.627 0 12-5.373 12-12s-5.373-12-12-12c-6.628 0-12 5.373-12 12s5.372 12 12 12Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
@@ -45,14 +45,14 @@ const GoogleChromeLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 20.924a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"
+          d="M16.96 20.783a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 11.924h11.125M13.06 18.674 7.498 9.037M20.86 18.674l-5.563 9.638"
+          d="M16.96 11.783h11.125M13.06 18.533 7.498 8.896M20.86 18.533l-5.563 9.637"
         />
 
         {children || childrenCtx}

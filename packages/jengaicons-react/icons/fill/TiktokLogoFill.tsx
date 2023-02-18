@@ -38,7 +38,7 @@ const TiktokLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M21.859 13.973a11.701 11.701 0 0 0 6.857 2.207v-4.898a6.857 6.857 0 0 1-6.857-6.858H16.96v15.674a3.43 3.43 0 1 1-4.898-3.099v-5.098a8.327 8.327 0 1 0 9.796 8.197v-6.125Z"
+          d="M21.859 13.832a11.702 11.702 0 0 0 6.857 2.206V11.14a6.857 6.857 0 0 1-6.857-6.857H16.96v15.673a3.429 3.429 0 1 1-4.898-3.098v-5.099a8.327 8.327 0 1 0 9.796 8.197v-6.124Z"
         />
 
         {children || childrenCtx}

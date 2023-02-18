@@ -40,14 +40,14 @@ const Factory = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M10.857 22h3M18.143 22h3M25.429 26.286v-8.572h-8.007l-3.775-5.142-1.933 5.142-5.142-5.142v13.714M4 26.284h24"
+          d="M10.857 22.5h3M18.143 22.5h3M25.429 26.786v-8.572h-8.007l-3.775-5.142-1.933 5.142-5.142-5.142v13.714M4 26.784h24"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M25.428 17.714 23.82 6.45a.857.857 0 0 0-.848-.736h-1.942a.857.857 0 0 0-.849.736l-2.44 11.265"
+          d="M25.428 18.214 23.82 6.95a.857.857 0 0 0-.848-.736h-1.942a.857.857 0 0 0-.849.736l-2.44 11.265"
         />
 
         {children || childrenCtx}

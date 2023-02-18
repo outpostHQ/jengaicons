@@ -39,13 +39,13 @@ const Lamp = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 18.593v6.915M12.543 25.508h6.915M23.78 18.593v4.322"
+        d="M16 19.093v6.915M12.543 26.008h6.915M23.78 19.093v4.322"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M9.186 6.492h13.628L28 18.593H4L9.186 6.492Z"
+        d="M9.186 6.992h13.628L28 19.093H4L9.186 6.992Z"
       />
 
       {children || childrenCtx}

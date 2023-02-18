@@ -40,7 +40,7 @@ const CurrencyBtc = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M11.2 15.6h7.2a4 4 0 1 1 0 8h-7.2V8.4h6a3.6 3.6 0 0 1 0 7.2M9.6 8.4h1.6M9.6 23.6h1.6M13.6 8.4V6M16.8 8.4V6M13.6 26v-2.4M16.8 26v-2.4"
+          d="M11.2 16.1h7.2a4 4 0 1 1 0 8h-7.2V8.9h6a3.6 3.6 0 0 1 0 7.2M9.6 8.9h1.6M9.6 24.1h1.6M13.6 8.9V6.5M16.8 8.9V6.5M13.6 26.5v-2.4M16.8 26.5v-2.4"
         />
 
         {children || childrenCtx}

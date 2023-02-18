@@ -40,18 +40,18 @@ const Wallet = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 7.476V26.46h24V9.677H6.6"
+          d="M4 7.976V26.96h24V10.177H6.6"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M23.065 5.54H6a2 2 0 0 0-2 2v2.137h21.996"
+          d="M23.065 6.04H6a2 2 0 0 0-2 2v2.137h21.996"
         />
         <path
           fill={color || colorCtx || "#000000"}
-          d="M23.5 23.46a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
+          d="M23.5 23.96a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
         />
 
         {children || childrenCtx}

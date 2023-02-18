@@ -38,7 +38,7 @@ const GitlabLogoSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M22.172 13.215h-10.12l-3.716-7.43-3.459 12.81 12.299 8.456 11.786-8.456-3.587-12.81-3.203 7.43Z"
+          d="M22.172 13.073h-10.12l-3.716-7.43-3.459 12.81 12.299 8.456 11.786-8.455-3.587-12.81-3.203 7.43Z"
         />
 
         {children || childrenCtx}

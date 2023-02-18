@@ -37,7 +37,7 @@ const WindowsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m18.05 6.424 10.91-2v9.819H18.05V6.424ZM18.05 18.606h10.91v9.818l-10.91-2v-7.818ZM4.96 18.606h8.727v7.041l-8.727-2v-5.04ZM4.96 9.201l8.727-2v7.042H4.96V9.2Z"
+          d="m18.05 6.283 10.91-2v9.818H18.05V6.283ZM18.05 18.465h10.91v9.818l-10.91-2v-7.818ZM4.96 18.465h8.727v7.041l-8.727-2v-5.041ZM4.96 9.06l8.727-2V14.1H4.96V9.06Z"
         />
 
         {children || childrenCtx}

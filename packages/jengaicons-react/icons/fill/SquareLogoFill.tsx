@@ -36,7 +36,7 @@ const SquareLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M4.96 4.424h24v24h-24z"
+          d="M4.96 4.283h24v24h-24z"
         />
         <path
           fill={color || colorCtx || "#000000"}
@@ -44,7 +44,7 @@ const SquareLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M21.72 11.664H12.2v9.52h9.52v-9.52Z"
+          d="M21.72 11.523H12.2v9.52h9.52v-9.52Z"
         />
 
         {children || childrenCtx}

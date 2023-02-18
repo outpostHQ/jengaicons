@@ -39,7 +39,7 @@ const Egg = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M25.23 18.77a9.23 9.23 0 1 1-18.46 0C6.77 11.384 12.307 4 16 4s9.23 7.385 9.23 14.77Z"
+        d="M25.23 19.27a9.23 9.23 0 1 1-18.46 0C6.77 11.884 12.307 4.5 16 4.5s9.23 7.385 9.23 14.77Z"
       />
 
       {children || childrenCtx}

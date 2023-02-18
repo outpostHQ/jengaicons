@@ -40,7 +40,7 @@ const Brandy = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M16 21.74V28M10.783 28h10.434M25.622 4A11.478 11.478 0 1 1 6.378 4h19.244ZM5.565 13.392h20.87"
+          d="M16 22.24v6.26M10.783 28.5h10.434M25.622 4.5a11.478 11.478 0 1 1-19.244 0h19.244ZM5.565 13.892h20.87"
         />
 
         {children || childrenCtx}

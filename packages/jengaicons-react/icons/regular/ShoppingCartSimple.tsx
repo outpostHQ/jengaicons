@@ -37,14 +37,14 @@ const ShoppingCartSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
 
         <path
           fill={color || colorCtx || "#000000"}
-          d="M12.086 27.23a1.797 1.797 0 1 0 0-3.594 1.797 1.797 0 0 0 0 3.594ZM23.765 27.23a1.797 1.797 0 1 0 0-3.594 1.797 1.797 0 0 0 0 3.594Z"
+          d="M12.086 27.73a1.797 1.797 0 1 0 0-3.594 1.797 1.797 0 0 0 0 3.594ZM23.765 27.73a1.797 1.797 0 1 0 0-3.594 1.797 1.797 0 0 0 0 3.594Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M7.85 9.262H28l-2.965 10.376a1.796 1.796 0 0 1-1.727 1.303H12.543a1.797 1.797 0 0 1-1.728-1.303L6.753 5.422a.898.898 0 0 0-.864-.652H4"
+          d="M7.85 9.762H28l-2.965 10.376a1.796 1.796 0 0 1-1.727 1.303H12.543a1.797 1.797 0 0 1-1.728-1.303L6.753 5.922a.898.898 0 0 0-.864-.652H4"
         />
 
         {children || childrenCtx}
