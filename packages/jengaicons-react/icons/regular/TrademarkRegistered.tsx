@@ -40,13 +40,13 @@ const TrademarkRegistered = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M16 28c6.627 0 12-5.373 12-12S22.627 4 16 4 4 9.373 4 16s5.373 12 12 12ZM17.516 17.44 20 21"
+          d="M16 28.5c6.627 0 12-5.373 12-12s-5.373-12-12-12-12 5.373-12 12 5.373 12 12 12ZM17.516 17.94 20 21.5"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M13 17.483h3.758A3.242 3.242 0 0 0 20 14.242v0A3.242 3.242 0 0 0 16.758 11h-3.723a.035.035 0 0 0-.035.035V21"
+          d="M13 17.983h3.758A3.242 3.242 0 0 0 20 14.742v0a3.242 3.242 0 0 0-3.242-3.242h-3.723a.035.035 0 0 0-.035.035V21.5"
         />
 
         {children || childrenCtx}

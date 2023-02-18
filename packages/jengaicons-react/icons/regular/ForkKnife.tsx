@@ -40,7 +40,7 @@ const ForkKnife = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M10.75 4v5M10.75 14.5V28M14.25 4l1 6a4.5 4.5 0 1 1-9 0l1-6M25.75 20h-7s1.5-14 7-16v24"
+          d="M10.75 4.5v5M10.75 15v13.5M14.25 4.5l1 6a4.5 4.5 0 1 1-9 0l1-6M25.75 20.5h-7s1.5-14 7-16v24"
         />
 
         {children || childrenCtx}

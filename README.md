@@ -46,7 +46,7 @@ The icon components can receive all the props that a standard SVG element can, w
 - **weight?**: `number | string` changes the thinkness / stroke-width of icons. Default is `2px`
 - **mirrored?**: `boolean` flips the icon horizontally, which can be helpful in languages that use RTL text orientation.
 - **alt?**: `string` provides accessible alt text for the icon.
-- **style**: `object` specifies the style prop object which will be passed to underlying `<svg />` element 
+- **style?**: `object` specifies the style prop object which will be passed to underlying `<svg />` element
 
 ## License
 

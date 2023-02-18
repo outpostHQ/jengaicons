@@ -40,7 +40,7 @@ const CurrencyJpy = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M10.286 20.286h11.428M10.286 16.476h11.428M16 16.476V26M24.571 6 16 16.476 7.428 6"
+          d="M10.286 20.786h11.428M10.286 16.976h11.428M16 16.976V26.5M24.571 6.5 16 16.976 7.428 6.5"
         />
 
         {children || childrenCtx}

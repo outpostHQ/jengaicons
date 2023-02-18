@@ -40,19 +40,19 @@ const Hamburger = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 16.462h24"
+          d="M4 16.962h24"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="m4.418 21.837 4.447-2.017a.1.1 0 0 1 .08 0l4.824 2a.1.1 0 0 0 .08 0l4.459-2a.1.1 0 0 1 .08 0l4.615 2a.1.1 0 0 0 .08 0l4.5-2.018"
+          d="m4.418 22.337 4.447-2.017a.1.1 0 0 1 .08 0l4.824 2a.1.1 0 0 0 .08 0l4.459-2a.1.1 0 0 1 .08 0l4.615 2a.1.1 0 0 0 .08 0l4.5-2.018"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M6.77 21.077v.539a5 5 0 0 0 5 5h8.46a5 5 0 0 0 5-5v-.539M13.288 5.385h5.424a7.348 7.348 0 0 1 7.348 7.348c0 .02-.017.036-.037.036H5.977a.037.037 0 0 1-.037-.037 7.348 7.348 0 0 1 7.348-7.347Z"
+          d="M6.77 21.577v.539a5 5 0 0 0 5 5h8.46a5 5 0 0 0 5-5v-.539M13.288 5.885h5.424a7.348 7.348 0 0 1 7.348 7.348c0 .02-.017.036-.037.036H5.977a.037.037 0 0 1-.037-.037 7.348 7.348 0 0 1 7.348-7.347Z"
         />
 
         {children || childrenCtx}

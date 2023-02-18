@@ -40,13 +40,13 @@ const ShoppingBagOpen = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 10h24M21 14a5 5 0 1 1-10 0"
+          d="M4 10.5h24M21 14.5a5 5 0 1 1-10 0"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 6h24v20H4z"
+          d="M4 6.5h24v20H4z"
         />
 
         {children || childrenCtx}

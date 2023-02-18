@@ -36,20 +36,20 @@ const GooglePlayLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m27.576 16.424-21.232-12v24l21.232-12Z"
+          d="m27.576 16.283-21.232-12v24l21.232-12Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M6.893 5.455 21.28 19.843M6.894 27.36 21.28 12.973"
+          d="M6.893 5.314 21.28 19.7M6.894 27.218 21.28 12.831"
         />
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
-          d="M17.5 16.142 6 5.142v22.5l11.5-11.5Z"
+          d="M17.5 16 6 5v22.5L17.5 16Z"
         />
 
         {children || childrenCtx}

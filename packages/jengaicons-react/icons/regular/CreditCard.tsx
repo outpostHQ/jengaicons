@@ -39,14 +39,14 @@ const CreditCard = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4.001 7.692H28v16.615H4.001z"
+          d="M4.001 8.192H28v16.615H4.001z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M20.615 20.615h3.692M15.077 20.615h1.846M4 12.406h24"
+          d="M20.615 21.115h3.692M15.077 21.115h1.846M4 12.906h24"
         />
 
         {children || childrenCtx}

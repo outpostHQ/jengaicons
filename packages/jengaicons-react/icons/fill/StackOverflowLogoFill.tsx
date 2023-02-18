@@ -37,13 +37,13 @@ const StackOverflowLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M11.748 23.213h10.424M12.66 16.333 22.72 19.03M15.305 9.923l9.03 5.212M19.54 4.424l7.362 7.362"
+          d="M11.748 23.071h10.424M12.66 16.192l10.059 2.697M15.305 9.781l9.03 5.212M19.54 4.283l7.362 7.362"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth="2"
-          d="M6.537 21.128v6.796a.5.5 0 0 0 .5.5h19.847a.5.5 0 0 0 .5-.5v-6.796"
+          d="M6.537 20.987v6.796a.5.5 0 0 0 .5.5h19.847a.5.5 0 0 0 .5-.5v-6.796"
         />
 
         {children || childrenCtx}

@@ -40,13 +40,13 @@ const Buildings = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 25.857h24M10 10.429h3.428M10 15.572h3.428M10 20.714h3.428M21.142 21.572h1.715M21.142 17.286h1.715"
+          d="M4 26.357h24M10 10.929h3.428M10 16.072h3.428M10 21.214h3.428M21.142 22.072h1.715M21.142 17.786h1.715"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M5.714 6.18h12v19.677h-12zM17.714 13h8.572v12.857h-8.572z"
+          d="M5.714 6.68h12v19.677h-12zM17.714 13.5h8.572v12.857h-8.572z"
         />
 
         {children || childrenCtx}

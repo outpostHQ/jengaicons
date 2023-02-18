@@ -40,7 +40,7 @@ const Ladder = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M24.182 4H11.09M13.273 4 4.545 28M13.273 28 22 4M8.513 17.09h8.728M10.886 10.545h8.727M6.127 23.637h8.727M20.363 8.5 27.454 28M16.054 20.363h8.619"
+          d="M24.182 4.5H11.09M13.273 4.5l-8.728 24M13.273 28.5 22 4.5M8.513 17.59h8.728M10.886 11.045h8.727M6.127 24.137h8.727M20.363 9l7.091 19.5M16.054 20.863h8.619"
         />
 
         {children || childrenCtx}

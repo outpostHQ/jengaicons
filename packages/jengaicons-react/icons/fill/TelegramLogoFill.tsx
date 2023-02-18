@@ -37,22 +37,22 @@ const TelegramLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m12.11 17.495 10.76 9.469a.958.958 0 0 0 1.565-.505l4.501-19.641a.957.957 0 0 0-1.283-1.105L5.567 14.389a.957.957 0 0 0 .163 1.83l6.38 1.276Z"
+          d="m12.11 17.353 10.76 9.47a.958.958 0 0 0 1.565-.506l4.501-19.64a.957.957 0 0 0-1.283-1.106L5.567 14.248a.957.957 0 0 0 .163 1.83l6.38 1.275Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
-          d="m17.483 22.224-3.74 3.74a.958.958 0 0 1-1.634-.678v-7.791"
+          d="m17.483 22.082-3.74 3.74a.957.957 0 0 1-1.634-.677v-7.792"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m17.483 22.224-3.74 3.74a.958.958 0 0 1-1.634-.678v-7.791l5.374 4.729Z"
+          d="m17.483 22.082-3.74 3.74a.957.957 0 0 1-1.634-.677v-7.792l5.374 4.73Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
-          d="m28 6.641-23.5 8.5 7.5 2.5 16-11Z"
+          d="M28 6.5 4.5 15l7.5 2.5 16-11Z"
         />
 
         {children || childrenCtx}

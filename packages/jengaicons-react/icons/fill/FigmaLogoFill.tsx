@@ -37,7 +37,7 @@ const FigmaLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M20.96 20.424a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
+          d="M20.96 20.283a4 4 0 1 0 0-8 4 4 0 0 0 0 8Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
@@ -45,14 +45,14 @@ const FigmaLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 12.424v-8h-4a4 4 0 0 0 0 8h4ZM16.96 20.424v-8h-4a4 4 0 1 0 0 8h4Z"
+          d="M16.96 12.283v-8h-4a4 4 0 0 0 0 8h4ZM16.96 20.283v-8h-4a4 4 0 0 0 0 8h4Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 12.424v-8h4a4 4 0 0 1 0 8h-4Z"
+          d="M16.96 12.283v-8h4a4 4 0 0 1 0 8h-4Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
@@ -60,7 +60,7 @@ const FigmaLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M16.96 20.424v4a3.999 3.999 0 0 1-7.923.78 4 4 0 0 1 3.923-4.78h4Z"
+          d="M16.96 20.283v4a3.999 3.999 0 0 1-7.923.78 4 4 0 0 1 3.923-4.78h4Z"
         />
 
         {children || childrenCtx}

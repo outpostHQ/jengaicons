@@ -40,13 +40,13 @@ const ToteSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M11.342 9.945a4.657 4.657 0 0 1 9.315 0"
+          d="M11.342 10.445a4.657 4.657 0 0 1 9.315 0"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M5.863 26.712h20.274L28 9.946H4l1.863 16.766Z"
+          d="M5.863 27.212h20.274L28 10.445H4l1.863 16.767Z"
         />
 
         {children || childrenCtx}

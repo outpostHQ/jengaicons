@@ -40,13 +40,13 @@ const CookingPot = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M12.8 6.4v3.2M16 6.4v3.2M19.2 6.4v3.2M28 14.4l-3.2 2.4M4 14.4l3.2 2.4"
+          d="M12.8 6.9v3.2M16 6.9v3.2M19.2 6.9v3.2M28 14.9l-3.2 2.4M4 14.9l3.2 2.4"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M7.2 12.8h17.6v10.8a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V12.8Z"
+          d="M7.2 13.3h17.6v10.8a2 2 0 0 1-2 2H9.2a2 2 0 0 1-2-2V13.3Z"
         />
 
         {children || childrenCtx}

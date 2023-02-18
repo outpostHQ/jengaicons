@@ -37,20 +37,20 @@ const GitlabLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m27.5 13.142 1.462 5.454-11.786 8.455-12.299-8.455L6.5 13.142"
+          d="m27.5 13 1.462 5.454-11.786 8.455-12.299-8.455L6.5 13"
         />
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
           strokeWidth="2"
-          d="M12 13.142H6.5l2-7 3.5 7ZM22 13.142h5.5l-2-7-3.5 7Z"
+          d="M12 13H6.5l2-7 3.5 7ZM22 13h5.5l-2-7-3.5 7Z"
         />
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
           strokeLinejoin="round"
-          d="M22 13.142H12l5 14 5-14Z"
+          d="M22 13H12l5 14 5-14Z"
         />
 
         {children || childrenCtx}

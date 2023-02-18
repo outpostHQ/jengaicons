@@ -40,14 +40,14 @@ const CurrencyEth = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M16.054 4.405v22.686M6.667 15.636 16 4l9.333 11.636L16 28 6.666 15.636Z"
+          d="M16.054 4.905v22.686M6.667 16.136 16 4.5l9.333 11.636L16 28.5 6.666 16.136Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="m6.927 15.74 9.116 4.198 9.155-4.198"
+          d="m6.927 16.24 9.116 4.198 9.155-4.198"
         />
 
         {children || childrenCtx}

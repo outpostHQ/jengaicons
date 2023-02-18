@@ -37,7 +37,7 @@ const PinterestLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"
-          d="m15.96 11.424-4 17M8.654 19.994a10 10 0 1 1 18.307-5.57c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633"
+          d="m15.96 11.283-4 17M8.654 19.852a10 10 0 1 1 18.307-5.569c0 5.523-4 9-8 9s-5.204-2.633-5.204-2.633"
         />
 
         {children || childrenCtx}

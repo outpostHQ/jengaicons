@@ -39,13 +39,13 @@ const Gift = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 11.267v16M21.657 9.853C20.243 11.267 16 11.267 16 11.267s0-4.242 1.414-5.657a3 3 0 0 1 4.243 4.243v0ZM10.343 9.853C11.757 11.267 16 11.267 16 11.267s0-4.242-1.414-5.657a3 3 0 0 0-4.243 4.243v0Z"
+        d="M16 11.767v16M21.657 10.353C20.243 11.767 16 11.767 16 11.767s0-4.242 1.414-5.657a3 3 0 0 1 4.243 4.243v0ZM10.343 10.353C11.757 11.767 16 11.767 16 11.767s0-4.242-1.414-5.657a3 3 0 0 0-4.243 4.243v0Z"
       />
       <path
         stroke={color || colorCtx || "#000000"}
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="M6 17.267h20v10H6zM4 11.267h24v6H4z"
+        d="M6 17.767h20v10H6zM4 11.767h24v6H4z"
       />
 
       {children || childrenCtx}

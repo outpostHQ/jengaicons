@@ -40,7 +40,7 @@ const TagChevron = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M22.274 7.92H4l5.208 8.199L4 24.079h18.274L28 16.12 22.274 7.92Z"
+          d="M22.274 8.42H4l5.208 8.199L4 24.579h18.274L28 16.62 22.274 8.42Z"
         />
 
         {children || childrenCtx}

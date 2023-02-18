@@ -39,7 +39,7 @@ const Knife = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth={weight || weightCtx || "2"}
-        d="m18.133 11.912 6.174 6.174S16 29.162 4 26.393L24.06 5.84a2.308 2.308 0 1 1 3.264 3.263l-5.812 6.19"
+        d="m18.133 12.412 6.174 6.174S16 29.662 4 26.893L24.06 6.34a2.308 2.308 0 1 1 3.264 3.263l-5.812 6.19"
       />
 
       {children || childrenCtx}

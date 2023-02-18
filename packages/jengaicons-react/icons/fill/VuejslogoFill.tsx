@@ -34,11 +34,9 @@ const VuejslogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
 
         <path
           fill={color || colorCtx || "#000000"}
-          d="m16.96 11.266-2.771-4.8H10.22l6.74 11.672 6.738-11.672h-3.967l-2.772 4.8Z"
-        />
-        <path
-          fill={color || colorCtx || "#000000"}
-          d="m24.622 6.466-7.662 13.27L9.3 6.466H4.96l12 20.785 12-20.785h-4.338Z"
+          fillRule="evenodd"
+          d="m16.96 19.595 7.662-13.27h4.338l-12 20.785-12-20.786H9.3l7.661 13.27ZM14.19 6.325l2.771 4.8 2.772-4.8h3.967L16.96 17.995 10.221 6.324h3.968Z"
+          clipRule="evenodd"
         />
 
         {children || childrenCtx}

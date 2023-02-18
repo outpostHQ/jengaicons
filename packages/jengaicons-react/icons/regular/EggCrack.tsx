@@ -40,13 +40,13 @@ const EggCrack = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="M25.23 18.77a9.23 9.23 0 1 1-18.46 0C6.77 11.384 12.307 4 16 4s9.23 7.385 9.23 14.77Z"
+          d="M25.23 19.27a9.23 9.23 0 1 1-18.46 0C6.77 11.884 12.307 4.5 16 4.5s9.23 7.385 9.23 14.77Z"
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
-          d="m21.09 7.546-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45"
+          d="m21.09 8.046-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45"
         />
 
         {children || childrenCtx}
