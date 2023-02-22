@@ -1,0 +1,11 @@
+*,
+*::after,
+*::before {
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  min-height: 100vh;
+  background-color: var(--cp-surface);
+}
