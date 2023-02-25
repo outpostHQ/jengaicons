@@ -1,6 +1,29 @@
 import fs from 'fs'
+import fsP from 'fs/promises'
 import path from 'path'
 import { optimize } from 'svgo'
+
+const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
+
+const getSafeComponentName = (svgFileName: string, variant: string) => {
+  const componentName = `${svgFileName
+    .split('-')[0]
+    .trim()
+    .replace(/\.svg$/i, '')}${capitalize(variant)}`
+
+  let safeComponentName = componentName
+    .replace(/\./g, '')
+    .replace(/-/g, '')
+    .replace(/\s*/g, '')
+    .replace(/&/g, '')
+
+  // If variant = regular then strip Regular, ActivityRegular -> Activity
+  if (/regular$/i.test(variant)) {
+    safeComponentName = safeComponentName.replace(/regular$/i, '')
+  }
+
+  return safeComponentName
+}
 
 /**
  * This script is for generating optimized svgs at the root level
@@ -49,11 +72,8 @@ async function main() {
       .filter((file) => file.name.endsWith('.svg'))
       .map((item) => item.name)
 
-    for (const svgFile of svgFiles) {
-      const svgFileName = `${svgFile
-        .split('-')[0]
-        .trim()
-        .replace(/\.svg$/i, '')}.svg`
+    svgFiles.map((svgFile) => {
+      const SVGComponentName = getSafeComponentName(svgFile, variant)
 
       const svgString = fs.readFileSync(
         path.join(pathToAssets, variant, svgFile),
@@ -63,16 +83,32 @@ async function main() {
       /**
        * Optimize the svg, this will remove all the unnecessary
        */
-      const optimizedSvgString = optimize(svgString, { path: pathToOptimized })
+      const optimizedSvgString = optimize(svgString, {
+        path: pathToOptimized,
+      })
 
       /**
        * Write the component to the optimized folder
        */
       fs.writeFileSync(
-        path.join(pathToOptimized, variant, svgFileName),
+        path.join(pathToOptimized, variant, `${SVGComponentName}.svg`),
         optimizedSvgString.data
       )
-    }
+
+      // Write JSON file associated to it
+      fs.writeFileSync(
+        path.join(pathToOptimized, variant, `${SVGComponentName}.json`),
+        JSON.stringify(
+          {
+            name: SVGComponentName,
+            tag: [SVGComponentName],
+            category: [],
+          },
+          null,
+          2
+        )
+      )
+    })
   }
 }
 
