@@ -11,7 +11,7 @@ import {
 
 function Sidebar() {
   return (
-    <CPColumn height="100vh" width="20rem">
+    <CPColumn>
       <CPRow
         alignItems="center"
         justifyContent="space-between"

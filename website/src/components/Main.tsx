@@ -9,7 +9,11 @@ function Main() {
       <Block>
         <Header />
       </Block>
-      <SectionContainer>
+      <SectionContainer
+        style={{
+          minHeight: "200vh",
+        }}
+      >
         <Sidebar />
       </SectionContainer>
     </Block>

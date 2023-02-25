@@ -1,6 +1,7 @@
+import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { Block, Flex, Item, MenuTrigger, Slider } from "@cube-dev/ui-kit";
 import { CaretDownFill, Sun } from "@jengaicons/react";
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import { isNullOrUndefined } from "util";
 import {
   CPButton,
@@ -10,29 +11,22 @@ import {
   CPText,
 } from "./shared/library";
 function Header() {
-  useEffect(() => {
-    let header = document.getElementById("header");
-    window.addEventListener("scroll", () => {
-      if (header != undefined || header != null) {
-        console.log(header?.getBoundingClientRect().top);
-        if (header?.getBoundingClientRect().top < 0) {
-          header.style.position = "fixed";
-          header.style.top = "0";
-          header.style.zIndex = "110000";
+  const scroll = useScrollPosition();
 
-          header.style.left = "0";
-          header.style.backgroundColor = "#ffffff";
-        } else {
-          header.style.position = "relative";
-          header.style.backgroundColor = "#f00";
-        }
+  useEffect(() => {
+    const header = document.getElementById("header");
+    window.addEventListener("scroll", () => {
+      if (header?.getBoundingClientRect().top < 0) {
+        header?.classList.add("fixed");
+      } else {
+        header?.classList.remove("fixed");
       }
     });
   }, []);
-
   return (
     <Block
       id="header"
+      className="header"
       padding={["1.25rem 0", "1.25rem 0", "1.25rem "]}
       styles={{
         boxShadow: "0px 4px 12px 0.75px rgba(0, 0, 0, 0.33)",
