@@ -3,12 +3,12 @@ import "../styles/designSystem.css";
 import "../styles/tokens.css";
 
 import type { AppProps } from "next/app";
-import { Root } from "@cube-dev/ui-kit";
+import AppWrapper from "@/components/shared/AppWrapper";
 
 export default function App({ Component, pageProps }: AppProps) {
   return (
-    <Root>
+    <AppWrapper>
       <Component {...pageProps} />
-    </Root>
+    </AppWrapper>
   );
 }
