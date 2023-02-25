@@ -3,9 +3,28 @@
 *::before {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
 }
 
-main {
-  min-height: 100vh;
+.site-container {
   background-color: var(--cp-surface);
+  /* overflow: hidden; */
+}
+
+li[data-qa^="MenuItem"] {
+  background-color: var(--cp-surface) !important;
+}
+
+li[data-qa^="MenuItem"] button {
+  background-color: var(--cp-surface) !important;
+  color: var(--cp-text) !important;
+}
+
+li[data-qa^="MenuItem"] button:hover {
+  background-color: var(--cp-surface-hovered) !important;
+}
+
+li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
+  outline: none !important;
+  border-width: 0px !important;
 }
