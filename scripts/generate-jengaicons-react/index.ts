@@ -19,24 +19,26 @@ const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 const getIconDirs = () => {
   if (!pathPresent(PATH_TO_ASSETS))
     throw new Error(`Path : "${PATH_TO_ASSETS}" does not exists`)
-
-  return fs
+  const icons = fs
     .readdirSync(PATH_TO_ASSETS, { withFileTypes: true })
     .filter((item) => item.isDirectory())
     .sort((a, b) => a.name.localeCompare(b.name))
+  return icons
 }
 
 /**
  * @returns only the names of svg files
  */
 const getSVGFileNames = (variant: string) => {
-  return fs
+  const svgs = fs
     .readdirSync(path.join(PATH_TO_ASSETS, variant), {
       withFileTypes: true,
     })
     .filter((file) => file.name.endsWith('.svg'))
     .map((item) => item.name)
     .sort((a, b) => a.localeCompare(b))
+
+  return svgs
 }
 
 const getReactSVGContent = (svgFileName: string, variant: string) => {
@@ -51,17 +53,19 @@ const getReactSVGContent = (svgFileName: string, variant: string) => {
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
-  const componentName = `${svgFileName.replace('.svg', '')}${capitalize(
-    variant
-  )}`
+  // const componentName = `${svgFileName.replace('.svg', '')}${capitalize(
+  //   variant
+  // )}`
 
-  let safeComponentName = componentName
-    .replace(/\./g, '')
-    .replace(/-/g, '')
-    .replace(/\s*/g, '')
-    .replace(/&/g, '')
+  // let safeComponentName = componentName
+  //   .replace(/\./g, '')
+  //   .replace(/-/g, '')
+  //   .replace(/\s*/g, '')
+  //   .replace(/&/g, '')
 
-  return safeComponentName
+  // return safeComponentName
+
+  return svgFileName.replace(/\.svg$/i, '')
 }
 
 async function main() {
@@ -84,17 +88,13 @@ async function main() {
   }
 
   for (const item of itemsInDirectory) {
-    const variantFolder = item.name as TVariants
+    const variantFolder = item.name as Lowercase<TVariants>
 
     getSVGFileNames(variantFolder).map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
-
-      // If variant = regular then strip Regular, ActivityRegular -> Activity
-      if (/regular$/i.test(variantFolder)) {
-        componentName = componentName.replace(/regular$/i, '')
-      }
+      console.log('Making', componentName)
 
       /**
        * SVG generated component with export statement
@@ -109,7 +109,7 @@ async function main() {
       })
 
       /**
-       * Write the component to the optimized folder
+       * Write the component to the packages/icons folder
        */
       fs.writeFileSync(
         path.join(PATH_TO_WRITE_FOLDER, variantFolder, `${componentName}.tsx`),
