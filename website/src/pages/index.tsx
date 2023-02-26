@@ -1,10 +1,12 @@
 import Hero from "@/components/Hero";
 import Main from "@/components/Main";
-import { CPColumn } from "@/components/shared/library";
+import { CPColumn, CPText } from "@/components/shared/library";
 import { Block } from "@cube-dev/ui-kit";
 import { Inter } from "@next/font/google";
-import { useEffect } from "react";
-
+import { useScroll } from "framer-motion";
+import { useEffect, useRef } from "react";
+import { motion } from "framer-motion";
+import Banner from "@/components/Banner";
 const inter = Inter({ subsets: ["latin"] });
 
 export default function Home() {
@@ -12,17 +14,16 @@ export default function Home() {
     document.documentElement.setAttribute("data-theme", "dark");
   }, []);
 
+  const heroContainerRef = useRef(null);
+  const { scrollYProgress } = useScroll({
+    container: heroContainerRef,
+  });
+
+  console.log(scrollYProgress);
+
   return (
     <CPColumn>
-      <Block>
-        {/* <Block
-          styles={{
-            height: ["100vh", "650px"],
-            // background: "url('/Hero.svg')",
-            // backgroundSize: "100%",
-          }}
-        ></Block> */}
-      </Block>
+      <Banner />
       <Hero />
       <Main />
     </CPColumn>
