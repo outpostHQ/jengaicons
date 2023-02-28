@@ -1,16 +1,16 @@
-import Hero from "@/components/Hero";
-import Main from "@/components/Main";
-import { CPColumn } from "@/components/shared/library";
-import { Block } from "@cube-dev/ui-kit";
-import { Inter } from "@next/font/google";
-import { useEffect } from "react";
+import Hero from '@/components/Hero'
+import Main from '@/components/Main'
+import { CPColumn } from '@/components/shared/library'
+import { Block } from '@cube-dev/ui-kit'
+import { Inter } from '@next/font/google'
+import { useEffect } from 'react'
 
-const inter = Inter({ subsets: ["latin"] });
+const inter = Inter({ subsets: ['latin'] })
 
 export default function Home() {
   useEffect(() => {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }, []);
+    document.documentElement.setAttribute('data-theme', 'dark')
+  }, [])
 
   return (
     <CPColumn>
@@ -26,5 +26,5 @@ export default function Home() {
       <Hero />
       <Main />
     </CPColumn>
-  );
+  )
 }
