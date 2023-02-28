@@ -52,7 +52,7 @@ const ToiletPaper = forwardRef<SVGSVGElement, JengaIconRegularProps>(
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          stroke-dasharray="4 4"
+          strokeDasharray="4 4"
           strokeLinecap="round"
           strokeWidth={weight || weightCtx || "2"}
           d="M13.292 15.002h14.536"

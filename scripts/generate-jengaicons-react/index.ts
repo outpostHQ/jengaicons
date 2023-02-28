@@ -50,6 +50,7 @@ const getReactSVGContent = (svgFileName: string, variant: string) => {
     .replace(/stroke-width/g, 'strokeWidth')
     .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
     .replace(/clip-rule/g, 'clipRule')
+    .replace(/stroke-dasharray/g, 'strokeDasharray')
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {

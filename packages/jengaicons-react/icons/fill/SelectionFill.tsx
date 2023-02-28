@@ -34,7 +34,7 @@ const SelectionFill = forwardRef<SVGSVGElement, JengaIconProps>(
 
         <path
           stroke={color || colorCtx || "#000000"}
-          stroke-dasharray="4 4"
+          strokeDasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth="2"

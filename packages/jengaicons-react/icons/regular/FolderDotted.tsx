@@ -37,7 +37,7 @@ const FolderDotted = forwardRef<SVGSVGElement, JengaIconRegularProps>(
 
         <path
           stroke={color || colorCtx || "#000000"}
-          stroke-dasharray="4 4"
+          strokeDasharray="4 4"
           strokeLinecap="round"
           strokeLinejoin="round"
           strokeWidth={weight || weightCtx || "2"}
