@@ -51,7 +51,7 @@ const StarHalfFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        stroke-dasharray="6 6"
+        strokeDasharray="6 6"
         strokeLinecap="round"
         strokeLinejoin="round"
         strokeWidth="2"

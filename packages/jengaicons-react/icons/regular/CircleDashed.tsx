@@ -37,7 +37,7 @@ const CircleDashed = forwardRef<SVGSVGElement, JengaIconRegularProps>(
 
         <path
           stroke={color || colorCtx || "#000000"}
-          stroke-dasharray="4 4"
+          strokeDasharray="4 4"
           strokeLinecap="round"
           strokeMiterlimit="10"
           strokeWidth={weight || weightCtx || "2"}

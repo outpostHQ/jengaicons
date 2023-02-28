@@ -2,6 +2,7 @@ import fs from 'fs'
 import fsP from 'fs/promises'
 import path from 'path'
 import { optimize } from 'svgo'
+import { IconMetadata } from '../generate-jengaicons-react/types'
 
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
@@ -62,6 +63,8 @@ async function main() {
     fs.mkdirSync(path.join(pathToOptimized, fontVariant))
   }
 
+  const allIcons: IconMetadata[] = []
+
   for (const item of itemsInDirectory) {
     const variant = item.name
 
@@ -95,21 +98,30 @@ async function main() {
         optimizedSvgString.data
       )
 
+      allIcons.push({
+        name: SVGComponentName,
+        safeName: SVGComponentName,
+        tags: [SVGComponentName],
+        categories: [],
+        variant: variant.toLowerCase() as IconMetadata['variant'],
+      })
+
       // Write JSON file associated to it
-      fs.writeFileSync(
-        path.join(pathToOptimized, variant, `${SVGComponentName}.json`),
-        JSON.stringify(
-          {
-            name: SVGComponentName,
-            tag: [SVGComponentName],
-            category: [],
-          },
-          null,
-          2
-        )
-      )
+      // fs.writeFileSync(
+      //   path.join(pathToOptimized, variant, `${SVGComponentName}.json`),
+      //   JSON.stringify(allIcons[allIcons.length - 1], null, 2)
+      // )
     })
   }
+
+  // sort by name imports
+  allIcons.sort((a, b) => a.safeName.localeCompare(b.safeName))
+
+  // write all icons data
+  fs.writeFileSync(
+    path.join(pathToOptimized, 'allIconsData.json'),
+    JSON.stringify(allIcons, null, 2)
+  )
 }
 
 main().catch((e) => console.log(e.message))
