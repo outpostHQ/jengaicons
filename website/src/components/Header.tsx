@@ -1,7 +1,8 @@
+import { defaultIconProps } from '@/context/IconContext'
 import useIconSettings from '@/hooks/useIconSettings'
 import { useScrollPosition } from '@/hooks/useScrollPosition'
 import { Block, Flex, Item, MenuTrigger, Slider } from '@cube-dev/ui-kit'
-import { CaretDownFill, Sun } from '@jengaicons/react'
+import { ArrowClockwise, CaretDownFill, Sun } from '@jengaicons/react'
 import React, { useEffect, useState } from 'react'
 import { isNullOrUndefined } from 'util'
 import { IconMetadata } from '../../../scripts/generate-jengaicons-react/types'
@@ -29,11 +30,14 @@ function Header() {
 
   return (
     <Block
-      id='header'
       className='header'
       padding={['1.25rem 0', '1.25rem 0', '1.25rem ']}
       styles={{
         boxShadow: '0px 4px 12px 0.75px rgba(0, 0, 0, 0.33)',
+        position: 'sticky',
+        top: 0,
+        background: 'var(--cp-surface)',
+        zIndex: 1,
       }}
     >
       <Block
@@ -103,7 +107,7 @@ function Header() {
               <Slider
                 width='100%'
                 minValue={16}
-                maxValue={64}
+                maxValue={96}
                 value={iconSettings.props.size as number}
                 onChange={(val) =>
                   setIconSettings({
@@ -128,8 +132,8 @@ function Header() {
               <CPText>Border</CPText>
               <Slider
                 width='100%'
-                minValue={1}
-                maxValue={10}
+                minValue={0.5}
+                maxValue={3}
                 onChange={(val) =>
                   setIconSettings({ type: 'update-border-width', payload: val })
                 }
@@ -163,7 +167,13 @@ function Header() {
             <CPButton
               height='100%'
               variant='outline'
-              icon={<Sun size='1.25rem' />}
+              icon={<ArrowClockwise size='1.25rem' />}
+              onClick={() =>
+                setIconSettings({
+                  type: 'update-icon-props',
+                  payload: defaultIconProps,
+                })
+              }
             />
             <CPButton
               height='100%'
