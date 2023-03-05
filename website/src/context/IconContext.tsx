@@ -31,11 +31,21 @@ type IconSettingsAction =
       type: 'update-variant-filter'
       payload: IconMetadata['variant']
     }
+  | {
+      type: 'update-icon-props'
+      payload: Partial<JengaIconProps | JengaIconRegularProps>
+    }
 
 type TSettingsReducer = (
   state: IconSettingsState,
   action: IconSettingsAction
 ) => IconSettingsState
+
+export const defaultIconProps: JengaIconProps | JengaIconRegularProps = {
+  size: 32,
+  color: '#FFFFFF',
+  weight: 2,
+}
 
 export const IconContext = createContext<{
   iconSettings: IconSettingsState
@@ -46,7 +56,7 @@ export const IconContext = createContext<{
       search: '',
       variant: 'regular',
     },
-    props: { size: 32, color: '#FFFFFF' },
+    props: defaultIconProps,
   },
   setIconSettings: () => console.log('Settings will not be updated'),
 })
@@ -65,6 +75,8 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         return { ...state, props: { ...state.props, weight: payload } }
       case 'update-variant-filter':
         return { ...state, filter: { ...state.filter, variant: payload } }
+      case 'update-icon-props':
+        return { ...state, props: { ...state.props, ...payload } }
       default:
         console.warn('Unknown action:', type)
         return state
@@ -81,20 +93,14 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         search: '',
         variant: 'regular',
       },
-      props: {
-        size: 32,
-        color: '#FFFFFF',
-      },
+      props: defaultIconProps,
     },
     () => ({
       filter: {
         search: '',
         variant: 'regular',
       },
-      props: {
-        size: 32,
-        color: '#FFFFFF',
-      },
+      props: defaultIconProps,
     })
   )
 
