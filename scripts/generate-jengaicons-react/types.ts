@@ -5,5 +5,5 @@ export interface IconMetadata {
   safeName: string
   categories: string[]
   tags: string[]
-  variant: 'fill' | 'regular'
+  variant: Lowercase<TVariants>
 }
