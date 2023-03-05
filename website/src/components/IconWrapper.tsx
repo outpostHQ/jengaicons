@@ -17,14 +17,16 @@ const IconWrapper = ({
   if (filter.search && !iconMetadata.name.includes(filter.search)) return null
 
   return (
-    <CPButton variant='clear'>
+    <CPButton variant='clear' padding='0'>
       <CPRow
-        padding='2rem'
+        padding='1.25rem'
         radius='2r'
         flow='column nowrap'
         alignItems='center'
         justifyContent='center'
-        gap='1rem'
+        gap='0.625rem'
+        width='10rem'
+        height='10rem'
       >
         {/* @ts-expect-error */}
         {<ICON {...iconSettings.props} />}
