@@ -7,14 +7,8 @@ import Sidebar from './Sidebar'
 function Main() {
   return (
     <Block style={{ position: 'relative' }}>
-      <Block>
-        <Header />
-      </Block>
-      <SectionContainer
-        style={{
-          minHeight: '200vh',
-        }}
-      >
+      <Header />
+      <SectionContainer>
         {/* <Sidebar /> */}
         <IconGrid />
       </SectionContainer>

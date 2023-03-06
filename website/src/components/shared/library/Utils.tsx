@@ -6,18 +6,20 @@ import {
   CubePlaceholderProps,
   CubeTagProps,
   Flex,
+  Grid,
   Placeholder,
   Tag,
   tasty,
-} from '@cube-dev/ui-kit';
+  CubeGridProps,
+} from '@cube-dev/ui-kit'
 
 const CPColumn = tasty(Flex, {
   flow: 'column',
-});
+})
 
 const CPRow = tasty(Flex, {
   flow: 'row',
-});
+})
 
 function CPDivider() {
   return (
@@ -26,9 +28,9 @@ function CPDivider() {
         height: '100%',
         width: '1px',
       }}
-      fill="var(--cp-border)"
+      fill='var(--cp-border)'
     />
-  );
+  )
 }
 
 function CPSlash() {
@@ -41,7 +43,7 @@ function CPSlash() {
         transform: 'skew(-15deg)',
       }}
     />
-  );
+  )
 }
 
 function CPCopySnippet({ code, styles, ...otherProps }: CubeCopySnippetProps) {
@@ -49,8 +51,8 @@ function CPCopySnippet({ code, styles, ...otherProps }: CubeCopySnippetProps) {
     <CopySnippet
       code={code}
       width={['50%', '70%', '100%']}
-      fill="var(--cp-surface)"
-      radius="2r"
+      fill='var(--cp-surface)'
+      radius='2r'
       styles={{
         color: 'var(--cp-text)',
         Code: {
@@ -63,7 +65,7 @@ function CPCopySnippet({ code, styles, ...otherProps }: CubeCopySnippetProps) {
       }}
       {...otherProps}
     />
-  );
+  )
 }
 
 function CPPillOutline({ children }: CubeBlockProps) {
@@ -81,15 +83,15 @@ function CPPillOutline({ children }: CubeBlockProps) {
     >
       {children}
     </Block>
-  );
+  )
 }
 
 function CPTag(props: CubeTagProps) {
-  return <Tag {...props} />;
+  return <Tag {...props} />
 }
 
 function CPPlaceholder(props: CubePlaceholderProps) {
-  return <Placeholder {...props} />;
+  return <Placeholder {...props} />
 }
 
 const CPIndicator = tasty({
@@ -102,8 +104,7 @@ const CPIndicator = tasty({
     display: 'inline-block',
   },
   styleProps: ['backgroundColor'],
-});
-
+})
 export {
   CPColumn,
   CPRow,
@@ -114,4 +115,4 @@ export {
   CPPlaceholder,
   CPDivider,
   CPIndicator,
-};
+}
