@@ -39,6 +39,7 @@ const prodConfig = {
     externals({
       deps: true,
       devDeps: true,
+      peerDeps: true,
     }),
     clean(),
     resolve(),
