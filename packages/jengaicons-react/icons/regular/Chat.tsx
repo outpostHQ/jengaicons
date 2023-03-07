@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Chat = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -15,7 +15,7 @@ const Chat = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -28,24 +28,24 @@ const Chat = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinejoin="round"
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M28 4.498H4v23.004l6.304-5.115H28V4.498Z"
+        d='M28 4.498H4v23.004l6.304-5.115H28V4.498Z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-Chat.displayName = "Chat";
+Chat.displayName = "Chat"
 
-export default Chat;
+export default Chat

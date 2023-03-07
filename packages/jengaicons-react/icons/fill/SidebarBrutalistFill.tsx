@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const SidebarBrutalistFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const SidebarBrutalistFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,59 +26,59 @@ const SidebarBrutalistFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M11.96 6.283v20"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M11.96 6.283v20'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M4.96 6.283h24v20h-24z"
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M4.96 6.283h24v20h-24z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M12 6.283v20"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M12 6.283v20'
         />
         <path
           fill={color || colorCtx || "#000000"}
-          d="M4.96 6.283H12v20H4.96z"
+          d='M4.96 6.283H12v20H4.96z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253"
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M22.837 14.99V12.58a.5.5 0 0 0-.5-.5H16.38a.5.5 0 0 0-.5.5v5.977a.5.5 0 0 0 .5.5h2.253'
         />
         <rect
-          width="6.957"
-          height="6.977"
-          x="18.666"
-          y="14.864"
+          width='6.957'
+          height='6.977'
+          x='18.666'
+          y='14.864'
           stroke={color || colorCtx || "#000000"}
-          strokeLinejoin="round"
-          strokeWidth="2"
-          rx=".5"
+          strokeLinejoin='round'
+          strokeWidth='2'
+          rx='.5'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-SidebarBrutalistFill.displayName = "SidebarBrutalistFill";
+SidebarBrutalistFill.displayName = "SidebarBrutalistFill"
 
-export default SidebarBrutalistFill;
+export default SidebarBrutalistFill

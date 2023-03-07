@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const ArrowElbowDownRight = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const ArrowElbowDownRight = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,33 +29,33 @@ const ArrowElbowDownRight = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M7 4.879v18h18"
+          d='M7 4.879v18h18'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M20.757 18.636 25 22.879l-4.243 4.242"
+          d='M20.757 18.636 25 22.879l-4.243 4.242'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-ArrowElbowDownRight.displayName = "ArrowElbowDownRight";
+ArrowElbowDownRight.displayName = "ArrowElbowDownRight"
 
-export default ArrowElbowDownRight;
+export default ArrowElbowDownRight

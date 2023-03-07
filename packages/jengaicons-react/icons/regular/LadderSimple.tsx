@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const LadderSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const LadderSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,26 +29,26 @@ const LadderSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M8 4.5v24M24 4.5v24M8 9.5h16M8 16.5h16M8 23.5h16"
+          d='M8 4.5v24M24 4.5v24M8 9.5h16M8 16.5h16M8 23.5h16'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-LadderSimple.displayName = "LadderSimple";
+LadderSimple.displayName = "LadderSimple"
 
-export default LadderSimple;
+export default LadderSimple

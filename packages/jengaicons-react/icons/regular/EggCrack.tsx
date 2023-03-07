@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const EggCrack = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const EggCrack = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,32 +29,32 @@ const EggCrack = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M25.23 19.27a9.23 9.23 0 1 1-18.46 0C6.77 11.884 12.307 4.5 16 4.5s9.23 7.385 9.23 14.77Z"
+          d='M25.23 19.27a9.23 9.23 0 1 1-18.46 0C6.77 11.884 12.307 4.5 16 4.5s9.23 7.385 9.23 14.77Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
+          strokeLinecap='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="m21.09 8.046-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45"
+          d='m21.09 8.046-4.985 5.438a.1.1 0 0 0 .042.163l3.333 1.082a.1.1 0 0 1 .068.112l-.772 4.45'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-EggCrack.displayName = "EggCrack";
+EggCrack.displayName = "EggCrack"
 
-export default EggCrack;
+export default EggCrack

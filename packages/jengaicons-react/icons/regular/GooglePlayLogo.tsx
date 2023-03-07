@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const GooglePlayLogo = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const GooglePlayLogo = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,32 +29,32 @@ const GooglePlayLogo = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinejoin="round"
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M26.616 16 5.384 4v24l21.232-12Z"
+          d='M26.616 16 5.384 4v24l21.232-12Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M5.933 5.03 20.32 19.419M5.933 26.935 20.32 12.548"
+          d='M5.933 5.03 20.32 19.419M5.933 26.935 20.32 12.548'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-GooglePlayLogo.displayName = "GooglePlayLogo";
+GooglePlayLogo.displayName = "GooglePlayLogo"
 
-export default GooglePlayLogo;
+export default GooglePlayLogo

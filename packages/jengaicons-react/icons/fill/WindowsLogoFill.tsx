@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const WindowsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const WindowsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,26 +26,26 @@ const WindowsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="m18.05 6.283 10.91-2v9.818H18.05V6.283ZM18.05 18.465h10.91v9.818l-10.91-2v-7.818ZM4.96 18.465h8.727v7.041l-8.727-2v-5.041ZM4.96 9.06l8.727-2V14.1H4.96V9.06Z"
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='m18.05 6.283 10.91-2v9.818H18.05V6.283ZM18.05 18.465h10.91v9.818l-10.91-2v-7.818ZM4.96 18.465h8.727v7.041l-8.727-2v-5.041ZM4.96 9.06l8.727-2V14.1H4.96V9.06Z'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-WindowsLogoFill.displayName = "WindowsLogoFill";
+WindowsLogoFill.displayName = "WindowsLogoFill"
 
-export default WindowsLogoFill;
+export default WindowsLogoFill

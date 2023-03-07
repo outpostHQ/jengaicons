@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const DownloadSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const DownloadSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,32 +29,32 @@ const DownloadSimple = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
+          strokeLinecap='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M6.398 20.799v3.902a.5.5 0 0 0 .5.5h18.203a.5.5 0 0 0 .5-.5V20.8"
+          d='M6.398 20.799v3.902a.5.5 0 0 0 .5.5h18.203a.5.5 0 0 0 .5-.5V20.8'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M16 18.799v-12M11.757 14.556 16 18.8l4.242-4.243"
+          d='M16 18.799v-12M11.757 14.556 16 18.8l4.242-4.243'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-DownloadSimple.displayName = "DownloadSimple";
+DownloadSimple.displayName = "DownloadSimple"
 
-export default DownloadSimple;
+export default DownloadSimple

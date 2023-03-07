@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Scales = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const Scales = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,26 +29,26 @@ const Scales = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M16 6.346v20.308M13.23 26.654h5.54M7.692 11.885l16.616-3.693M4 21.116c0 2.039 2.308 2.769 3.692 2.769 1.385 0 3.693-.73 3.693-2.77l-3.693-9.23L4 21.115ZM20.616 17.423c0 2.04 2.307 2.77 3.692 2.77 1.384 0 3.692-.73 3.692-2.77l-3.692-9.23-3.692 9.23Z"
+          d='M16 6.346v20.308M13.23 26.654h5.54M7.692 11.885l16.616-3.693M4 21.116c0 2.039 2.308 2.769 3.692 2.769 1.385 0 3.693-.73 3.693-2.77l-3.693-9.23L4 21.115ZM20.616 17.423c0 2.04 2.307 2.77 3.692 2.77 1.384 0 3.692-.73 3.692-2.77l-3.692-9.23-3.692 9.23Z'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-Scales.displayName = "Scales";
+Scales.displayName = "Scales"
 
-export default Scales;
+export default Scales

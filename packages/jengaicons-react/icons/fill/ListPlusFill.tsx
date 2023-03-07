@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ListPlusFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const ListPlusFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const ListPlusFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M6.73 8.975a1 1 0 0 1 1-1h16.923a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm0 6.154a1 1 0 0 1 1-1h16.923a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm1 5.154a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2h-10Zm12.846 1a1 1 0 0 1 1-1h1.307v-1.308a1 1 0 0 1 2 0v1.308h1.308a1 1 0 1 1 0 2h-1.308v1.308a1 1 0 1 1-2 0v-1.308h-1.307a1 1 0 0 1-1-1Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M6.73 8.975a1 1 0 0 1 1-1h16.923a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm0 6.154a1 1 0 0 1 1-1h16.923a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm1 5.154a1 1 0 1 0 0 2h10a1 1 0 1 0 0-2h-10Zm12.846 1a1 1 0 0 1 1-1h1.307v-1.308a1 1 0 0 1 2 0v1.308h1.308a1 1 0 1 1 0 2h-1.308v1.308a1 1 0 1 1-2 0v-1.308h-1.307a1 1 0 0 1-1-1Z'
+        clipRule='evenodd'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-ListPlusFill.displayName = "ListPlusFill";
+ListPlusFill.displayName = "ListPlusFill"
 
-export default ListPlusFill;
+export default ListPlusFill

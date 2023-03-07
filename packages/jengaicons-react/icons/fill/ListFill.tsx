@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ListFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const ListFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const ListFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M6.73 9.57a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm0 6.713a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm1 5.713a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H7.729Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M6.73 9.57a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm0 6.713a1 1 0 0 1 1-1H26.19a1 1 0 1 1 0 2H7.729a1 1 0 0 1-1-1Zm1 5.713a1 1 0 1 0 0 2H26.19a1 1 0 1 0 0-2H7.729Z'
+        clipRule='evenodd'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-ListFill.displayName = "ListFill";
+ListFill.displayName = "ListFill"
 
-export default ListFill;
+export default ListFill

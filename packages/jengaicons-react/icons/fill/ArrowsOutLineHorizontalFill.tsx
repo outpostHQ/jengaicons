@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ArrowsOutLineHorizontalFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const ArrowsOutLineHorizontalFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,26 +26,26 @@ const ArrowsOutLineHorizontalFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M16.96 6.283v20M4.811 16.283h8M9.054 12.038l-4.243 4.243 4.243 4.243M24.688 12.038l4.243 4.243-4.482 3.99M28.688 16.281h-8"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M16.96 6.283v20M4.811 16.283h8M9.054 12.038l-4.243 4.243 4.243 4.243M24.688 12.038l4.243 4.243-4.482 3.99M28.688 16.281h-8'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-ArrowsOutLineHorizontalFill.displayName = "ArrowsOutLineHorizontalFill";
+ArrowsOutLineHorizontalFill.displayName = "ArrowsOutLineHorizontalFill"
 
-export default ArrowsOutLineHorizontalFill;
+export default ArrowsOutLineHorizontalFill

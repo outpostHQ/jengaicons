@@ -1,14 +1,14 @@
-import * as svgson from 'svgson'
-import prettier from 'prettier'
-import { SVGProps } from 'react'
-import { TVariants } from './types'
+import * as svgson from "svgson"
+import prettier from "prettier"
+import { SVGProps } from "react"
+import { TVariants } from "./types"
 
 type SVGProp = keyof SVGProps<SVGSVGElement>
 
 const genAttrString = (attrs: Record<string, string>) => {
   return Object.entries(attrs)
     .map(([key, val]) => `${key}="${val}"`)
-    .join(' ')
+    .join(" ")
 }
 
 const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
@@ -20,16 +20,16 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
 
           switch (attr) {
             // Replace Color
-            case 'stroke':
-            case 'fill':
+            case "stroke":
+            case "fill":
               // check if the value is a hex color
               if (/^#.+/.test(attrVal))
                 _attrVal = `{color || colorCtx || "${data.defaultColor}"}`
               break
 
             // Replace StrokeWidth for weight prop
-            case 'strokeWidth':
-              if (data.variant === 'Regular')
+            case "strokeWidth":
+              if (data.variant === "Regular")
                 _attrVal = `{weight || weightCtx || "${data.defaultWeight}"}`
               else _attrVal = `"${data.defaultWeight}"`
               break
@@ -37,14 +37,14 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
 
           return `${attr}=${_attrVal}`
         },
-      })
+      }),
     )
-    .join('')
+    .join("")
 }
 
 const getRegularComponent = (
   transformData: TransformData,
-  svgAST: svgson.INode
+  svgAST: svgson.INode,
 ) => {
   const { componentName, defaultSize, defaultWeight } = transformData
 
@@ -103,7 +103,7 @@ const getRegularComponent = (
 
 const getVariantComponent = (
   transformData: TransformData,
-  svgAST: svgson.INode
+  svgAST: svgson.INode,
 ) => {
   const { componentName, defaultSize } = transformData
 
@@ -159,7 +159,7 @@ const getVariantComponent = (
 
 const getComponent = (transformData: TransformData, svgAST: svgson.INode) => {
   switch (transformData.variant) {
-    case 'Regular':
+    case "Regular":
       return getRegularComponent(transformData, svgAST)
   }
 
@@ -189,7 +189,7 @@ const transform = (transformData: TransformData) => {
 
   return prettier.format(ComponentFileContent, {
     semi: true,
-    parser: 'babel-ts',
+    parser: "babel-ts",
   })
 }
 

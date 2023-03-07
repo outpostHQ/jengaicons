@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ToggleLeftFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const ToggleLeftFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const ToggleLeftFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M11.817 9.426a6.857 6.857 0 1 0 0 13.714h10.286a6.857 6.857 0 0 0 0-13.714H11.817Zm3.751 6.857a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M11.817 9.426a6.857 6.857 0 1 0 0 13.714h10.286a6.857 6.857 0 0 0 0-13.714H11.817Zm3.751 6.857a3.75 3.75 0 1 1-7.5 0 3.75 3.75 0 0 1 7.5 0Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-ToggleLeftFill.displayName = "ToggleLeftFill";
+ToggleLeftFill.displayName = "ToggleLeftFill"
 
-export default ToggleLeftFill;
+export default ToggleLeftFill

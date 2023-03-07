@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const CurrencyCnyFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const CurrencyCnyFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,26 +26,26 @@ const CurrencyCnyFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9.688 8.556h14.545M7.87 14.92H26.05M19.688 14.92v6.363a2.727 2.727 0 0 0 2.727 2.727h4.545v-2.727M14.233 14.92v1.817A7.273 7.273 0 0 1 6.96 24.01"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M9.688 8.556h14.545M7.87 14.92H26.05M19.688 14.92v6.363a2.727 2.727 0 0 0 2.727 2.727h4.545v-2.727M14.233 14.92v1.817A7.273 7.273 0 0 1 6.96 24.01'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-CurrencyCnyFill.displayName = "CurrencyCnyFill";
+CurrencyCnyFill.displayName = "CurrencyCnyFill"
 
-export default CurrencyCnyFill;
+export default CurrencyCnyFill

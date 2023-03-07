@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const PowerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const PowerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const PowerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M17.96 7.473a1 1 0 1 0-2 0v7.972a1 1 0 0 0 2 0V7.473Zm-5.49 1.491a1 1 0 0 0-1.09-1.676 10.23 10.23 0 1 0 11.16 0 1 1 0 0 0-1.09 1.676 8.23 8.23 0 1 1-8.98 0Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M17.96 7.473a1 1 0 1 0-2 0v7.972a1 1 0 0 0 2 0V7.473Zm-5.49 1.491a1 1 0 0 0-1.09-1.676 10.23 10.23 0 1 0 11.16 0 1 1 0 0 0-1.09 1.676 8.23 8.23 0 1 1-8.98 0Z'
+        clipRule='evenodd'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-PowerFill.displayName = "PowerFill";
+PowerFill.displayName = "PowerFill"
 
-export default PowerFill;
+export default PowerFill

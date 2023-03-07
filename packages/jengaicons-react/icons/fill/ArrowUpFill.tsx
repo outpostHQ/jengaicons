@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ArrowUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const ArrowUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,25 +25,25 @@ const ArrowUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M16.96 4.283v24M10.596 10.647l6.364-6.364 6.364 6.364"
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='2'
+        d='M16.96 4.283v24M10.596 10.647l6.364-6.364 6.364 6.364'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-ArrowUpFill.displayName = "ArrowUpFill";
+ArrowUpFill.displayName = "ArrowUpFill"
 
-export default ArrowUpFill;
+export default ArrowUpFill

@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const TextItalicFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const TextItalicFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const TextItalicFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="m18.65 8.052-5.488 16.462H8.755a1 1 0 1 0 0 2H19.01a1 1 0 1 0 0-2h-3.74l5.486-16.462h4.408a1 1 0 1 0 0-2H14.909a1 1 0 1 0 0 2h3.74Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='m18.65 8.052-5.488 16.462H8.755a1 1 0 1 0 0 2H19.01a1 1 0 1 0 0-2h-3.74l5.486-16.462h4.408a1 1 0 1 0 0-2H14.909a1 1 0 1 0 0 2h3.74Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-TextItalicFill.displayName = "TextItalicFill";
+TextItalicFill.displayName = "TextItalicFill"
 
-export default TextItalicFill;
+export default TextItalicFill

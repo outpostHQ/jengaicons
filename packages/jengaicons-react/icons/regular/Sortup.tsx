@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Sortup = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const Sortup = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,33 +29,33 @@ const Sortup = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="m16.353 4.354 8.958 8.957a.5.5 0 0 1-.354.854H7.042a.5.5 0 0 1-.353-.854l8.957-8.957a.5.5 0 0 1 .707 0Z"
+          d='m16.353 4.354 8.958 8.957a.5.5 0 0 1-.354.854H7.042a.5.5 0 0 1-.353-.854l8.957-8.957a.5.5 0 0 1 .707 0Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M15.646 27.646 6.69 18.69a.5.5 0 0 1 .353-.854h17.915a.5.5 0 0 1 .354.854l-8.957 8.957a.5.5 0 0 1-.708 0Z"
+          d='M15.646 27.646 6.69 18.69a.5.5 0 0 1 .353-.854h17.915a.5.5 0 0 1 .354.854l-8.957 8.957a.5.5 0 0 1-.708 0Z'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-Sortup.displayName = "Sortup";
+Sortup.displayName = "Sortup"
 
-export default Sortup;
+export default Sortup

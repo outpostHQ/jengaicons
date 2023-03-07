@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const CaretUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const CaretUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,22 +25,22 @@ const CaretUpFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        d="M16.607 10.636 5.814 21.43a.5.5 0 0 0 .353.854h21.586a.5.5 0 0 0 .354-.854L17.314 10.637a.5.5 0 0 0-.707 0Z"
+        d='M16.607 10.636 5.814 21.43a.5.5 0 0 0 .353.854h21.586a.5.5 0 0 0 .354-.854L17.314 10.637a.5.5 0 0 0-.707 0Z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-CaretUpFill.displayName = "CaretUpFill";
+CaretUpFill.displayName = "CaretUpFill"
 
-export default CaretUpFill;
+export default CaretUpFill

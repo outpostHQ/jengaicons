@@ -1,5 +1,5 @@
-import { useContext } from 'react'
-import { IconContext } from '@/context/IconContext'
+import { useContext } from "react"
+import { IconContext } from "@/context/IconContext"
 
 const useIconSettings = () => {
   const { iconSettings, setIconSettings } = useContext(IconContext)

@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const TrayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const TrayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const TrayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M4.96 3.283a1 1 0 0 0-1 1v24a1 1 0 0 0 1 1h24a1 1 0 0 0 1-1v-24a1 1 0 0 0-1-1h-24Zm1 17.329v6.67h22v-6.67h-4.069a1 1 0 0 0-.707.293l-2.947 2.947a1 1 0 0 1-.707.293h-5.297a1 1 0 0 1-.707-.293l-2.947-2.947a1 1 0 0 0-.707-.293H5.96Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M4.96 3.283a1 1 0 0 0-1 1v24a1 1 0 0 0 1 1h24a1 1 0 0 0 1-1v-24a1 1 0 0 0-1-1h-24Zm1 17.329v6.67h22v-6.67h-4.069a1 1 0 0 0-.707.293l-2.947 2.947a1 1 0 0 1-.707.293h-5.297a1 1 0 0 1-.707-.293l-2.947-2.947a1 1 0 0 0-.707-.293H5.96Z'
+        clipRule='evenodd'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-TrayFill.displayName = "TrayFill";
+TrayFill.displayName = "TrayFill"
 
-export default TrayFill;
+export default TrayFill

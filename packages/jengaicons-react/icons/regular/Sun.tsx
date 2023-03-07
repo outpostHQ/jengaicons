@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Sun = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -15,7 +15,7 @@ const Sun = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -28,25 +28,25 @@ const Sun = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 22.929a6.429 6.429 0 1 0 0-12.858 6.429 6.429 0 0 0 0 12.858ZM16 6.643V4.5M9.025 9.525l-1.51-1.51M6.143 16.5H4M9.025 23.475l-1.51 1.51M16 26.357V28.5M22.975 23.475l1.51 1.51M25.857 16.5H28M22.975 9.525l1.51-1.51"
+        d='M16 22.929a6.429 6.429 0 1 0 0-12.858 6.429 6.429 0 0 0 0 12.858ZM16 6.643V4.5M9.025 9.525l-1.51-1.51M6.143 16.5H4M9.025 23.475l-1.51 1.51M16 26.357V28.5M22.975 23.475l1.51 1.51M25.857 16.5H28M22.975 9.525l1.51-1.51'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-Sun.displayName = "Sun";
+Sun.displayName = "Sun"
 
-export default Sun;
+export default Sun

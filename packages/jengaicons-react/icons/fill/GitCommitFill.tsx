@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const GitCommitFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const GitCommitFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const GitCommitFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M22.065 17.278a5.202 5.202 0 0 1-10.21 0 1.03 1.03 0 0 1-.095.005h-6.8a1 1 0 1 1 0-2h6.8c.032 0 .064.001.095.004a5.202 5.202 0 0 1 10.21 0 1.04 1.04 0 0 1 .095-.004h6.8a1 1 0 0 1 0 2h-6.8c-.032 0-.064-.002-.095-.005Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M22.065 17.278a5.202 5.202 0 0 1-10.21 0 1.03 1.03 0 0 1-.095.005h-6.8a1 1 0 1 1 0-2h6.8c.032 0 .064.001.095.004a5.202 5.202 0 0 1 10.21 0 1.04 1.04 0 0 1 .095-.004h6.8a1 1 0 0 1 0 2h-6.8c-.032 0-.064-.002-.095-.005Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-GitCommitFill.displayName = "GitCommitFill";
+GitCommitFill.displayName = "GitCommitFill"
 
-export default GitCommitFill;
+export default GitCommitFill

@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Timer = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -15,7 +15,7 @@ const Timer = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -28,31 +28,31 @@ const Timer = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeMiterlimit="10"
+        strokeMiterlimit='10'
         strokeWidth={weight || weightCtx || "2"}
-        d="M16 28.5c5.608 0 10.154-4.546 10.154-10.154S21.608 8.192 16 8.192 5.846 12.738 5.846 18.346 10.392 28.5 16 28.5Z"
+        d='M16 28.5c5.608 0 10.154-4.546 10.154-10.154S21.608 8.192 16 8.192 5.846 12.738 5.846 18.346 10.392 28.5 16 28.5Z'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="m16 18.346 4.57-4.569M13.23 4.5h5.54"
+        d='m16 18.346 4.57-4.569M13.23 4.5h5.54'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-Timer.displayName = "Timer";
+Timer.displayName = "Timer"
 
-export default Timer;
+export default Timer

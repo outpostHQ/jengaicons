@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Tote = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -15,7 +15,7 @@ const Tote = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -28,31 +28,31 @@ const Tote = forwardRef<SVGSVGElement, JengaIconRegularProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M11.342 14.171v-3.726a4.657 4.657 0 0 1 9.315 0v3.726"
+        d='M11.342 14.171v-3.726a4.657 4.657 0 0 1 9.315 0v3.726'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinejoin="round"
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M5.863 27.212h20.274L28 10.445H4l1.863 16.767Z"
+        d='M5.863 27.212h20.274L28 10.445H4l1.863 16.767Z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-Tote.displayName = "Tote";
+Tote.displayName = "Tote"
 
-export default Tote;
+export default Tote

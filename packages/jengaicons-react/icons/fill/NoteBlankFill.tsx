@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const NoteBlankFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const NoteBlankFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const NoteBlankFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M27.96 4.283h-22a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h14.262a1 1 0 0 0 .642-.233l7.738-6.476a1 1 0 0 0 .358-.767V5.283a1 1 0 0 0-1-1Zm-7.642 22.56v-4.895a1 1 0 0 1 1-1h6.08l-7.08 5.895Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M27.96 4.283h-22a1 1 0 0 0-1 1v22a1 1 0 0 0 1 1h14.262a1 1 0 0 0 .642-.233l7.738-6.476a1 1 0 0 0 .358-.767V5.283a1 1 0 0 0-1-1Zm-7.642 22.56v-4.895a1 1 0 0 1 1-1h6.08l-7.08 5.895Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-NoteBlankFill.displayName = "NoteBlankFill";
+NoteBlankFill.displayName = "NoteBlankFill"
 
-export default NoteBlankFill;
+export default NoteBlankFill

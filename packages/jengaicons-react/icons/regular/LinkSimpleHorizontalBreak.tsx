@@ -1,14 +1,14 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const LinkSimpleHorizontalBreak = forwardRef<
   SVGSVGElement,
   JengaIconRegularProps
 >((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -18,7 +18,7 @@ const LinkSimpleHorizontalBreak = forwardRef<
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -31,25 +31,25 @@ const LinkSimpleHorizontalBreak = forwardRef<
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M13.428 21.143H9.143a5.143 5.143 0 1 1 0-10.286h4.285M18.572 21.143h4.285a5.142 5.142 0 1 0 0-10.286h-4.285"
+        d='M13.428 21.143H9.143a5.143 5.143 0 1 1 0-10.286h4.285M18.572 21.143h4.285a5.142 5.142 0 1 0 0-10.286h-4.285'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-LinkSimpleHorizontalBreak.displayName = "LinkSimpleHorizontalBreak";
+LinkSimpleHorizontalBreak.displayName = "LinkSimpleHorizontalBreak"
 
-export default LinkSimpleHorizontalBreak;
+export default LinkSimpleHorizontalBreak

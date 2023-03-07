@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const BathtubFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const BathtubFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,37 +25,37 @@ const BathtubFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M10.96 23.569v2.571M22.96 23.569v2.571"
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='2'
+        d='M10.96 23.569v2.571M22.96 23.569v2.571'
       />
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M5.46 14.14a.5.5 0 0 0-.5.5v3.929a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V14.64a.5.5 0 0 0-.5-.5h-23Zm17.84.498h-4.108v2.451H23.3v-2.45Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M5.46 14.14a.5.5 0 0 0-.5.5v3.929a5 5 0 0 0 5 5h14a5 5 0 0 0 5-5V14.64a.5.5 0 0 0-.5-.5h-23Zm17.84.498h-4.108v2.451H23.3v-2.45Z'
+        clipRule='evenodd'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeWidth="2"
-        d="M9.246 14.14V8.426a2 2 0 0 1 2-2h.285a2 2 0 0 1 2 2v.143"
+        strokeLinecap='round'
+        strokeWidth='2'
+        d='M9.246 14.14V8.426a2 2 0 0 1 2-2h.285a2 2 0 0 1 2 2v.143'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-BathtubFill.displayName = "BathtubFill";
+BathtubFill.displayName = "BathtubFill"
 
-export default BathtubFill;
+export default BathtubFill

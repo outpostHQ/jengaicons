@@ -1,7 +1,7 @@
-import { JSXElementConstructor, ReactNode } from 'react'
-import { CPButton, CPRow, CPText } from './shared/library'
-import { IconMetadata } from '../../../scripts/generate-jengaicons-react/types'
-import useIconSettings from '@/hooks/useIconSettings'
+import { JSXElementConstructor, ReactNode } from "react"
+import { CPButton, CPRow, CPText } from "./shared/library"
+import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
+import useIconSettings from "@/hooks/useIconSettings"
 
 const IconWrapper = ({
   ICON,

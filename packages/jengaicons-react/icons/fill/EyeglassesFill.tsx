@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const EyeglassesFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const EyeglassesFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,40 +26,40 @@ const EyeglassesFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M9.46 25.771a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM24.46 25.771a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M9.46 25.771a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9ZM24.46 25.771a4.5 4.5 0 1 0 0-9 4.5 4.5 0 0 0 0 9Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M13.96 20.771h6"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M13.96 20.771h6'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeWidth="2"
-          d="M10.078 6.794H9.96a5 5 0 0 0-5 5v9.676M23.843 6.794h.117a5 5 0 0 1 5 5v9.676"
+          strokeLinecap='round'
+          strokeWidth='2'
+          d='M10.078 6.794H9.96a5 5 0 0 0-5 5v9.676M23.843 6.794h.117a5 5 0 0 1 5 5v9.676'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-EyeglassesFill.displayName = "EyeglassesFill";
+EyeglassesFill.displayName = "EyeglassesFill"
 
-export default EyeglassesFill;
+export default EyeglassesFill

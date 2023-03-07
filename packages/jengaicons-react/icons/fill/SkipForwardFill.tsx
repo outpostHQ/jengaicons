@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const SkipForwardFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const SkipForwardFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const SkipForwardFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M25.459 5.783a1 1 0 1 1 2 0v22a1 1 0 0 1-2 0V17.414L8.227 28.297a.5.5 0 0 1-.767-.423V5.691a.5.5 0 0 1 .767-.422L25.46 16.15V5.783Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M25.459 5.783a1 1 0 1 1 2 0v22a1 1 0 0 1-2 0V17.414L8.227 28.297a.5.5 0 0 1-.767-.423V5.691a.5.5 0 0 1 .767-.422L25.46 16.15V5.783Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-SkipForwardFill.displayName = "SkipForwardFill";
+SkipForwardFill.displayName = "SkipForwardFill"
 
-export default SkipForwardFill;
+export default SkipForwardFill

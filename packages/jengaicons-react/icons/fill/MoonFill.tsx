@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const MoonFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const MoonFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,22 +25,22 @@ const MoonFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        d="M28.691 20.683c.132-.367-.212-.715-.594-.638a12.21 12.21 0 0 1-14.4-14.4c.078-.381-.27-.725-.637-.593a12.224 12.224 0 1 0 15.631 15.63Z"
+        d='M28.691 20.683c.132-.367-.212-.715-.594-.638a12.21 12.21 0 0 1-14.4-14.4c.078-.381-.27-.725-.637-.593a12.224 12.224 0 1 0 15.631 15.63Z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-MoonFill.displayName = "MoonFill";
+MoonFill.displayName = "MoonFill"
 
-export default MoonFill;
+export default MoonFill

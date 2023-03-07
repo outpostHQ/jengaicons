@@ -1,4 +1,4 @@
-import { readdirSync } from 'fs'
+import { readdirSync } from "fs"
 export const getJSONFiles = (dir: string) => {
   return readdirSync(dir, {
     withFileTypes: true,

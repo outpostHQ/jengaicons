@@ -1,16 +1,16 @@
-import { useEffect } from "react";
-import { Button, CubeButtonProps, Flex } from "@cube-dev/ui-kit";
-import { ArrowSquareOut } from "@jengaicons/react";
+import { useEffect } from "react"
+import { Button, CubeButtonProps, Flex } from "@cube-dev/ui-kit"
+import { ArrowSquareOut } from "@jengaicons/react"
 // import { animate, stagger } from 'motion';
 
-import { CPRow } from "./Utils";
+import { CPRow } from "./Utils"
 
 const sharedButtonStyles = {
   fontWeight: 500,
   radius: "2r",
   padding: "0.5rem 1rem",
   styles: { fontSize: "0.9375rem" },
-};
+}
 
 export function CPButton({
   variant = "primary",
@@ -20,7 +20,7 @@ export function CPButton({
   openInNew = false,
   ...otherProps
 }: CubeButtonProps & { variant?: keyof typeof CPButtonVariantProps } & {
-  openInNew?: boolean;
+  openInNew?: boolean
 }) {
   const CPButtonVariantProps = {
     primary: {
@@ -122,7 +122,7 @@ export function CPButton({
         ...styles,
       },
     },
-  };
+  }
 
   return (
     <Button
@@ -132,20 +132,20 @@ export function CPButton({
     >
       {children}
     </Button>
-  );
+  )
 }
 
 export function CPButtonOpenInNew(props: CubeButtonProps) {
   return (
-    <Button type="link" to={`!${props.to}`} outline="0">
+    <Button type='link' to={`!${props.to}`} outline='0'>
       <Flex
         style={{ whiteSpace: "normal", gap: "0.5rem", alignItems: "center" }}
       >
         {props.children}
-        <ArrowSquareOut color="var(--cp-icon-primary)" />
+        <ArrowSquareOut color='var(--cp-icon-primary)' />
       </Flex>
     </Button>
-  );
+  )
 }
 
 // export function CPSpinner() {

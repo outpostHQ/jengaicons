@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const TwitterLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const TwitterLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,27 +26,27 @@ const TwitterLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M15.69 10.596A4.74 4.74 0 0 1 24.776 8.7h4.185l-3.822 3.823a15.166 15.166 0 0 1-15.134 14.186c-3.792 0-4.74-1.422-4.74-1.422s3.792-1.421 5.687-4.265c0 0-7.582-3.791-5.687-14.217 0 0 4.74 4.739 10.425 5.687l.002-1.896Z"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M15.69 10.596A4.74 4.74 0 0 1 24.776 8.7h4.185l-3.822 3.823a15.166 15.166 0 0 1-15.134 14.186c-3.792 0-4.74-1.422-4.74-1.422s3.792-1.421 5.687-4.265c0 0-7.582-3.791-5.687-14.217 0 0 4.74 4.739 10.425 5.687l.002-1.896Z'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-TwitterLogoFill.displayName = "TwitterLogoFill";
+TwitterLogoFill.displayName = "TwitterLogoFill"
 
-export default TwitterLogoFill;
+export default TwitterLogoFill

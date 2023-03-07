@@ -1,14 +1,14 @@
-import fs from 'fs'
-import path from 'path'
-import transform from './transform'
-import { getCLIArgs } from './cli'
-import { TVariants } from './types'
+import fs from "fs"
+import path from "path"
+import transform from "./transform"
+import { getCLIArgs } from "./cli"
+import { TVariants } from "./types"
 
 const args = getCLIArgs()
 const PATH_TO_ASSETS = args.assets
 const PATH_TO_WRITE_FOLDER = path.join(args.rootPath, args.outputFolderName)
-const PATH_TO_SRC_FOLDER = path.join(args.rootPath, 'src')
-const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, 'index.tsx')
+const PATH_TO_SRC_FOLDER = path.join(args.rootPath, "src")
+const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, "index.tsx")
 
 const pathPresent = (path: string) => fs.existsSync(path)
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
@@ -34,7 +34,7 @@ const getSVGFileNames = (variant: string) => {
     .readdirSync(path.join(PATH_TO_ASSETS, variant), {
       withFileTypes: true,
     })
-    .filter((file) => file.name.endsWith('.svg'))
+    .filter((file) => file.name.endsWith(".svg"))
     .map((item) => item.name)
     .sort((a, b) => a.localeCompare(b))
 
@@ -43,14 +43,14 @@ const getSVGFileNames = (variant: string) => {
 
 const getReactSVGContent = (svgFileName: string, variant: string) => {
   return fs
-    .readFileSync(path.join(PATH_TO_ASSETS, variant, svgFileName), 'utf8')
-    .replace(/fill-rule/g, 'fillRule')
-    .replace(/stroke-linecap/g, 'strokeLinecap')
-    .replace(/stroke-linejoin/g, 'strokeLinejoin')
-    .replace(/stroke-width/g, 'strokeWidth')
-    .replace(/stroke-miterlimit/g, 'strokeMiterlimit')
-    .replace(/clip-rule/g, 'clipRule')
-    .replace(/stroke-dasharray/g, 'strokeDasharray')
+    .readFileSync(path.join(PATH_TO_ASSETS, variant, svgFileName), "utf8")
+    .replace(/fill-rule/g, "fillRule")
+    .replace(/stroke-linecap/g, "strokeLinecap")
+    .replace(/stroke-linejoin/g, "strokeLinejoin")
+    .replace(/stroke-width/g, "strokeWidth")
+    .replace(/stroke-miterlimit/g, "strokeMiterlimit")
+    .replace(/clip-rule/g, "clipRule")
+    .replace(/stroke-dasharray/g, "strokeDasharray")
 }
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
@@ -66,7 +66,7 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
 
   // return safeComponentName
 
-  return svgFileName.replace(/\.svg$/i, '')
+  return svgFileName.replace(/\.svg$/i, "")
 }
 
 async function main() {
@@ -95,7 +95,7 @@ async function main() {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
-      console.log('Making', componentName)
+      console.log("Making", componentName)
 
       /**
        * SVG generated component with export statement
@@ -104,8 +104,8 @@ async function main() {
         componentName,
         defaultSize: 32,
         svgContent: svgFileContent,
-        defaultColor: '#000000', // BLACK COLOR
-        defaultWeight: '2',
+        defaultColor: "#000000", // BLACK COLOR
+        defaultWeight: "2",
         variant: capitalize(variantFolder) as TVariants,
       })
 
@@ -114,12 +114,12 @@ async function main() {
        */
       fs.writeFileSync(
         path.join(PATH_TO_WRITE_FOLDER, variantFolder, `${componentName}.tsx`),
-        svgComponent
+        svgComponent,
       )
 
       fs.appendFileSync(
         PATH_TO_SRC_INDEX_FILE,
-        `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`
+        `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`,
       )
     })
   }
@@ -130,12 +130,12 @@ async function main() {
       `export { JengaIconContext } from "./base";`,
       `export type { JengaIconProps }  from "./base"`,
       `export type { JengaIconRegularProps } from "./base"`,
-    ].join('\n')
+    ].join("\n"),
   )
 }
 
 main()
   .then(() => {
-    console.log('Finished generating for react!')
+    console.log("Finished generating for react!")
   })
   .catch((e) => console.log(e.message))

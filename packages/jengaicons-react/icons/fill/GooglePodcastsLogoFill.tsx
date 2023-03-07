@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const GooglePodcastsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const GooglePodcastsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,26 +26,26 @@ const GooglePodcastsLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M16.96 4.283v2.77M22.499 9.36v2.77M16.96 25.514v2.769M16.96 10.745V21.82M11.422 9.36v7.384M22.499 15.821v7.385M5.883 14.898v2.77M11.422 20.437v2.769M28.037 14.898v2.77"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M16.96 4.283v2.77M22.499 9.36v2.77M16.96 25.514v2.769M16.96 10.745V21.82M11.422 9.36v7.384M22.499 15.821v7.385M5.883 14.898v2.77M11.422 20.437v2.769M28.037 14.898v2.77'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-GooglePodcastsLogoFill.displayName = "GooglePodcastsLogoFill";
+GooglePodcastsLogoFill.displayName = "GooglePodcastsLogoFill"
 
-export default GooglePodcastsLogoFill;
+export default GooglePodcastsLogoFill

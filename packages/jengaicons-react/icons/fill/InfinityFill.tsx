@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const InfinityFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const InfinityFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const InfinityFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeWidth="2"
-        d="M14.462 19.014a5.143 5.143 0 1 1-4.359-7.874c1.044 0 2.425.528 3.058 1.089.623.55 6.903 7.52 7.115 7.756l.016.017.254.25a5.143 5.143 0 1 0-.725-7.206"
+        strokeLinecap='round'
+        strokeWidth='2'
+        d='M14.462 19.014a5.143 5.143 0 1 1-4.359-7.874c1.044 0 2.425.528 3.058 1.089.623.55 6.903 7.52 7.115 7.756l.016.017.254.25a5.143 5.143 0 1 0-.725-7.206'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-InfinityFill.displayName = "InfinityFill";
+InfinityFill.displayName = "InfinityFill"
 
-export default InfinityFill;
+export default InfinityFill

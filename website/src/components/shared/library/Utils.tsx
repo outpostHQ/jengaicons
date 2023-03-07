@@ -11,22 +11,22 @@ import {
   Tag,
   tasty,
   CubeGridProps,
-} from '@cube-dev/ui-kit'
+} from "@cube-dev/ui-kit"
 
 const CPColumn = tasty(Flex, {
-  flow: 'column',
+  flow: "column",
 })
 
 const CPRow = tasty(Flex, {
-  flow: 'row',
+  flow: "row",
 })
 
 function CPDivider() {
   return (
     <Block
       styles={{
-        height: '100%',
-        width: '1px',
+        height: "100%",
+        width: "1px",
       }}
       fill='var(--cp-border)'
     />
@@ -37,10 +37,10 @@ function CPSlash() {
   return (
     <Block
       styles={{
-        width: '2px',
-        height: '1.5rem',
-        background: 'var(--cp-border)',
-        transform: 'skew(-15deg)',
+        width: "2px",
+        height: "1.5rem",
+        background: "var(--cp-border)",
+        transform: "skew(-15deg)",
       }}
     />
   )
@@ -50,18 +50,18 @@ function CPCopySnippet({ code, styles, ...otherProps }: CubeCopySnippetProps) {
   return (
     <CopySnippet
       code={code}
-      width={['50%', '70%', '100%']}
+      width={["50%", "70%", "100%"]}
       fill='var(--cp-surface)'
       radius='2r'
       styles={{
-        color: 'var(--cp-text)',
+        color: "var(--cp-text)",
         Code: {
-          color: 'var(--cp-text)',
+          color: "var(--cp-text)",
         },
         ...styles,
       }}
       style={{
-        border: '1px solid var(--cp-border)',
+        border: "1px solid var(--cp-border)",
       }}
       {...otherProps}
     />
@@ -72,13 +72,13 @@ function CPPillOutline({ children }: CubeBlockProps) {
   return (
     <Block
       styles={{
-        fontSize: '0.75rem',
-        color: '#7F7AFF',
-        padding: '0 0.5rem',
-        borderRadius: '5rem',
+        fontSize: "0.75rem",
+        color: "#7F7AFF",
+        padding: "0 0.5rem",
+        borderRadius: "5rem",
       }}
       style={{
-        border: '1px solid var(--cp-border-primary)',
+        border: "1px solid var(--cp-border-primary)",
       }}
     >
       {children}
@@ -95,15 +95,15 @@ function CPPlaceholder(props: CubePlaceholderProps) {
 }
 
 const CPIndicator = tasty({
-  as: 'div',
-  border: 'none',
+  as: "div",
+  border: "none",
   styles: {
     width: 10,
     height: 10,
-    borderRadius: '10px',
-    display: 'inline-block',
+    borderRadius: "10px",
+    display: "inline-block",
   },
-  styleProps: ['backgroundColor'],
+  styleProps: ["backgroundColor"],
 })
 export {
   CPColumn,
