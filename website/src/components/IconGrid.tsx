@@ -1,46 +1,31 @@
-import { Flex } from '@cube-dev/ui-kit'
-import { Info, InfoFill, JengaIconContext } from '@jengaicons/react'
-import { CPRow } from './shared/library'
-import IconWrapper from './IconWrapper'
-import * as JengaIcons from '@jengaicons/react'
-import allIconsData from '../../../optimized/allIconsData.json'
-import useIconSettings from '@/hooks/useIconSettings'
-import useFetch from '@/hooks/useFetch'
-import { GET_ICON_LENGTH } from '@/constants/api/paths'
-import { IconMetadata } from '@/types'
-import { GetLengthResponse } from '@/types/api/getLength'
-import { useEffect } from 'react'
+import { CPIconLoading, CPRow } from "./shared/library"
+import useIconSettings from "@/hooks/useIconSettings"
+import dynamic from "next/dynamic"
+import {} from "@reach/router"
+const LoadingComponent = () => <CPIconLoading size="4rem" />
+
+const RegularIconGrid = dynamic(import("@/components/icon/RegularIconGrid"), {
+  loading: LoadingComponent,
+  ssr: true,
+})
+
+const FillIconGrid = dynamic(import("@/components/icon/FillIconGrid"), {
+  loading: LoadingComponent,
+  ssr: false,
+})
+
+// const RegularIconGrid = lazy(() => import("@/components/icon/RegularIconGrid"))
+// const FillIconGrid = lazy(() => import("@/components/icon/FillIconGrid"))
 
 const IconGrid = () => {
   const [iconSettings] = useIconSettings()
-  const [loading, data, error] = useFetch<GetLengthResponse>({
-    url: GET_ICON_LENGTH,
-  })
 
-  useEffect(() => {
-    console.log('Loading', loading)
-
-    if (data) console.log('Data', data)
-    if (error) console.log('Error', error)
-  }, [loading])
-
-  return (
-    <CPRow width='100%' flow='row wrap' justifyContent='space-between'>
-      {allIconsData.map((iconMetaData, idx) => {
-        // @ts-expect-error
-        const ICON = JengaIcons[
-          iconMetaData.safeName
-        ] as () => React.ReactElement
-        return (
-          <IconWrapper
-            key={`${iconMetaData.safeName}${idx}`}
-            ICON={ICON}
-            iconMetadata={iconMetaData as IconMetadata}
-          />
-        )
-      })}
-    </CPRow>
-  )
+  switch (iconSettings.filter.variant) {
+    case "fill":
+      return <FillIconGrid />
+    case "regular":
+      return <RegularIconGrid />
+  }
 }
 
 export default IconGrid
