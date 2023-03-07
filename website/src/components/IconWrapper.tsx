@@ -27,6 +27,7 @@ const IconWrapper = ({
         gap='0.625rem'
         width='10rem'
         height='10rem'
+        whiteSpace='pre-line'
       >
         {/* @ts-expect-error */}
         {<ICON {...iconSettings.props} />}
