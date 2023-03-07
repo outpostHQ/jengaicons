@@ -28,10 +28,8 @@ const IconInfoDrawer = () => {
     useIconInfoDrawer()
 
   // TODO: added proper typings
-  // @ts-expect-error
-  const SELECTED_ICON = JengaIcons[
-    selectedIcon
-  ] as ComponentType<JengaIconProps>
+  const SELECTED_ICON = // @ts-expect-error
+  JengaIcons[selectedIcon] as ComponentType<JengaIconProps>
   const [iconSettings] = useIconSettings()
 
   const ReactString = useMemo(() => {
