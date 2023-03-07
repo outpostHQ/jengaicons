@@ -6,8 +6,14 @@ import useTheme from "@/hooks/useTheme"
 import type { AvailableThemes } from "@/types/theme"
 import { Block, Flex, Item, MenuTrigger, Slider } from "@cube-dev/ui-kit"
 import { ArrowClockwise, CaretDownFill, Moon, Sun } from "@jengaicons/react"
-import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
-import { CPButton, CPMenu, CPRow, CPSearchInput, CPText } from "@shared/library"
+import { IconMetadata } from "@/types/icon"
+import {
+  CPButton,
+  CPMenu,
+  CPRow,
+  CPSearchInput,
+  CPText,
+} from "@/shared/library"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {
