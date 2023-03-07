@@ -3,8 +3,11 @@ import { JengaIconContext } from "@jengaicons/react"
 import { IconContextProvider } from "@/context/IconContext"
 import React, { ReactNode } from "react"
 import Layout from "./Layout"
+import useTheme from "@/hooks/useTheme"
 
 function AppWrapper({ children }: { children: ReactNode }) {
+  useTheme()
+
   return (
     <Root>
       <Layout>

@@ -8,10 +8,6 @@ import { useEffect } from "react"
 const inter = Inter({ subsets: ["latin"] })
 
 export default function Home() {
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", "dark")
-  }, [])
-
   return (
     <CPColumn>
       <Block>
