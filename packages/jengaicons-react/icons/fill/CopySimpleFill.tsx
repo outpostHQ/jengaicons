@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const CopySimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const CopySimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const CopySimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M8.935 3.783a1 1 0 1 0 0 2H27.46v18.525a1 1 0 1 0 2 0V4.783a1 1 0 0 0-1-1H8.935ZM5.46 9.257a1 1 0 0 0-1 1v17.526a1 1 0 0 0 1 1h17.525a1 1 0 0 0 1-1V10.257a1 1 0 0 0-1-1H5.46Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M8.935 3.783a1 1 0 1 0 0 2H27.46v18.525a1 1 0 1 0 2 0V4.783a1 1 0 0 0-1-1H8.935ZM5.46 9.257a1 1 0 0 0-1 1v17.526a1 1 0 0 0 1 1h17.525a1 1 0 0 0 1-1V10.257a1 1 0 0 0-1-1H5.46Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-CopySimpleFill.displayName = "CopySimpleFill";
+CopySimpleFill.displayName = "CopySimpleFill"
 
-export default CopySimpleFill;
+export default CopySimpleFill

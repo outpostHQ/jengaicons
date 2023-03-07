@@ -1,5 +1,5 @@
-import { createContext } from 'react'
-import type { SVGProps } from 'react'
+import { createContext } from "react"
+import type { SVGProps } from "react"
 
 export interface JengaIconProps {
   /** Set the size of the Svg in px*/
@@ -15,9 +15,9 @@ export interface JengaIconProps {
   mirrored?: boolean
 
   /** Change the style prop of svg element */
-  style?: SVGProps<SVGSVGElement>['style']
+  style?: SVGProps<SVGSVGElement>["style"]
 
-  children?: SVGProps<SVGSVGElement>['children']
+  children?: SVGProps<SVGSVGElement>["children"]
 }
 
 export interface JengaIconRegularProps extends JengaIconProps {
@@ -25,7 +25,7 @@ export interface JengaIconRegularProps extends JengaIconProps {
    * Sets the thinkness / `strokeWidth` of the Icon \
    * Only applies to `Regular` icons
    * */
-  weight?: SVGProps<SVGSVGElement>['strokeWidth']
+  weight?: SVGProps<SVGSVGElement>["strokeWidth"]
 }
 
 type TJengaIconContext = Partial<JengaIconProps | JengaIconRegularProps>

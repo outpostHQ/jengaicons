@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const ChatCenteredDotsFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const ChatCenteredDotsFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const ChatCenteredDotsFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M5.96 4.283h22a1 1 0 0 1 1 1v15.935a1 1 0 0 1-1 1h-6.448a1 1 0 0 0-.833.447l-2.887 4.352a1 1 0 0 1-1.67-.006l-2.835-4.34a1 1 0 0 0-.837-.453H5.96a1 1 0 0 1-1-1V5.283a1 1 0 0 1 1-1Zm6.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm6 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm4.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M5.96 4.283h22a1 1 0 0 1 1 1v15.935a1 1 0 0 1-1 1h-6.448a1 1 0 0 0-.833.447l-2.887 4.352a1 1 0 0 1-1.67-.006l-2.835-4.34a1 1 0 0 0-.837-.453H5.96a1 1 0 0 1-1-1V5.283a1 1 0 0 1 1-1Zm6.5 9a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm6 0a1.5 1.5 0 1 1-3 0 1.5 1.5 0 0 1 3 0Zm4.5 1.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-ChatCenteredDotsFill.displayName = "ChatCenteredDotsFill";
+ChatCenteredDotsFill.displayName = "ChatCenteredDotsFill"
 
-export default ChatCenteredDotsFill;
+export default ChatCenteredDotsFill

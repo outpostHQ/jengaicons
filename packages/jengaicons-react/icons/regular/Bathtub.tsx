@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Bathtub = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const Bathtub = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,46 +29,46 @@ const Bathtub = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M10 23.786v2.571M22 23.786v2.571"
+          d='M10 23.786v2.571M22 23.786v2.571'
         />
         <path
           stroke={color || colorCtx || "#000000"}
           strokeWidth={weight || weightCtx || "2"}
-          d="M4 14.857a.5.5 0 0 1 .5-.5h23a.5.5 0 0 1 .5.5v3.929a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3.929Z"
+          d='M4 14.857a.5.5 0 0 1 .5-.5h23a.5.5 0 0 1 .5.5v3.929a5 5 0 0 1-5 5H9a5 5 0 0 1-5-5v-3.929Z'
         />
         <rect
-          width="6.857"
-          height="4.286"
-          x="16.857"
-          y="14.357"
+          width='6.857'
+          height='4.286'
+          x='16.857'
+          y='14.357'
           stroke={color || colorCtx || "#000000"}
           strokeWidth={weight || weightCtx || "2"}
-          rx=".5"
+          rx='.5'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
+          strokeLinecap='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M8.286 14.357V8.643a2 2 0 0 1 2-2h.285a2 2 0 0 1 2 2v.143"
+          d='M8.286 14.357V8.643a2 2 0 0 1 2-2h.285a2 2 0 0 1 2 2v.143'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-Bathtub.displayName = "Bathtub";
+Bathtub.displayName = "Bathtub"
 
-export default Bathtub;
+export default Bathtub

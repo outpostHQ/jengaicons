@@ -1,4 +1,4 @@
-import { ReactNode, RefAttributes } from 'react';
+import { ReactNode, RefAttributes } from "react"
 import {
   CubeAvatarProps,
   CubeNumberInputProps,
@@ -8,66 +8,72 @@ import {
   CubeTextAreaProps,
   CubeTextInputBaseProps,
   CubeTextInputProps,
-} from '@cube-dev/ui-kit';
+} from "@cube-dev/ui-kit"
 
 // TEXT
 
-type CPTextWeight = 'light' | 'base' | 'medium' | 'semibold' | 'bold';
+type CPTextWeight = "light" | "base" | "medium" | "semibold" | "bold"
 type CPTextVariants =
-  | 'caption'
-  | 'subheading'
-  | 'base'
-  | 'heading'
-  | 'displaySmall'
-  | 'displayMedium'
-  | 'displayLarge';
+  | "caption"
+  | "subheading"
+  | "base"
+  | "heading"
+  | "displaySmall"
+  | "displayMedium"
+  | "displayLarge"
 
 type CPTextProps = {
-  children: ReactNode;
-  fontWeight?: CPTextWeight;
-  variant?: CPTextVariants;
-};
+  children: ReactNode
+  fontWeight?: CPTextWeight
+  variant?: CPTextVariants
+}
 
-export type CPTextPropsType = CPTextProps & Exclude<CubeParagraphProps, keyof CPTextProps>;
+export type CPTextPropsType = CPTextProps &
+  Exclude<CubeParagraphProps, keyof CPTextProps>
 
 // INPUTS
 
-type CPInputSizeVariants = 'normal' | 'full';
+type CPInputSizeVariants = "normal" | "full"
 
 interface CPInputAddedProps<T> {
-  size?: CPInputSizeVariants;
-  value?: T;
-  defaultValue?: T;
+  size?: CPInputSizeVariants
+  value?: T
+  defaultValue?: T
 }
 
 export type CPTextInputPropsType = CubeTextInputProps &
   CPInputAddedProps<string> &
-  RefAttributes<HTMLInputElement>;
+  RefAttributes<HTMLInputElement>
 
 export type CPSearchInputPropsType = CubeSearchInputProps &
   CPInputAddedProps<string> &
-  RefAttributes<HTMLInputElement>;
+  RefAttributes<HTMLInputElement>
 
 export type CPNumberInputPropsType = CubeNumberInputProps &
   CPInputAddedProps<number> &
-  RefAttributes<HTMLInputElement>;
+  RefAttributes<HTMLInputElement>
 
-export type CPPasswordInputPropsType = Omit<CubeTextInputBaseProps, 'value' | 'defaultValue'> & {
-  value?: any;
-  defaultValue?: any;
-  size?: CPInputSizeVariants;
-} & RefAttributes<HTMLInputElement>;
+export type CPPasswordInputPropsType = Omit<
+  CubeTextInputBaseProps,
+  "value" | "defaultValue"
+> & {
+  value?: any
+  defaultValue?: any
+  size?: CPInputSizeVariants
+} & RefAttributes<HTMLInputElement>
 
 export type CPTextAreaPropsType = CubeTextAreaProps &
   CPInputAddedProps<string> &
-  RefAttributes<HTMLInputElement>;
+  RefAttributes<HTMLInputElement>
 
-export type CPSelectPropsType = CubeSelectBaseProps<object> & { size?: CPInputSizeVariants };
+export type CPSelectPropsType = CubeSelectBaseProps<object> & {
+  size?: CPInputSizeVariants
+}
 
 // AVATAR
 type CPAvatarProps = {
-  type?: 'outline' | 'filled';
-  size?: 'sm' | 'md' | 'lg';
-};
+  type?: "outline" | "filled"
+  size?: "sm" | "md" | "lg"
+}
 
-export type CPAvatarPropsType = CubeAvatarProps & CPAvatarProps;
+export type CPAvatarPropsType = CubeAvatarProps & CPAvatarProps

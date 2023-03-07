@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const AlignRightSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const AlignRightSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const AlignRightSimpleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M27.96 24.923a1 1 0 1 0 2 0V7.643a1 1 0 0 0-2 0v17.28Zm-23-4.84a1 1 0 0 0 1 1h18.16a1 1 0 0 0 1-1v-7.6a1 1 0 0 0-1-1H5.96a1 1 0 0 0-1 1v7.6Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M27.96 24.923a1 1 0 1 0 2 0V7.643a1 1 0 0 0-2 0v17.28Zm-23-4.84a1 1 0 0 0 1 1h18.16a1 1 0 0 0 1-1v-7.6a1 1 0 0 0-1-1H5.96a1 1 0 0 0-1 1v7.6Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-AlignRightSimpleFill.displayName = "AlignRightSimpleFill";
+AlignRightSimpleFill.displayName = "AlignRightSimpleFill"
 
-export default AlignRightSimpleFill;
+export default AlignRightSimpleFill

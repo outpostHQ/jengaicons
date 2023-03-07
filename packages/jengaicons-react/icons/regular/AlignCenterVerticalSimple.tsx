@@ -1,14 +1,14 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const AlignCenterVerticalSimple = forwardRef<
   SVGSVGElement,
   JengaIconRegularProps
 >((props, ref) => {
-  const { size, color, alt, children, mirrored, weight, style } = props;
+  const { size, color, alt, children, mirrored, weight, style } = props
 
   const {
     alt: altCtx,
@@ -18,7 +18,7 @@ const AlignCenterVerticalSimple = forwardRef<
     size: sizeCtx,
     weight: weightCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+  } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
   return (
     <svg
@@ -31,31 +31,31 @@ const AlignCenterVerticalSimple = forwardRef<
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
+        strokeLinecap='round'
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M5.091 16h5.455M21.455 16h5.454"
+        d='M5.091 16h5.455M21.455 16h5.454'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinejoin="round"
+        strokeLinejoin='round'
         strokeWidth={weight || weightCtx || "2"}
-        d="M21.454 28H10.545V4h10.91z"
+        d='M21.454 28H10.545V4h10.91z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-AlignCenterVerticalSimple.displayName = "AlignCenterVerticalSimple";
+AlignCenterVerticalSimple.displayName = "AlignCenterVerticalSimple"
 
-export default AlignCenterVerticalSimple;
+export default AlignCenterVerticalSimple

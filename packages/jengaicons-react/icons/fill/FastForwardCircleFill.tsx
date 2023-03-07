@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const FastForwardCircleFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const FastForwardCircleFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const FastForwardCircleFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M16.96 28.783c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.627 5.372 12 12 12Zm-.016-11.575a.5.5 0 0 0 0-.85l-5.034-3.127a.5.5 0 0 0-.764.425v6.254a.5.5 0 0 0 .764.425l5.034-3.127Zm6.9-.85a.5.5 0 0 1 0 .85l-5.034 3.127a.5.5 0 0 1-.764-.425v-6.254a.5.5 0 0 1 .764-.425l5.035 3.127Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M16.96 28.783c6.627 0 12-5.373 12-12 0-6.628-5.373-12-12-12-6.628 0-12 5.372-12 12 0 6.627 5.372 12 12 12Zm-.016-11.575a.5.5 0 0 0 0-.85l-5.034-3.127a.5.5 0 0 0-.764.425v6.254a.5.5 0 0 0 .764.425l5.034-3.127Zm6.9-.85a.5.5 0 0 1 0 .85l-5.034 3.127a.5.5 0 0 1-.764-.425v-6.254a.5.5 0 0 1 .764-.425l5.035 3.127Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-FastForwardCircleFill.displayName = "FastForwardCircleFill";
+FastForwardCircleFill.displayName = "FastForwardCircleFill"
 
-export default FastForwardCircleFill;
+export default FastForwardCircleFill

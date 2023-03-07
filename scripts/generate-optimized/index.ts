@@ -1,26 +1,26 @@
-import fs from 'fs'
-import fsP from 'fs/promises'
-import path from 'path'
-import { optimize } from 'svgo'
-import { IconMetadata } from '../generate-jengaicons-react/types'
+import fs from "fs"
+import fsP from "fs/promises"
+import path from "path"
+import { optimize } from "svgo"
+import { IconMetadata } from "../generate-jengaicons-react/types"
 
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
 const getSafeComponentName = (svgFileName: string, variant: string) => {
   const componentName = `${svgFileName
-    .split('-')[0]
+    .split("-")[0]
     .trim()
-    .replace(/\.svg$/i, '')}${capitalize(variant)}`
+    .replace(/\.svg$/i, "")}${capitalize(variant)}`
 
   let safeComponentName = componentName
-    .replace(/\./g, '')
-    .replace(/-/g, '')
-    .replace(/\s*/g, '')
-    .replace(/&/g, '')
+    .replace(/\./g, "")
+    .replace(/-/g, "")
+    .replace(/\s*/g, "")
+    .replace(/&/g, "")
 
   // If variant = regular then strip Regular, ActivityRegular -> Activity
   if (/regular$/i.test(variant)) {
-    safeComponentName = safeComponentName.replace(/regular$/i, '')
+    safeComponentName = safeComponentName.replace(/regular$/i, "")
   }
 
   return safeComponentName
@@ -37,7 +37,7 @@ async function main() {
   const args = process.argv.slice(2)
 
   if (args.length === 0) {
-    throw new Error('No path provided')
+    throw new Error("No path provided")
   }
 
   const [pathToAssets] = args
@@ -49,11 +49,11 @@ async function main() {
 
   // prepare the optimized svgs
   // remove any exisitng optimized folder
-  const root = path.join(pathToAssets, '..')
-  const pathToOptimized = path.join(root, 'optimized')
+  const root = path.join(pathToAssets, "..")
+  const pathToOptimized = path.join(root, "optimized")
 
   const allDirs = fs.readdirSync(root)
-  if (allDirs.includes('optimized')) {
+  if (allDirs.includes("optimized")) {
     fs.rmSync(pathToOptimized, { recursive: true })
   }
 
@@ -72,7 +72,7 @@ async function main() {
       .readdirSync(path.join(pathToAssets, variant), {
         withFileTypes: true,
       })
-      .filter((file) => file.name.endsWith('.svg'))
+      .filter((file) => file.name.endsWith(".svg"))
       .map((item) => item.name)
 
     svgFiles.map((svgFile) => {
@@ -80,7 +80,7 @@ async function main() {
 
       const svgString = fs.readFileSync(
         path.join(pathToAssets, variant, svgFile),
-        'utf8'
+        "utf8",
       )
 
       /**
@@ -95,7 +95,7 @@ async function main() {
        */
       fs.writeFileSync(
         path.join(pathToOptimized, variant, `${SVGComponentName}.svg`),
-        optimizedSvgString.data
+        optimizedSvgString.data,
       )
 
       allIcons.push({
@@ -103,7 +103,7 @@ async function main() {
         safeName: SVGComponentName,
         tags: [SVGComponentName],
         categories: [],
-        variant: variant.toLowerCase() as IconMetadata['variant'],
+        variant: variant.toLowerCase() as IconMetadata["variant"],
       })
 
       // Write JSON file associated to it
@@ -119,8 +119,8 @@ async function main() {
 
   // write all icons data
   fs.writeFileSync(
-    path.join(pathToOptimized, 'allIconsData.json'),
-    JSON.stringify(allIcons, null, 2)
+    path.join(pathToOptimized, "allIconsData.json"),
+    JSON.stringify(allIcons, null, 2),
   )
 }
 

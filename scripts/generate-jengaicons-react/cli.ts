@@ -1,4 +1,4 @@
-import { Command } from 'commander'
+import { Command } from "commander"
 
 interface ICLIArgs {
   assets: string
@@ -12,16 +12,16 @@ const getCLIArgs = () => {
   const program = new Command()
 
   program
-    .option('--assets <path>', 'Path to Assets folder', '../../optimized')
+    .option("--assets <path>", "Path to Assets folder", "../../optimized")
     .option(
-      '--root-path <path>',
-      'Root Path for react package',
-      '../../packages/jengaicons-react'
+      "--root-path <path>",
+      "Root Path for react package",
+      "../../packages/jengaicons-react",
     )
     .option(
-      '--output-folder-name <name>',
+      "--output-folder-name <name>",
       'Output Folder name for writing the "icons"',
-      'icons'
+      "icons",
     )
 
   program.parse()

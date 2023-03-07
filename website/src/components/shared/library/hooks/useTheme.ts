@@ -1,8 +1,8 @@
-import { useContext } from 'react';
+import { useContext } from "react"
 
-import { CPThemeContext } from '../context/CPThemeProvider';
+import { CPThemeContext } from "../context/CPThemeProvider"
 
 export const useTheme = () => {
-  const { theme } = useContext(CPThemeContext);
-  return theme;
-};
+  const { theme } = useContext(CPThemeContext)
+  return theme
+}

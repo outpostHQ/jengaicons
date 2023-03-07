@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const UserCircleMinusFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const UserCircleMinusFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const UserCircleMinusFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M5.96 16.783c0-6.075 4.925-11 11-11a1 1 0 0 0 0-2c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13a1 1 0 0 0-2 0c0 3.723-1.85 7.015-4.681 9.005a6.39 6.39 0 0 0-12.638 0 10.987 10.987 0 0 1-4.681-9.005Zm17-10a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2h-6Zm-6 13.568a4.784 4.784 0 1 0 0-9.568 4.784 4.784 0 0 0 0 9.568Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M5.96 16.783c0-6.075 4.925-11 11-11a1 1 0 0 0 0-2c-7.18 0-13 5.82-13 13s5.82 13 13 13 13-5.82 13-13a1 1 0 0 0-2 0c0 3.723-1.85 7.015-4.681 9.005a6.39 6.39 0 0 0-12.638 0 10.987 10.987 0 0 1-4.681-9.005Zm17-10a1 1 0 1 0 0 2h6a1 1 0 0 0 0-2h-6Zm-6 13.568a4.784 4.784 0 1 0 0-9.568 4.784 4.784 0 0 0 0 9.568Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-UserCircleMinusFill.displayName = "UserCircleMinusFill";
+UserCircleMinusFill.displayName = "UserCircleMinusFill"
 
-export default UserCircleMinusFill;
+export default UserCircleMinusFill

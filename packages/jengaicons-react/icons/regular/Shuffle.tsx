@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Shuffle = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const Shuffle = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,32 +29,32 @@ const Shuffle = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="m24.4 5.277 4.242 4.243-4.242 4.242M24.4 19.644l4.242 4.243L24.4 28.13"
+          d='m24.4 5.277 4.242 4.243-4.242 4.242M24.4 19.644l4.242 4.243L24.4 28.13'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
+          strokeLinecap='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M4.643 9.52h2.653a8 8 0 0 1 6.463 3.285l5.687 7.796a8 8 0 0 0 6.463 3.286h2.734M4.643 23.873h2.653a8 8 0 0 0 6.463-3.286l.224-.306m14.66-10.775h-2.734a8 8 0 0 0-6.463 3.285l-.223.306"
+          d='M4.643 9.52h2.653a8 8 0 0 1 6.463 3.285l5.687 7.796a8 8 0 0 0 6.463 3.286h2.734M4.643 23.873h2.653a8 8 0 0 0 6.463-3.286l.224-.306m14.66-10.775h-2.734a8 8 0 0 0-6.463 3.285l-.223.306'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-Shuffle.displayName = "Shuffle";
+Shuffle.displayName = "Shuffle"
 
-export default Shuffle;
+export default Shuffle

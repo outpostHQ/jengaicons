@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const ArrowsInCardinal = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const ArrowsInCardinal = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,26 +29,26 @@ const ArrowsInCardinal = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M15.79 20v8M11.547 24.243 15.789 20l4.243 4.243M11.547 7.757 15.789 12l4.243-4.243M15.79 4v8M19.79 15.553h8M24.032 11.31l-4.243 4.242 4.243 4.243M7.547 11.308l4.242 4.242-4.481 3.99M11.79 15.55h-8"
+          d='M15.79 20v8M11.547 24.243 15.789 20l4.243 4.243M11.547 7.757 15.789 12l4.243-4.243M15.79 4v8M19.79 15.553h8M24.032 11.31l-4.243 4.242 4.243 4.243M7.547 11.308l4.242 4.242-4.481 3.99M11.79 15.55h-8'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-ArrowsInCardinal.displayName = "ArrowsInCardinal";
+ArrowsInCardinal.displayName = "ArrowsInCardinal"
 
-export default ArrowsInCardinal;
+export default ArrowsInCardinal

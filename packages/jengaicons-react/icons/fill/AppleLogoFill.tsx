@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const AppleLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const AppleLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,30 +26,30 @@ const AppleLogoFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          strokeWidth="2"
-          d="M18.71 6.695a3.766 3.766 0 0 1 3.514-2.412"
+          strokeLinecap='round'
+          strokeLinejoin='round'
+          strokeWidth='2'
+          d='M18.71 6.695a3.766 3.766 0 0 1 3.514-2.412'
         />
         <path
           fill={color || colorCtx || "#000000"}
-          d="M28.167 22.04c-1.48 3.614-4.166 6.243-6.413 6.243h-8.47c-3.295 0-7.53-5.647-7.53-11.765a7.06 7.06 0 0 1 11.765-5.26v-.001a7.059 7.059 0 0 1 10.255.898 5.65 5.65 0 0 0 .392 9.885Z"
+          d='M28.167 22.04c-1.48 3.614-4.166 6.243-6.413 6.243h-8.47c-3.295 0-7.53-5.647-7.53-11.765a7.06 7.06 0 0 1 11.765-5.26v-.001a7.059 7.059 0 0 1 10.255.898 5.65 5.65 0 0 0 .392 9.885Z'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-AppleLogoFill.displayName = "AppleLogoFill";
+AppleLogoFill.displayName = "AppleLogoFill"
 
-export default AppleLogoFill;
+export default AppleLogoFill

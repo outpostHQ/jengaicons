@@ -1,9 +1,9 @@
-import { NextApiRequest, NextApiResponse } from 'next'
-import { TVariants } from '@/types/index'
+import { NextApiRequest, NextApiResponse } from "next"
+import { TVariants } from "@/types/index"
 
 export type NextHandler<ReqBody = {}, ResBody = {}> = (
   req: NextApiRequest & { body?: ReqBody },
-  res: NextApiResponse<ResBody>
+  res: NextApiResponse<ResBody>,
 ) => void
 
 export type GetLengthResponse = {

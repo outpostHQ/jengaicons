@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const Armchair = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const Armchair = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,33 +29,33 @@ const Armchair = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M10.857 18.643h10.286M7.428 13.5v-2.571A3.429 3.429 0 0 1 10.857 7.5h10.286a3.428 3.428 0 0 1 3.428 3.429V13.5"
+          d='M10.857 18.643h10.286M7.428 13.5v-2.571A3.429 3.429 0 0 1 10.857 7.5h10.286a3.428 3.428 0 0 1 3.428 3.429V13.5'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M10.857 25.357V16.93a3.428 3.428 0 1 0-3.428 3.428v4.286a.857.857 0 0 0 .857.857h15.428a.857.857 0 0 0 .857-.857v-4.286a3.428 3.428 0 1 0-3.428-3.428v8.428"
+          d='M10.857 25.357V16.93a3.428 3.428 0 1 0-3.428 3.428v4.286a.857.857 0 0 0 .857.857h15.428a.857.857 0 0 0 .857-.857v-4.286a3.428 3.428 0 1 0-3.428-3.428v8.428'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-Armchair.displayName = "Armchair";
+Armchair.displayName = "Armchair"
 
-export default Armchair;
+export default Armchair

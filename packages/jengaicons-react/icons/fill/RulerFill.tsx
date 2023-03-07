@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const RulerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const RulerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,24 +25,24 @@ const RulerFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        fillRule="evenodd"
-        d="M22.267 4.99a1 1 0 0 0-1.414 0L18.11 7.733l3.753 3.753A1 1 0 0 1 20.45 12.9l-3.753-3.753-2.75 2.75 3.753 3.753a1 1 0 1 1-1.415 1.415l-3.752-3.753-2.751 2.75 3.753 3.753a1 1 0 0 1-1.414 1.415l-3.753-3.753-2.7 2.7a1 1 0 0 0 0 1.414l5.985 5.985a1 1 0 0 0 1.414 0l15.187-15.187a1 1 0 0 0 0-1.414L22.267 4.99Z"
-        clipRule="evenodd"
+        fillRule='evenodd'
+        d='M22.267 4.99a1 1 0 0 0-1.414 0L18.11 7.733l3.753 3.753A1 1 0 0 1 20.45 12.9l-3.753-3.753-2.75 2.75 3.753 3.753a1 1 0 1 1-1.415 1.415l-3.752-3.753-2.751 2.75 3.753 3.753a1 1 0 0 1-1.414 1.415l-3.753-3.753-2.7 2.7a1 1 0 0 0 0 1.414l5.985 5.985a1 1 0 0 0 1.414 0l15.187-15.187a1 1 0 0 0 0-1.414L22.267 4.99Z'
+        clipRule='evenodd'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-RulerFill.displayName = "RulerFill";
+RulerFill.displayName = "RulerFill"
 
-export default RulerFill;
+export default RulerFill

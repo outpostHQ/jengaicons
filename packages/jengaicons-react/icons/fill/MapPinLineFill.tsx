@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const MapPinLineFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const MapPinLineFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const MapPinLineFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M18.237 27.283c2.533-2.121 7.954-7.403 7.954-13.77a9.23 9.23 0 1 0-18.462 0c0 6.367 5.42 11.649 7.954 13.77h-7.03a1 1 0 1 0 0 2h16.615a1 1 0 1 0 0-2h-7.031ZM16.96 17.206a3.692 3.692 0 1 0 0-7.385 3.692 3.692 0 0 0 0 7.385Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M18.237 27.283c2.533-2.121 7.954-7.403 7.954-13.77a9.23 9.23 0 1 0-18.462 0c0 6.367 5.42 11.649 7.954 13.77h-7.03a1 1 0 1 0 0 2h16.615a1 1 0 1 0 0-2h-7.031ZM16.96 17.206a3.692 3.692 0 1 0 0-7.385 3.692 3.692 0 0 0 0 7.385Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-MapPinLineFill.displayName = "MapPinLineFill";
+MapPinLineFill.displayName = "MapPinLineFill"
 
-export default MapPinLineFill;
+export default MapPinLineFill

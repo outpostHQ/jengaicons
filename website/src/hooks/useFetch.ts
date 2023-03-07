@@ -1,15 +1,15 @@
-import { APIError } from '@/types/api'
-import { Loading } from '@/types/hooks/useFetch'
-import axios from 'axios'
-import { useEffect, useState } from 'react'
+import { APIError } from "@/types/api"
+import { Loading } from "@/types/hooks/useFetch"
+import axios from "axios"
+import { useEffect, useState } from "react"
 
 export const useFetch = <Response, Error = APIError>({
-  type = 'GET',
+  type = "GET",
   url,
   data,
 }: {
   url: string
-  type?: 'GET' | 'POST'
+  type?: "GET" | "POST"
   data?: any
 }) => {
   const [response, setResponse] = useState<Response>()
@@ -24,14 +24,14 @@ export const useFetch = <Response, Error = APIError>({
         let res: Response
 
         switch (type) {
-          case 'GET':
+          case "GET":
             res = (
               await axios.get(url, {
                 data,
               })
             )?.data
 
-          case 'POST':
+          case "POST":
             res = (
               await axios.post(url, {
                 data,

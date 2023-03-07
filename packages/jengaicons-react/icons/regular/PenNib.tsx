@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const PenNib = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const PenNib = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,40 +29,40 @@ const PenNib = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="m12.539 19.534-8.136 8.135M12.945 19.1a2.397 2.397 0 1 0 3.39-3.39 2.397 2.397 0 0 0-3.39 3.39Z"
+          d='m12.539 19.534-8.136 8.135M12.945 19.1a2.397 2.397 0 1 0 3.39-3.39 2.397 2.397 0 0 0-3.39 3.39Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="m7.12 10.416 6.89-2.157a.57.57 0 0 1 .572.14l8.992 8.993a.57.57 0 0 1 .13.607l-2.507 6.524a.569.569 0 0 1-.425.354L4.676 27.945a.569.569 0 0 1-.668-.652l2.72-16.427a.57.57 0 0 1 .392-.45Z"
+          d='m7.12 10.416 6.89-2.157a.57.57 0 0 1 .572.14l8.992 8.993a.57.57 0 0 1 .13.607l-2.507 6.524a.569.569 0 0 1-.425.354L4.676 27.945a.569.569 0 0 1-.668-.652l2.72-16.427a.57.57 0 0 1 .392-.45Z'
         />
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M23.855 17.681 28 13.536l-9.491-9.49-4.145 4.144"
+          d='M23.855 17.681 28 13.536l-9.491-9.49-4.145 4.144'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-PenNib.displayName = "PenNib";
+PenNib.displayName = "PenNib"
 
-export default PenNib;
+export default PenNib

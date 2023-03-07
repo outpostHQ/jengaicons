@@ -1,15 +1,15 @@
-import { Flex } from '@cube-dev/ui-kit'
-import { Info, InfoFill, JengaIconContext } from '@jengaicons/react'
-import { CPRow } from './shared/library'
-import IconWrapper from './IconWrapper'
-import * as JengaIcons from '@jengaicons/react'
-import allIconsData from '../../../optimized/allIconsData.json'
-import useIconSettings from '@/hooks/useIconSettings'
-import useFetch from '@/hooks/useFetch'
-import { GET_ICON_LENGTH } from '@/constants/api/paths'
-import { IconMetadata } from '@/types'
-import { GetLengthResponse } from '@/types/api/getLength'
-import { useEffect } from 'react'
+import { Flex } from "@cube-dev/ui-kit"
+import { Info, InfoFill, JengaIconContext } from "@jengaicons/react"
+import { CPRow } from "./shared/library"
+import IconWrapper from "./IconWrapper"
+import * as JengaIcons from "@jengaicons/react"
+import allIconsData from "../../../optimized/allIconsData.json"
+import useIconSettings from "@/hooks/useIconSettings"
+import useFetch from "@/hooks/useFetch"
+import { GET_ICON_LENGTH } from "@/constants/api/paths"
+import { IconMetadata } from "@/types"
+import { GetLengthResponse } from "@/types/api/getLength"
+import { useEffect } from "react"
 
 const IconGrid = () => {
   const [iconSettings] = useIconSettings()
@@ -18,10 +18,10 @@ const IconGrid = () => {
   })
 
   useEffect(() => {
-    console.log('Loading', loading)
+    console.log("Loading", loading)
 
-    if (data) console.log('Data', data)
-    if (error) console.log('Error', error)
+    if (data) console.log("Data", data)
+    if (error) console.log("Error", error)
   }, [loading])
 
   return (

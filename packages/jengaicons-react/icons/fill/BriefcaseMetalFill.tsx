@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const BriefcaseMetalFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const BriefcaseMetalFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const BriefcaseMetalFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M11.96 4.283a1 1 0 0 0-1 1v4h-5a1 1 0 0 0-1 1v3h24v-3a1 1 0 0 0-1-1h-5v-4a1 1 0 0 0-1-1h-10Zm1 4.74v-2.74h8v2.74h-8Zm-8 12.26v-6h24v6h-24Zm24 2h-24v3a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-3Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M11.96 4.283a1 1 0 0 0-1 1v4h-5a1 1 0 0 0-1 1v3h24v-3a1 1 0 0 0-1-1h-5v-4a1 1 0 0 0-1-1h-10Zm1 4.74v-2.74h8v2.74h-8Zm-8 12.26v-6h24v6h-24Zm24 2h-24v3a1 1 0 0 0 1 1h22a1 1 0 0 0 1-1v-3Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-BriefcaseMetalFill.displayName = "BriefcaseMetalFill";
+BriefcaseMetalFill.displayName = "BriefcaseMetalFill"
 
-export default BriefcaseMetalFill;
+export default BriefcaseMetalFill

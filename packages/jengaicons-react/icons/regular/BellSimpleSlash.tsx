@@ -1,12 +1,12 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import type { Context } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconRegularProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import type { Context } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconRegularProps } from "../../src/base"
 
 const BellSimpleSlash = forwardRef<SVGSVGElement, JengaIconRegularProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, weight, style } = props;
+    const { size, color, alt, children, mirrored, weight, style } = props
 
     const {
       alt: altCtx,
@@ -16,7 +16,7 @@ const BellSimpleSlash = forwardRef<SVGSVGElement, JengaIconRegularProps>(
       size: sizeCtx,
       weight: weightCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext as Context<JengaIconRegularProps>);
+    } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
     return (
       <svg
@@ -29,26 +29,26 @@ const BellSimpleSlash = forwardRef<SVGSVGElement, JengaIconRegularProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           stroke={color || colorCtx || "#000000"}
-          strokeLinecap="round"
-          strokeLinejoin="round"
+          strokeLinecap='round'
+          strokeLinejoin='round'
           strokeWidth={weight || weightCtx || "2"}
-          d="M12 27.997h8M6 5l20 22M26.874 23.073s-2.566-3.65-3-6.13a11.308 11.308 0 0 1-.122-2.596C24.04 9.41 20.944 4 16 4c-1.954 0-3.619.845-4.9 2.171m11.107 16.902H5.126s2.566-3.65 3-6.13c.144-.828.174-1.705.122-2.596a11.673 11.673 0 0 1 .956-5.294"
+          d='M12 27.997h8M6 5l20 22M26.874 23.073s-2.566-3.65-3-6.13a11.308 11.308 0 0 1-.122-2.596C24.04 9.41 20.944 4 16 4c-1.954 0-3.619.845-4.9 2.171m11.107 16.902H5.126s2.566-3.65 3-6.13c.144-.828.174-1.705.122-2.596a11.673 11.673 0 0 1 .956-5.294'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-BellSimpleSlash.displayName = "BellSimpleSlash";
+BellSimpleSlash.displayName = "BellSimpleSlash"
 
-export default BellSimpleSlash;
+export default BellSimpleSlash

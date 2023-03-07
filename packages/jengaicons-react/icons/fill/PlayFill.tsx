@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const PlayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const PlayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,22 +25,22 @@ const PlayFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         fill={color || colorCtx || "#000000"}
-        d="M26.244 17.212a.5.5 0 0 0 0-.858L7.719 5.24a.5.5 0 0 0-.758.428v22.231a.5.5 0 0 0 .758.43l18.525-11.116Z"
+        d='M26.244 17.212a.5.5 0 0 0 0-.858L7.719 5.24a.5.5 0 0 0-.758.428v22.231a.5.5 0 0 0 .758.43l18.525-11.116Z'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-PlayFill.displayName = "PlayFill";
+PlayFill.displayName = "PlayFill"
 
-export default PlayFill;
+export default PlayFill

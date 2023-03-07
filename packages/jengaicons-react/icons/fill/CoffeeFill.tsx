@@ -1,10 +1,10 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const CoffeeFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
-  const { size, color, alt, children, mirrored, style } = props;
+  const { size, color, alt, children, mirrored, style } = props
 
   const {
     alt: altCtx,
@@ -13,7 +13,7 @@ const CoffeeFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
     mirrored: mirroredCtx,
     size: sizeCtx,
     style: styleCtx,
-  } = useContext(JengaIconContext);
+  } = useContext(JengaIconContext)
 
   return (
     <svg
@@ -25,43 +25,43 @@ const CoffeeFill = forwardRef<SVGSVGElement, JengaIconProps>((props, ref) => {
         ...styleCtx,
         ...style,
       }}
-      xmlns="http://www.w3.org/2000/svg"
-      fill="none"
-      viewBox="0 0 32 32"
+      xmlns='http://www.w3.org/2000/svg'
+      fill='none'
+      viewBox='0 0 32 32'
     >
       {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M11.422 5.206v3.692M15.114 5.206v3.692M18.806 5.206v3.692M4.96 27.36h20.308"
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='2'
+        d='M11.422 5.206v3.692M15.114 5.206v3.692M18.806 5.206v3.692M4.96 27.36h20.308'
       />
       <path
         fill={color || colorCtx || "#000000"}
-        d="M10.879 27.36a10.156 10.156 0 0 1-5.919-9.231V12.59h20.308v5.539a10.156 10.156 0 0 1-5.919 9.231"
+        d='M10.879 27.36a10.156 10.156 0 0 1-5.919-9.231V12.59h20.308v5.539a10.156 10.156 0 0 1-5.919 9.231'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M10.879 27.36a10.156 10.156 0 0 1-5.919-9.231V12.59h20.308v5.539a10.156 10.156 0 0 1-5.919 9.231"
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='2'
+        d='M10.879 27.36a10.156 10.156 0 0 1-5.919-9.231V12.59h20.308v5.539a10.156 10.156 0 0 1-5.919 9.231'
       />
       <path
         stroke={color || colorCtx || "#000000"}
-        strokeLinecap="round"
-        strokeLinejoin="round"
-        strokeWidth="2"
-        d="M25.268 12.59a3.692 3.692 0 0 1 3.692 3.693v.923a3.693 3.693 0 0 1-3.692 3.692h-.39"
+        strokeLinecap='round'
+        strokeLinejoin='round'
+        strokeWidth='2'
+        d='M25.268 12.59a3.692 3.692 0 0 1 3.692 3.693v.923a3.693 3.693 0 0 1-3.692 3.692h-.39'
       />
 
       {children || childrenCtx}
     </svg>
-  );
-});
+  )
+})
 
-CoffeeFill.displayName = "CoffeeFill";
+CoffeeFill.displayName = "CoffeeFill"
 
-export default CoffeeFill;
+export default CoffeeFill

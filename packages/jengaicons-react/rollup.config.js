@@ -1,16 +1,16 @@
-import resolve from '@rollup/plugin-node-resolve'
-import babel from '@rollup/plugin-babel'
-import includePaths from 'rollup-plugin-includepaths'
-import typescript from '@rollup/plugin-typescript'
-import clean from '@rollup-extras/plugin-clean'
-import terser from '@rollup/plugin-terser'
-import summary from 'rollup-plugin-summary'
-import progress from 'rollup-plugin-progress'
-import externals from 'rollup-plugin-node-externals'
+import resolve from "@rollup/plugin-node-resolve"
+import babel from "@rollup/plugin-babel"
+import includePaths from "rollup-plugin-includepaths"
+import typescript from "@rollup/plugin-typescript"
+import clean from "@rollup-extras/plugin-clean"
+import terser from "@rollup/plugin-terser"
+import summary from "rollup-plugin-summary"
+import progress from "rollup-plugin-progress"
+import externals from "rollup-plugin-node-externals"
 
 let includePathOptions = {
-  paths: ['./'],
-  extensions: ['.js', '.ts', '.tsx', '.jsx'],
+  paths: ["./"],
+  extensions: [".js", ".ts", ".tsx", ".jsx"],
 }
 
 // import rollup from 'rollup'
@@ -24,11 +24,11 @@ const externalsCustom = (id, parentId, isResolved) => {
 
 /**@type {rollup.RollupOptions} */
 const prodConfig = {
-  input: './src/index.tsx',
+  input: "./src/index.tsx",
   output: {
-    format: 'esm',
+    format: "esm",
     sourcemap: false,
-    dir: 'dist',
+    dir: "dist",
     preserveModules: true,
   },
   external: [/node_modules/],
@@ -45,12 +45,12 @@ const prodConfig = {
     includePaths(includePathOptions),
     typescript(),
     babel({
-      babelHelpers: 'bundled',
+      babelHelpers: "bundled",
       exclude: /node_modules/,
-      extensions: ['.js', '.ts', '.jsx', '.tsx'],
+      extensions: [".js", ".ts", ".jsx", ".tsx"],
     }),
     terser({
-      ecma: '2015',
+      ecma: "2015",
       module: true,
     }),
     summary({

@@ -1,29 +1,29 @@
-import { defaultIconProps } from '@/context/IconContext'
-import useIconSettings from '@/hooks/useIconSettings'
-import { useScrollPosition } from '@/hooks/useScrollPosition'
-import { Block, Flex, Item, MenuTrigger, Slider } from '@cube-dev/ui-kit'
-import { ArrowClockwise, CaretDownFill, Sun } from '@jengaicons/react'
-import React, { useEffect, useState } from 'react'
-import { isNullOrUndefined } from 'util'
-import { IconMetadata } from '../../../scripts/generate-jengaicons-react/types'
+import { defaultIconProps } from "@/context/IconContext"
+import useIconSettings from "@/hooks/useIconSettings"
+import { useScrollPosition } from "@/hooks/useScrollPosition"
+import { Block, Flex, Item, MenuTrigger, Slider } from "@cube-dev/ui-kit"
+import { ArrowClockwise, CaretDownFill, Sun } from "@jengaicons/react"
+import React, { useEffect, useState } from "react"
+import { isNullOrUndefined } from "util"
+import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
 import {
   CPButton,
   CPMenu,
   CPRow,
   CPSearchInput,
   CPText,
-} from './shared/library'
+} from "./shared/library"
 function Header() {
   const scroll = useScrollPosition()
   const [iconSettings, setIconSettings] = useIconSettings()
 
   useEffect(() => {
-    const header = document.getElementById('header')
-    window.addEventListener('scroll', () => {
+    const header = document.getElementById("header")
+    window.addEventListener("scroll", () => {
       if (header!.getBoundingClientRect().top < 0) {
-        header?.classList.add('fixed')
+        header?.classList.add("fixed")
       } else {
-        header?.classList.remove('fixed')
+        header?.classList.remove("fixed")
       }
     })
   }, [])
@@ -31,24 +31,24 @@ function Header() {
   return (
     <Block
       className='header'
-      padding={['1.25rem 0', '1.25rem 0', '1.25rem ']}
+      padding={["1.25rem 0", "1.25rem 0", "1.25rem "]}
       styles={{
-        boxShadow: '0px 4px 12px 0.75px rgba(0, 0, 0, 0.33)',
-        position: 'sticky',
+        boxShadow: "0px 4px 12px 0.75px rgba(0, 0, 0, 0.33)",
+        position: "sticky",
         top: 0,
-        background: 'var(--cp-surface)',
+        background: "var(--cp-surface)",
         zIndex: 1,
       }}
     >
       <Block
         id='header'
         styles={{
-          maxWidth: '1040px',
-          margin: '0 auto',
+          maxWidth: "1040px",
+          margin: "0 auto",
         }}
       >
         <Flex
-          flow={['row wrap', 'row wrap', 'column']}
+          flow={["row wrap", "row wrap", "column"]}
           justifyContent='space-between'
           gap='.6125rem'
           width='100%'
@@ -60,15 +60,15 @@ function Header() {
                 rightIcon={<CaretDownFill />}
                 variant='outline'
               >
-                {iconSettings.filter.variant === 'regular' && 'Regular'}
-                {iconSettings.filter.variant === 'fill' && 'Filled'}
+                {iconSettings.filter.variant === "regular" && "Regular"}
+                {iconSettings.filter.variant === "fill" && "Filled"}
               </CPButton>
               <CPMenu
                 width='6.3rem'
                 onAction={(key) =>
                   setIconSettings({
-                    type: 'update-variant-filter',
-                    payload: key as IconMetadata['variant'],
+                    type: "update-variant-filter",
+                    payload: key as IconMetadata["variant"],
                   })
                 }
               >
@@ -81,7 +81,7 @@ function Header() {
               width='100%'
               onChange={(val) =>
                 setIconSettings({
-                  type: 'update-search-filter',
+                  type: "update-search-filter",
                   payload: val,
                 })
               }
@@ -89,15 +89,15 @@ function Header() {
           </CPRow>
           <CPRow
             flex='1'
-            flow={['row', 'row', 'column']}
+            flow={["row", "row", "column"]}
             gap='10px'
             width='100%'
           >
             <Flex
               padding='12px 10px'
               style={{
-                border: '1px solid var(--cp-border)',
-                borderRadius: '0.5rem',
+                border: "1px solid var(--cp-border)",
+                borderRadius: "0.5rem",
               }}
               alignItems='center'
               gap='0.25rem'
@@ -111,7 +111,7 @@ function Header() {
                 value={iconSettings.props.size as number}
                 onChange={(val) =>
                   setIconSettings({
-                    type: 'update-size',
+                    type: "update-size",
                     payload: val,
                   })
                 }
@@ -122,8 +122,8 @@ function Header() {
             <Flex
               padding='12px 10px'
               style={{
-                border: '1px solid var(--cp-border)',
-                borderRadius: '0.5rem',
+                border: "1px solid var(--cp-border)",
+                borderRadius: "0.5rem",
               }}
               alignItems='center'
               gap='0.25rem'
@@ -135,18 +135,18 @@ function Header() {
                 minValue={0.5}
                 maxValue={3}
                 onChange={(val) =>
-                  setIconSettings({ type: 'update-border-width', payload: val })
+                  setIconSettings({ type: "update-border-width", payload: val })
                 }
               />
               <CPText>{iconSettings.props.weight}px</CPText>
             </Flex>
           </CPRow>
-          <CPRow width={['auto', 'auto', '100%']} gap='10px'>
+          <CPRow width={["auto", "auto", "100%"]} gap='10px'>
             <Flex
               padding='6px 12px'
               style={{
-                border: '1px solid var(--cp-border)',
-                borderRadius: '0.5rem',
+                border: "1px solid var(--cp-border)",
+                borderRadius: "0.5rem",
               }}
               alignItems='center'
               gap='0.5rem'
@@ -156,7 +156,7 @@ function Header() {
                 value={iconSettings.props.color}
                 onChange={(e) =>
                   setIconSettings({
-                    type: 'update-color',
+                    type: "update-color",
                     payload: e.target.value,
                   })
                 }
@@ -170,7 +170,7 @@ function Header() {
               icon={<ArrowClockwise size='1.25rem' />}
               onClick={() =>
                 setIconSettings({
-                  type: 'update-icon-props',
+                  type: "update-icon-props",
                   payload: defaultIconProps,
                 })
               }

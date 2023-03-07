@@ -3,18 +3,18 @@ import {
   ActivityFill,
   Activity,
   Cube,
-} from '@jengaicons/react'
+} from "@jengaicons/react"
 
 export default function Home() {
   return (
     <JengaIconContext.Provider
       value={{
-        color: 'var(--icn-color)', // or color: 'red',
+        color: "var(--icn-color)", // or color: 'red',
       }}
     >
       <main>
         <ActivityFill size={300} />
-        <div style={{ color: 'green' }}>
+        <div style={{ color: "green" }}>
           <Activity weight={0.5} size='300px' color='currentColor' />
         </div>
 

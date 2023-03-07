@@ -1,11 +1,11 @@
-import * as React from "react";
-import { forwardRef, useContext } from "react";
-import { JengaIconContext } from "../../src/base";
-import type { JengaIconProps } from "../../src/base";
+import * as React from "react"
+import { forwardRef, useContext } from "react"
+import { JengaIconContext } from "../../src/base"
+import type { JengaIconProps } from "../../src/base"
 
 const CheckSquareOffsetFill = forwardRef<SVGSVGElement, JengaIconProps>(
   (props, ref) => {
-    const { size, color, alt, children, mirrored, style } = props;
+    const { size, color, alt, children, mirrored, style } = props
 
     const {
       alt: altCtx,
@@ -14,7 +14,7 @@ const CheckSquareOffsetFill = forwardRef<SVGSVGElement, JengaIconProps>(
       mirrored: mirroredCtx,
       size: sizeCtx,
       style: styleCtx,
-    } = useContext(JengaIconContext);
+    } = useContext(JengaIconContext)
 
     return (
       <svg
@@ -26,25 +26,25 @@ const CheckSquareOffsetFill = forwardRef<SVGSVGElement, JengaIconProps>(
           ...styleCtx,
           ...style,
         }}
-        xmlns="http://www.w3.org/2000/svg"
-        fill="none"
-        viewBox="0 0 32 32"
+        xmlns='http://www.w3.org/2000/svg'
+        fill='none'
+        viewBox='0 0 32 32'
       >
         {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
 
         <path
           fill={color || colorCtx || "#000000"}
-          fillRule="evenodd"
-          d="M7.73 6.052a1 1 0 0 0-1 1v10a1 1 0 1 0 2 0v-9H25.19v16.462h-9a1 1 0 1 0 0 2h10a1 1 0 0 0 1-1V7.052a1 1 0 0 0-1-1H7.729Zm9.937 13.246a1 1 0 0 0-1.414-1.414l-5.447 5.446-2.37-2.37a1 1 0 0 0-1.414 1.415L10.1 25.45a1 1 0 0 0 1.415 0l6.153-6.153Z"
-          clipRule="evenodd"
+          fillRule='evenodd'
+          d='M7.73 6.052a1 1 0 0 0-1 1v10a1 1 0 1 0 2 0v-9H25.19v16.462h-9a1 1 0 1 0 0 2h10a1 1 0 0 0 1-1V7.052a1 1 0 0 0-1-1H7.729Zm9.937 13.246a1 1 0 0 0-1.414-1.414l-5.447 5.446-2.37-2.37a1 1 0 0 0-1.414 1.415L10.1 25.45a1 1 0 0 0 1.415 0l6.153-6.153Z'
+          clipRule='evenodd'
         />
 
         {children || childrenCtx}
       </svg>
-    );
-  }
-);
+    )
+  },
+)
 
-CheckSquareOffsetFill.displayName = "CheckSquareOffsetFill";
+CheckSquareOffsetFill.displayName = "CheckSquareOffsetFill"
 
-export default CheckSquareOffsetFill;
+export default CheckSquareOffsetFill
