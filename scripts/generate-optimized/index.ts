@@ -26,6 +26,20 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
   return safeComponentName
 }
 
+const transformToName = (svg_name: string) => {
+  let name = svg_name[0].toLowerCase()
+
+  for (let i = 1; i < svg_name.length; i++) {
+    if (svg_name[i] === svg_name[i].toUpperCase()) {
+      name += `-${svg_name[i].toLowerCase()}`
+    } else {
+      name += svg_name[i]
+    }
+  }
+
+  return name
+}
+
 /**
  * This script is for generating optimized svgs at the root level
  */
@@ -99,7 +113,7 @@ async function main() {
       )
 
       allIcons.push({
-        name: SVGComponentName,
+        name: transformToName(SVGComponentName),
         safeName: SVGComponentName,
         tags: [SVGComponentName],
         categories: [],
