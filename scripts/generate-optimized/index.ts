@@ -28,10 +28,11 @@ const getSafeComponentName = (svgFileName: string, variant: string) => {
 
 const transformToName = (svg_name: string) => {
   let name = svg_name[0].toLowerCase()
+  const seperator = " "
 
   for (let i = 1; i < svg_name.length; i++) {
     if (svg_name[i] === svg_name[i].toUpperCase()) {
-      name += `-${svg_name[i].toLowerCase()}`
+      name += `${seperator}${svg_name[i].toLowerCase()}`
     } else {
       name += svg_name[i]
     }
