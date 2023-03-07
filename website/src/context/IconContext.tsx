@@ -35,6 +35,10 @@ type IconSettingsAction =
       type: 'update-icon-props'
       payload: Partial<JengaIconProps | JengaIconRegularProps>
     }
+  | {
+      type: 'reset-icon-props'
+      payload: undefined
+    }
 
 type TSettingsReducer = (
   state: IconSettingsState,
@@ -77,6 +81,8 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         return { ...state, filter: { ...state.filter, variant: payload } }
       case 'update-icon-props':
         return { ...state, props: { ...state.props, ...payload } }
+      case 'reset-icon-props':
+        return { ...state, props: { ...state.props, ...defaultIconProps } }
       default:
         console.warn('Unknown action:', type)
         return state
