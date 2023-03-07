@@ -1,6 +1,8 @@
+import useTheme from "@/hooks/useTheme"
+import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps, JengaIconRegularProps } from "@jengaicons/react"
-import { createContext, ReactNode, useReducer } from "react"
-import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
+import { createContext, ReactNode, useEffect, useReducer } from "react"
+import { IconMetadata } from "@/types/icon"
 
 interface IconSettingsState {
   props: JengaIconProps & JengaIconRegularProps
@@ -103,6 +105,17 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
       props: defaultIconProps,
     }),
   )
+
+  const [currentTheme, changeTheme] = useTheme()
+
+  useEffect(() => {
+    const color = currentTheme === "light" ? "#000000" : "#FFFFFF"
+    console.log(`currentTheme ${currentTheme}`)
+    setSettings({
+      type: "update-color",
+      payload: color,
+    })
+  }, [currentTheme, changeTheme])
 
   return (
     <IconContext.Provider
