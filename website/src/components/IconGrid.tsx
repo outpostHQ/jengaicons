@@ -1,9 +1,9 @@
 import { Flex } from "@cube-dev/ui-kit"
 import { Info, InfoFill, JengaIconContext } from "@jengaicons/react"
-import { CPRow } from "./shared/library"
-import IconWrapper from "./IconWrapper"
+import { CPRow } from "@/shared/library"
+import IconWrapper from "@/components/IconWrapper"
 import * as JengaIcons from "@jengaicons/react"
-import allIconsData from "../../../optimized/allIconsData.json"
+import { allIconsMetaData } from "@/constants/icons"
 import useIconSettings from "@/hooks/useIconSettings"
 import useFetch from "@/hooks/useFetch"
 import { GET_ICON_LENGTH } from "@/constants/api/paths"
@@ -13,6 +13,7 @@ import { useEffect } from "react"
 
 const IconGrid = () => {
   const [iconSettings] = useIconSettings()
+
   const [loading, data, error] = useFetch<GetLengthResponse>({
     url: GET_ICON_LENGTH,
   })
@@ -26,7 +27,7 @@ const IconGrid = () => {
 
   return (
     <CPRow width='100%' flow='row wrap' justifyContent='space-between'>
-      {allIconsData.map((iconMetaData, idx) => {
+      {allIconsMetaData.slice(0, 30).map((iconMetaData, idx) => {
         // @ts-expect-error
         const ICON = JengaIcons[
           iconMetaData.safeName
