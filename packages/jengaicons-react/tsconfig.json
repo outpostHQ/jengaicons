@@ -9,5 +9,5 @@
     "target": "ES2015",
     "strict": true
   },
-  "include": ["src"]
+  "include": ["src", "icons/*/index.tsx"]
 }

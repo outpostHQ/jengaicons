@@ -91,6 +91,12 @@ async function main() {
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as Lowercase<TVariants>
 
+    const PATH_TO_VARIANT_INDEX = path.join(
+      PATH_TO_WRITE_FOLDER,
+      variantFolder,
+      'index.tsx'
+    )
+
     getSVGFileNames(variantFolder).map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
@@ -115,6 +121,11 @@ async function main() {
       fs.writeFileSync(
         path.join(PATH_TO_WRITE_FOLDER, variantFolder, `${componentName}.tsx`),
         svgComponent
+      )
+
+      fs.appendFileSync(
+        PATH_TO_VARIANT_INDEX,
+        `export { default as ${componentName} } from "./${componentName}";\n`
       )
 
       fs.appendFileSync(

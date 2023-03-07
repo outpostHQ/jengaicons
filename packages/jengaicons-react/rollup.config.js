@@ -24,13 +24,18 @@ const externalsCustom = (id, parentId, isResolved) => {
 
 /**@type {rollup.RollupOptions} */
 const prodConfig = {
-  input: './src/index.tsx',
+  input: [
+    './icons/fill/index.tsx',
+    './icons/regular/index.tsx',
+    './src/index.tsx',
+  ],
   output: {
     format: 'esm',
     sourcemap: false,
     dir: 'dist',
     preserveModules: true,
   },
+
   external: [/node_modules/],
   plugins: [
     progress({
