@@ -36,3 +36,8 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
   outline: none !important;
   border-width: 0px !important;
 }
+
+#icon-info-drawer{
+  height: calc(100vh - 80px);
+}
+
