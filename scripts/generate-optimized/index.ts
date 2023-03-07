@@ -2,7 +2,7 @@ import fs from 'fs'
 import fsP from 'fs/promises'
 import path from 'path'
 import { optimize } from 'svgo'
-import { IconMetadata } from '../generate-jengaicons-react/types'
+import { IconMetadata, TVariants } from '../generate-jengaicons-react/types'
 
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
@@ -63,7 +63,12 @@ async function main() {
     fs.mkdirSync(path.join(pathToOptimized, fontVariant))
   }
 
-  const allIcons: IconMetadata[] = []
+  const allIcons: {
+    [variant in Lowercase<TVariants>]: IconMetadata[]
+  } = {
+    fill: [],
+    regular: [],
+  }
 
   for (const item of itemsInDirectory) {
     const variant = item.name
@@ -98,10 +103,11 @@ async function main() {
         optimizedSvgString.data
       )
 
-      allIcons.push({
+      allIcons[variant.toLowerCase()].push({
         name: SVGComponentName,
         safeName: SVGComponentName,
         tags: [SVGComponentName],
+        // TODO: add a way to categorize
         categories: [],
         variant: variant.toLowerCase() as IconMetadata['variant'],
       })
@@ -114,13 +120,38 @@ async function main() {
     })
   }
 
-  // sort by name imports
-  allIcons.sort((a, b) => a.safeName.localeCompare(b.safeName))
+  const combinedIcons: IconMetadata[] = []
+
+  for (const variant of Object.keys(allIcons)) {
+    const VARIANT_DATA_PATH = path.join(pathToOptimized, `${variant}.json`)
+
+    // sort by name
+    ;(allIcons[variant] as IconMetadata[]).sort((a, b) =>
+      a.safeName.localeCompare(b.safeName)
+    )
+
+    // write variant icons to their specific variant file
+    fs.writeFileSync(
+      VARIANT_DATA_PATH,
+      JSON.stringify(
+        (allIcons[variant] as IconMetadata[]).map((v) => {
+          return {
+            ...v,
+            categories: v.categories.length > 0 ? v.categories : undefined,
+            variant: undefined,
+          }
+        })
+      )
+    )
+
+    // add it into combinedIconPool
+    combinedIcons.push(...allIcons[variant])
+  }
 
   // write all icons data
   fs.writeFileSync(
-    path.join(pathToOptimized, 'allIconsData.json'),
-    JSON.stringify(allIcons, null, 2)
+    path.join(pathToOptimized, 'combined-icons.json'),
+    JSON.stringify(combinedIcons)
   )
 }
 

@@ -1,9 +1,9 @@
-export type TVariants = 'Fill' | 'Regular'
+export type TVariants = 'fill' | 'regular'
 
 export interface IconMetadata {
   name: string
   safeName: string
-  categories: string[]
+  categories?: string[]
   tags: string[]
   variant: Lowercase<TVariants>
 }
