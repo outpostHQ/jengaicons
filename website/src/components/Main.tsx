@@ -1,5 +1,5 @@
 import { Block } from "@cube-dev/ui-kit"
-import Header from "./Header"
+import IconControls from "@/components/IconControls"
 import IconGrid from "./IconGrid"
 import SectionContainer from "./shared/SectionContainer"
 import Sidebar from "./Sidebar"
@@ -7,7 +7,7 @@ import Sidebar from "./Sidebar"
 function Main() {
   return (
     <Block style={{ position: "relative" }}>
-      <Header />
+      <IconControls />
       <SectionContainer>
         {/* <Sidebar /> */}
         <IconGrid />
