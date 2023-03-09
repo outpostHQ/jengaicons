@@ -5,15 +5,26 @@ import { useScrollPosition } from "@/hooks/useScrollPosition"
 import useTheme from "@/hooks/useTheme"
 import type { AvailableThemes } from "@/types/theme"
 import { Block, Flex, Item, MenuTrigger, Slider } from "@cube-dev/ui-kit"
-import { ArrowClockwise, CaretDownFill, Moon, Sun } from "@jengaicons/react"
+import {
+  ArrowClockwise,
+  CaretDownFill,
+  JengaIconProps,
+  JengaIconRegularProps,
+  Moon,
+  Sun,
+  WaveTriangle,
+  WaveTriangleFill,
+} from "@jengaicons/react"
 import { IconMetadata } from "@/types/icon"
 import {
   CPButton,
+  CPColorPicker,
   CPMenu,
   CPRow,
   CPSearchInput,
   CPText,
 } from "@/shared/library"
+import { CommonControlProps, CornerType } from "@/types/components/IconControl"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {
@@ -24,14 +35,248 @@ const getThemeIcon = (theme: AvailableThemes) => {
   }
 }
 
-const SearchBar = () => {
-  return
+const VariantSelectorMenu = ({
+  setIconSettings,
+  iconSettings,
+}: CommonControlProps) => {
+  return (
+    <MenuTrigger>
+      <CPButton
+        padding='10px'
+        height='100%'
+        rightIcon={<CaretDownFill />}
+        variant='outline'
+      >
+        {iconSettings.filter.variant === "regular" && "Regular"}
+        {iconSettings.filter.variant === "fill" && "Filled"}
+      </CPButton>
+      <CPMenu
+        width='6.3rem'
+        onAction={(key) =>
+          setIconSettings({
+            type: "update-variant-filter",
+            payload: key as IconMetadata["variant"],
+          })
+        }
+      >
+        <Item key='regular'>Regular</Item>
+        <Item key='fill'>Filled</Item>
+      </CPMenu>
+    </MenuTrigger>
+  )
 }
 
-function IconControls() {
-  const scroll = useScrollPosition()
-  const [iconSettings, setIconSettings] = useIconSettings()
+const IconSearch = ({ setIconSettings }: CommonControlProps) => {
+  return (
+    <CPSearchInput
+      width='100%'
+      placeholder='Search...'
+      onChange={(val) =>
+        setIconSettings({
+          type: "update-search-filter",
+          payload: val,
+        })
+      }
+    />
+  )
+}
 
+const IconSizeChanger = ({
+  iconSettings,
+  setIconSettings,
+}: CommonControlProps) => {
+  return (
+    <CPRow
+      padding='10px'
+      height='100%'
+      style={{
+        border: "1px solid var(--cp-border)",
+        borderRadius: "0.5rem",
+        minWidth: "fit-content",
+      }}
+      alignItems='center'
+      gap='0.25rem'
+      width='100%'
+    >
+      <CPText>Size</CPText>
+      <Slider
+        width='100%'
+        minValue={16}
+        maxValue={96}
+        step={4}
+        value={iconSettings.props.size as number}
+        onChange={(val) =>
+          setIconSettings({
+            type: "update-size",
+            payload: val,
+          })
+        }
+      />
+      <CPText width='30px'>{iconSettings.props.size}px</CPText>
+    </CPRow>
+  )
+}
+
+const IconBorderChanger = ({
+  iconSettings,
+  setIconSettings,
+}: CommonControlProps) => {
+  return (
+    <CPRow
+      padding='10px'
+      height='100%'
+      width='100%'
+      style={{
+        border: "1px solid var(--cp-border)",
+        borderRadius: "0.5rem",
+      }}
+      alignItems='center'
+      gap='8px'
+    >
+      <CPText>Border</CPText>
+      <Slider
+        width='100%'
+        minValue={0.5}
+        maxValue={3}
+        step={0.5}
+        value={Number(iconSettings.props.weight)}
+        onChange={(val) =>
+          setIconSettings({ type: "update-border-width", payload: val })
+        }
+      />
+      <CPText>{iconSettings.props.weight}px</CPText>
+    </CPRow>
+  )
+}
+
+const getCornerIcon = (corner: CornerType) => {
+  switch (corner) {
+    case "Miter corner":
+      return <WaveTriangleFill />
+    case "Round corner":
+      return <WaveTriangleFill />
+    case "Bevel corner":
+      return <WaveTriangleFill />
+  }
+}
+
+const IconCornerChanger = ({
+  iconSettings,
+  setIconSettings,
+}: CommonControlProps) => {
+  const corner = iconSettings.notAdded.corner
+
+  return (
+    <MenuTrigger>
+      <CPButton
+        styles={{
+          border: "1px solid var(--cp-border)",
+          borderRadius: "8px",
+        }}
+        padding='10px'
+        height='100%'
+        width='45rem'
+        variant='outline'
+        icon={getCornerIcon(corner)}
+      >
+        <CPText transform='capitalize'>{corner}</CPText>
+      </CPButton>
+
+      <CPMenu
+        width='6.3rem'
+        onAction={(key) =>
+          setIconSettings({
+            type: "update-icon-corner",
+            payload: key as CornerType,
+          })
+        }
+      >
+        <Item key='Miter corner'>
+          <CPText>{getCornerIcon("Miter corner")} Miter corner </CPText>
+        </Item>
+        <Item key='Round corner'>
+          <CPText>{getCornerIcon("Round corner")} Round corner </CPText>
+        </Item>
+        <Item key='Bevel corner'>
+          <CPText>{getCornerIcon("Bevel corner")} Bevel corner </CPText>
+        </Item>
+      </CPMenu>
+    </MenuTrigger>
+  )
+}
+
+const IconColorChanger = ({
+  iconSettings,
+  setIconSettings,
+}: CommonControlProps) => {
+  return (
+    <MenuTrigger>
+      <CPButton
+        styles={{
+          border: "1px solid var(--cp-border)",
+          borderRadius: "8px",
+        }}
+        variant='outline'
+        margin='0'
+        padding='0'
+      >
+        <CPRow height='100%' padding='10px' alignItems='center' gap='8px'>
+          <CPRow
+            width='24px'
+            height='24px'
+            styles={{ backgroundColor: iconSettings.props.color }}
+          />
+
+          <CPText>{iconSettings.props.color}</CPText>
+        </CPRow>
+      </CPButton>
+
+      <CPMenu
+        width='6.3rem'
+        onAction={(key) =>
+          setIconSettings({
+            type: "update-variant-filter",
+            payload: key as IconMetadata["variant"],
+          })
+        }
+      >
+        <Item>
+          <CPColorPicker
+            color={iconSettings.props.color}
+            onChange={(color) =>
+              setIconSettings({
+                type: "update-color",
+                payload: color,
+              })
+            }
+          />
+        </Item>
+      </CPMenu>
+    </MenuTrigger>
+  )
+}
+
+const IconSettingsReset = ({
+  setIconSettings,
+}: Omit<CommonControlProps, "iconSettings">) => {
+  return (
+    <CPRow height='100%'>
+      <CPButton
+        height='100%'
+        variant='outline'
+        icon={<ArrowClockwise />}
+        onClick={() =>
+          setIconSettings({
+            type: "update-icon-props",
+            payload: defaultIconProps,
+          })
+        }
+      />
+    </CPRow>
+  )
+}
+
+const WebpageThemeChanger = () => {
   const [currentTheme, changeTheme] = useTheme()
 
   const handleChangeTheme = useCallback(() => {
@@ -40,163 +285,56 @@ function IconControls() {
   }, [currentTheme])
 
   return (
-    <Block
-      padding={["1.25rem 0", "1.25rem 0", "1.25rem "]}
+    <CPRow height='100%'>
+      <CPButton
+        height='100%'
+        variant='outline'
+        icon={getThemeIcon(currentTheme)}
+        onClick={handleChangeTheme}
+      />
+    </CPRow>
+  )
+}
+
+function IconControls() {
+  const [iconSettings, setIconSettings] = useIconSettings()
+
+  const commonProps: CommonControlProps = {
+    iconSettings,
+    setIconSettings,
+  }
+
+  return (
+    <CPRow
+      zIndex={1}
+      gap='0.625rem'
+      height='84px'
+      alignItems='center'
+      justifyContent='center'
       styles={{
-        boxShadow: "0px 4px 12px 0.75px rgba(0, 0, 0, 0.33)",
         position: "sticky",
         top: 0,
-        background: "var(--cp-surface)",
-        zIndex: 1,
+        backgroundColor: "var(--cp-surface)",
+        padding: ["20px 140px", "20px 100px", ""],
+        flex: "row wrap",
       }}
     >
-      <Block
-        id='header'
-        styles={{
-          maxWidth: "1040px",
-          margin: "0 auto",
-        }}
-      >
-        <Flex
-          flow={["row wrap", "row wrap", "column"]}
-          justifyContent='space-between'
-          gap='.6125rem'
-          width='100%'
-        >
-          <CPRow flex='1' gap='10px' width='100%'>
-            <MenuTrigger>
-              <CPButton
-                padding='12px'
-                rightIcon={<CaretDownFill />}
-                variant='outline'
-              >
-                {iconSettings.filter.variant === "regular" && "Regular"}
-                {iconSettings.filter.variant === "fill" && "Filled"}
-              </CPButton>
-              <CPMenu
-                width='6.3rem'
-                onAction={(key) =>
-                  setIconSettings({
-                    type: "update-variant-filter",
-                    payload: key as IconMetadata["variant"],
-                  })
-                }
-              >
-                <Item key='regular'>Regular</Item>
-                <Item key='fill'>Filled</Item>
-              </CPMenu>
-            </MenuTrigger>
-            <CPSearchInput
-              padding='12px 10px'
-              width='100%'
-              onChange={(val) =>
-                setIconSettings({
-                  type: "update-search-filter",
-                  payload: val,
-                })
-              }
-            />
-          </CPRow>
-          <CPRow
-            flex='1'
-            flow={["row", "row", "column"]}
-            gap='10px'
-            width='100%'
-          >
-            <Flex
-              padding='12px 10px'
-              style={{
-                border: "1px solid var(--cp-border)",
-                borderRadius: "0.5rem",
-              }}
-              alignItems='center'
-              gap='0.25rem'
-              width='100%'
-            >
-              <CPText>Size</CPText>
-              <Slider
-                width='100%'
-                minValue={16}
-                maxValue={96}
-                step={4}
-                value={iconSettings.props.size as number}
-                onChange={(val) =>
-                  setIconSettings({
-                    type: "update-size",
-                    payload: val,
-                  })
-                }
-              />
-              <CPText width='30px'>{iconSettings.props.size}px</CPText>
-            </Flex>
+      <VariantSelectorMenu {...commonProps} />
 
-            <Flex
-              padding='12px 10px'
-              style={{
-                border: "1px solid var(--cp-border)",
-                borderRadius: "0.5rem",
-              }}
-              alignItems='center'
-              gap='0.25rem'
-              width='100%'
-            >
-              <CPText>Border</CPText>
-              <Slider
-                width='100%'
-                minValue={0.5}
-                maxValue={3}
-                step={0.5}
-                onChange={(val) =>
-                  setIconSettings({ type: "update-border-width", payload: val })
-                }
-              />
-              <CPText>{iconSettings.props.weight}px</CPText>
-            </Flex>
-          </CPRow>
-          <CPRow width={["auto", "auto", "100%"]} gap='10px'>
-            <Flex
-              padding='6px 12px'
-              style={{
-                border: "1px solid var(--cp-border)",
-                borderRadius: "0.5rem",
-              }}
-              alignItems='center'
-              gap='0.5rem'
-            >
-              <input
-                type='color'
-                value={iconSettings.props.color}
-                onChange={(e) =>
-                  setIconSettings({
-                    type: "update-color",
-                    payload: e.target.value,
-                  })
-                }
-              />
-              <CPText>{iconSettings.props.color}</CPText>
-            </Flex>
+      <IconSearch {...commonProps} />
 
-            <CPButton
-              height='100%'
-              variant='outline'
-              icon={<ArrowClockwise size='1.25rem' />}
-              onClick={() =>
-                setIconSettings({
-                  type: "update-icon-props",
-                  payload: defaultIconProps,
-                })
-              }
-            />
-            <CPButton
-              height='100%'
-              variant='outline'
-              icon={getThemeIcon(currentTheme)}
-              onClick={handleChangeTheme}
-            />
-          </CPRow>
-        </Flex>
-      </Block>
-    </Block>
+      <IconSizeChanger {...commonProps} />
+
+      <IconBorderChanger {...commonProps} />
+
+      <IconCornerChanger {...commonProps} />
+
+      <IconColorChanger {...commonProps} />
+
+      <IconSettingsReset {...commonProps} />
+
+      <WebpageThemeChanger />
+    </CPRow>
   )
 }
 

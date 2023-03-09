@@ -425,6 +425,22 @@ function CPMenu<T>({ children, styles, ...otherProps }: CubeMenuProps<T>) {
   )
 }
 
+export const CPColorPicker = ({
+  color,
+  onChange,
+}: {
+  color?: string
+  onChange: (color: string) => void
+}) => {
+  return (
+    <input
+      type={"color"}
+      value={color}
+      onChange={(e) => onChange(e.target.value)}
+    />
+  )
+}
+
 export {
   CPTextInput,
   CPNumberInput,

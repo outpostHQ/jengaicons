@@ -30,13 +30,14 @@ export const useFetch = <Response, Error = APIError>({
                 data,
               })
             )?.data
-
+            break
           case "POST":
             res = (
               await axios.post(url, {
                 data,
               })
             )?.data
+            break
         }
 
         setResponse(res)
