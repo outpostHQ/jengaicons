@@ -1,4 +1,4 @@
-import { Flex } from "@cube-dev/ui-kit"
+import { Flex, Styles } from "@cube-dev/ui-kit"
 import { Info, InfoFill, JengaIconContext } from "@jengaicons/react"
 import { CPRow } from "@/shared/library"
 import IconWrapper from "@/components/IconWrapper"
@@ -11,7 +11,7 @@ import { IconMetadata } from "@/types"
 import { GetLengthResponse } from "@/types/api/getLength"
 import { useEffect } from "react"
 
-const IconGrid = () => {
+const IconGrid = ({ styles }: { styles?: Styles }) => {
   const [iconSettings] = useIconSettings()
 
   const [loading, data, error] = useFetch<GetLengthResponse>({
@@ -26,20 +26,28 @@ const IconGrid = () => {
   }, [loading])
 
   return (
-    <CPRow width='100%' flow='row wrap' justifyContent='space-between'>
-      {allIconsMetaData.slice(0, 30).map((iconMetaData, idx) => {
-        // @ts-expect-error
-        const ICON = JengaIcons[
-          iconMetaData.safeName
-        ] as () => React.ReactElement
-        return (
-          <IconWrapper
-            key={`${iconMetaData.safeName}${idx}`}
-            ICON={ICON}
-            iconMetadata={iconMetaData as IconMetadata}
-          />
-        )
-      })}
+    <CPRow
+      flow='row nowrap'
+      justifyContent='flex-start'
+      alignItems='flex-start'
+      height='4000px'
+      styles={styles}
+    >
+      <CPRow width='100%' flow='row wrap' justifyContent='space-between'>
+        {allIconsMetaData.slice(0, 30).map((iconMetaData, idx) => {
+          // @ts-expect-error
+          const ICON = JengaIcons[
+            iconMetaData.safeName
+          ] as () => React.ReactElement
+          return (
+            <IconWrapper
+              key={`${iconMetaData.safeName}${idx}`}
+              ICON={ICON}
+              iconMetadata={iconMetaData as IconMetadata}
+            />
+          )
+        })}
+      </CPRow>
     </CPRow>
   )
 }

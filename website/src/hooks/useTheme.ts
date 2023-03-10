@@ -1,18 +1,18 @@
 import { AvailableThemes } from "@/types/theme"
 import { useCallback, useEffect, useState } from "react"
+import { useTheme as useNextTheme } from "next-themes"
+
+const defaultTheme = "light"
 
 const useTheme = () => {
-  const [currentTheme, setCurrentTheme] = useState<AvailableThemes>("dark")
+  const { theme: nextTheme, setTheme } = useNextTheme()
 
   const changeTheme = useCallback((theme: AvailableThemes) => {
-    setCurrentTheme(theme)
+    setTheme(theme)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", currentTheme)
-  }, [currentTheme])
-
-  return [currentTheme, changeTheme] as const
+  return [(nextTheme || defaultTheme) as AvailableThemes, changeTheme] as const
 }
 
 export default useTheme

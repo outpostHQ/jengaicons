@@ -4,10 +4,18 @@ import useIconSettings from "@/hooks/useIconSettings"
 import { useScrollPosition } from "@/hooks/useScrollPosition"
 import useTheme from "@/hooks/useTheme"
 import type { AvailableThemes } from "@/types/theme"
-import { Block, Flex, Item, MenuTrigger, Slider } from "@cube-dev/ui-kit"
+import {
+  Block,
+  Flex,
+  Item,
+  MenuTrigger,
+  Slider,
+  Styles,
+} from "@cube-dev/ui-kit"
 import {
   ArrowClockwise,
   CaretDownFill,
+  ChevronDown,
   JengaIconProps,
   JengaIconRegularProps,
   Moon,
@@ -34,6 +42,8 @@ const getThemeIcon = (theme: AvailableThemes) => {
       return <Sun size='1.25rem' />
   }
 }
+
+const width = "100%"
 
 const VariantSelectorMenu = ({
   setIconSettings,
@@ -69,7 +79,7 @@ const VariantSelectorMenu = ({
 const IconSearch = ({ setIconSettings }: CommonControlProps) => {
   return (
     <CPSearchInput
-      width='100%'
+      width={width}
       placeholder='Search...'
       onChange={(val) =>
         setIconSettings({
@@ -96,7 +106,7 @@ const IconSizeChanger = ({
       }}
       alignItems='center'
       gap='0.25rem'
-      width='100%'
+      width={width}
     >
       <CPText>Size</CPText>
       <Slider
@@ -125,7 +135,7 @@ const IconBorderChanger = ({
     <CPRow
       padding='10px'
       height='100%'
-      width='100%'
+      width={width}
       style={{
         border: "1px solid var(--cp-border)",
         borderRadius: "0.5rem",
@@ -175,11 +185,17 @@ const IconCornerChanger = ({
         }}
         padding='10px'
         height='100%'
-        width='45rem'
+        width={width}
         variant='outline'
         icon={getCornerIcon(corner)}
+        rightIcon={<CaretDownFill />}
       >
-        <CPText transform='capitalize'>{corner}</CPText>
+        <CPText
+          transform='capitalize'
+          styles={{ display: ["block", "block", "none"] }}
+        >
+          {corner}
+        </CPText>
       </CPButton>
 
       <CPMenu
@@ -296,7 +312,7 @@ const WebpageThemeChanger = () => {
   )
 }
 
-function IconControls() {
+const IconControls = ({ styles }: { styles?: Styles }) => {
   const [iconSettings, setIconSettings] = useIconSettings()
 
   const commonProps: CommonControlProps = {
@@ -304,36 +320,47 @@ function IconControls() {
     setIconSettings,
   }
 
+  const props = {
+    gap: "0.625rem",
+    height: "100%",
+    width: "100%",
+    flow: "row nowrap",
+    alignItems: "center",
+  } as const
+
   return (
     <CPRow
       zIndex={1}
       gap='0.625rem'
-      height='84px'
+      width='100%'
       alignItems='center'
-      justifyContent='center'
+      flow={["row nowrap", "row nowrap", "column nowrap"]}
       styles={{
         position: "sticky",
+        padding: "20px auto",
         top: 0,
         backgroundColor: "var(--cp-surface)",
-        padding: ["20px 140px", "20px 100px", ""],
-        flex: "row wrap",
+        ...styles,
       }}
     >
-      <VariantSelectorMenu {...commonProps} />
+      <CPRow {...props}>
+        <VariantSelectorMenu {...commonProps} />
+        <IconSearch {...commonProps} />
+      </CPRow>
 
-      <IconSearch {...commonProps} />
+      <CPRow {...props}>
+        <IconSizeChanger {...commonProps} />
 
-      <IconSizeChanger {...commonProps} />
+        <IconBorderChanger {...commonProps} />
+      </CPRow>
+      <CPRow {...props}>
+        <IconCornerChanger {...commonProps} />
 
-      <IconBorderChanger {...commonProps} />
+        <IconColorChanger {...commonProps} />
+        <IconSettingsReset {...commonProps} />
 
-      <IconCornerChanger {...commonProps} />
-
-      <IconColorChanger {...commonProps} />
-
-      <IconSettingsReset {...commonProps} />
-
-      <WebpageThemeChanger />
+        <WebpageThemeChanger />
+      </CPRow>
     </CPRow>
   )
 }
