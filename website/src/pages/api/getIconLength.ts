@@ -6,9 +6,9 @@ type Tvariants = IconMetadata["variant"]
 
 const handler: GetLengthHandler = (req, res) => {
   res.status(200).json({
-    Fill: allIconsMetaData.map((val) => (val.variant as Tvariants) === "fill")
+    fill: allIconsMetaData.map((val) => (val.variant as Tvariants) === "fill")
       .length,
-    Regular: allIconsMetaData.map(
+    regular: allIconsMetaData.map(
       (val) => (val.variant as Tvariants) === "regular",
     ).length,
   })
