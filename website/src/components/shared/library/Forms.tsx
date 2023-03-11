@@ -1,6 +1,6 @@
 import { CubeDialogFormProps, DialogForm, FieldTypes } from "@cube-dev/ui-kit"
 
-import { useTheme } from "./hooks/useTheme"
+import useTheme from "@/hooks/useTheme"
 
 const formButtonDefaultProps = {
   fontWeight: 500,
@@ -12,7 +12,7 @@ export function CPDialogForm<T extends FieldTypes>(
   props: CubeDialogFormProps<T> & { variant?: "normal" | "danger" },
 ) {
   const { cancelProps, variant, styles, submitProps, ...otherProps } = props
-  const theme = useTheme()
+  const [theme] = useTheme()
   return (
     <DialogForm<T>
       cancelProps={{
