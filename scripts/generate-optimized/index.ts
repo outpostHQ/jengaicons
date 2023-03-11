@@ -3,6 +3,7 @@ import fsP from "fs/promises"
 import path from "path"
 import { optimize } from "svgo"
 import { IconMetadata } from "../generate-jengaicons-react/types"
+import { COMPRESSION_LEVEL, zip } from "zip-a-folder"
 
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
 
@@ -90,7 +91,7 @@ async function main() {
       .filter((file) => file.name.endsWith(".svg"))
       .map((item) => item.name)
 
-    svgFiles.map((svgFile) => {
+    for (const svgFile of svgFiles) {
       const SVGComponentName = getSafeComponentName(svgFile, variant)
 
       const svgString = fs.readFileSync(
@@ -126,8 +127,24 @@ async function main() {
       //   path.join(pathToOptimized, variant, `${SVGComponentName}.json`),
       //   JSON.stringify(allIcons[allIcons.length - 1], null, 2)
       // )
-    })
+    }
   }
+
+  const WEBSITE_PUBLIC_FOLDER = path.join("..", "..", "website", "public")
+  const PATH_TO_ZIP_FILE = path.join(WEBSITE_PUBLIC_FOLDER, "jengaicons.zip")
+  // Create a zip file
+  await zip(pathToOptimized, PATH_TO_ZIP_FILE, {
+    compression: COMPRESSION_LEVEL.high,
+  })
+
+  const PATH_TO_PUBLIC_ICON_FOLDER = path.join(
+    WEBSITE_PUBLIC_FOLDER,
+    "iconSVGs",
+  )
+  // Copy Optimized folder to Website public folder
+  await fsP.cp(pathToOptimized, PATH_TO_PUBLIC_ICON_FOLDER, {
+    recursive: true,
+  })
 
   // sort by name imports
   allIcons.sort((a, b) => a.safeName.localeCompare(b.safeName))
