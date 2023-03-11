@@ -1,4 +1,4 @@
-export type TVariants = "Fill" | "Regular"
+export type TVariants = "fill" | "regular"
 
 export type TIconSafeName = string
 
