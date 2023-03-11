@@ -40,7 +40,7 @@ const IconWrapper = ({
       >
         {/* @ts-expect-error */}
         {<ICON {...iconSettings.props} />}
-        <CPText className='truncate'>{iconMetadata.name}</CPText>
+        <CPText>{iconMetadata.name}</CPText>
       </CPRow>
     </CPButton>
   )

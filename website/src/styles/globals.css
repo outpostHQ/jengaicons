@@ -37,7 +37,31 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
   border-width: 0px !important;
 }
 
-#icon-info-drawer{
+#icon-info-drawer {
   height: calc(100vh - 80px);
 }
 
+/* UTILS */
+
+.truncate {
+  width: 120px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media screen and (min-width: 420px) {
+  .truncate {
+    width: 200px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}
+
+@media screen and (min-width: 550px) {
+  .truncate {
+    width: 250px;
+    white-space: nowrap;
+  }
+}
