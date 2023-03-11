@@ -41,7 +41,9 @@ const IconHeader = ({
       padding='.6125rem 1.25rem 0.8rem 1.25rem'
       style={{ borderBottom: "1px solid var(--cp-border)" }}
     >
-      <CPText variant='displaySmall'>{iconName}</CPText>
+      <CPText variant='displaySmall' className='truncate'>
+        {iconName}
+      </CPText>
       <CPButton
         variant='clear'
         icon={<X />}
