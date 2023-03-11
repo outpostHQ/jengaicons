@@ -1,5 +1,5 @@
 import { useIconInfoDrawer } from "@/hooks/useIconInfoDrawer"
-import { Block } from "@cube-dev/ui-kit"
+import { Block, useToastsApi } from "@cube-dev/ui-kit"
 import { Copy, Download, JengaIconProps, X } from "@jengaicons/react"
 import React, { ComponentType, useCallback, useEffect, useMemo } from "react"
 import {
@@ -13,6 +13,13 @@ import {
 // TODO: LazyLoad
 import * as JengaIcons from "@jengaicons/react"
 import useIconSettings from "@/hooks/useIconSettings"
+import useFetch from "@/hooks/useFetch"
+import { GetSVGRequestBody, GetSVGResponseBody } from "@/types/api/getSVG"
+import { TIconSafeName, TVariants } from "@/types/icon"
+import { GET_ICON_SVG } from "@/constants/api/paths"
+import fileDownload from "js-file-download"
+import { getSVGIconURL } from "@/utils/icons"
+import { copyToClipboard } from "@/utils"
 
 const makeReactString = (IconProps: JengaIconProps) => {
   return Object.entries(IconProps).reduce((prev, [propName, propVal]) => {
@@ -109,17 +116,64 @@ const CodeBlock = ({
   )
 }
 
-const IconActions = () => {
+const IconActions = ({
+  iconSafeName,
+  variant,
+}: {
+  iconSafeName: TIconSafeName
+  variant: TVariants
+}) => {
+  const { response: SVGResponse, request: requestSVG } =
+    useFetch<GetSVGResponseBody>({
+      url: getSVGIconURL({
+        iconSafeName,
+        variant,
+      }),
+      type: "GET",
+      makeInitialReq: true,
+    })
+
+  const { toast } = useToastsApi()
+
+  const handleCopySVG = useCallback(() => {
+    toast.attention("Getting SVG...")
+    requestSVG().then(() => {
+      let isCopied = false
+
+      if (SVGResponse) isCopied = copyToClipboard(SVGResponse)
+
+      if (isCopied) toast.success("Copied svg to clipboard")
+      else toast.danger("Failed to copy svg to clipboard")
+    })
+  }, [iconSafeName, SVGResponse])
+
+  const handleDownloadSVG = useCallback(() => {
+    toast.attention("Copying...")
+    requestSVG().then(() => {
+      if (SVGResponse) {
+        toast.success("Downloading...")
+        fileDownload(SVGResponse, `${iconSafeName}.svg`, "image/svg+xml")
+      } else {
+        toast.danger("Failed to download svg")
+      }
+    })
+  }, [iconSafeName, SVGResponse])
+
   return (
     <CPRow
       padding='1.25rem'
       justifyContent='space-between'
       style={{ borderTop: "1px solid var(--cp-border)" }}
     >
-      <CPButton variant='invisible' icon={<Copy />}>
+      <CPButton variant='invisible' icon={<Copy />} onClick={handleCopySVG}>
         Copy SVG
       </CPButton>
-      <CPButton variant='invisible' icon={<Download />}>
+
+      <CPButton
+        variant='invisible'
+        icon={<Download />}
+        onClick={handleDownloadSVG}
+      >
         Download SVG
       </CPButton>
     </CPRow>
@@ -195,7 +249,7 @@ const IconInfoDrawer = () => {
           />
         </CPColumn>
       </Block>
-      <IconActions />
+      <IconActions iconSafeName={selectedIcon} variant='regular' />
     </CPRow>
   )
 }
