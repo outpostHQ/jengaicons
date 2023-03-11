@@ -209,6 +209,7 @@ importers:
       axios: 1.3.4
       eslint: 8.34.0
       eslint-config-next: 13.1.6
+      js-file-download: 0.4.12
       next: 13.1.6
       next-themes: 0.2.1
       prettier: ^2.8.4
@@ -223,6 +224,7 @@ importers:
       '@next/font': 13.1.6
       '@react-aria/ssr': 3.5.0_react@18.2.0
       axios: 1.3.4
+      js-file-download: 0.4.12
       next: 13.1.6_6m24vuloj5ihw4zc5lbsktc4fu
       next-themes: 0.2.1_3vryta7zmbcsw4rrqf4axjqggm
       react: 18.2.0
@@ -7301,6 +7303,10 @@ packages:
     dependencies:
       '@discoveryjs/natural-compare': 1.1.0
     dev: true
+
+  /js-file-download/0.4.12:
+    resolution: {integrity: sha512-rML+NkoD08p5Dllpjo0ffy4jRHeY6Zsapvr/W86N7E0yuzAO6qa5X9+xog6zQNlH102J7IXljNY2FtS6Lj3ucg==}
+    dev: false
 
   /js-sdsl/4.3.0:
     resolution: {integrity: sha512-mifzlm2+5nZ+lEcLJMoBK0/IH/bDg8XnJfd/Wq6IP+xoCjLZsTOnV2QpxlVbX9bMnkl5PdEjNtBJ9Cj1NjifhQ==}
