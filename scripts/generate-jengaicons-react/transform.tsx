@@ -30,7 +30,7 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
 
             // Replace StrokeWidth for weight prop
             case "strokeWidth":
-              if (data.variant === "Regular")
+              if (data.variant === "regular")
                 _attrVal = `{weight || weightCtx || "${data.defaultWeight}"}`
               else _attrVal = `"${data.defaultWeight}"`
               break
@@ -160,7 +160,7 @@ const getVariantComponent = (
 
 const getComponent = (transformData: TransformData, svgAST: svgson.INode) => {
   switch (transformData.variant) {
-    case "Regular":
+    case "regular":
       return getRegularComponent(transformData, svgAST)
   }
 

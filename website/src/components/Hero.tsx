@@ -1,10 +1,20 @@
-import { Block, BreakpointsProvider, Flex } from "@cube-dev/ui-kit"
-import { FigmaLogo, Heart, LinkBreak } from "@jengaicons/react"
-import React from "react"
+import { GET_ALL_SVG_ICON_ZIP } from "@/constants/api/paths"
+import useFetch from "@/hooks/useFetch"
+import { Flex, useToastsApi } from "@cube-dev/ui-kit"
+import {
+  ArrowCircleUpRight,
+  ArrowLineDown,
+  ChevronRight,
+  FigmaLogo,
+  Heart,
+  LinkBreak,
+} from "@jengaicons/react"
+import Link from "next/link"
+import React, { useCallback } from "react"
 import { CPButton, CPColumn, CPRow, CPText } from "./shared/library"
 import SectionContainer from "./shared/SectionContainer"
 
-function Hero() {
+function Hero({ totalIcons }: { totalIcons: string }) {
   return (
     <SectionContainer>
       <CPColumn padding='1.25rem 0 100px 0 '>
@@ -29,7 +39,7 @@ function Hero() {
             justifyContent='center'
             margin='2.5rem 0 0 0'
           >
-            <CPRow
+            {/* <CPRow
               hide={[false, false, true]}
               gap='4px'
               justifyContent='center'
@@ -37,7 +47,7 @@ function Hero() {
             >
               <LinkBreak size='1.25rem' />
               <CPText fontWeight='medium'>Download All</CPText>
-            </CPRow>
+            </CPRow> */}
             <CPRow gap='4px' justifyContent='center' alignItems='center'>
               <FigmaLogo size='1.25rem' />
               <CPText fontWeight='medium'>Figma Library / Plugin</CPText>
@@ -59,13 +69,26 @@ function Hero() {
           gap='1.25rem'
           flow={["row", "row", "column"]}
         >
-          <CPButton rightIcon={<LinkBreak size='1.25rem' />}>
+          <CPButton
+            padding='12px 24px'
+            rightIcon={<ChevronRight color='var(--cp-icon-on-primary)' />}
+          >
             Get Started
           </CPButton>
-
-          <CPButton rightIcon={<LinkBreak size='1.25rem' />} variant='outline'>
-            Download All (6,782)
-          </CPButton>
+          <Link
+            href={`${GET_ALL_SVG_ICON_ZIP}`}
+            target='_blank'
+            className='text-decoration-none'
+          >
+            <CPButton
+              padding='12px 24px'
+              rightIcon={<ArrowLineDown />}
+              variant='outline'
+              width='100%'
+            >
+              <CPText>Download All ({totalIcons})</CPText>
+            </CPButton>
+          </Link>
         </Flex>
       </CPColumn>
     </SectionContainer>

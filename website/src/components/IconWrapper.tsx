@@ -13,17 +13,12 @@ const IconWrapper = ({
 }) => {
   const [iconSettings] = useIconSettings()
 
-  const [_, { selectIcon, openDrawer }] = useIconInfoDrawer()
+  const [, { selectIcon, openDrawer }] = useIconInfoDrawer()
 
   const handleIconClick = useCallback(() => {
     selectIcon(iconMetadata.safeName)
     openDrawer()
   }, [])
-
-  const { filter } = iconSettings
-
-  if (filter.variant !== iconMetadata.variant) return null
-  if (filter.search && !iconMetadata.name.includes(filter.search)) return null
 
   return (
     <CPButton variant='clear' padding='0' onClick={handleIconClick}>

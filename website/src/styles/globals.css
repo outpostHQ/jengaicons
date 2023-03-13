@@ -65,3 +65,11 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
     white-space: nowrap;
   }
 }
+
+#color-menu-item [data-qa^="MenuItem"] button:hover {
+  background-color: transparent !important;
+}
+
+.text-decoration-none {
+  text-decoration: none;
+}

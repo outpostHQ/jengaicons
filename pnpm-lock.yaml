@@ -211,6 +211,7 @@ importers:
       axios: 1.3.4
       eslint: 8.34.0
       eslint-config-next: 13.1.6
+      fuse.js: 6.6.2
       js-file-download: 0.4.12
       next: 13.1.6
       next-themes: 0.2.1
@@ -226,6 +227,7 @@ importers:
       '@next/font': 13.1.6
       '@react-aria/ssr': 3.5.0_react@18.2.0
       axios: 1.3.4
+      fuse.js: 6.6.2
       js-file-download: 0.4.12
       next: 13.1.6_6m24vuloj5ihw4zc5lbsktc4fu
       next-themes: 0.2.1_3vryta7zmbcsw4rrqf4axjqggm
@@ -6749,6 +6751,11 @@ packages:
 
   /functions-have-names/1.2.3:
     resolution: {integrity: sha512-xckBUXyTIqT97tq2x2AMb+g163b5JFysYk0x4qxNFwbfQkmNZoiRHb6sPzI9/QV33WeuvVYBUIiD4NzNIyqaRQ==}
+
+  /fuse.js/6.6.2:
+    resolution: {integrity: sha512-cJaJkxCCxC8qIIcPBF9yGxY0W/tVZS3uEISDxhYIdtk8OL93pe+6Zj7LjCqVV4dzbqcriOZ+kQ/NE4RXZHsIGA==}
+    engines: {node: '>=10'}
+    dev: false
 
   /gensync/1.0.0-beta.2:
     resolution: {integrity: sha512-3hN7NaskYvMDLQY55gnW3NQ+mesEAepTqlg+VEbj7zzqEMBVNhzcGYYeqFo/TlYz6eQiFcp1HcsCZO+nGgS8zg==}

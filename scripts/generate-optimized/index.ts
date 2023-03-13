@@ -129,8 +129,9 @@ async function main() {
       // )
     }
   }
+  const WEBSITE_FOLDER = path.join("..", "..", "website")
 
-  const WEBSITE_PUBLIC_FOLDER = path.join("..", "..", "website", "public")
+  const WEBSITE_PUBLIC_FOLDER = path.join(WEBSITE_FOLDER, "public")
   const PATH_TO_ZIP_FILE = path.join(WEBSITE_PUBLIC_FOLDER, "jengaicons.zip")
   // Create a zip file
   await zip(pathToOptimized, PATH_TO_ZIP_FILE, {

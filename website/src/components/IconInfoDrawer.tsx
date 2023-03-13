@@ -73,18 +73,20 @@ const IconPreview = ({
     JengaIcons[selectedIcon] as ComponentType<JengaIconProps>
 
   return (
-    <CPRow
-      justifyContent='center'
-      alignItems='center'
-      width='17.5rem'
-      height='17.5rem'
-      styles={{
-        borderRadius: "8px",
-        boxShadow: "inset 0px 0px 8px 0.5px var(--cp-shadow)",
-      }}
-      style={{ border: "1px solid var(--cp-border)" }}
-    >
-      <SELECTED_ICON {...iconProps} size='13.75rem' />
+    <CPRow justifyContent='center' alignItems='center'>
+      <CPRow
+        justifyContent='center'
+        alignItems='center'
+        width='17.5rem'
+        height='17.5rem'
+        styles={{
+          borderRadius: "8px",
+          boxShadow: "inset 0px 0px 8px 0.5px var(--cp-shadow)",
+        }}
+        style={{ border: "1px solid var(--cp-border)" }}
+      >
+        <SELECTED_ICON {...iconProps} size='13.75rem' />
+      </CPRow>
     </CPRow>
   )
 }
@@ -136,8 +138,9 @@ const IconActions = ({
   const { toast } = useToastsApi()
 
   const handleCopySVG = useCallback(() => {
-    toast.attention("Getting SVG...")
-    requestSVG().then(() => {
+    requestSVG({
+      cached: true,
+    }).then(() => {
       let isCopied = false
 
       if (SVGResponse) isCopied = copyToClipboard(SVGResponse)
@@ -145,19 +148,21 @@ const IconActions = ({
       if (isCopied) toast.success("Copied svg to clipboard")
       else toast.danger("Failed to copy svg to clipboard")
     })
-  }, [iconSafeName, SVGResponse])
+  }, [requestSVG, SVGResponse, toast])
 
   const handleDownloadSVG = useCallback(() => {
-    toast.attention("Copying...")
-    requestSVG().then(() => {
+    toast.attention("Downloading...")
+    requestSVG({
+      cached: true,
+    }).then(() => {
       if (SVGResponse) {
-        toast.success("Downloading...")
+        toast.success("Downloaded")
         fileDownload(SVGResponse, `${iconSafeName}.svg`, "image/svg+xml")
       } else {
         toast.danger("Failed to download svg")
       }
     })
-  }, [iconSafeName, SVGResponse])
+  }, [toast, requestSVG, SVGResponse, iconSafeName])
 
   return (
     <CPRow
@@ -195,18 +200,17 @@ const IconInfoDrawer = () => {
 
   return (
     <CPRow
+      height='100%'
       styles={{
-        position: "sticky",
-        top: 0,
         borderBottom: "1px solid var(--cp-border)",
         backgroundColor: "var(--cp-surface)",
+        minWidth: "320px",
       }}
       style={{ borderLeft: "1px solid var(--cp-border)" }}
-      height='100%'
-      width='320px'
+      width={["320px", "320px", "100%"]}
       justifyContent='space-between'
       flow='column nowrap'
-      id='icon-info-drawer'
+      overflow='auto'
     >
       <Block>
         <IconHeader onClose={closeDrawer} iconName={selectedIcon} />
@@ -249,7 +253,10 @@ const IconInfoDrawer = () => {
           />
         </CPColumn>
       </Block>
-      <IconActions iconSafeName={selectedIcon} variant='regular' />
+      <IconActions
+        iconSafeName={selectedIcon}
+        variant={iconSettings.filter.variant}
+      />
     </CPRow>
   )
 }

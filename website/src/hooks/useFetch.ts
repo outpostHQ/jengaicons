@@ -77,47 +77,52 @@ export const useFetch = <RequestBody = undefined, ResponseBody = undefined>(
   const [error, setError] = useState<TAPIErrorBody>()
   const [loading, setLoading] = useState<Loading>(true)
 
-  const request = useCallback(async () => {
-    setLoading(true)
+  const request = useCallback(
+    async ({ cached }: { cached?: boolean }) => {
+      if (cached && response) return response
 
-    try {
-      let res: ResponseBody
+      setLoading(true)
 
-      switch (type) {
-        case "GET":
-          res = await axios
-            .get(url, {
-              data: reqData,
-            })
-            .then((res) => res?.data)
+      try {
+        let res: ResponseBody
 
-          break
-        case "POST":
-          res = await axios
-            .post(url, {
-              data: reqData,
-            })
-            .then((res) => res?.data)
-          break
+        switch (type) {
+          case "GET":
+            res = await axios
+              .get(url, {
+                data: reqData,
+              })
+              .then((res) => res?.data)
+
+            break
+          case "POST":
+            res = await axios
+              .post(url, {
+                data: reqData,
+              })
+              .then((res) => res?.data)
+            break
+        }
+        // console.log(
+        //   await axios
+        //     .get(url, {
+        //       data: reqData,
+        //     })
+        //     .then((res) => res?.data),
+        // )
+        setResponse(res)
+      } catch (err) {
+        setError(err as Error)
+      } finally {
+        setLoading(false)
       }
-      // console.log(
-      //   await axios
-      //     .get(url, {
-      //       data: reqData,
-      //     })
-      //     .then((res) => res?.data),
-      // )
-      setResponse(res)
-    } catch (err) {
-      setError(err as Error)
-    } finally {
-      setLoading(false)
-    }
-  }, [param0])
+    },
+    [reqData, response, type, url],
+  )
 
   useEffect(() => {
-    if (makeInitialReq) request()
-  }, [])
+    if (makeInitialReq) request({})
+  }, [makeInitialReq, request])
 
   return { loading, response, error, request } as const
 }

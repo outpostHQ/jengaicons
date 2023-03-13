@@ -1,5 +1,4 @@
 import allIconsData from "../../../optimized/allIconsData.json"
+import { IconMetadata } from "@/types/icon"
 
-const allIconsMetaData = allIconsData
-
-export { allIconsMetaData }
+export const allIconsMetaData = allIconsData as IconMetadata[]

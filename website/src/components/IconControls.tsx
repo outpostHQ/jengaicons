@@ -1,4 +1,4 @@
-import React, { useCallback, useEffect, useState } from "react"
+import React, { forwardRef, useCallback, useEffect, useState } from "react"
 import { defaultIconProps } from "@/context/IconContext"
 import useIconSettings from "@/hooks/useIconSettings"
 import { useScrollPosition } from "@/hooks/useScrollPosition"
@@ -98,7 +98,8 @@ const IconSizeChanger = ({
   return (
     <CPRow
       padding='10px'
-      height='100%'
+      flow={["row nowrap", "row nowrap", "row wrap"]}
+      justifyContent='space-between'
       style={{
         border: "1px solid var(--cp-border)",
         borderRadius: "0.5rem",
@@ -109,20 +110,49 @@ const IconSizeChanger = ({
       width={width}
     >
       <CPText>Size</CPText>
-      <Slider
+      <Block
         width='100%'
-        minValue={16}
-        maxValue={96}
-        step={4}
-        value={iconSettings.props.size as number}
-        onChange={(val) =>
-          setIconSettings({
-            type: "update-size",
-            payload: val,
-          })
-        }
-      />
+        styles={{
+          display: ["block", "block", "none"],
+        }}
+      >
+        <Slider
+          width='100%'
+          minValue={16}
+          maxValue={96}
+          step={4}
+          value={iconSettings.props.size as number}
+          onChange={(val) =>
+            setIconSettings({
+              type: "update-size",
+              payload: val,
+            })
+          }
+        />
+      </Block>
+
       <CPText width='30px'>{iconSettings.props.size}px</CPText>
+      {/* FOR MOBILE */}
+      <Block
+        width='100%'
+        styles={{
+          display: ["none", "none", "block"],
+        }}
+      >
+        <Slider
+          width='100%'
+          minValue={16}
+          maxValue={96}
+          step={4}
+          value={iconSettings.props.size as number}
+          onChange={(val) =>
+            setIconSettings({
+              type: "update-size",
+              payload: val,
+            })
+          }
+        />
+      </Block>
     </CPRow>
   )
 }
@@ -135,6 +165,8 @@ const IconBorderChanger = ({
     <CPRow
       padding='10px'
       height='100%'
+      flow={["row nowrap", "row nowrap", "row wrap"]}
+      justifyContent='space-between'
       width={width}
       style={{
         border: "1px solid var(--cp-border)",
@@ -144,17 +176,43 @@ const IconBorderChanger = ({
       gap='8px'
     >
       <CPText>Border</CPText>
-      <Slider
+
+      <Block
         width='100%'
-        minValue={0.5}
-        maxValue={3}
-        step={0.5}
-        value={Number(iconSettings.props.weight)}
-        onChange={(val) =>
-          setIconSettings({ type: "update-border-width", payload: val })
-        }
-      />
+        styles={{
+          display: ["block", "block", "none"],
+        }}
+      >
+        <Slider
+          width='100%'
+          minValue={0.5}
+          maxValue={3}
+          step={0.5}
+          value={Number(iconSettings.props.weight)}
+          onChange={(val) =>
+            setIconSettings({ type: "update-border-width", payload: val })
+          }
+        />
+      </Block>
       <CPText>{iconSettings.props.weight}px</CPText>
+      {/* FOR MOBILE */}
+      <Block
+        width='100%'
+        styles={{
+          display: ["none", "none", "block"],
+        }}
+      >
+        <Slider
+          width='100%'
+          minValue={0.5}
+          maxValue={3}
+          step={0.5}
+          value={Number(iconSettings.props.weight)}
+          onChange={(val) =>
+            setIconSettings({ type: "update-border-width", payload: val })
+          }
+        />
+      </Block>
     </CPRow>
   )
 }
@@ -199,7 +257,6 @@ const IconCornerChanger = ({
       </CPButton>
 
       <CPMenu
-        width='6.3rem'
         onAction={(key) =>
           setIconSettings({
             type: "update-icon-corner",
@@ -232,23 +289,31 @@ const IconColorChanger = ({
           border: "1px solid var(--cp-border)",
           borderRadius: "8px",
         }}
+        height='100%'
         variant='outline'
         margin='0'
         padding='0'
       >
-        <CPRow height='100%' padding='10px' alignItems='center' gap='8px'>
+        <CPRow height='100%' padding='8px' alignItems='center' gap='8px'>
           <CPRow
-            width='24px'
-            height='24px'
+            width={["24px", "24px", "61px"]}
+            height={"24px"}
             styles={{ backgroundColor: iconSettings.props.color }}
           />
 
-          <CPText>{iconSettings.props.color}</CPText>
+          <CPText
+            styles={{
+              display: ["block", "block", "none"],
+            }}
+          >
+            {iconSettings.props.color}
+          </CPText>
         </CPRow>
       </CPButton>
 
       <CPMenu
         width='6.3rem'
+        id='color-menu-item'
         onAction={(key) =>
           setIconSettings({
             type: "update-variant-filter",
@@ -278,7 +343,6 @@ const IconSettingsReset = ({
   return (
     <CPRow height='100%'>
       <CPButton
-        height='100%'
         variant='outline'
         icon={<ArrowClockwise />}
         onClick={() =>
@@ -301,9 +365,8 @@ const WebpageThemeChanger = () => {
   }, [currentTheme])
 
   return (
-    <CPRow height='100%'>
+    <CPRow>
       <CPButton
-        height='100%'
         variant='outline'
         icon={getThemeIcon(currentTheme)}
         onClick={handleChangeTheme}
@@ -312,7 +375,12 @@ const WebpageThemeChanger = () => {
   )
 }
 
-const IconControls = ({ styles }: { styles?: Styles }) => {
+const IconControls = forwardRef<
+  HTMLElement,
+  {
+    styles?: Styles
+  }
+>(function _IconControls({ styles }, ref) {
   const [iconSettings, setIconSettings] = useIconSettings()
 
   const commonProps: CommonControlProps = {
@@ -330,39 +398,39 @@ const IconControls = ({ styles }: { styles?: Styles }) => {
 
   return (
     <CPRow
-      zIndex={1}
-      gap='0.625rem'
-      width='100%'
+      ref={ref}
       alignItems='center'
-      flow={["row nowrap", "row nowrap", "column nowrap"]}
       styles={{
-        position: "sticky",
-        padding: "20px auto",
-        top: 0,
         backgroundColor: "var(--cp-surface)",
+        minHeight: "84px",
         ...styles,
       }}
     >
-      <CPRow {...props}>
-        <VariantSelectorMenu {...commonProps} />
-        <IconSearch {...commonProps} />
-      </CPRow>
+      <CPRow
+        zIndex={1}
+        gap='0.625rem'
+        width='100%'
+        alignItems='stretch'
+        flow={["row nowrap", "row wrap", "column nowrap"]}
+      >
+        <CPRow {...props}>
+          <VariantSelectorMenu {...commonProps} />
+          <IconSearch {...commonProps} />
+        </CPRow>
 
-      <CPRow {...props}>
-        <IconSizeChanger {...commonProps} />
-
-        <IconBorderChanger {...commonProps} />
-      </CPRow>
-      <CPRow {...props}>
-        <IconCornerChanger {...commonProps} />
-
-        <IconColorChanger {...commonProps} />
-        <IconSettingsReset {...commonProps} />
-
-        <WebpageThemeChanger />
+        <CPRow {...props}>
+          <IconSizeChanger {...commonProps} />
+          <IconBorderChanger {...commonProps} />
+        </CPRow>
+        <CPRow {...props}>
+          <IconCornerChanger {...commonProps} />
+          <IconColorChanger {...commonProps} />
+          <IconSettingsReset {...commonProps} />
+          <WebpageThemeChanger />
+        </CPRow>
       </CPRow>
     </CPRow>
   )
-}
+})
 
 export default IconControls
