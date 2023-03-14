@@ -5,12 +5,9 @@
     "esModuleInterop": true,
     "allowSyntheticDefaultImports": true,
     "module": "CommonJS",
-    "outDir": "./dist"
+    "outDir": "./dist",
+    "resolveJsonModule": true
   },
   "include": ["."],
-  "exclude": [
-    "dist",
-    "node_modules",
-    "**/*.spec.ts",
-  ]
+  "exclude": ["dist", "node_modules", "**/*.spec.ts"]
 }

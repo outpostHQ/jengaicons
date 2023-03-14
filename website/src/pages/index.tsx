@@ -1,30 +1,36 @@
+import Banner from "@/components/Banner"
 import Hero from "@/components/Hero"
 import Main from "@/components/Main"
 import { CPColumn } from "@/components/shared/library"
 import { Block } from "@cube-dev/ui-kit"
 import { Inter } from "@next/font/google"
+import { GetStaticProps } from "next/types"
 import { useEffect } from "react"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export default function Home() {
-  useEffect(() => {
-    document.documentElement.setAttribute("data-theme", "dark")
-  }, [])
+type THomeProps = {
+  totalIcons: string
+}
 
+export default function Home({ totalIcons }: THomeProps) {
   return (
     <CPColumn>
-      <Block>
-        {/* <Block
-          styles={{
-            height: ["100vh", "650px"],
-            // background: "url('/Hero.svg')",
-            // backgroundSize: "100%",
-          }}
-        ></Block> */}
-      </Block>
-      <Hero />
+      <Banner />
+      <Hero totalIcons={totalIcons} />
       <Main />
     </CPColumn>
   )
+}
+
+export const getStaticProps: GetStaticProps<THomeProps> = async () => {
+  const totalIcons = (
+    await import("@/constants/icons").then((icons) => icons.allIconsMetaData)
+  ).length.toLocaleString("en-US")
+
+  return {
+    props: {
+      totalIcons,
+    },
+  }
 }

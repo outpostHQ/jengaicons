@@ -1,44 +1,56 @@
-import { Flex } from "@cube-dev/ui-kit"
-import { Info, InfoFill, JengaIconContext } from "@jengaicons/react"
-import { CPRow } from "./shared/library"
-import IconWrapper from "./IconWrapper"
+import { Styles } from "@cube-dev/ui-kit"
+import { CPRow } from "@/shared/library"
+import IconWrapper from "@/components/IconWrapper"
 import * as JengaIcons from "@jengaicons/react"
-import allIconsData from "../../../optimized/allIconsData.json"
+import { allIconsMetaData } from "@/constants/icons"
 import useIconSettings from "@/hooks/useIconSettings"
-import useFetch from "@/hooks/useFetch"
-import { GET_ICON_LENGTH } from "@/constants/api/paths"
 import { IconMetadata } from "@/types"
-import { GetLengthResponse } from "@/types/api/getLength"
-import { useEffect } from "react"
+import { useEffect, useState } from "react"
+import Fuse from "fuse.js"
 
-const IconGrid = () => {
+const IconSearch = new Fuse(allIconsMetaData, {
+  keys: ["name"],
+})
+
+const fewRegularVariants = allIconsMetaData
+  // .slice(0, 60)
+  .filter((val) => val.variant === "regular")
+
+const IconGrid = ({ styles }: { styles?: Styles }) => {
   const [iconSettings] = useIconSettings()
-  const [loading, data, error] = useFetch<GetLengthResponse>({
-    url: GET_ICON_LENGTH,
-  })
+
+  const [icons, setIcons] = useState(fewRegularVariants)
 
   useEffect(() => {
-    console.log("Loading", loading)
-
-    if (data) console.log("Data", data)
-    if (error) console.log("Error", error)
-  }, [loading])
+    setIcons(() =>
+      allIconsMetaData.filter(
+        (val) => val.variant === iconSettings.filter.variant,
+      ),
+    )
+  }, [iconSettings.filter.variant])
 
   return (
-    <CPRow width='100%' flow='row wrap' justifyContent='space-between'>
-      {allIconsData.map((iconMetaData, idx) => {
-        // @ts-expect-error
-        const ICON = JengaIcons[
-          iconMetaData.safeName
-        ] as () => React.ReactElement
-        return (
-          <IconWrapper
-            key={`${iconMetaData.safeName}${idx}`}
-            ICON={ICON}
-            iconMetadata={iconMetaData as IconMetadata}
-          />
-        )
-      })}
+    <CPRow
+      flow='row nowrap'
+      justifyContent='flex-start'
+      alignItems='flex-start'
+      styles={styles}
+    >
+      <CPRow width='100%' flow='row wrap' justifyContent={"space-around"}>
+        {icons.map((iconMetaData, idx) => {
+          // @ts-expect-error
+          const ICON = JengaIcons[
+            iconMetaData.safeName
+          ] as () => React.ReactElement
+          return (
+            <IconWrapper
+              key={`${iconMetaData.safeName}${idx}`}
+              ICON={ICON}
+              iconMetadata={iconMetaData as IconMetadata}
+            />
+          )
+        })}
+      </CPRow>
     </CPRow>
   )
 }

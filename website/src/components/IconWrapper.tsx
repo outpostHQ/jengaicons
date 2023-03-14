@@ -1,7 +1,8 @@
-import { JSXElementConstructor, ReactNode } from "react"
-import { CPButton, CPRow, CPText } from "./shared/library"
-import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
+import { JSXElementConstructor, ReactNode, useCallback } from "react"
+import { CPButton, CPRow, CPText } from "@/shared/library"
+import { IconMetadata } from "@/types/icon"
 import useIconSettings from "@/hooks/useIconSettings"
+import { useIconInfoDrawer } from "@/hooks/useIconInfoDrawer"
 
 const IconWrapper = ({
   ICON,
@@ -11,13 +12,16 @@ const IconWrapper = ({
   iconMetadata: IconMetadata
 }) => {
   const [iconSettings] = useIconSettings()
-  const { filter } = iconSettings
 
-  if (filter.variant !== iconMetadata.variant) return null
-  if (filter.search && !iconMetadata.name.includes(filter.search)) return null
+  const [, { selectIcon, openDrawer }] = useIconInfoDrawer()
+
+  const handleIconClick = useCallback(() => {
+    selectIcon(iconMetadata.safeName)
+    openDrawer()
+  }, [])
 
   return (
-    <CPButton variant='clear' padding='0'>
+    <CPButton variant='clear' padding='0' onClick={handleIconClick}>
       <CPRow
         padding='1.25rem'
         radius='2r'
@@ -27,10 +31,11 @@ const IconWrapper = ({
         gap='0.625rem'
         width='10rem'
         height='10rem'
+        whiteSpace='pre-line'
       >
         {/* @ts-expect-error */}
         {<ICON {...iconSettings.props} />}
-        <CPText className='truncate'>{iconMetadata.name}</CPText>
+        <CPText>{iconMetadata.name}</CPText>
       </CPRow>
     </CPButton>
   )

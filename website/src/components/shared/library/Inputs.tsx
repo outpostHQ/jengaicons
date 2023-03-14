@@ -19,7 +19,7 @@ import {
 } from "@cube-dev/ui-kit"
 import { CubeFieldProps } from "@cube-dev/ui-kit/types/components/forms/Form/Field"
 
-import { useTheme } from "./hooks/useTheme"
+import useTheme from "@/hooks/useTheme"
 import {
   CPNumberInputPropsType,
   CPSearchInputPropsType,
@@ -38,7 +38,7 @@ const CPTextInput = forwardRef(function CPTextInput(
   }: CPTextInputPropsType,
   ref: Ref<HTMLInputElement>,
 ) {
-  const theme = useTheme()
+  const [theme] = useTheme()
 
   return (
     <TextInput
@@ -83,7 +83,7 @@ const CPPasswordInput = forwardRef(function CPPasswordInput(
   }: CPTextInputPropsType,
   ref: Ref<HTMLInputElement>,
 ) {
-  const theme = useTheme()
+  const [theme] = useTheme()
 
   return (
     <PasswordInput
@@ -135,7 +135,7 @@ const CPNumberInput = forwardRef(function CPNumberInput(
   }: CPNumberInputPropsType,
   ref: Ref<HTMLInputElement>,
 ) {
-  const theme = useTheme()
+  const [theme] = useTheme()
 
   return (
     <NumberInput
@@ -176,7 +176,7 @@ const CPSearchInput = forwardRef(function CPTextInput(
   }: CPSearchInputPropsType,
   ref: Ref<HTMLInputElement>,
 ) {
-  const theme = useTheme()
+  const [theme] = useTheme()
 
   return (
     <SearchInput
@@ -205,7 +205,7 @@ const CPSearchInput = forwardRef(function CPTextInput(
           "is-focused": "none",
         },
         border: {
-          "": `1px solid ${theme === "dark" ? "#323034" : "#E5E1E6"}`,
+          "": `1px solid ${theme === "dark" ? "#323034" : "var(--cp-border)"}`,
           "is-focused": "0px solid red",
         },
         fill: "var(--cp-surface)",
@@ -220,7 +220,7 @@ const CPTextArea = forwardRef(function CPTextArea(
   { styles, labelStyles, wrapperStyles, ...otherProps }: CPTextAreaPropsType,
   ref: Ref<HTMLInputElement>,
 ) {
-  const theme = useTheme()
+  const [theme] = useTheme()
   return (
     <TextArea
       ref={ref}
@@ -259,7 +259,7 @@ function CPSelect({
   size = "normal",
   ...otherProps
 }: CPSelectPropsType) {
-  const theme = useTheme()
+  const [theme] = useTheme()
   return (
     <Select
       inputStyles={{
@@ -320,7 +320,7 @@ function CPSelect({
 
 function CPCheckbox(props: CubeCheckboxProps) {
   let { styles, ...otherProps } = props
-  const theme = useTheme()
+  const [theme] = useTheme()
 
   return (
     <Checkbox
@@ -407,7 +407,7 @@ function CPField<T extends FieldTypes>(props: CubeFieldProps<T>) {
 }
 
 function CPMenu<T>({ children, styles, ...otherProps }: CubeMenuProps<T>) {
-  const theme = useTheme()
+  const [theme] = useTheme()
   return (
     <Menu
       radius='2r'
@@ -422,6 +422,22 @@ function CPMenu<T>({ children, styles, ...otherProps }: CubeMenuProps<T>) {
     >
       {children}
     </Menu>
+  )
+}
+
+export const CPColorPicker = ({
+  color,
+  onChange,
+}: {
+  color?: string
+  onChange: (color: string) => void
+}) => {
+  return (
+    <input
+      type={"color"}
+      value={color}
+      onChange={(e) => onChange(e.target.value)}
+    />
   )
 }
 

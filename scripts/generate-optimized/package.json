@@ -19,6 +19,7 @@
   },
   "dependencies": {
     "@svgr/core": "^6.5.1",
-    "fp-ts": "^2.13.1"
+    "fp-ts": "^2.13.1",
+    "zip-a-folder": "1.1.5"
   }
 }

@@ -2,6 +2,7 @@ import * as svgson from "svgson"
 import prettier from "prettier"
 import { SVGProps } from "react"
 import { TVariants } from "./types"
+import prettierConfig from "../../.prettierrc.json"
 
 type SVGProp = keyof SVGProps<SVGSVGElement>
 
@@ -29,7 +30,7 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
 
             // Replace StrokeWidth for weight prop
             case "strokeWidth":
-              if (data.variant === "Regular")
+              if (data.variant === "regular")
                 _attrVal = `{weight || weightCtx || "${data.defaultWeight}"}`
               else _attrVal = `"${data.defaultWeight}"`
               break
@@ -56,11 +57,11 @@ const getRegularComponent = (
     import type { JengaIconRegularProps } from '../../src/base'
 
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconRegularProps>(
-      
+
             ( props, ref )=>{
               const { size, color, alt, children, mirrored, weight, style } = props;
 
-                          
+
               const {
                 alt: altCtx,
                 children: childrenCtx,
@@ -72,24 +73,24 @@ const getRegularComponent = (
               } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
 
-              return  <svg 
+              return  <svg
                        width={size || sizeCtx || ${defaultSize}}
                        height={size || sizeCtx || ${defaultSize}}
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        strokeWidth={weight || weightCtx || ${defaultWeight}}
-                       ref={ref} 
+                       ref={ref}
 
                        style={{
                         ...styleCtx,
                         ...style,
                        }}
 
-                       ${genAttrString(svgAST.attributes)} 
+                       ${genAttrString(svgAST.attributes)}
                         >
                             {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
-   
+
                             ${genSVG(svgAST.children, transformData)}
-                            
+
                             {children || childrenCtx}
                     </svg>
             }
@@ -114,11 +115,11 @@ const getVariantComponent = (
     import type { JengaIconProps } from '../../src/base'
 
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconProps>(
-      
+
             ( props, ref )=>{
               const { size, color, alt, children, mirrored, style } = props;
 
-                          
+
               const {
                 alt: altCtx,
                 children: childrenCtx,
@@ -129,23 +130,23 @@ const getVariantComponent = (
               } = useContext(JengaIconContext)
 
 
-              return  <svg 
+              return  <svg
                        width={size || sizeCtx || ${defaultSize}}
                        height={size || sizeCtx || ${defaultSize}}
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
-                       ref={ref} 
+                       ref={ref}
 
                        style={{
                         ...styleCtx,
                         ...style,
                        }}
 
-                       ${genAttrString(svgAST.attributes)} 
+                       ${genAttrString(svgAST.attributes)}
                         >
                             {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
-   
+
                             ${genSVG(svgAST.children, transformData)}
-                            
+
                             {children || childrenCtx}
                     </svg>
             }
@@ -159,7 +160,7 @@ const getVariantComponent = (
 
 const getComponent = (transformData: TransformData, svgAST: svgson.INode) => {
   switch (transformData.variant) {
-    case "Regular":
+    case "regular":
       return getRegularComponent(transformData, svgAST)
   }
 
@@ -186,9 +187,9 @@ const transform = (transformData: TransformData) => {
   svgAST.attributes.viewBox = `0 0 ${defaultSize} ${defaultSize}`
 
   const ComponentFileContent = getComponent(transformData, svgAST)
-
+  // @ts-expect-error
   return prettier.format(ComponentFileContent, {
-    semi: true,
+    ...prettierConfig,
     parser: "babel-ts",
   })
 }

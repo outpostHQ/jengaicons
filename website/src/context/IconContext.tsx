@@ -1,12 +1,19 @@
+import useTheme from "@/hooks/useTheme"
+import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps, JengaIconRegularProps } from "@jengaicons/react"
-import { createContext, ReactNode, useReducer } from "react"
-import { IconMetadata } from "../../../scripts/generate-jengaicons-react/types"
+import { createContext, ReactNode, useEffect, useReducer } from "react"
+import { IconMetadata } from "@/types/icon"
+import { CornerType } from "@/types/components/IconControl"
 
 interface IconSettingsState {
   props: JengaIconProps & JengaIconRegularProps
   filter: {
     search: string
     variant: IconMetadata["variant"]
+  }
+  /** This prop is used to indicate certain features or functionality is not added */
+  notAdded: {
+    corner: CornerType
   }
 }
 
@@ -35,6 +42,10 @@ type IconSettingsAction =
       type: "update-icon-props"
       payload: Partial<JengaIconProps | JengaIconRegularProps>
     }
+  | {
+      type: "update-icon-corner"
+      payload: CornerType
+    }
 
 type TSettingsReducer = (
   state: IconSettingsState,
@@ -47,16 +58,21 @@ export const defaultIconProps: JengaIconProps | JengaIconRegularProps = {
   weight: 2,
 }
 
-export const IconContext = createContext<{
+export type TPreviewIconContext = {
   iconSettings: IconSettingsState
   setIconSettings: (_: IconSettingsAction) => void
-}>({
+}
+
+export const IconContext = createContext<TPreviewIconContext>({
   iconSettings: {
     filter: {
       search: "",
       variant: "regular",
     },
     props: defaultIconProps,
+    notAdded: {
+      corner: "Miter corner",
+    },
   },
   setIconSettings: () => console.log("Settings will not be updated"),
 })
@@ -77,6 +93,8 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         return { ...state, filter: { ...state.filter, variant: payload } }
       case "update-icon-props":
         return { ...state, props: { ...state.props, ...payload } }
+      case "update-icon-corner":
+        return { ...state, notAdded: { ...state.notAdded, corner: payload } }
       default:
         console.warn("Unknown action:", type)
         return state
@@ -94,6 +112,9 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         variant: "regular",
       },
       props: defaultIconProps,
+      notAdded: {
+        corner: "Miter corner",
+      },
     },
     () => ({
       filter: {
@@ -101,8 +122,22 @@ export const IconContextProvider = ({ children }: { children: ReactNode }) => {
         variant: "regular",
       },
       props: defaultIconProps,
+      notAdded: {
+        corner: "Miter corner",
+      },
     }),
   )
+
+  const [currentTheme, changeTheme] = useTheme()
+
+  useEffect(() => {
+    const color = currentTheme === "light" ? "#000000" : "#FFFFFF"
+    console.log(`currentTheme ${currentTheme}`)
+    setSettings({
+      type: "update-color",
+      payload: color,
+    })
+  }, [currentTheme, changeTheme])
 
   return (
     <IconContext.Provider
