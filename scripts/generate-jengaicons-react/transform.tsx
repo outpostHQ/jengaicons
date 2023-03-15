@@ -24,9 +24,10 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
             case "stroke":
             case "fill":
               // check if the value is a hex color
-              if (/^#.+/.test(attrVal))
-                _attrVal = `{color || colorCtx || "${data.defaultColor}"}`
-              break
+              // if (/^#.+/.test(attrVal)) _attrVal = `{color || colorCtx}`
+
+              // remove fill prop, already implemented in root <svg> of that icon
+              return ""
 
             // Replace StrokeWidth for weight prop
             case "strokeWidth":
@@ -47,7 +48,8 @@ const getRegularComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
 ) => {
-  const { componentName, defaultSize, defaultWeight } = transformData
+  const { componentName, defaultSize, defaultWeight, defaultColor } =
+    transformData
 
   return `
     import * as React from 'react'
@@ -65,10 +67,10 @@ const getRegularComponent = (
               const {
                 alt: altCtx,
                 children: childrenCtx,
-                color: colorCtx,
+                color: colorCtx = "${defaultColor}",
                 mirrored: mirroredCtx,
                 size: sizeCtx,
-                weight: weightCtx,
+                weight: weightCtx = "${defaultWeight}",
                 style: styleCtx
               } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
@@ -77,7 +79,7 @@ const getRegularComponent = (
                        width={size || sizeCtx || ${defaultSize}}
                        height={size || sizeCtx || ${defaultSize}}
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
-                       strokeWidth={weight || weightCtx || ${defaultWeight}}
+                       strokeWidth={weight || weightCtx}
                        ref={ref}
 
                        style={{
@@ -106,7 +108,7 @@ const getVariantComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
 ) => {
-  const { componentName, defaultSize } = transformData
+  const { componentName, defaultSize, defaultColor } = transformData
 
   return `
     import * as React from 'react'
@@ -123,16 +125,16 @@ const getVariantComponent = (
               const {
                 alt: altCtx,
                 children: childrenCtx,
-                color: colorCtx,
+                color: colorCtx = "${defaultColor}",
                 mirrored: mirroredCtx,
-                size: sizeCtx,
+                size: sizeCtx = ${defaultSize},
                 style: styleCtx
               } = useContext(JengaIconContext)
 
 
               return  <svg
-                       width={size || sizeCtx || ${defaultSize}}
-                       height={size || sizeCtx || ${defaultSize}}
+                       width={size || sizeCtx }
+                       height={size || sizeCtx}
                        transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        ref={ref}
 
