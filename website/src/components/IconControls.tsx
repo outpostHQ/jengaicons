@@ -1,4 +1,10 @@
-import React, { forwardRef, useCallback, useEffect, useState } from "react"
+import React, {
+  forwardRef,
+  memo,
+  useCallback,
+  useEffect,
+  useState,
+} from "react"
 import { defaultIconProps } from "@/context/IconContext"
 import useIconSettings from "@/hooks/useIconSettings"
 import { useScrollPosition } from "@/hooks/useScrollPosition"
@@ -23,7 +29,7 @@ import {
   WaveTriangle,
   WaveTriangleFill,
 } from "@jengaicons/react"
-import { IconMetadata } from "@/types/icon"
+import { IconMetadata, TVariants } from "@/types/icon"
 import {
   CPButton,
   CPColorPicker,
@@ -32,7 +38,21 @@ import {
   CPSearchInput,
   CPText,
 } from "@/shared/library"
-import { CommonControlProps, CornerType } from "@/types/components/IconControl"
+import {
+  CommonControlProps,
+  IconCornerType,
+} from "@/types/components/IconControl"
+import { ColorPicker } from "./ColorPicker"
+import { useAtom, useAtomValue, useSetAtom } from "jotai"
+import {
+  IconColorAtom,
+  IconCornerAtom,
+  IconSearchAtom,
+  IconSizeAtom,
+  IconVariantAtom,
+  IconWeightAtom,
+} from "@/state/atoms"
+import { useRecoilValue } from "recoil"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {
@@ -45,10 +65,11 @@ const getThemeIcon = (theme: AvailableThemes) => {
 
 const width = "100%"
 
-const VariantSelectorMenu = ({
-  setIconSettings,
-  iconSettings,
-}: CommonControlProps) => {
+const AvailableIconVariants: TVariants[] = ["fill", "regular"]
+
+const VariantSelectorMenu = () => {
+  const [iconVariant, setIconVariant] = useAtom(IconVariantAtom)
+
   return (
     <MenuTrigger>
       <CPButton
@@ -57,44 +78,33 @@ const VariantSelectorMenu = ({
         rightIcon={<CaretDownFill />}
         variant='outline'
       >
-        {iconSettings.filter.variant === "regular" && "Regular"}
-        {iconSettings.filter.variant === "fill" && "Filled"}
+        <CPText transform='capitalize'>{iconVariant}</CPText>
       </CPButton>
-      <CPMenu
-        width='6.3rem'
-        onAction={(key) =>
-          setIconSettings({
-            type: "update-variant-filter",
-            payload: key as IconMetadata["variant"],
-          })
-        }
-      >
-        <Item key='regular'>Regular</Item>
-        <Item key='fill'>Filled</Item>
+      <CPMenu width='6.3rem' onAction={setIconVariant as any}>
+        {AvailableIconVariants.map((variant) => (
+          <Item key={variant}>
+            <CPText transform='capitalize'>{variant}</CPText>
+          </Item>
+        ))}
       </CPMenu>
     </MenuTrigger>
   )
 }
 
-const IconSearch = ({ setIconSettings }: CommonControlProps) => {
+const IconSearch = () => {
+  const setIconSearch = useSetAtom(IconSearchAtom)
+
   return (
     <CPSearchInput
       width={width}
       placeholder='Search...'
-      onChange={(val) =>
-        setIconSettings({
-          type: "update-search-filter",
-          payload: val,
-        })
-      }
+      onChange={setIconSearch}
     />
   )
 }
 
-const IconSizeChanger = ({
-  iconSettings,
-  setIconSettings,
-}: CommonControlProps) => {
+const IconSizeChanger = () => {
+  const [iconSize, setIconSize] = useAtom(IconSizeAtom)
   return (
     <CPRow
       padding='10px'
@@ -121,17 +131,12 @@ const IconSizeChanger = ({
           minValue={16}
           maxValue={96}
           step={4}
-          value={iconSettings.props.size as number}
-          onChange={(val) =>
-            setIconSettings({
-              type: "update-size",
-              payload: val,
-            })
-          }
+          value={iconSize as number}
+          onChange={setIconSize}
         />
       </Block>
 
-      <CPText width='30px'>{iconSettings.props.size}px</CPText>
+      <CPText width='30px'>{iconSize}px</CPText>
       {/* FOR MOBILE */}
       <Block
         width='100%'
@@ -144,23 +149,17 @@ const IconSizeChanger = ({
           minValue={16}
           maxValue={96}
           step={4}
-          value={iconSettings.props.size as number}
-          onChange={(val) =>
-            setIconSettings({
-              type: "update-size",
-              payload: val,
-            })
-          }
+          value={iconSize as number}
+          onChange={setIconSize}
         />
       </Block>
     </CPRow>
   )
 }
 
-const IconBorderChanger = ({
-  iconSettings,
-  setIconSettings,
-}: CommonControlProps) => {
+const IconBorderChanger = () => {
+  const [iconWeight, setIconWeight] = useAtom(IconWeightAtom)
+
   return (
     <CPRow
       padding='10px'
@@ -188,13 +187,11 @@ const IconBorderChanger = ({
           minValue={0.5}
           maxValue={3}
           step={0.5}
-          value={Number(iconSettings.props.weight)}
-          onChange={(val) =>
-            setIconSettings({ type: "update-border-width", payload: val })
-          }
+          value={iconWeight}
+          onChange={setIconWeight}
         />
       </Block>
-      <CPText>{iconSettings.props.weight}px</CPText>
+      <CPText>{iconWeight}px</CPText>
       {/* FOR MOBILE */}
       <Block
         width='100%'
@@ -207,17 +204,15 @@ const IconBorderChanger = ({
           minValue={0.5}
           maxValue={3}
           step={0.5}
-          value={Number(iconSettings.props.weight)}
-          onChange={(val) =>
-            setIconSettings({ type: "update-border-width", payload: val })
-          }
+          value={iconWeight}
+          onChange={setIconWeight}
         />
       </Block>
     </CPRow>
   )
 }
 
-const getCornerIcon = (corner: CornerType) => {
+const getCornerIcon = (corner: IconCornerType) => {
   switch (corner) {
     case "Miter corner":
       return <WaveTriangleFill />
@@ -228,11 +223,8 @@ const getCornerIcon = (corner: CornerType) => {
   }
 }
 
-const IconCornerChanger = ({
-  iconSettings,
-  setIconSettings,
-}: CommonControlProps) => {
-  const corner = iconSettings.notAdded.corner
+const IconCornerChanger = () => {
+  const [corner, setCorner] = useAtom(IconCornerAtom)
 
   return (
     <MenuTrigger>
@@ -256,14 +248,7 @@ const IconCornerChanger = ({
         </CPText>
       </CPButton>
 
-      <CPMenu
-        onAction={(key) =>
-          setIconSettings({
-            type: "update-icon-corner",
-            payload: key as CornerType,
-          })
-        }
-      >
+      <CPMenu onAction={setCorner as any}>
         <Item key='Miter corner'>
           <CPText>{getCornerIcon("Miter corner")} Miter corner </CPText>
         </Item>
@@ -278,27 +263,40 @@ const IconCornerChanger = ({
   )
 }
 
-const IconColorChanger = ({
-  iconSettings,
-  setIconSettings,
-}: CommonControlProps) => {
+const IconColorChanger = () => {
+  const IconColor = useAtomValue(IconColorAtom)
+
+  const [showPicker, setShowPicker] = useState(false)
+
+  const togglePicker = useCallback(() => {
+    console.log("pressed")
+    setShowPicker((prev) => !prev)
+  }, [])
+
   return (
-    <MenuTrigger>
+    <CPRow
+      styles={{
+        position: "relative",
+      }}
+    >
       <CPButton
         styles={{
           border: "1px solid var(--cp-border)",
           borderRadius: "8px",
         }}
         height='100%'
+        width={["120px", "120px", "auto"]}
         variant='outline'
         margin='0'
         padding='0'
+        onPress={togglePicker}
       >
         <CPRow height='100%' padding='8px' alignItems='center' gap='8px'>
-          <CPRow
-            width={["24px", "24px", "61px"]}
-            height={"24px"}
-            styles={{ backgroundColor: iconSettings.props.color }}
+          <canvas
+            id='icon-controls-color-picker'
+            style={{
+              backgroundColor: IconColor,
+            }}
           />
 
           <CPText
@@ -306,34 +304,21 @@ const IconColorChanger = ({
               display: ["block", "block", "none"],
             }}
           >
-            {iconSettings.props.color}
+            {IconColor}
           </CPText>
         </CPRow>
       </CPButton>
-
-      <CPMenu
-        width='6.3rem'
-        id='color-menu-item'
-        onAction={(key) =>
-          setIconSettings({
-            type: "update-variant-filter",
-            payload: key as IconMetadata["variant"],
-          })
-        }
-      >
-        <Item>
-          <CPColorPicker
-            color={iconSettings.props.color}
-            onChange={(color) =>
-              setIconSettings({
-                type: "update-color",
-                payload: color,
-              })
-            }
-          />
-        </Item>
-      </CPMenu>
-    </MenuTrigger>
+      {showPicker ? (
+        <CPRow
+          styles={{
+            position: "absolute",
+            marginTop: "45px",
+          }}
+        >
+          <ColorPicker zIndex={99999999999999999999999999} />
+        </CPRow>
+      ) : null}
+    </CPRow>
   )
 }
 
@@ -356,13 +341,13 @@ const IconSettingsReset = ({
   )
 }
 
-const WebpageThemeChanger = () => {
+const WebpageThemeChanger = memo(function _() {
   const [currentTheme, changeTheme] = useTheme()
 
   const handleChangeTheme = useCallback(() => {
     if (currentTheme === "light") changeTheme("dark")
     if (currentTheme === "dark") changeTheme("light")
-  }, [currentTheme])
+  }, [changeTheme, currentTheme])
 
   return (
     <CPRow>
@@ -373,7 +358,7 @@ const WebpageThemeChanger = () => {
       />
     </CPRow>
   )
-}
+})
 
 const IconControls = forwardRef<
   HTMLElement,
@@ -414,18 +399,18 @@ const IconControls = forwardRef<
         flow={["row nowrap", "row wrap", "column nowrap"]}
       >
         <CPRow {...props}>
-          <VariantSelectorMenu {...commonProps} />
-          <IconSearch {...commonProps} />
+          <VariantSelectorMenu />
+          <IconSearch />
         </CPRow>
 
         <CPRow {...props}>
-          <IconSizeChanger {...commonProps} />
-          <IconBorderChanger {...commonProps} />
+          <IconSizeChanger />
+          <IconBorderChanger />
         </CPRow>
         <CPRow {...props}>
-          <IconCornerChanger {...commonProps} />
-          <IconColorChanger {...commonProps} />
-          <IconSettingsReset {...commonProps} />
+          <IconCornerChanger />
+          <IconColorChanger />
+          {/* <IconSettingsReset {...commonProps} /> */}
           <WebpageThemeChanger />
         </CPRow>
       </CPRow>

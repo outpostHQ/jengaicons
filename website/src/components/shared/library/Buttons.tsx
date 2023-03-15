@@ -1,4 +1,4 @@
-import { useEffect } from "react"
+import { useEffect, useMemo } from "react"
 import { Button, CubeButtonProps, Flex } from "@cube-dev/ui-kit"
 import { ArrowSquareOut } from "@jengaicons/react"
 // import { animate, stagger } from 'motion';
@@ -22,107 +22,110 @@ export function CPButton({
 }: CubeButtonProps & { variant?: keyof typeof CPButtonVariantProps } & {
   openInNew?: boolean
 }) {
-  const CPButtonVariantProps = {
-    primary: {
-      type: "primary",
-      color: "var(--cp-gray-100)",
-      fill: {
-        "": "var(--cp-surface-primary)",
-        hovered: "var(--cp-surface-primary-hovered)",
-        disabled: "var(--cp-surface-primary-pressed)",
-      },
-      opacity: {
-        "": "1",
-        disabled: "0.5",
-      },
-      cursor: {
-        "": "pointer",
-        disabled: "not-allowed",
-      },
-      ...style,
-      ...styles,
-    },
-    danger: {
-      type: "danger",
-      theme: "danger",
-      fill: {
-        "": "var(--cp-surface-critical)",
-        hovered: "var(--cp-surface-critical-hovered)",
-        disabled: "var(--cp-surface-primary-subdued)",
-      },
-
-      color: "var(--cp-gray-100)",
-      ...style,
-      ...styles,
-    },
-    clear: {
-      color: "var(--cp-text)",
-      type: "clear",
-      fill: {
-        "": "transparent",
-        hovered: "var(--cp-surface-hovered)",
-      },
-      styles: {
-        border: "1px solid var(--cp-border)",
-        borderColor: {
-          "": "transparent",
-          hovered: "var(--cp-border)",
-          pressed: "var(--cp-border)",
+  const CPButtonVariantProps = useMemo(
+    () => ({
+      primary: {
+        type: "primary",
+        color: "var(--cp-gray-100)",
+        fill: {
+          "": "var(--cp-surface-primary)",
+          hovered: "var(--cp-surface-primary-hovered)",
+          disabled: "var(--cp-surface-primary-pressed)",
         },
-        ...styles,
-      },
-      style: {
-        ...style,
-      },
-    },
-    invisible: {
-      color: "var(--cp-text)",
-      type: "clear",
-      padding: "0",
-      fill: {
-        "": "transparent",
-      },
-      outline: "none",
-      border: "none",
-      ...style,
-      ...styles,
-    },
-    link: {
-      padding: "0 0.5rem",
-      type: "link",
-      outline: "0",
-      ...style,
-      ...styles,
-    },
-    outline: {
-      type: "outline",
-      color: "var(--cp-text)",
-      padding: "0.5rem 1rem",
-      border: "1px solid var(--cp-text)",
-      style: { ...style },
-      styles: {
-        ...sharedButtonStyles,
         opacity: {
           "": "1",
           disabled: "0.5",
-        },
-        borderColor: {
-          "": "var(--cp-border)",
-          "is-hovered": "var(--cp-border)",
-          "is-pressed": "var(--cp-border)",
-        },
-        fill: {
-          "": "var(--cp-surface)",
-          hovered: "var(--cp-surface-hovered)",
         },
         cursor: {
           "": "pointer",
           disabled: "not-allowed",
         },
+        ...style,
         ...styles,
       },
-    },
-  }
+      danger: {
+        type: "danger",
+        theme: "danger",
+        fill: {
+          "": "var(--cp-surface-critical)",
+          hovered: "var(--cp-surface-critical-hovered)",
+          disabled: "var(--cp-surface-primary-subdued)",
+        },
+
+        color: "var(--cp-gray-100)",
+        ...style,
+        ...styles,
+      },
+      clear: {
+        color: "var(--cp-text)",
+        type: "clear",
+        fill: {
+          "": "transparent",
+          hovered: "var(--cp-surface-hovered)",
+        },
+        styles: {
+          border: "1px solid var(--cp-border)",
+          borderColor: {
+            "": "transparent",
+            hovered: "var(--cp-border)",
+            pressed: "var(--cp-border)",
+          },
+          ...styles,
+        },
+        style: {
+          ...style,
+        },
+      },
+      invisible: {
+        color: "var(--cp-text)",
+        type: "clear",
+        padding: "0",
+        fill: {
+          "": "transparent",
+        },
+        outline: "none",
+        border: "none",
+        ...style,
+        ...styles,
+      },
+      link: {
+        padding: "0 0.5rem",
+        type: "link",
+        outline: "0",
+        ...style,
+        ...styles,
+      },
+      outline: {
+        type: "outline",
+        color: "var(--cp-text)",
+        padding: "0.5rem 1rem",
+        border: "1px solid var(--cp-text)",
+        style: { ...style },
+        styles: {
+          ...sharedButtonStyles,
+          opacity: {
+            "": "1",
+            disabled: "0.5",
+          },
+          borderColor: {
+            "": "var(--cp-border)",
+            "is-hovered": "var(--cp-border)",
+            "is-pressed": "var(--cp-border)",
+          },
+          fill: {
+            "": "var(--cp-surface)",
+            hovered: "var(--cp-surface-hovered)",
+          },
+          cursor: {
+            "": "pointer",
+            disabled: "not-allowed",
+          },
+          ...styles,
+        },
+      },
+    }),
+    [style, styles],
+  )
 
   return (
     <Button

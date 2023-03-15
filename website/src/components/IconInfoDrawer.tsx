@@ -20,8 +20,19 @@ import { GET_ICON_SVG } from "@/constants/api/paths"
 import fileDownload from "js-file-download"
 import { getSVGIconURL } from "@/utils/icons"
 import { copyToClipboard } from "@/utils"
+import { useAtom, useAtomValue } from "jotai"
+import {
+  IconColorAtom,
+  IconSizeAtom,
+  IconVariantAtom,
+  IconWeightAtom,
+  IsDrawerOpenAtom,
+  selectedIconAtom,
+} from "@/state/atoms"
 
-const makeReactString = (IconProps: JengaIconProps) => {
+const makeReactString = (
+  IconProps: JengaIconProps | JengaIcons.JengaIconRegularProps,
+) => {
   return Object.entries(IconProps).reduce((prev, [propName, propVal]) => {
     let _propVal = `"${propVal}"`
     if (typeof propVal !== "string") _propVal = `{${propVal}}`
@@ -61,16 +72,16 @@ const IconHeader = ({
   )
 }
 
-const IconPreview = ({
-  iconProps,
-  selectedIcon,
-}: {
-  iconProps: JengaIconProps
-  selectedIcon: string
-}) => {
+const IconPreview = () => {
+  const selectedIcon = useAtomValue(selectedIconAtom)
+  const weight = useAtomValue(IconWeightAtom)
+  const color = useAtomValue(IconColorAtom)
+
   // TODO: added proper typings
   const SELECTED_ICON = // @ts-expect-error
-    JengaIcons[selectedIcon] as ComponentType<JengaIconProps>
+    JengaIcons[selectedIcon] as ComponentType<
+      JengaIconProps | JengaIcons.JengaIconRegularProps
+    >
 
   return (
     <CPRow justifyContent='center' alignItems='center'>
@@ -85,26 +96,26 @@ const IconPreview = ({
         }}
         style={{ border: "1px solid var(--cp-border)" }}
       >
-        <SELECTED_ICON {...iconProps} size='13.75rem' />
+        <SELECTED_ICON color={color} weight={weight} size='13.75rem' />
       </CPRow>
     </CPRow>
   )
 }
 
-const CodeBlock = ({
-  iconProps,
-  isDrawerOpen,
-  selectedIcon,
-}: {
-  isDrawerOpen: boolean
-  selectedIcon: string
-  iconProps: JengaIconProps
-}) => {
+const CodeBlock = () => {
+  const selectedIcon = useAtomValue(selectedIconAtom)
+  const weight = useAtomValue(IconWeightAtom)
+  const color = useAtomValue(IconColorAtom)
+  const size = useAtomValue(IconSizeAtom)
+
   const ReactString = useMemo(() => {
-    if (!isDrawerOpen || !selectedIcon) return ""
-    return makeReactString(iconProps)
+    return makeReactString({
+      color,
+      weight,
+      size,
+    })
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [selectedIcon, iconProps])
+  }, [])
 
   return (
     <CPColumn>
@@ -118,13 +129,10 @@ const CodeBlock = ({
   )
 }
 
-const IconActions = ({
-  iconSafeName,
-  variant,
-}: {
-  iconSafeName: TIconSafeName
-  variant: TVariants
-}) => {
+const IconActions = () => {
+  const variant = useAtomValue(IconVariantAtom)
+  const iconSafeName = useAtomValue(selectedIconAtom) as string
+
   const { response: SVGResponse, request: requestSVG } =
     useFetch<GetSVGResponseBody>({
       url: getSVGIconURL({
@@ -186,15 +194,18 @@ const IconActions = ({
 }
 
 const IconInfoDrawer = () => {
-  const [{ isOpen, selectedIcon }, { closeDrawer, openDrawer }] =
-    useIconInfoDrawer()
-
-  const [iconSettings] = useIconSettings()
+  const [isOpen, setIsOpen] = useAtom(IsDrawerOpenAtom)
+  const [selectedIcon, setSelectedIcon] = useAtom(selectedIconAtom)
 
   useEffect(() => {
     if (isOpen && !selectedIcon)
       console.warn("Icon Info Drawer is Open without any selectedIcon")
-  }, [isOpen])
+  }, [isOpen, selectedIcon])
+
+  const handleClose = useCallback(() => {
+    setIsOpen(false)
+    setSelectedIcon(null)
+  }, [setIsOpen, setSelectedIcon])
 
   if (!isOpen || !selectedIcon) return null
 
@@ -213,7 +224,7 @@ const IconInfoDrawer = () => {
       overflow='auto'
     >
       <Block>
-        <IconHeader onClose={closeDrawer} iconName={selectedIcon} />
+        <IconHeader onClose={handleClose} iconName={selectedIcon} />
         <CPColumn padding='1.25rem' gap='1.25rem' flex='1'>
           <CPRow>
             <CPButton
@@ -242,21 +253,11 @@ const IconInfoDrawer = () => {
               Preview
             </CPButton>
           </CPRow>
-          <IconPreview
-            iconProps={iconSettings.props}
-            selectedIcon={selectedIcon}
-          />
-          <CodeBlock
-            iconProps={iconSettings.props}
-            isDrawerOpen={isOpen}
-            selectedIcon={selectedIcon}
-          />
+          <IconPreview />
+          <CodeBlock />
         </CPColumn>
       </Block>
-      <IconActions
-        iconSafeName={selectedIcon}
-        variant={iconSettings.filter.variant}
-      />
+      <IconActions />
     </CPRow>
   )
 }
