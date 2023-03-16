@@ -199,7 +199,7 @@ importers:
     specifiers:
       '@cube-dev/ui-kit': ^0.16.4
       '@ianvs/prettier-plugin-sort-imports': ^3.7.1
-      '@jengaicons/react': workspace:*
+      '@jengaicons/react': ^0.5.0
       '@next/font': 13.1.6
       '@react-aria/ssr': ^3.4.1
       '@react-types/shared': ^3.16.0
