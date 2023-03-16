@@ -3,7 +3,7 @@ import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps, JengaIconRegularProps } from "@jengaicons/react"
 import { createContext, ReactNode, useEffect, useReducer } from "react"
 import { IconMetadata } from "@/types/icon"
-import { CornerType } from "@/types/components/IconControl"
+import { IconCornerType } from "@/types/components/IconControl"
 
 interface IconSettingsState {
   props: JengaIconProps & JengaIconRegularProps
@@ -13,7 +13,7 @@ interface IconSettingsState {
   }
   /** This prop is used to indicate certain features or functionality is not added */
   notAdded: {
-    corner: CornerType
+    corner: IconCornerType
   }
 }
 
@@ -44,7 +44,7 @@ type IconSettingsAction =
     }
   | {
       type: "update-icon-corner"
-      payload: CornerType
+      payload: IconCornerType
     }
 
 type TSettingsReducer = (

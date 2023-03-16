@@ -414,7 +414,7 @@ function CPMenu<T>({ children, styles, ...otherProps }: CubeMenuProps<T>) {
       styles={{
         fill: "var(--cp-surface)",
         gap: "0.3rem",
-        border: `1px solid ${theme === "dark" ? "#323034" : "#E5E1E6"}`,
+        border: `1px solid red`,
 
         ...styles,
       }}

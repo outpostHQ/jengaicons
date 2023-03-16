@@ -7,27 +7,27 @@ import useIconSettings from "@/hooks/useIconSettings"
 import { IconMetadata } from "@/types"
 import { useEffect, useState } from "react"
 import Fuse from "fuse.js"
+import { useAtomValue } from "jotai"
+import { IconVariantAtom } from "@/state/atoms"
+import handleViewport from "react-in-viewport"
 
 const IconSearch = new Fuse(allIconsMetaData, {
   keys: ["name"],
 })
 
-const fewRegularVariants = allIconsMetaData
-  // .slice(0, 60)
-  .filter((val) => val.variant === "regular")
+const fewRegularVariants = allIconsMetaData.filter(
+  (val) => val.variant === "regular",
+)
 
 const IconGrid = ({ styles }: { styles?: Styles }) => {
-  const [iconSettings] = useIconSettings()
-
   const [icons, setIcons] = useState(fewRegularVariants)
+  const selectedIconVariant = useAtomValue(IconVariantAtom)
 
-  useEffect(() => {
-    setIcons(() =>
-      allIconsMetaData.filter(
-        (val) => val.variant === iconSettings.filter.variant,
-      ),
-    )
-  }, [iconSettings.filter.variant])
+  // useEffect(() => {
+  //   setIcons(() =>
+  //     allIconsMetaData.filter((val) => val.variant === selectedIconVariant),
+  //   )
+  // }, [selectedIconVariant])
 
   return (
     <CPRow
