@@ -1,5 +1,5 @@
 import { useIconInfoDrawer } from "@/hooks/useIconInfoDrawer"
-import { Block, useToastsApi } from "@cube-dev/ui-kit"
+import { Block, Styles, useToastsApi } from "@cube-dev/ui-kit"
 import { Copy, Download, JengaIconProps, X } from "@jengaicons/react"
 import React, { ComponentType, useCallback, useEffect, useMemo } from "react"
 import {
@@ -29,6 +29,7 @@ import {
   IsDrawerOpenAtom,
   selectedIconAtom,
 } from "@/state/atoms"
+import useTheme from "@/hooks/useTheme"
 
 const makeReactString = (
   IconProps: JengaIconProps | JengaIcons.JengaIconRegularProps,
@@ -72,6 +73,87 @@ const IconHeader = ({
   )
 }
 
+const Line = ({
+  rotateDeg,
+  styles,
+}: {
+  rotateDeg: number
+  styles?: Styles
+}) => (
+  <CPRow
+    width='100%'
+    margin='10px'
+    height={1}
+    styles={{
+      backgroundColor: "white",
+      position: "absolute",
+      border: "1px solid white",
+      transform: `rotate(${rotateDeg}deg)`,
+      ...styles,
+    }}
+  />
+)
+
+const IconBGSVG = ({ styles }: { styles?: Styles }) => {
+  return (
+    <CPRow
+      styles={{
+        position: "absolute",
+        ...styles,
+      }}
+    >
+      <svg
+        width='278'
+        height='278'
+        viewBox='0 0 278 278'
+        fill='none'
+        xmlns='http://www.w3.org/2000/svg'
+      >
+        <path
+          opacity='0.2'
+          d='M1.40625 1.40601L276.594 276.594'
+          stroke='#71717A'
+          stroke-width='2'
+          stroke-linecap='round'
+        />
+        <path
+          opacity='0.2'
+          d='M276.594 1.40601L1.40583 276.594'
+          stroke='#71717A'
+          stroke-width='2'
+          stroke-linecap='round'
+        />
+        <g opacity='0.2'>
+          <path
+            d='M230.666 29H47.333V249H230.666V29Z'
+            stroke='#71717A'
+            stroke-width='2'
+            stroke-miterlimit='10'
+          />
+          <path
+            d='M239.834 38.1666H38.167V239.833H239.834V38.1666Z'
+            stroke='#71717A'
+            stroke-width='2'
+            stroke-miterlimit='10'
+          />
+          <path
+            d='M249 47.3334H29V230.667H249V47.3334Z'
+            stroke='#71717A'
+            stroke-width='2'
+            stroke-miterlimit='10'
+          />
+          <path
+            d='M139 249C199.751 249 249 199.751 249 139C249 78.2487 199.751 29 139 29C78.2487 29 29 78.2487 29 139C29 199.751 78.2487 249 139 249Z'
+            stroke='#71717A'
+            stroke-width='2'
+            stroke-miterlimit='10'
+          />
+        </g>
+      </svg>
+    </CPRow>
+  )
+}
+
 const IconPreview = () => {
   const selectedIcon = useAtomValue(selectedIconAtom)
   const weight = useAtomValue(IconWeightAtom)
@@ -80,24 +162,33 @@ const IconPreview = () => {
   // TODO: added proper typings
   const SELECTED_ICON = // @ts-expect-error
     JengaIcons[selectedIcon] as ComponentType<
-      JengaIconProps | JengaIcons.JengaIconRegularProps
+      (JengaIconProps | JengaIcons.JengaIconRegularProps) & Styles
     >
 
   return (
-    <CPRow justifyContent='center' alignItems='center'>
+    <CPRow
+      justifyContent='center'
+      alignItems='center'
+      width='17.5rem'
+      height='17.5rem'
+      styles={{
+        borderRadius: "8px",
+        boxShadow: "inset 0px 0px 8px 0.5px var(--cp-shadow)",
+        position: "relative",
+        maxWidth: "17.5rem",
+        maxHeight: "17.5rem",
+      }}
+    >
       <CPRow
         justifyContent='center'
         alignItems='center'
-        width='17.5rem'
-        height='17.5rem'
-        styles={{
-          borderRadius: "8px",
-          boxShadow: "inset 0px 0px 8px 0.5px var(--cp-shadow)",
-        }}
         style={{ border: "1px solid var(--cp-border)" }}
       >
-        <SELECTED_ICON color={color} weight={weight} size='13.75rem' />
+        <CPRow justifyItems='center' alignItems='center' zIndex={1}>
+          <SELECTED_ICON color={color} weight={weight} size='13.75rem' />
+        </CPRow>
       </CPRow>
+      <IconBGSVG styles={{ zIndex: 0 }} />
     </CPRow>
   )
 }
@@ -197,6 +288,8 @@ const IconInfoDrawer = () => {
   const [isOpen, setIsOpen] = useAtom(IsDrawerOpenAtom)
   const [selectedIcon, setSelectedIcon] = useAtom(selectedIconAtom)
 
+  const [theme] = useTheme()
+
   useEffect(() => {
     if (isOpen && !selectedIcon)
       console.warn("Icon Info Drawer is Open without any selectedIcon")
@@ -235,11 +328,16 @@ const IconInfoDrawer = () => {
                 borderBottomRightRadius: "0",
                 borderRightWidth: 0,
               }}
-              style={{ boxShadow: "inset 0px 0px 12px 0.5px var(--cp-shadow)" }}
+              style={{
+                boxShadow:
+                  theme === "light"
+                    ? "inset 0px 0px 12px 0.5px rgba(161, 161, 170, 0.5)"
+                    : undefined,
+              }}
               variant='outline'
-              fill='var(--cp-surface-primary)'
+              fill={theme === "dark" && "var(--cp-surface-primary)"}
             >
-              Code block
+              <CPText>Code block</CPText>
             </CPButton>
             <CPButton
               width='100%'
