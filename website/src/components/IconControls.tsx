@@ -315,7 +315,7 @@ const IconColorChanger = () => {
             marginTop: "45px",
           }}
         >
-          <ColorPicker zIndex={99999999999999999999999999} />
+          <ColorPicker zIndex={99999} />
         </CPRow>
       ) : null}
     </CPRow>
