@@ -3,6 +3,7 @@ import React, {
   memo,
   useCallback,
   useEffect,
+  useMemo,
   useState,
 } from "react"
 import { defaultIconProps } from "@/context/IconContext"
@@ -113,7 +114,6 @@ const IconSizeChanger = () => {
       style={{
         border: "1px solid var(--cp-border)",
         borderRadius: "0.5rem",
-        minWidth: "fit-content",
       }}
       alignItems='center'
       gap='0.25rem'
@@ -366,12 +366,12 @@ const IconControls = forwardRef<
     styles?: Styles
   }
 >(function _IconControls({ styles }, ref) {
-  const [iconSettings, setIconSettings] = useIconSettings()
+  const iconVariant = useAtomValue(IconVariantAtom)
 
-  const commonProps: CommonControlProps = {
-    iconSettings,
-    setIconSettings,
-  }
+  const showBorderChanger = useMemo(
+    () => (["regular"] as TVariants[]).includes(iconVariant),
+    [iconVariant],
+  )
 
   const props = {
     gap: "0.625rem",
@@ -405,7 +405,7 @@ const IconControls = forwardRef<
 
         <CPRow {...props}>
           <IconSizeChanger />
-          <IconBorderChanger />
+          {showBorderChanger ? <IconBorderChanger /> : null}
         </CPRow>
         <CPRow {...props}>
           <IconCornerChanger />
