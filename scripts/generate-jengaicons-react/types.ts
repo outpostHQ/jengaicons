@@ -9,3 +9,10 @@ export interface IconMetadata {
   tags: string[]
   variant: Lowercase<TVariants>
 }
+
+export interface VariantIconMetaData {
+  name: string
+  safeName: TIconSafeName
+  categories?: string[]
+  tags?: string[]
+}

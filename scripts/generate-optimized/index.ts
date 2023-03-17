@@ -2,7 +2,11 @@ import fs from "fs"
 import fsP from "fs/promises"
 import path from "path"
 import { optimize } from "svgo"
-import { IconMetadata } from "../generate-jengaicons-react/types"
+import {
+  IconMetadata,
+  TVariants,
+  VariantIconMetaData,
+} from "../generate-jengaicons-react/types"
 import { COMPRESSION_LEVEL, zip } from "zip-a-folder"
 
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
@@ -81,8 +85,12 @@ async function main() {
 
   const allIcons: IconMetadata[] = []
 
+  const variants: TVariants[] = []
+
   for (const item of itemsInDirectory) {
     const variant = item.name
+
+    variants.push(variant as TVariants)
 
     const svgFiles = fs
       .readdirSync(path.join(pathToAssets, variant), {
@@ -155,6 +163,23 @@ async function main() {
     path.join(pathToOptimized, "allIconsData.json"),
     JSON.stringify(allIcons, null, 2),
   )
+
+  for (const variant of variants) {
+    const variantIcons: VariantIconMetaData[] = allIcons
+      .filter((icon) => icon.variant === variant)
+      .sort((a, b) => a.safeName.localeCompare(b.safeName))
+      .map((icon) => ({
+        name: icon.name,
+        safeName: icon.safeName,
+        categories: icon.categories.length === 0 ? undefined : icon.categories,
+        tags: icon.tags.length === 0 ? undefined : icon.tags,
+      }))
+
+    fs.writeFileSync(
+      path.join(pathToOptimized, `${variant}.json`),
+      JSON.stringify(variantIcons),
+    )
+  }
 }
 
 main().catch((e) => console.log(e.message))
