@@ -67,6 +67,7 @@ function Hero({ totalIcons }: { totalIcons: string }) {
             href='https://github.com/OutpostHQ/jengaicons/blob/main/README.md'
           >
             <CPButton
+              width='100%'
               padding='12px 24px'
               rightIcon={<ChevronRight color='var(--cp-icon-on-primary)' />}
             >
