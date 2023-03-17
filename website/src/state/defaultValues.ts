@@ -1,0 +1,9 @@
+export const defaultIconLightModeColor = "#000000" // black
+export const defaultIconDarkModeColor = "#FFFFFF" // white
+export const defaultIconColor = defaultIconLightModeColor
+export const defaultIconCorner = "Miter corner"
+export const defaultIconWeight = 2
+export const defaultIconSize = 32
+export const defaultIconVariant = "regular"
+export const defaultIconSelected = null
+export const defaultIsDrawerOpen = false
