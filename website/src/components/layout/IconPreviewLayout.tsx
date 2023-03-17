@@ -36,7 +36,7 @@ export const IconPreviewLayout = () => {
         styles={{
           position: "sticky",
           top: 0,
-          zIndex: 999,
+          zIndex: 1,
           width: "100%",
           backgroundColor: "var(--cp-surface)",
         }}
@@ -47,7 +47,7 @@ export const IconPreviewLayout = () => {
           styles={{
             boxShadow: "0px 4px 12px 0.75px var(--cp-shadow)",
             padding: ["20px 140px", "20px 140px", "20px 10px"],
-            zIndex: 9999,
+            zIndex: 2,
           }}
         />
         <Block
@@ -55,7 +55,7 @@ export const IconPreviewLayout = () => {
             position: "absolute",
             right: 0,
             height: `calc(100vh - ${height}px)`,
-            zIndex: 999,
+            zIndex: 0,
           }}
         >
           <IconInfoDrawer />

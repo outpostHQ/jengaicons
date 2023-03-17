@@ -2,14 +2,24 @@ import { IconCornerType } from "@/types/components/IconControl"
 import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps } from "@jengaicons/react"
 import { atom } from "jotai"
+import { atomWithStorage } from "jotai/utils"
 import { TIconSafeName, TVariants } from "@/types/icon"
+import {
+  defaultIconColor,
+  defaultIconCorner,
+  defaultIconSelected,
+  defaultIconSize,
+  defaultIconVariant,
+  defaultIconWeight,
+  defaultIsDrawerOpen,
+} from "./defaultValues"
 
-export const IconColorAtom = atom("#aabbcc")
-export const IconCornerAtom = atom<IconCornerType>("Miter corner")
+export const IconColorAtom = atomWithStorage("icon-color", defaultIconColor)
+export const IconCornerAtom = atom<IconCornerType>(defaultIconCorner)
 // @ts-expect-error
-export const IconWeightAtom = atom<JengaIconProps["weight"]>(2)
-export const IconSizeAtom = atom<JengaIconProps["size"]>(32)
+export const IconWeightAtom = atom<JengaIconProps["weight"]>(defaultIconWeight)
+export const IconSizeAtom = atom<JengaIconProps["size"]>(defaultIconSize)
 export const IconSearchAtom = atom<string>("")
-export const IconVariantAtom = atom<TVariants>("regular")
-export const selectedIconAtom = atom<TIconSafeName | null>(null)
-export const IsDrawerOpenAtom = atom<boolean>(false)
+export const IconVariantAtom = atom<TVariants>(defaultIconVariant)
+export const selectedIconAtom = atom<TIconSafeName | null>(defaultIconSelected)
+export const IsDrawerOpenAtom = atom<boolean>(defaultIsDrawerOpen)

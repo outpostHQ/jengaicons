@@ -3,6 +3,7 @@ import React, {
   memo,
   useCallback,
   useEffect,
+  useMemo,
   useState,
 } from "react"
 import { defaultIconProps } from "@/context/IconContext"
@@ -52,7 +53,16 @@ import {
   IconVariantAtom,
   IconWeightAtom,
 } from "@/state/atoms"
-import { useRecoilValue } from "recoil"
+import {
+  defaultIconColor,
+  defaultIconCorner,
+  defaultIconDarkModeColor,
+  defaultIconLightModeColor,
+  defaultIconSize,
+  defaultIconWeight,
+} from "@/state/defaultValues"
+import tinycolor from "tinycolor2"
+import { useDebounce } from "usehooks-ts"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {
@@ -93,12 +103,22 @@ const VariantSelectorMenu = () => {
 
 const IconSearch = () => {
   const setIconSearch = useSetAtom(IconSearchAtom)
+  const [search, setSearch] = useState("")
+  const debouncedSearch = useDebounce<string>(search, 500)
+
+  useEffect(() => {
+    setIconSearch(debouncedSearch)
+  }, [debouncedSearch, setIconSearch])
+
+  const handleIconSearch = useCallback((val: string) => {
+    setSearch(val)
+  }, [])
 
   return (
     <CPSearchInput
       width={width}
       placeholder='Search...'
-      onChange={setIconSearch}
+      onChange={handleIconSearch}
     />
   )
 }
@@ -113,7 +133,6 @@ const IconSizeChanger = () => {
       style={{
         border: "1px solid var(--cp-border)",
         borderRadius: "0.5rem",
-        minWidth: "fit-content",
       }}
       alignItems='center'
       gap='0.25rem'
@@ -312,30 +331,44 @@ const IconColorChanger = () => {
         <CPRow
           styles={{
             position: "absolute",
-            marginTop: "45px",
+            top: 50,
+            right: ["50%", "50%", 0],
+            transform: [
+              "translate(50% , 0)",
+              "translate(50% , 0)",
+              "translate(55% , 0)",
+            ],
           }}
         >
-          <ColorPicker zIndex={99999999999999999999999999} />
+          <ColorPicker zIndex={99999} />
         </CPRow>
       ) : null}
     </CPRow>
   )
 }
 
-const IconSettingsReset = ({
-  setIconSettings,
-}: Omit<CommonControlProps, "iconSettings">) => {
+const IconSettingsReset = () => {
+  const setIconSize = useSetAtom(IconSizeAtom)
+  const setIconColor = useSetAtom(IconColorAtom)
+  const setIconWeight = useSetAtom(IconWeightAtom)
+  const setIconCorner = useSetAtom(IconCornerAtom)
+  const [theme] = useTheme()
+
+  const handleResetIconProps = useCallback(() => {
+    setIconSize(defaultIconSize)
+    setIconWeight(defaultIconWeight)
+    setIconCorner(defaultIconCorner)
+
+    if (theme === "light") setIconColor(defaultIconLightModeColor)
+    else if (theme === "dark") setIconColor(defaultIconDarkModeColor)
+  }, [setIconColor, setIconCorner, setIconSize, setIconWeight, theme])
+
   return (
     <CPRow height='100%'>
       <CPButton
         variant='outline'
         icon={<ArrowClockwise />}
-        onClick={() =>
-          setIconSettings({
-            type: "update-icon-props",
-            payload: defaultIconProps,
-          })
-        }
+        onPress={handleResetIconProps}
       />
     </CPRow>
   )
@@ -343,11 +376,17 @@ const IconSettingsReset = ({
 
 const WebpageThemeChanger = memo(function _() {
   const [currentTheme, changeTheme] = useTheme()
-
+  const [iconColor, setIconColor] = useAtom(IconColorAtom)
   const handleChangeTheme = useCallback(() => {
-    if (currentTheme === "light") changeTheme("dark")
-    if (currentTheme === "dark") changeTheme("light")
-  }, [changeTheme, currentTheme])
+    if (currentTheme === "light") {
+      changeTheme("dark")
+      setIconColor(defaultIconDarkModeColor)
+    }
+    if (currentTheme === "dark") {
+      changeTheme("light")
+      setIconColor(defaultIconLightModeColor)
+    }
+  }, [changeTheme, currentTheme, setIconColor])
 
   return (
     <CPRow>
@@ -366,19 +405,19 @@ const IconControls = forwardRef<
     styles?: Styles
   }
 >(function _IconControls({ styles }, ref) {
-  const [iconSettings, setIconSettings] = useIconSettings()
+  const iconVariant = useAtomValue(IconVariantAtom)
 
-  const commonProps: CommonControlProps = {
-    iconSettings,
-    setIconSettings,
-  }
+  const showBorderChanger = useMemo(
+    () => (["regular"] as TVariants[]).includes(iconVariant),
+    [iconVariant],
+  )
 
   const props = {
     gap: "0.625rem",
     height: "100%",
-    width: "100%",
     flow: "row nowrap",
     alignItems: "center",
+    justifyContent: "center",
   } as const
 
   return (
@@ -396,21 +435,22 @@ const IconControls = forwardRef<
         gap='0.625rem'
         width='100%'
         alignItems='stretch'
+        justifyContent='center'
         flow={["row nowrap", "row wrap", "column nowrap"]}
       >
-        <CPRow {...props}>
+        <CPRow {...props} width='100%'>
           <VariantSelectorMenu />
           <IconSearch />
         </CPRow>
 
-        <CPRow {...props}>
+        <CPRow {...props} width='100%'>
           <IconSizeChanger />
-          <IconBorderChanger />
+          {showBorderChanger ? <IconBorderChanger /> : null}
         </CPRow>
         <CPRow {...props}>
-          <IconCornerChanger />
+          {/* <IconCornerChanger /> */}
           <IconColorChanger />
-          {/* <IconSettingsReset {...commonProps} /> */}
+          <IconSettingsReset />
           <WebpageThemeChanger />
         </CPRow>
       </CPRow>

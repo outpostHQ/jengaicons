@@ -2,32 +2,11 @@ import { Styles } from "@cube-dev/ui-kit"
 import { CPRow } from "@/shared/library"
 import IconWrapper from "@/components/IconWrapper"
 import * as JengaIcons from "@jengaicons/react"
-import { allIconsMetaData } from "@/constants/icons"
-import useIconSettings from "@/hooks/useIconSettings"
 import { IconMetadata } from "@/types"
-import { useEffect, useState } from "react"
-import Fuse from "fuse.js"
-import { useAtomValue } from "jotai"
-import { IconVariantAtom } from "@/state/atoms"
-import handleViewport from "react-in-viewport"
-
-const IconSearch = new Fuse(allIconsMetaData, {
-  keys: ["name"],
-})
-
-const fewRegularVariants = allIconsMetaData.filter(
-  (val) => val.variant === "regular",
-)
+import { useFilteredIcons } from "@/hooks/useFilteredIcons"
 
 const IconGrid = ({ styles }: { styles?: Styles }) => {
-  const [icons, setIcons] = useState(fewRegularVariants)
-  const selectedIconVariant = useAtomValue(IconVariantAtom)
-
-  // useEffect(() => {
-  //   setIcons(() =>
-  //     allIconsMetaData.filter((val) => val.variant === selectedIconVariant),
-  //   )
-  // }, [selectedIconVariant])
+  const [icons] = useFilteredIcons()
 
   return (
     <CPRow

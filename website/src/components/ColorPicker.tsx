@@ -7,13 +7,14 @@ import {
   CPTextInput,
 } from "@/components/shared/library"
 import useIconSettings from "@/hooks/useIconSettings"
+import useTheme from "@/hooks/useTheme"
 import { IconColorAtom } from "@/state/atoms"
 import { Item, MenuTrigger } from "@cube-dev/ui-kit"
 import { CaretDownFill } from "@jengaicons/react"
 import { useAtom } from "jotai"
 import Image from "next/image"
 import { memo, useCallback, useEffect, useMemo, useState } from "react"
-import { RGBColor } from "react-color"
+
 import {
   HexColorInput,
   HexColorPicker,
@@ -21,7 +22,8 @@ import {
   RgbColorPicker,
 } from "react-colorful"
 import { ColorPickerBaseProps } from "react-colorful/dist/types"
-import { useRecoilState } from "recoil"
+import tinycolor from "tinycolor2"
+
 type TColorModes = "hex" | "rgb"
 type TColorValue = TRGBValue | THexValue
 type TRGBValue = { r: number; g: number; b: number }
@@ -123,7 +125,7 @@ const convertColor = ({
         r: 1,
         g: 2,
         b: 3,
-      } as RGBColor
+      } as TRGBValue
 
     case "hex":
       return color
@@ -147,7 +149,7 @@ const GetColorPicker = ({
       return (
         <RgbColorPicker
           {...commonProps}
-          color={color as RGBColor}
+          color={color as TRGBValue}
           onChange={handleRGB}
         />
       )
@@ -165,6 +167,7 @@ type TColorPickerProps = {
 export const ColorPicker = ({ zIndex, marginTop }: TColorPickerProps) => {
   const [colorMode, setColorMode] = useState<TColorModes>("hex")
   const [IconColor, setIconColor] = useAtom(IconColorAtom)
+  const [, setTheme] = useTheme()
 
   const handleColorModeChange = useCallback(
     (colorMode: TColorModes) => setColorMode(colorMode),
@@ -172,8 +175,16 @@ export const ColorPicker = ({ zIndex, marginTop }: TColorPickerProps) => {
   )
 
   const handleColorChange = useCallback(
-    (color: string) => setIconColor(color),
-    [setIconColor],
+    (color: string) => {
+      if (tinycolor(color).isLight()) {
+        setTheme("dark")
+      } else {
+        setTheme("light")
+      }
+
+      setIconColor(color)
+    },
+    [setIconColor, setTheme],
   )
 
   return (
@@ -185,11 +196,12 @@ export const ColorPicker = ({ zIndex, marginTop }: TColorPickerProps) => {
         borderRadius: "8px",
         position: "relative",
         backgroundColor: "var(--cp-surface)",
-        border: "1px soild var(--cp-border)",
         marginTop,
       }}
       zIndex={zIndex}
-      border='1px black solid'
+      style={{
+        border: "1px soild black",
+      }}
       flow='column nowrap'
       gap='20px'
     >

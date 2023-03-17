@@ -52,7 +52,7 @@ function Hero({ totalIcons }: { totalIcons: string }) {
               <FigmaLogo size='1.25rem' />
               <CPText fontWeight='medium'>Figma Library / Plugin</CPText>
             </CPRow>
-            <CPRow
+            {/* <CPRow
               margin={["0", "0", "0 0 -1.25rem 0"]}
               gap='4px'
               justifyContent='center'
@@ -60,7 +60,7 @@ function Hero({ totalIcons }: { totalIcons: string }) {
             >
               <Heart size='1.25rem' />
               <CPText fontWeight='medium'>Donate on PayPal</CPText>
-            </CPRow>
+            </CPRow> */}
           </Flex>
         </CPColumn>
         <Flex
@@ -69,12 +69,18 @@ function Hero({ totalIcons }: { totalIcons: string }) {
           gap='1.25rem'
           flow={["row", "row", "column"]}
         >
-          <CPButton
-            padding='12px 24px'
-            rightIcon={<ChevronRight color='var(--cp-icon-on-primary)' />}
+          <Link
+            className='text-decoration-none'
+            target='_blank'
+            href='https://github.com/OutpostHQ/jengaicons/blob/main/README.md'
           >
-            Get Started
-          </CPButton>
+            <CPButton
+              padding='12px 24px'
+              rightIcon={<ChevronRight color='var(--cp-icon-on-primary)' />}
+            >
+              Get Started
+            </CPButton>
+          </Link>
           <Link
             href={`${GET_ALL_SVG_ICON_ZIP}`}
             target='_blank'

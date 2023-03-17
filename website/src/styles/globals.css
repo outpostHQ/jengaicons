@@ -88,32 +88,23 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
   width: 20px;
   height: 20px;
 }
-/*
-.cp-color-picker > .color-slider .react-colorful {
-  width: 100%;
-  height: 100%;
+
+.banner-icons .row {
+  will-change: transform;
+  animation: bottomTop 13s linear infinite;
+
+  transform: translate(0, 0);
+  /* top: -50%; */
 }
 
-.cp-color-picker > .color-slider .react-colorful__saturation {
-  border-radius: 8px;
-  border-bottom: none;
+@keyframes bottomTop {
+  0% {
+    top: 0;
+  }
+  100% {
+    top: -100%;
+  }
 }
-
-.cp-color-picker > .color-slider .react-colorful__hue {
-  display: none;
-}
-
-.cp-color-picker > .color-slider .react-colorful__hue,
-.cp-color-picker > .color-slider .react-colorful__alpha {
-  height: 14px;
-  border-radius: 8px;
-}
-
-.cp-color-picker > .color-slider .react-colorful__hue-pointer,
-.cp-color-picker > .color-slider .react-colorful__alpha-pointer {
-  width: 20px;
-  height: 20px;
-} */
 
 #icon-controls-color-picker {
   width: 24px;
