@@ -1,4 +1,5 @@
 #!/usr/bin/env sh
 . "$(dirname -- "$0")/_/husky.sh"
 
-npx pretty-quick --staged --pattern "**/*.*(js|jsx|ts|tsx)"
+npm run format:staged
+npm run website:fix

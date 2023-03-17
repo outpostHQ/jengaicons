@@ -1,5 +1,5 @@
 {
-  "name": "website",
+  "name": "jengaicon-website",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -7,7 +7,12 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "make:icons": "ts-node scripts"
+    "format": "npx pretty-quick --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "format:staged": "npx pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "make:icons": "ts-node scripts",
+    "_putout:disable": "putout --disable-all src",
+    "putout:fix": "putout --fix src",
+    "fix": "putout --fix src && pnpm format:staged"
   },
   "dependencies": {
     "@cube-dev/ui-kit": "^0.16.4",
@@ -30,6 +35,8 @@
   },
   "devDependencies": {
     "@ianvs/prettier-plugin-sort-imports": "^3.7.1",
+    "@putout/plugin-merge-duplicate-imports": "8.0.0",
+    "@putout/processor-ignore": "3.0.0",
     "@react-types/shared": "^3.16.0",
     "@types/node": "18.14.0",
     "@types/react": "18.0.28",
@@ -39,6 +46,7 @@
     "eslint": "8.34.0",
     "eslint-config-next": "13.1.6",
     "prettier": "^2.8.4",
+    "putout": "29.1.4",
     "typescript": "4.9.5",
     "vitest": "^0.28.5"
   }

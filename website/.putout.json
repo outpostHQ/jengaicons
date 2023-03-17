@@ -1,0 +1,21 @@
+{
+  "processors": ["ignore"],
+  "rules": {
+    "remove-unused-variables": "off",
+    "remove-useless-return": "off",
+    "typescript/remove-unused-types": "off",
+    "convert-template-to-string": "off",
+    "remove-console": "off",
+    "simplify-ternary/value": "off",
+    "promises/remove-useless-async": "off",
+    "new/remove-useless": "off",
+    "conditions/convert-equal-to-strict-equal": "off",
+    "remove-nested-blocks": "off",
+    "remove-unreachable-code": "off",
+    "try-catch/async": "off",
+    "apply-destructuring/object": "off",
+    "maybe/noop": "off",
+    "apply-optional-chaining": "off"
+  },
+  "ignore": ["styles"]
+}
