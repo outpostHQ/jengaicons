@@ -1,7 +1,7 @@
 {
   "processors": ["ignore"],
   "rules": {
-    "remove-unused-variables": "off",
+    "remove-unused-variables": "on",
     "remove-useless-return": "off",
     "typescript/remove-unused-types": "off",
     "convert-template-to-string": "off",

@@ -12,7 +12,7 @@
     "make:icons": "ts-node scripts",
     "_putout:disable": "putout --disable-all src",
     "putout:fix": "putout --fix src",
-    "fix": "putout --fix src && pnpm format:staged"
+    "fix": "putout --fix src && pnpm format"
   },
   "dependencies": {
     "@cube-dev/ui-kit": "^0.16.4",
