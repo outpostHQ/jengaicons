@@ -3,11 +3,9 @@ import Hero from "@/components/Hero"
 import Main from "@/components/Main"
 import { CPColumn } from "@/components/shared/library"
 import { Block } from "@cube-dev/ui-kit"
-import { Inter } from "@next/font/google"
+
 import { GetStaticProps } from "next/types"
 import { useEffect } from "react"
-
-const inter = Inter({ subsets: ["latin"] })
 
 type THomeProps = {
   totalIcons: string
