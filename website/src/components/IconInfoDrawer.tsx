@@ -12,11 +12,8 @@ import {
 
 // TODO: LazyLoad
 import * as JengaIcons from "@jengaicons/react"
-import useIconSettings from "@/hooks/useIconSettings"
 import useFetch from "@/hooks/useFetch"
-import { GetSVGRequestBody, GetSVGResponseBody } from "@/types/api/getSVG"
-import { TIconSafeName, TVariants } from "@/types/icon"
-import { GET_ICON_SVG } from "@/constants/api/paths"
+import { GetSVGResponseBody } from "@/types/api/getSVG"
 import fileDownload from "js-file-download"
 import { getSVGIconURL } from "@/utils/icons"
 import { copyToClipboard } from "@/utils"
@@ -73,27 +70,6 @@ const IconHeader = ({
   )
 }
 
-const Line = ({
-  rotateDeg,
-  styles,
-}: {
-  rotateDeg: number
-  styles?: Styles
-}) => (
-  <CPRow
-    width='100%'
-    margin='10px'
-    height={1}
-    styles={{
-      backgroundColor: "white",
-      position: "absolute",
-      border: "1px solid white",
-      transform: `rotate(${rotateDeg}deg)`,
-      ...styles,
-    }}
-  />
-)
-
 const IconBGSVG = ({ styles }: { styles?: Styles }) => {
   return (
     <CPRow
@@ -110,44 +86,17 @@ const IconBGSVG = ({ styles }: { styles?: Styles }) => {
         xmlns='http://www.w3.org/2000/svg'
       >
         <path
-          opacity='0.2'
-          d='M1.40625 1.40601L276.594 276.594'
+          opacity='.2'
+          d='m1.406 1.406 275.188 275.188m0-275.188L1.406 276.594'
           stroke='#71717A'
-          stroke-width='2'
-          stroke-linecap='round'
+          strokeWidth='2'
+          strokeLinecap='round'
         />
-        <path
-          opacity='0.2'
-          d='M276.594 1.40601L1.40583 276.594'
-          stroke='#71717A'
-          stroke-width='2'
-          stroke-linecap='round'
-        />
-        <g opacity='0.2'>
-          <path
-            d='M230.666 29H47.333V249H230.666V29Z'
-            stroke='#71717A'
-            stroke-width='2'
-            stroke-miterlimit='10'
-          />
-          <path
-            d='M239.834 38.1666H38.167V239.833H239.834V38.1666Z'
-            stroke='#71717A'
-            stroke-width='2'
-            stroke-miterlimit='10'
-          />
-          <path
-            d='M249 47.3334H29V230.667H249V47.3334Z'
-            stroke='#71717A'
-            stroke-width='2'
-            stroke-miterlimit='10'
-          />
-          <path
-            d='M139 249C199.751 249 249 199.751 249 139C249 78.2487 199.751 29 139 29C78.2487 29 29 78.2487 29 139C29 199.751 78.2487 249 139 249Z'
-            stroke='#71717A'
-            stroke-width='2'
-            stroke-miterlimit='10'
-          />
+        <g opacity='.2' stroke='#71717A' strokeWidth='2' strokeMiterlimit='10'>
+          <path d='M230.666 29H47.333v220h183.333V29Z' />
+          <path d='M239.834 38.167H38.167v201.666h201.667V38.167Z' />
+          <path d='M249 47.333H29v183.334h220V47.333Z' />
+          <path d='M139 249c60.751 0 110-49.249 110-110S199.751 29 139 29 29 78.249 29 139s49.249 110 110 110Z' />
         </g>
       </svg>
     </CPRow>
@@ -309,17 +258,35 @@ const IconInfoDrawer = () => {
         borderBottom: "1px solid var(--cp-border)",
         backgroundColor: "var(--cp-surface)",
         minWidth: "320px",
+        position: "relative",
       }}
       style={{ borderLeft: "1px solid var(--cp-border)" }}
       width={["320px", "320px", "100%"]}
       justifyContent='space-between'
       flow='column nowrap'
       overflow='auto'
+      // fill='red'
     >
+      {/* HACK FOR BOX SHADOW TOP */}
+      <CPRow
+        width='100%'
+        height={84}
+        styles={{
+          position: "absolute",
+          boxShadow: "0px 4px 12px 0.75px var(--cp-shadow",
+          transform: "translateY(-84px)",
+        }}
+      />
       <Block>
         <IconHeader onClose={handleClose} iconName={selectedIcon} />
-        <CPColumn padding='1.25rem' gap='1.25rem' flex='1'>
-          <CPRow>
+        <CPColumn
+          padding='1.25rem'
+          gap='1.25rem'
+          flex='1'
+          justifyContent='center'
+          alignItems='center'
+        >
+          {/* <CPRow>
             <CPButton
               width='100%'
               fontWeight='500'
@@ -350,7 +317,7 @@ const IconInfoDrawer = () => {
             >
               Preview
             </CPButton>
-          </CPRow>
+          </CPRow> */}
           <IconPreview />
           <CodeBlock />
         </CPColumn>
