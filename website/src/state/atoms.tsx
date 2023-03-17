@@ -1,5 +1,4 @@
 import { IconCornerType } from "@/types/components/IconControl"
-import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps } from "@jengaicons/react"
 import { atom } from "jotai"
 import { atomWithStorage } from "jotai/utils"

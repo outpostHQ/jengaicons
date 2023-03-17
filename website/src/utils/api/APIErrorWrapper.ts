@@ -1,6 +1,4 @@
-import { TAPIErrorBody, TAPIHandler, TypedNextApiRequest } from "@/types/api"
 import { APIError } from "@/utils/api/APIError"
-import { NextApiResponse } from "next/types"
 
 export const APIErrorWrapper = <Handler extends Function>(
   APIHandler: Handler,

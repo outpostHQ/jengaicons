@@ -1,33 +1,22 @@
 import {
   CPButton,
   CPMenu,
-  CPNumberInput,
   CPRow,
   CPText,
   CPTextInput,
 } from "@/components/shared/library"
-import useIconSettings from "@/hooks/useIconSettings"
 import useTheme from "@/hooks/useTheme"
 import { IconColorAtom } from "@/state/atoms"
 import { Item, MenuTrigger } from "@cube-dev/ui-kit"
 import { CaretDownFill } from "@jengaicons/react"
 import { useAtom } from "jotai"
-import Image from "next/image"
-import { memo, useCallback, useEffect, useMemo, useState } from "react"
+import { memo, useCallback, useMemo, useState } from "react"
 
-import {
-  HexColorInput,
-  HexColorPicker,
-  RgbColor,
-  RgbColorPicker,
-} from "react-colorful"
-import { ColorPickerBaseProps } from "react-colorful/dist/types"
+import { HexColorPicker, RgbColorPicker } from "react-colorful"
 import tinycolor from "tinycolor2"
 
 type TColorModes = "hex" | "rgb"
-type TColorValue = TRGBValue | THexValue
 type TRGBValue = { r: number; g: number; b: number }
-type THexValue = string
 type TColor = string
 
 type TCommonColorInputProps = {
@@ -138,7 +127,7 @@ const GetColorPicker = ({
 }: {
   colorMode: TColorModes
 } & TCommonColorPickerProps) => {
-  const handleRGB = useCallback((color: RgbColor) => {}, [])
+  const handleRGB = useCallback(() => {}, [])
   const color = useMemo(
     () => convertColor({ color: commonProps.color, colorMode }),
     [colorMode, commonProps.color],

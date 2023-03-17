@@ -2,14 +2,12 @@ import { Block, Styles } from "@cube-dev/ui-kit"
 import {
   AddressBook,
   Aperture,
-  ArrowArcLeft,
   ChalkboardTeacher,
   ChatCircleText,
   CodesandboxLogo,
   Confetti,
   Cube,
   FilmSlate,
-  Football,
   Gift,
   Horse,
   Key,
@@ -21,8 +19,6 @@ import {
   NavigationArrow,
   NotePencil,
   PaintBucket,
-  Phone,
-  PhoneSlash,
   PlusCircle,
   RedditLogo,
   RocketLaunch,
@@ -32,17 +28,15 @@ import {
   Stack,
   Star,
   Student,
-  Sun,
   Taxi,
   ThumbsUp,
-  Train,
   TrainRegional,
   Trophy,
   UserCirclePlus,
   VideoCameraSlash,
   Wallet,
 } from "@jengaicons/react"
-import React, { useEffect, useRef, useState } from "react"
+import React from "react"
 import BannerIcon from "./BannerIcon"
 import { CPColumn, CPRow, CPText } from "./shared/library"
 
@@ -52,7 +46,6 @@ const RowLayout = ({
   style,
   containerStyle,
   animationSpeed,
-  fadeTop,
 }: {
   children?: React.ReactNode
   styles?: Styles
@@ -223,7 +216,6 @@ const Icons2 = () => {
 }
 
 function Banner() {
-  const bannerRef = useRef(null)
   // const x = useMotionValue(0)
   // const { scrollYProgress } = useScroll({
   //   container: bannerRef,

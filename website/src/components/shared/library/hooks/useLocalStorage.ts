@@ -12,7 +12,7 @@ export const useLocalStorage = (key: string, initialValue: any) => {
         setIsFirstRender(false)
       }
       return item ? JSON.parse(item) : initialValue
-    } catch (error) {
+    } catch {
       return initialValue
     }
   })
@@ -24,7 +24,7 @@ export const useLocalStorage = (key: string, initialValue: any) => {
       setStoredValue(valueToStore)
       window.localStorage &&
         window.localStorage.setItem(key, JSON.stringify(valueToStore))
-    } catch (error) {}
+    } catch {}
   }
 
   return [storedValue, setValue, isFirstRender] as const

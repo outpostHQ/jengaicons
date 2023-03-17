@@ -5,7 +5,7 @@ export const copyToClipboard = (text: string): boolean => {
     navigator.clipboard
       .writeText(text)
       .then(() => (isCopied = true))
-      .catch((err) => (isCopied = false))
+      .catch(() => (isCopied = false))
   }
 
   if (isCopied) return true

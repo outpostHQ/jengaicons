@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import Fuse from "fuse.js"
 import { IconFillMetaData, IconRegularMetaData } from "@/constants/icons"
 import { defaultIconVariant } from "@/state/defaultValues"
-import { VariantIconMetaData, TVariants } from "@/types/icon"
+import { TVariants } from "@/types/icon"
 
 const fuseDefaultOptions = {
   keys: ["tags"],

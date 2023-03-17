@@ -1,11 +1,6 @@
-import {
-  Block,
-  BreakpointsProvider,
-  CubeFlexProps,
-  Flex,
-} from "@cube-dev/ui-kit"
+import { CubeFlexProps, Flex } from "@cube-dev/ui-kit"
 import React from "react"
-import { CPColumn, CPText } from "./library"
+import { CPText } from "./library"
 import SectionContainer from "./SectionContainer"
 
 function Footer(props: CubeFlexProps) {

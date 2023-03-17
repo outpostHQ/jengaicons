@@ -1,9 +1,7 @@
 import { Block, BreakpointsProvider, Root, SSRProvider } from "@cube-dev/ui-kit"
 import { JengaIconContext } from "@jengaicons/react"
-import { IconContextProvider } from "@/context/IconContext"
 import React, { ReactNode } from "react"
 import Layout from "@/shared/Layout"
-import { IconInfoDrawerProvider } from "@/hooks/useIconInfoDrawer"
 import { ThemeProvider } from "next-themes"
 import { Provider as JotaiProvider } from "jotai"
 

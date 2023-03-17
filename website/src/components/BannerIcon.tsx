@@ -1,6 +1,6 @@
 import { Block } from "@cube-dev/ui-kit"
-import { JengaIconContext, JengaIconProps } from "@jengaicons/react"
-import React, { ComponentType, ReactNode } from "react"
+import { JengaIconProps } from "@jengaicons/react"
+import React, { ComponentType } from "react"
 import { CPRow } from "./shared/library"
 
 function BannerIcon({

@@ -1,9 +1,6 @@
-import { useEffect, useMemo } from "react"
+import { useMemo } from "react"
 import { Button, CubeButtonProps, Flex } from "@cube-dev/ui-kit"
 import { ArrowSquareOut } from "@jengaicons/react"
-// import { animate, stagger } from 'motion';
-
-import { CPRow } from "./Utils"
 
 const sharedButtonStyles = {
   fontWeight: 500,
@@ -17,7 +14,6 @@ export function CPButton({
   children,
   style = {},
   styles = {},
-  openInNew = false,
   ...otherProps
 }: CubeButtonProps & { variant?: keyof typeof CPButtonVariantProps } & {
   openInNew?: boolean

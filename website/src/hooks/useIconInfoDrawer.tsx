@@ -39,18 +39,15 @@ export const IconInfoDrawerProvider = ({
 
   const openDrawer = useCallback(() => {
     setDrawerState((prev) => ({ ...prev, isOpen: true }))
-  }, [drawerState.isOpen])
+  }, [])
 
   const closeDrawer = useCallback(() => {
     setDrawerState((prev) => ({ ...prev, isOpen: false }))
-  }, [drawerState.isOpen])
+  }, [])
 
-  const selectIcon = useCallback(
-    (iconSafeName: TIconSafeName) => {
-      setDrawerState((prev) => ({ ...prev, selectedIcon: iconSafeName }))
-    },
-    [drawerState.selectedIcon],
-  )
+  const selectIcon = useCallback((iconSafeName: TIconSafeName) => {
+    setDrawerState((prev) => ({ ...prev, selectedIcon: iconSafeName }))
+  }, [])
 
   return (
     <IconInfoDrawerContext.Provider

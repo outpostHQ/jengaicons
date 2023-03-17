@@ -2,15 +2,12 @@ import IconGrid from "@/components/IconGrid"
 import IconInfoDrawer from "@/components/IconInfoDrawer"
 import { useElementHeight } from "@/hooks/useElementHeight"
 import { CPRow } from "@/shared/library"
-import SectionContainer from "@/shared/SectionContainer"
 import { Block, Styles } from "@cube-dev/ui-kit"
-import { useEffect } from "react"
 import IconControls from "../IconControls"
 
 const Container = ({
   children,
   styles,
-  style,
 }: {
   children: React.ReactNode
   styles?: Styles
