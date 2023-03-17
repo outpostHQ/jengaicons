@@ -206,6 +206,7 @@ importers:
       '@types/react': 18.0.28
       '@types/react-dom': 18.0.11
       '@types/styled-components': ^5.1.26
+      '@types/tinycolor2': 1.4.3
       '@vitejs/plugin-react': ^3.1.0
       axios: 1.3.4
       eslint: 8.34.0
@@ -221,6 +222,7 @@ importers:
       react-dom: 18.2.0
       react-in-viewport: 1.0.0-alpha.29
       styled-components: ^5.3.6
+      tinycolor2: 1.6.0
       typescript: 4.9.5
       usehooks-ts: 2.9.1
       vitest: ^0.28.5
@@ -228,6 +230,7 @@ importers:
       '@cube-dev/ui-kit': 0.16.4_xqu5gebanmrvlpvr4443uw7goi
       '@jengaicons/react': link:../packages/jengaicons-react
       '@react-aria/ssr': 3.5.0_react@18.2.0
+      '@types/tinycolor2': 1.4.3
       axios: 1.3.4
       fuse.js: 6.6.2
       jotai: 2.0.3_react@18.2.0
@@ -239,6 +242,7 @@ importers:
       react-dom: 18.2.0_react@18.2.0
       react-in-viewport: 1.0.0-alpha.29_biqbaboplfbrettd7655fr4n2y
       styled-components: 5.3.9_7i5myeigehqah43i5u7wbekgba
+      tinycolor2: 1.6.0
       usehooks-ts: 2.9.1_biqbaboplfbrettd7655fr4n2y
     devDependencies:
       '@ianvs/prettier-plugin-sort-imports': 3.7.1_prettier@2.8.4
@@ -4411,6 +4415,10 @@ packages:
       '@types/react': 18.0.28
       csstype: 3.1.1
     dev: true
+
+  /@types/tinycolor2/1.4.3:
+    resolution: {integrity: sha512-Kf1w9NE5HEgGxCRyIcRXR/ZYtDv0V8FVPtYHwLxl0O+maGX0erE77pQlD0gpP+/KByMZ87mOA79SjifhSB3PjQ==}
+    dev: false
 
   /@types/yauzl/2.10.0:
     resolution: {integrity: sha512-Cn6WYCm0tXv8p6k+A8PvbDG763EDpBoTzHdA+Q/MF6H3sapGjCm9NzoaJncJS9tUKSuCoDs9XHxYYsQDgxR6kw==}
@@ -9326,6 +9334,10 @@ packages:
   /tinybench/2.4.0:
     resolution: {integrity: sha512-iyziEiyFxX4kyxSp+MtY1oCH/lvjH3PxFN8PGCDeqcZWAJ/i+9y+nL85w99PxVzrIvew/GSkSbDYtiGVa85Afg==}
     dev: true
+
+  /tinycolor2/1.6.0:
+    resolution: {integrity: sha512-XPaBkWQJdsf3pLKJV9p4qN/S+fm2Oj8AIPo1BTUhg5oxkvm9+SVEGFdhyOz7tTdUTfvxMiAs4sp6/eZO2Ew+pw==}
+    dev: false
 
   /tinypool/0.3.1:
     resolution: {integrity: sha512-zLA1ZXlstbU2rlpA4CIeVaqvWq41MTWqLY3FfsAXgC8+f7Pk7zroaJQxDgxn1xNudKW6Kmj4808rPFShUlIRmQ==}
