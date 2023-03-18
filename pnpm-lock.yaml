@@ -43,7 +43,7 @@ importers:
   examples/next-ts-example:
     specifiers:
       '@heroicons/react': 2.0.14
-      '@jengaicons/react': workspace:*
+      '@jengaicons/react': ^0.5.0
       '@next/bundle-analyzer': 13.1.6
       '@next/font': 13.1.6
       '@types/node': ^18.11.18

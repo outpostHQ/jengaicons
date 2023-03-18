@@ -53,7 +53,7 @@ const getReactSVGContent = (svgFileName: string, variant: string) => {
     .replace(/stroke-dasharray/g, "strokeDasharray")
 }
 
-const getSafeComponentName = (svgFileName: string, variant: string) => {
+const getSafeComponentName = (svgFileName: string, variant: TVariants) => {
   // const componentName = `${svgFileName.replace('.svg', '')}${capitalize(
   //   variant
   // )}`
@@ -90,12 +90,13 @@ async function main() {
 
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as Lowercase<TVariants>
+    const variant = variantFolder.toLowerCase() as TVariants
 
     getSVGFileNames(variantFolder).map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
-      let componentName = getSafeComponentName(svgFileName, variantFolder)
-      console.log("Making", componentName)
+      let componentName = getSafeComponentName(svgFileName, variant)
+      console.log("Generating :", componentName)
 
       /**
        * SVG generated component with export statement
@@ -106,7 +107,7 @@ async function main() {
         svgContent: svgFileContent,
         defaultColor: "#000000", // BLACK COLOR
         defaultWeight: "2",
-        variant: capitalize(variantFolder) as TVariants,
+        variant,
       })
 
       /**
