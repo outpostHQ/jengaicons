@@ -7,13 +7,22 @@ import {
 } from "@/components/shared/library"
 import useTheme from "@/hooks/useTheme"
 import { IconColorAtom } from "@/state/atoms"
+import {
+  defaultIconColor,
+  defaultIconDarkModeColor,
+  defaultIconLightModeColor,
+} from "@/state/defaultValues"
 import { Item, MenuTrigger } from "@cube-dev/ui-kit"
 import { CaretDownFill } from "@jengaicons/react"
 import { useAtom } from "jotai"
-import { memo, useCallback, useMemo, useState } from "react"
+import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react"
 
 import { HexColorPicker, RgbColorPicker } from "react-colorful"
 import tinycolor from "tinycolor2"
+import { useDebounce, useOnClickOutside } from "usehooks-ts"
+import { useClickOutside } from "react-click-outside-hook"
+import OutsideClickHandler from "react-outside-click-handler-lite"
+import { useDetectClickOutside } from "react-detect-click-outside"
 
 type TColorModes = "hex" | "rgb"
 type TRGBValue = { r: number; g: number; b: number }
@@ -24,10 +33,10 @@ type TCommonColorInputProps = {
   onChange: (color: TColor) => void
 }
 
-type TCommonColorPickerProps = {
-  color: TColor
-  onChange: (color: TColor) => void
-}
+// type TCommonColorPickerProps = {
+//   color: TColor
+//   onChange: (color: TColor) => void
+// }
 
 const ColorModeMenu = memo(function _({
   colorMode,
@@ -71,16 +80,12 @@ const ColorModeMenu = memo(function _({
 // }
 
 const HexInput = ({ color, onChange }: TCommonColorInputProps) => {
-  const handleChange = useCallback(
-    (color: string) => onChange(color),
-    [onChange],
-  )
   return (
     <>
       <CPTextInput
         placeholder='Pick a color...'
         value={color}
-        onChange={handleChange}
+        onChange={onChange}
         width='150px'
       />
     </>
@@ -101,118 +106,125 @@ const GetColorInput = ({
   }
 }
 
-const convertColor = ({
-  color,
-  colorMode,
-}: {
-  color: string
-  colorMode: TColorModes
-}) => {
-  switch (colorMode) {
-    case "rgb":
-      return {
-        r: 1,
-        g: 2,
-        b: 3,
-      } as TRGBValue
+// const convertColor = ({
+//   color,
+//   colorMode,
+// }: {
+//   color: string
+//   colorMode: TColorModes
+// }) => {
+//   switch (colorMode) {
+//     case "rgb":
+//       return {
+//         r: 1,
+//         g: 2,
+//         b: 3,
+//       } as TRGBValue
 
-    case "hex":
-      return color
-  }
-}
+//     case "hex":
+//       return color
+//   }
+// }
 
-const GetColorPicker = ({
-  colorMode,
-  ...commonProps
-}: {
-  colorMode: TColorModes
-} & TCommonColorPickerProps) => {
-  const handleRGB = useCallback(() => {}, [])
-  const color = useMemo(
-    () => convertColor({ color: commonProps.color, colorMode }),
-    [colorMode, commonProps.color],
-  )
+// const GetColorPicker = ({
+//   colorMode,
+//   ...commonProps
+// }: {
+//   colorMode: TColorModes
+// } & TCommonColorPickerProps) => {
+//   const handleRGB = useCallback(() => {}, [])
+//   const color = useMemo(
+//     () => convertColor({ color: commonProps.color, colorMode }),
+//     [colorMode, commonProps.color],
+//   )
 
-  switch (colorMode) {
-    case "rgb":
-      return (
-        <RgbColorPicker
-          {...commonProps}
-          color={color as TRGBValue}
-          onChange={handleRGB}
-        />
-      )
-    case "hex":
-      return <HexColorPicker {...commonProps} />
-  }
-}
+//   switch (colorMode) {
+//     case "rgb":
+//       return (
+//         <RgbColorPicker
+//           {...commonProps}
+//           color={color as TRGBValue}
+//           onChange={handleRGB}
+//         />
+//       )
+//     case "hex":
+//       return <HexColorPicker {...commonProps} />
+//   }
+// }
 
 type TColorPickerProps = {
   zIndex?: number
   marginTop?: string
   onChange?: (color: string) => void
+  show?: boolean
+  close: (e: Event) => void
 }
 
-export const ColorPicker = ({ zIndex, marginTop }: TColorPickerProps) => {
-  const [colorMode, setColorMode] = useState<TColorModes>("hex")
+export const ColorPicker = ({
+  zIndex,
+  marginTop,
+  show,
+  close = () => null,
+}: TColorPickerProps) => {
+  const [colorMode] = useState<TColorModes>("hex")
   const [IconColor, setIconColor] = useAtom(IconColorAtom)
   const [, setTheme] = useTheme()
 
-  const handleColorModeChange = useCallback(
-    (colorMode: TColorModes) => setColorMode(colorMode),
-    [],
-  )
+  const [color, setColor] = useState(IconColor)
 
-  const handleColorChange = useCallback(
-    (color: string) => {
-      if (tinycolor(color).isLight()) {
-        setTheme("dark")
-      } else {
-        setTheme("light")
-      }
+  const debouncedColor = useDebounce(color, 50)
 
-      setIconColor(color)
-    },
-    [setIconColor, setTheme],
-  )
+  useEffect(() => {
+    if (!show) return
 
-  return (
-    <CPRow
-      className='cp-color-picker'
-      styles={{
-        width: 320,
-        height: 377,
-        borderRadius: "8px",
-        position: "relative",
-        backgroundColor: "var(--cp-surface)",
-        marginTop,
-      }}
-      zIndex={zIndex}
-      style={{
-        border: "1px soild black",
-      }}
-      flow='column nowrap'
-      gap='20px'
-    >
-      <CPRow className='saturation-picker' width='100%' height='100%'>
-        {GetColorPicker({
-          color: IconColor,
-          colorMode,
-          onChange: handleColorChange,
-        })}
-      </CPRow>
-      {/* CONTROLS */}
-      <CPRow width='100%' justifyContent='space-between'>
-        <ColorModeMenu colorMode={colorMode} onChange={handleColorModeChange} />
+    if (tinycolor(debouncedColor).isLight()) setTheme("dark")
+    else setTheme("light")
 
-        <CPRow>
-          {GetColorInput({
-            color: IconColor,
-            colorMode,
-            onChange: handleColorChange,
-          })}
+    setIconColor(debouncedColor)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [debouncedColor, setIconColor, show])
+
+  useEffect(() => {
+    setColor(IconColor)
+  }, [IconColor])
+
+  const ref = useDetectClickOutside({ onTriggered: close })
+  return show ? (
+    <div ref={ref}>
+      <CPRow
+        className='cp-color-picker'
+        styles={{
+          width: 320,
+          height: 377,
+          borderRadius: "8px",
+          position: "relative",
+          backgroundColor: "var(--cp-surface)",
+          marginTop,
+        }}
+        zIndex={zIndex}
+        style={{
+          border: "1px solid var(--cp-border)",
+        }}
+        padding='15px'
+        flow='column nowrap'
+        gap='20px'
+      >
+        <CPRow className='saturation-picker' width='100%' height='100%'>
+          <HexColorPicker color={color} onChange={setColor} />
+        </CPRow>
+        {/* CONTROLS */}
+        <CPRow width='100%' alignItems='center' justifyContent='space-between'>
+          {/* <ColorModeMenu colorMode={colorMode} onChange={setColor} /> */}
+          <CPText>HEX</CPText>
+          <CPRow>
+            {GetColorInput({
+              color,
+              colorMode,
+              onChange: setColor,
+            })}
+          </CPRow>
         </CPRow>
       </CPRow>
-    </CPRow>
-  )
+    </div>
+  ) : null
 }

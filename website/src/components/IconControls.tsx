@@ -2,6 +2,7 @@ import React, {
   forwardRef,
   memo,
   useCallback,
+  useDeferredValue,
   useEffect,
   useMemo,
   useState,
@@ -36,6 +37,7 @@ import {
   defaultIconWeight,
 } from "@/state/defaultValues"
 import { useDebounce } from "usehooks-ts"
+import { useDetectClickOutside } from "react-detect-click-outside"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {
@@ -77,27 +79,28 @@ const VariantSelectorMenu = () => {
 const IconSearch = () => {
   const setIconSearch = useSetAtom(IconSearchAtom)
   const [search, setSearch] = useState("")
-  const debouncedSearch = useDebounce<string>(search, 500)
+  const debouncedSearch = useDeferredValue<string>(search)
 
   useEffect(() => {
     setIconSearch(debouncedSearch)
   }, [debouncedSearch, setIconSearch])
 
-  const handleIconSearch = useCallback((val: string) => {
-    setSearch(val)
-  }, [])
-
   return (
-    <CPSearchInput
-      width={width}
-      placeholder='Search...'
-      onChange={handleIconSearch}
-    />
+    <CPSearchInput width={width} placeholder='Search...' onChange={setSearch} />
   )
 }
 
 const IconSizeChanger = () => {
-  const [iconSize, setIconSize] = useAtom(IconSizeAtom)
+  const [size, setSize] = useState(defaultIconSize)
+
+  const debouncedValue = useDebounce(size, 50)
+
+  const setIconSize = useSetAtom(IconSizeAtom)
+
+  useEffect(() => {
+    setIconSize(debouncedValue)
+  }, [debouncedValue, setIconSize])
+
   return (
     <CPRow
       padding='10px'
@@ -123,12 +126,13 @@ const IconSizeChanger = () => {
           minValue={16}
           maxValue={96}
           step={4}
-          value={iconSize as number}
-          onChange={setIconSize}
+          value={size}
+          onChange={setSize}
         />
       </Block>
-
-      <CPText width='30px'>{iconSize}px</CPText>
+      <Block>
+        <CPText>{size}px</CPText>
+      </Block>
       {/* FOR MOBILE */}
       <Block
         width='100%'
@@ -141,8 +145,8 @@ const IconSizeChanger = () => {
           minValue={16}
           maxValue={96}
           step={4}
-          value={iconSize as number}
-          onChange={setIconSize}
+          value={size}
+          onChange={setSize}
         />
       </Block>
     </CPRow>
@@ -150,7 +154,15 @@ const IconSizeChanger = () => {
 }
 
 const IconBorderChanger = () => {
-  const [iconWeight, setIconWeight] = useAtom(IconWeightAtom)
+  const [weight, setWeight] = useState(defaultIconWeight)
+
+  const debouncedWeight = useDebounce(weight, 50)
+
+  const setIconWeight = useSetAtom(IconWeightAtom)
+
+  useEffect(() => {
+    setIconWeight(debouncedWeight)
+  }, [debouncedWeight, setIconWeight])
 
   return (
     <CPRow
@@ -179,11 +191,17 @@ const IconBorderChanger = () => {
           minValue={0.5}
           maxValue={3}
           step={0.5}
-          value={iconWeight}
-          onChange={setIconWeight}
+          value={weight}
+          onChange={setWeight}
         />
       </Block>
-      <CPText>{iconWeight}px</CPText>
+      <Block
+        style={{
+          width: "70px",
+        }}
+      >
+        <CPText>{weight}px</CPText>
+      </Block>
       {/* FOR MOBILE */}
       <Block
         width='100%'
@@ -196,8 +214,8 @@ const IconBorderChanger = () => {
           minValue={0.5}
           maxValue={3}
           step={0.5}
-          value={iconWeight}
-          onChange={setIconWeight}
+          value={weight}
+          onChange={setWeight}
         />
       </Block>
     </CPRow>
@@ -205,13 +223,23 @@ const IconBorderChanger = () => {
 }
 
 const IconColorChanger = () => {
-  const IconColor = useAtomValue(IconColorAtom)
+  const [IconColor, setIconColor] = useAtom(IconColorAtom)
 
   const [showPicker, setShowPicker] = useState(false)
 
   const togglePicker = useCallback(() => {
-    console.log("pressed")
     setShowPicker((prev) => !prev)
+  }, [])
+
+  const [theme] = useTheme()
+
+  useEffect(() => {
+    let color = defaultIconLightModeColor
+
+    if (theme === "dark") color = defaultIconDarkModeColor
+
+    setIconColor(color)
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [])
 
   return (
@@ -249,22 +277,25 @@ const IconColorChanger = () => {
           </CPText>
         </CPRow>
       </CPButton>
-      {showPicker ? (
-        <CPRow
-          styles={{
-            position: "absolute",
-            top: 50,
-            right: ["50%", "50%", 0],
-            transform: [
-              "translate(50% , 0)",
-              "translate(50% , 0)",
-              "translate(55% , 0)",
-            ],
-          }}
-        >
-          <ColorPicker zIndex={99999} />
-        </CPRow>
-      ) : null}
+
+      <CPRow
+        styles={{
+          position: "absolute",
+          top: 50,
+          right: ["50%", "50%", 0],
+          transform: [
+            "translate(50% , 0)",
+            "translate(50% , 0)",
+            "translate(55% , 0)",
+          ],
+        }}
+      >
+        <ColorPicker
+          show={showPicker}
+          zIndex={99999}
+          close={() => setShowPicker(false)}
+        />
+      </CPRow>
     </CPRow>
   )
 }

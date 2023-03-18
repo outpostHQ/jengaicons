@@ -152,7 +152,7 @@ html[data-theme="dark"] {
 
   /* don't use  */
 
-  --cp-border: #47464a88;
+  --cp-border: rgba(71, 70, 74);
   --cp-border-critical: var(--cp-red-500);
   --cp-border-warning: var(--cp-yellow-500);
   --cp-border-success: #689e4f;

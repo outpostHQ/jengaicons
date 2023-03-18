@@ -13,7 +13,7 @@ import {
   defaultIsDrawerOpen,
 } from "./defaultValues"
 
-export const IconColorAtom = atomWithStorage("icon-color", defaultIconColor)
+export const IconColorAtom = atom(defaultIconColor)
 export const IconCornerAtom = atom<IconCornerType>(defaultIconCorner)
 // @ts-expect-error
 export const IconWeightAtom = atom<JengaIconProps["weight"]>(defaultIconWeight)

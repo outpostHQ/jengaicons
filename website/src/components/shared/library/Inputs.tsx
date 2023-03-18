@@ -191,7 +191,7 @@ const CPSearchInput = forwardRef(function CPTextInput(
       width={size === "normal" ? ["60%", "70%", "100%"] : "100%"}
       labelStyles={{
         fontWeight: "400",
-        color: "var(--cp-text)",
+        color: `var(--cp-text)`,
         ...labelStyles,
       }}
       wrapperStyles={{
@@ -204,12 +204,9 @@ const CPSearchInput = forwardRef(function CPTextInput(
           "is-hifa": "none",
           "is-focused": "none",
         },
-        border: {
-          "": `1px solid ${theme === "dark" ? "#323034" : "var(--cp-border)"}`,
-          "is-focused": "0px solid red",
-        },
         fill: "var(--cp-surface)",
         ...wrapperStyles,
+        border: `1px solid ${theme === "light" ? "black" : "rgb(71, 70, 74)"}`,
       }}
       {...otherProps}
     />

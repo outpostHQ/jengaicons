@@ -58,11 +58,6 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
   text-decoration: none;
 }
 
-/* Custom layout */
-.cp-color-picker {
-  padding: 10px;
-}
-
 .cp-color-picker > .saturation-picker .react-colorful {
   width: 100%;
   height: 100%;
@@ -83,10 +78,15 @@ li[data-qa^="MenuItem"] button[data-is-hovered^=""] {
   border-radius: 10px;
 }
 
-.cp-color-picker > .saturation-picker .react-colorful__hue-pointer,
-.cp-color-picker > .saturation-picker .react-colorful__alpha-pointer {
+.cp-color-picker > .saturation-picker .react-colorful__saturation-pointer {
   width: 20px;
   height: 20px;
+}
+
+.cp-color-picker > .saturation-picker .react-colorful__hue-pointer,
+.cp-color-picker > .saturation-picker .react-colorful__alpha-pointer {
+  width: 16px;
+  height: 16px;
 }
 
 .banner-icons .row {
