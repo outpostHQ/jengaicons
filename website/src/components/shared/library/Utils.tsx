@@ -6,11 +6,9 @@ import {
   CubePlaceholderProps,
   CubeTagProps,
   Flex,
-  Grid,
   Placeholder,
   Tag,
   tasty,
-  CubeGridProps,
 } from "@cube-dev/ui-kit"
 
 const CPColumn = tasty(Flex, {

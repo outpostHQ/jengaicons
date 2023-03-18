@@ -16,7 +16,10 @@
     "example:build": "pnpm --filter next-ts-example build",
     "example:dev": "pnpm --filter next-ts-example dev",
     "example:start": "pnpm --filter next-ts-example start",
-    "prepare": "husky install"
+    "prepare": "husky install",
+    "format": "npx pretty-quick --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "format:staged": "npx pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "website:fix": "pnpm --filter jengaicon-website fix"
   },
   "devDependencies": {
     "@changesets/changelog-github": "0.4.8",

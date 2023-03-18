@@ -1,13 +1,6 @@
 import { AvailableThemes } from "@/types/theme"
-import { useCallback, useEffect, useLayoutEffect, useState } from "react"
+import { useCallback } from "react"
 import { useTheme as useNextTheme } from "next-themes"
-import { useAtom, useAtomValue, useSetAtom } from "jotai"
-import { IconColorAtom } from "@/state/atoms"
-import tinycolor from "tinycolor2"
-import {
-  defaultIconDarkModeColor,
-  defaultIconLightModeColor,
-} from "@/state/defaultValues"
 
 const defaultTheme = "light"
 

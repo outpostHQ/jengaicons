@@ -1,16 +1,8 @@
 import { GET_ALL_SVG_ICON_ZIP } from "@/constants/api/paths"
-import useFetch from "@/hooks/useFetch"
-import { Flex, useToastsApi } from "@cube-dev/ui-kit"
-import {
-  ArrowCircleUpRight,
-  ArrowLineDown,
-  ChevronRight,
-  FigmaLogo,
-  Heart,
-  LinkBreak,
-} from "@jengaicons/react"
+import { Flex } from "@cube-dev/ui-kit"
+import { ArrowLineDown, ChevronRight, FigmaLogo } from "@jengaicons/react"
 import Link from "next/link"
-import React, { useCallback } from "react"
+import React from "react"
 import { CPButton, CPColumn, CPRow, CPText } from "./shared/library"
 import SectionContainer from "./shared/SectionContainer"
 

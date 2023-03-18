@@ -1,4 +1,3 @@
-import { useIconInfoDrawer } from "@/hooks/useIconInfoDrawer"
 import { Block, Styles, useToastsApi } from "@cube-dev/ui-kit"
 import { Copy, Download, JengaIconProps, X } from "@jengaicons/react"
 import React, { ComponentType, useCallback, useEffect, useMemo } from "react"
@@ -26,7 +25,6 @@ import {
   IsDrawerOpenAtom,
   selectedIconAtom,
 } from "@/state/atoms"
-import useTheme from "@/hooks/useTheme"
 
 const makeReactString = (
   IconProps: JengaIconProps | JengaIcons.JengaIconRegularProps,
@@ -46,9 +44,6 @@ const IconHeader = ({
   onClose: () => void
   iconName: string
 }) => {
-  const [{ isOpen, selectedIcon }, { closeDrawer, openDrawer }] =
-    useIconInfoDrawer()
-
   return (
     <CPRow
       height='52px'
@@ -236,8 +231,6 @@ const IconActions = () => {
 const IconInfoDrawer = () => {
   const [isOpen, setIsOpen] = useAtom(IsDrawerOpenAtom)
   const [selectedIcon, setSelectedIcon] = useAtom(selectedIconAtom)
-
-  const [theme] = useTheme()
 
   useEffect(() => {
     if (isOpen && !selectedIcon)

@@ -1,23 +1,11 @@
-import {
-  ComponentType,
-  JSXElementConstructor,
-  ReactNode,
-  useCallback,
-  useEffect,
-  useMemo,
-  useRef,
-} from "react"
+import { ComponentType, useCallback, useRef } from "react"
 import { CPButton, CPRow, CPText } from "@/shared/library"
-import { IconMetadata, TIconSafeName } from "@/types/icon"
-import useIconSettings from "@/hooks/useIconSettings"
-import { useIconInfoDrawer } from "@/hooks/useIconInfoDrawer"
+import { IconMetadata } from "@/types/icon"
 import { useAtomValue, useSetAtom } from "jotai"
 import {
   IconColorAtom,
-  IconCornerAtom,
   IconSizeAtom,
   IconWeightAtom,
-  IconVariantAtom,
   IsDrawerOpenAtom,
   selectedIconAtom,
 } from "@/state/atoms"
@@ -27,7 +15,6 @@ import { useIntersectionObserver } from "usehooks-ts"
 
 const DisplayIcon = ({
   ICON,
-  isVisible,
 }: {
   ICON: ComponentType<JengaIconProps | JengaIconRegularProps>
   isVisible: boolean

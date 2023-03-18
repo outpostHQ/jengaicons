@@ -1,7 +1,6 @@
 import type { GetSVGHandler } from "@/types/api/getSVG"
 import { allIconsMetaData } from "@/constants/icons"
 import { IconMetadata, TIconSafeName } from "@/types"
-import { APIErrorWrapper } from "@/utils/api/APIErrorWrapper"
 import { APIError } from "@/utils/api/APIError"
 import { readFile } from "fs/promises"
 import { totalVariants } from "@/utils/icons"
@@ -9,11 +8,6 @@ import { createReadStream } from "fs"
 type Tvariants = IconMetadata["variant"]
 
 const safeNameCache = allIconsMetaData.reduce((cache, iconMD) => {
-  cache.add(iconMD.safeName)
-  return cache
-}, new Set<(typeof allIconsMetaData)[number]["safeName"]>())
-
-const variantCache = allIconsMetaData.reduce((cache, iconMD) => {
   cache.add(iconMD.safeName)
   return cache
 }, new Set<(typeof allIconsMetaData)[number]["safeName"]>())

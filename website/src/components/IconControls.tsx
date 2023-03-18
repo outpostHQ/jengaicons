@@ -6,43 +6,18 @@ import React, {
   useMemo,
   useState,
 } from "react"
-import { defaultIconProps } from "@/context/IconContext"
-import useIconSettings from "@/hooks/useIconSettings"
-import { useScrollPosition } from "@/hooks/useScrollPosition"
 import useTheme from "@/hooks/useTheme"
 import type { AvailableThemes } from "@/types/theme"
-import {
-  Block,
-  Flex,
-  Item,
-  MenuTrigger,
-  Slider,
-  Styles,
-} from "@cube-dev/ui-kit"
-import {
-  ArrowClockwise,
-  CaretDownFill,
-  ChevronDown,
-  JengaIconProps,
-  JengaIconRegularProps,
-  Moon,
-  Sun,
-  WaveTriangle,
-  WaveTriangleFill,
-} from "@jengaicons/react"
-import { IconMetadata, TVariants } from "@/types/icon"
+import { Block, Item, MenuTrigger, Slider, Styles } from "@cube-dev/ui-kit"
+import { ArrowClockwise, CaretDownFill, Moon, Sun } from "@jengaicons/react"
+import { TVariants } from "@/types/icon"
 import {
   CPButton,
-  CPColorPicker,
   CPMenu,
   CPRow,
   CPSearchInput,
   CPText,
 } from "@/shared/library"
-import {
-  CommonControlProps,
-  IconCornerType,
-} from "@/types/components/IconControl"
 import { ColorPicker } from "./ColorPicker"
 import { useAtom, useAtomValue, useSetAtom } from "jotai"
 import {
@@ -54,14 +29,12 @@ import {
   IconWeightAtom,
 } from "@/state/atoms"
 import {
-  defaultIconColor,
   defaultIconCorner,
   defaultIconDarkModeColor,
   defaultIconLightModeColor,
   defaultIconSize,
   defaultIconWeight,
 } from "@/state/defaultValues"
-import tinycolor from "tinycolor2"
 import { useDebounce } from "usehooks-ts"
 
 const getThemeIcon = (theme: AvailableThemes) => {
@@ -231,57 +204,6 @@ const IconBorderChanger = () => {
   )
 }
 
-const getCornerIcon = (corner: IconCornerType) => {
-  switch (corner) {
-    case "Miter corner":
-      return <WaveTriangleFill />
-    case "Round corner":
-      return <WaveTriangleFill />
-    case "Bevel corner":
-      return <WaveTriangleFill />
-  }
-}
-
-const IconCornerChanger = () => {
-  const [corner, setCorner] = useAtom(IconCornerAtom)
-
-  return (
-    <MenuTrigger>
-      <CPButton
-        styles={{
-          border: "1px solid var(--cp-border)",
-          borderRadius: "8px",
-        }}
-        padding='10px'
-        height='100%'
-        width={width}
-        variant='outline'
-        icon={getCornerIcon(corner)}
-        rightIcon={<CaretDownFill />}
-      >
-        <CPText
-          transform='capitalize'
-          styles={{ display: ["block", "block", "none"] }}
-        >
-          {corner}
-        </CPText>
-      </CPButton>
-
-      <CPMenu onAction={setCorner as any}>
-        <Item key='Miter corner'>
-          <CPText>{getCornerIcon("Miter corner")} Miter corner </CPText>
-        </Item>
-        <Item key='Round corner'>
-          <CPText>{getCornerIcon("Round corner")} Round corner </CPText>
-        </Item>
-        <Item key='Bevel corner'>
-          <CPText>{getCornerIcon("Bevel corner")} Bevel corner </CPText>
-        </Item>
-      </CPMenu>
-    </MenuTrigger>
-  )
-}
-
 const IconColorChanger = () => {
   const IconColor = useAtomValue(IconColorAtom)
 
@@ -376,7 +298,7 @@ const IconSettingsReset = () => {
 
 const WebpageThemeChanger = memo(function _() {
   const [currentTheme, changeTheme] = useTheme()
-  const [iconColor, setIconColor] = useAtom(IconColorAtom)
+  const [, setIconColor] = useAtom(IconColorAtom)
   const handleChangeTheme = useCallback(() => {
     if (currentTheme === "light") {
       changeTheme("dark")

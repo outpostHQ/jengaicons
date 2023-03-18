@@ -1,5 +1,4 @@
 import useTheme from "@/hooks/useTheme"
-import { AvailableThemes } from "@/types/theme"
 import { JengaIconProps, JengaIconRegularProps } from "@jengaicons/react"
 import { createContext, ReactNode, useEffect, useReducer } from "react"
 import { IconMetadata } from "@/types/icon"

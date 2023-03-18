@@ -2,10 +2,8 @@ import Banner from "@/components/Banner"
 import Hero from "@/components/Hero"
 import Main from "@/components/Main"
 import { CPColumn } from "@/components/shared/library"
-import { Block } from "@cube-dev/ui-kit"
 
 import { GetStaticProps } from "next/types"
-import { useEffect } from "react"
 
 type THomeProps = {
   totalIcons: string

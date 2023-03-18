@@ -407,7 +407,6 @@ function CPField<T extends FieldTypes>(props: CubeFieldProps<T>) {
 }
 
 function CPMenu<T>({ children, styles, ...otherProps }: CubeMenuProps<T>) {
-  const [theme] = useTheme()
   return (
     <Menu
       radius='2r'
