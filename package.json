@@ -30,15 +30,15 @@
     "@size-limit/webpack": "8.2.4",
     "@size-limit/webpack-why": "8.2.4",
     "@svgr/cli": "^6.5.1",
-    "@types/node": "^18.14.0",
+    "@types/node": "^18.15.3",
     "@types/react": "^18.0.28",
     "@types/react-dom": "^18.0.11",
-    "husky": "^8.0.0",
+    "husky": "^8.0.3",
     "prettier": "2.8.4",
     "pretty-quick": "3.1.3",
     "size-limit": "8.2.4",
-    "turbo": "^1.8.1",
-    "typescript": "^4.9.5"
+    "turbo": "^1.8.3",
+    "typescript": "^5.0.2"
   },
   "size-limit": [
     {
