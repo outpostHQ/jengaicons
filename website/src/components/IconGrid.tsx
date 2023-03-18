@@ -23,6 +23,7 @@ const IconGrid = ({ styles }: { styles?: Styles }) => {
           ] as () => React.ReactElement
           return (
             <IconWrapper
+              noDynamic={idx < 100}
               key={`${iconMetaData.safeName}${idx}`}
               ICON={ICON}
               iconMetadata={iconMetaData as IconMetadata}

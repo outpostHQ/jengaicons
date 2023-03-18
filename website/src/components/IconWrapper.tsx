@@ -1,4 +1,4 @@
-import { ComponentType, useCallback, useRef } from "react"
+import { ComponentType, useCallback, useMemo, useRef } from "react"
 import { CPButton, CPRow, CPText } from "@/shared/library"
 import { IconMetadata } from "@/types/icon"
 import { useAtomValue, useSetAtom } from "jotai"
@@ -15,6 +15,7 @@ import { useIntersectionObserver } from "usehooks-ts"
 
 const DisplayIcon = ({
   ICON,
+  isVisible,
 }: {
   ICON: ComponentType<JengaIconProps | JengaIconRegularProps>
   isVisible: boolean
@@ -24,15 +25,21 @@ const DisplayIcon = ({
   const size = useAtomValue(IconSizeAtom)
   const weight = useAtomValue(IconWeightAtom)
 
+  const memoizedSize = useMemo(() => size, [size])
+
+  if (!isVisible) return <canvas width={memoizedSize} height={memoizedSize} />
+
   return <ICON color={color} size={size} weight={weight} />
 }
 
 const IconWrapper = ({
   iconMetadata,
   ICON,
+  noDynamic,
 }: {
   iconMetadata: IconMetadata
   ICON: () => JSX.Element
+  noDynamic: boolean
 }) => {
   const setIsDrawerOpen = useSetAtom(IsDrawerOpenAtom)
   const selectIcon = useSetAtom(selectedIconAtom)
@@ -45,7 +52,7 @@ const IconWrapper = ({
   const entry = useIntersectionObserver(ref, {
     freezeOnceVisible: false,
   })
-  const isVisible = !!entry?.isIntersecting
+  const isVisible = noDynamic || !!entry?.isIntersecting
 
   return (
     <CPButton
@@ -68,11 +75,8 @@ const IconWrapper = ({
         height='10rem'
         whiteSpace='pre-line'
       >
-        {isVisible ? (
-          <DisplayIcon isVisible={isVisible} ICON={ICON} />
-        ) : (
-          <canvas width='32px' height='32px' />
-        )}
+        <DisplayIcon isVisible={isVisible} ICON={ICON} />
+
         <CPText>{iconMetadata.name}</CPText>
       </CPRow>
     </CPButton>
