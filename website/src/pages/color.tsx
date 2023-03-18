@@ -11,6 +11,10 @@ const Page = () => {
     setShowPicker((prev) => !prev)
   }, [])
 
+  const closePicker = useCallback(() => {
+    setShowPicker(false)
+  }, [])
+
   return (
     <>
       <CPButton
@@ -48,7 +52,7 @@ const Page = () => {
             marginTop: "10px",
           }}
         >
-          <ColorPicker />
+          <ColorPicker close={closePicker} />
         </CPRow>
       ) : null}
     </>
