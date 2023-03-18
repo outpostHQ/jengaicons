@@ -1,7 +1,6 @@
 import { IconCornerType } from "@/types/components/IconControl"
 import { JengaIconProps } from "@jengaicons/react"
 import { atom } from "jotai"
-import { atomWithStorage } from "jotai/utils"
 import { TIconSafeName, TVariants } from "@/types/icon"
 import {
   defaultIconColor,

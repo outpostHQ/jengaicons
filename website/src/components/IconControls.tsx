@@ -37,7 +37,6 @@ import {
   defaultIconWeight,
 } from "@/state/defaultValues"
 import { useDebounce } from "usehooks-ts"
-import { useDetectClickOutside } from "react-detect-click-outside"
 
 const getThemeIcon = (theme: AvailableThemes) => {
   switch (theme) {

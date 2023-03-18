@@ -243,7 +243,7 @@ importers:
       fuse.js: 6.6.2
       jotai: 2.0.3_react@18.2.0
       js-file-download: 0.4.12
-      next: 13.2.4_hrdbe576m4w26u2yfpqpvbxyky
+      next: 13.2.4_pjwopsidmaokadturxaafygjp4
       next-themes: 0.2.1_ld2jel3hspngo3u5lti2kgl2sq
       react: 18.2.0
       react-click-outside-hook: 1.1.1
@@ -361,7 +361,6 @@ packages:
       semver: 6.3.0
     transitivePeerDependencies:
       - supports-color
-    dev: true
 
   /@babel/core/7.21.3:
     resolution: {integrity: sha512-qIJONzoa/qiHghnm0l1n4i/6IIziDpzqc36FBs4pzMhDUraHqponwJLiAKm1hGLP3OSB/TVNz6rMwVGpwxxySw==}
@@ -420,7 +419,6 @@ packages:
       browserslist: 4.21.5
       lru-cache: 5.1.1
       semver: 6.3.0
-    dev: true
 
   /@babel/helper-compilation-targets/7.20.7_@babel+core@7.21.3:
     resolution: {integrity: sha512-4tGORmfQcrc+bvrjb5y3dG9Mx1IOZjsHqQVUz7XCNHO+iTmqxWnVg3KRygjGmpRLJGdQSKuvFinbIb0CnZwHAQ==}
@@ -9969,7 +9967,7 @@ packages:
       react: '*'
       react-dom: '*'
     dependencies:
-      next: 13.2.4_hrdbe576m4w26u2yfpqpvbxyky
+      next: 13.2.4_pjwopsidmaokadturxaafygjp4
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
     dev: false
@@ -10018,7 +10016,7 @@ packages:
       - babel-plugin-macros
     dev: false
 
-  /next/13.2.4_hrdbe576m4w26u2yfpqpvbxyky:
+  /next/13.2.4_pjwopsidmaokadturxaafygjp4:
     resolution: {integrity: sha512-g1I30317cThkEpvzfXujf0O4wtaQHtDCLhlivwlTJ885Ld+eOgcz7r3TGQzeU+cSRoNHtD8tsJgzxVdYojFssw==}
     engines: {node: '>=14.6.0'}
     hasBin: true
@@ -10045,7 +10043,7 @@ packages:
       postcss: 8.4.14
       react: 18.2.0
       react-dom: 18.2.0_react@18.2.0
-      styled-jsx: 5.1.1_ogvc6ewgr3qq5z6tmbtquhqyui
+      styled-jsx: 5.1.1_2exiyaescjxorpwwmy4ejghgte
     optionalDependencies:
       '@next/swc-android-arm-eabi': 13.2.4
       '@next/swc-android-arm64': 13.2.4
@@ -11749,7 +11747,7 @@ packages:
       supports-color: 5.5.0
     dev: false
 
-  /styled-jsx/5.1.1_ogvc6ewgr3qq5z6tmbtquhqyui:
+  /styled-jsx/5.1.1_2exiyaescjxorpwwmy4ejghgte:
     resolution: {integrity: sha512-pW7uC1l4mBZ8ugbiZrcIsiIvVx1UmTfw7UkC3Um2tmfUq9Bhk8IiyEIPl6F8agHgjzku6j0xQEZbfA5uSgSaCw==}
     engines: {node: '>= 12.0.0'}
     peerDependencies:
@@ -11762,7 +11760,7 @@ packages:
       babel-plugin-macros:
         optional: true
     dependencies:
-      '@babel/core': 7.21.3
+      '@babel/core': 7.20.12
       client-only: 0.0.1
       react: 18.2.0
     dev: false

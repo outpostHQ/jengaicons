@@ -1,31 +1,16 @@
-import {
-  CPButton,
-  CPMenu,
-  CPRow,
-  CPText,
-  CPTextInput,
-} from "@/components/shared/library"
+import { CPRow, CPText, CPTextInput } from "@/components/shared/library"
 import useTheme from "@/hooks/useTheme"
 import { IconColorAtom } from "@/state/atoms"
-import {
-  defaultIconColor,
-  defaultIconDarkModeColor,
-  defaultIconLightModeColor,
-} from "@/state/defaultValues"
-import { Item, MenuTrigger } from "@cube-dev/ui-kit"
-import { CaretDownFill } from "@jengaicons/react"
 import { useAtom } from "jotai"
-import { memo, useCallback, useEffect, useMemo, useRef, useState } from "react"
+import { useEffect, useState } from "react"
 
-import { HexColorPicker, RgbColorPicker } from "react-colorful"
+import { HexColorPicker } from "react-colorful"
 import tinycolor from "tinycolor2"
-import { useDebounce, useOnClickOutside } from "usehooks-ts"
-import { useClickOutside } from "react-click-outside-hook"
-import OutsideClickHandler from "react-outside-click-handler-lite"
+import { useDebounce } from "usehooks-ts"
 import { useDetectClickOutside } from "react-detect-click-outside"
 
 type TColorModes = "hex" | "rgb"
-type TRGBValue = { r: number; g: number; b: number }
+// type TRGBValue = { r: number; g: number; b: number }
 type TColor = string
 
 type TCommonColorInputProps = {
@@ -38,34 +23,34 @@ type TCommonColorInputProps = {
 //   onChange: (color: TColor) => void
 // }
 
-const ColorModeMenu = memo(function _({
-  colorMode,
-  onChange,
-}: {
-  colorMode: TColorModes
-  onChange: (color: TColorModes) => void
-}) {
-  return (
-    <MenuTrigger>
-      <CPButton
-        padding='10px'
-        height='100%'
-        rightIcon={<CaretDownFill />}
-        variant='clear'
-      >
-        <CPText transform='uppercase'>{colorMode}</CPText>
-      </CPButton>
-      <CPMenu
-        width='6.3rem'
-        onAction={onChange as (key: any) => void}
-        selectedKeys={colorMode}
-      >
-        <Item key='hex'>HEX</Item>
-        {/* <Item key='rgb'>RGB</Item> */}
-      </CPMenu>
-    </MenuTrigger>
-  )
-})
+// const ColorModeMenu = memo(function _({
+//   colorMode,
+//   onChange,
+// }: {
+//   colorMode: TColorModes
+//   onChange: (color: TColorModes) => void
+// }) {
+//   return (
+//     <MenuTrigger>
+//       <CPButton
+//         padding='10px'
+//         height='100%'
+//         rightIcon={<CaretDownFill />}
+//         variant='clear'
+//       >
+//         <CPText transform='uppercase'>{colorMode}</CPText>
+//       </CPButton>
+//       <CPMenu
+//         width='6.3rem'
+//         onAction={onChange as (key: any) => void}
+//         selectedKeys={colorMode}
+//       >
+//         <Item key='hex'>HEX</Item>
+//         {/* <Item key='rgb'>RGB</Item> */}
+//       </CPMenu>
+//     </MenuTrigger>
+//   )
+// })
 
 // const RGBInput = ({ color, onChange }: TCommonProps) => {
 //   return (
