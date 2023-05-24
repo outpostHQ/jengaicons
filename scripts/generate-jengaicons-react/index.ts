@@ -104,9 +104,9 @@ async function main() {
         componentName,
         defaultSize: 32,
         svgContent: svgFileContent,
-        defaultColor: "#000000", // BLACK COLOR
+        defaultColor: "currentColor",
         defaultWeight: "2",
-        variant: capitalize(variantFolder) as TVariants,
+        variant: variantFolder.toLowerCase() as TVariants,
       })
 
       /**
