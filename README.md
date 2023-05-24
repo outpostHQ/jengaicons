@@ -38,7 +38,13 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-with `JengaIconContext.Provider`
+## Context
+
+Jenga Icons simplifies the process of applying a default style to all icons by
+utilizing React Context. By creating an `JengaIconContext.Provider` at the root
+of the application or at a higher level in the component tree than the icons,
+you can pass a configuration object with properties that will serve as the
+default style for all icons.
 
 ```tsx
 import React from "react"
@@ -62,6 +68,15 @@ const App = () => {
 
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
+
+In order to style icons differently in different areas of an application, you
+have the option to create multiple Contexts. Each Context will define a specific
+styling for icons within its respective region. Icons will utilize the nearest
+Context above them in the component tree to determine their individual style.
+
+> Important: The context will additionally transmit any supplied SVG props to
+> icon instances, offering utility in tasks such as including accessible
+> `aria-label`s, `classNames`, and more.
 
 ## Props
 
