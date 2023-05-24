@@ -13,6 +13,7 @@ dist-ssr
 --out-dir
 *.local
 .env
+packages/jengaicons-react/icons/*
 
 # Editor directories and files
 .vscode/*
