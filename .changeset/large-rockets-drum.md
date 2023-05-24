@@ -10,3 +10,5 @@
 - added `currentColor`
 - added `jengaIconFill` and `jengaIconCommon` Props
 - example update for `currentColor`
+- upgrade dependencies
+- added doc for context provider
