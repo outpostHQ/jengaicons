@@ -1,7 +1,7 @@
 import { createContext } from "react"
 import type { SVGProps } from "react"
 
-export interface JengaIconProps {
+export interface JengaIconCommonProps {
   /** Set the size of the Svg in px*/
   size?: number | string
 
@@ -20,13 +20,19 @@ export interface JengaIconProps {
   children?: SVGProps<SVGSVGElement>["children"]
 }
 
-export interface JengaIconRegularProps extends JengaIconProps {
+export interface JengaIconRegularProps extends JengaIconCommonProps {
   /**
    * Sets the thinkness / `strokeWidth` of the Icon \
    * Only applies to `Regular` icons
    * */
   weight?: SVGProps<SVGSVGElement>["strokeWidth"]
 }
+
+export interface JengaIconFillProps extends JengaIconCommonProps {
+  // currently no, special props for Fill icons but will add in future
+}
+
+export type JengaIconProps = JengaIconRegularProps | JengaIconFillProps
 
 type TJengaIconContext = Partial<JengaIconProps | JengaIconRegularProps>
 
