@@ -45,7 +45,7 @@
       "name": "@jengaicons/react",
       "limit": "3 kb",
       "path": "./packages/jengaicons-react/dist/src/index.js",
-      "import": "{ ActivityRegular }"
+      "import": "{ Activity }"
     }
   ]
 }
