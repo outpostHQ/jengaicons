@@ -13,8 +13,8 @@
   "devDependencies": {
     "@actions/core": "1.10.0",
     "@actions/exec": "1.1.1",
-    "commander": "10.0.0",
+    "commander": "10.0.1",
     "markdown-table": "3.0.3",
-    "size-limit": "8.1.2"
+    "size-limit": "8.2.4"
   }
 }

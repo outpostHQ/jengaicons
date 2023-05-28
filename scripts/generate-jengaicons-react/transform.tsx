@@ -87,7 +87,7 @@ const getRegularComponent = (
 
                        ${genAttrString(svgAST.attributes)}
                         >
-                            {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+                            {(!!altCtx || !!alt) ? <title>{alt || altCtx}</title> : null}
 
                             ${genSVG(svgAST.children, transformData)}
 
@@ -102,7 +102,7 @@ const getRegularComponent = (
     `
 }
 
-const getVariantComponent = (
+const getFillComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
 ) => {
@@ -112,9 +112,9 @@ const getVariantComponent = (
     import * as React from 'react'
     import { forwardRef, useContext } from 'react'
     import { JengaIconContext } from '../../src/base'
-    import type { JengaIconProps } from '../../src/base'
+    import type { JengaIconFillProps } from '../../src/base'
 
-    const ${componentName} =  forwardRef<SVGSVGElement, JengaIconProps>(
+    const ${componentName} =  forwardRef<SVGSVGElement, JengaIconFillProps>(
 
             ( props, ref )=>{
               const { size, color, alt, children, mirrored, style } = props;
@@ -143,7 +143,7 @@ const getVariantComponent = (
 
                        ${genAttrString(svgAST.attributes)}
                         >
-                            {(!!altCtx || !!alt) && <title>{alt || altCtx}</title>}
+                            {(!!altCtx || !!alt) ? <title>{alt || altCtx}</title> : null}
 
                             ${genSVG(svgAST.children, transformData)}
 
@@ -162,9 +162,11 @@ const getComponent = (transformData: TransformData, svgAST: svgson.INode) => {
   switch (transformData.variant) {
     case "regular":
       return getRegularComponent(transformData, svgAST)
+    case "fill":
+      return getFillComponent(transformData, svgAST)
+    default:
+      throw new Error(`Invalid Variant : ${transformData.variant}`)
   }
-
-  return getVariantComponent(transformData, svgAST)
 }
 
 interface TransformData {
