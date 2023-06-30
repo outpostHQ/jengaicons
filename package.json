@@ -42,7 +42,13 @@
   },
   "size-limit": [
     {
-      "name": "@jengaicons/react",
+      "name": "@jengaicons/react ESM Build",
+      "limit": "3 kb",
+      "path": "./packages/jengaicons-react/dist/src/index.mjs",
+      "import": "{ Activity }"
+    },
+    {
+      "name": "@jengaicons/react CJS Build",
       "limit": "3 kb",
       "path": "./packages/jengaicons-react/dist/src/index.js",
       "import": "{ Activity }"
