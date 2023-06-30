@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 0.7.0
+
+### Minor Changes
+
+- [#42](https://github.com/OutpostHQ/jengaicons/pull/42)
+  [`0e7b9b73`](https://github.com/OutpostHQ/jengaicons/commit/0e7b9b7384e7fb05b9aa0982857aed35c8800704)
+  Thanks [@sahilshahane](https://github.com/sahilshahane)! - - Added `cjs` build
+  - Added Remix example for `cjs` import
+
 ## 0.6.0
 
 ### Minor Changes
