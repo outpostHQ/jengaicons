@@ -1962,24 +1962,6 @@
     "variant": "fill"
   },
   {
-    "name": "arrow square in",
-    "safeName": "ArrowSquareIn",
-    "tags": [
-      "ArrowSquareIn"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow square in fill",
-    "safeName": "ArrowSquareInFill",
-    "tags": [
-      "ArrowSquareInFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
     "name": "arrow square left",
     "safeName": "ArrowSquareLeft",
     "tags": [
@@ -3379,24 +3361,6 @@
     "safeName": "BoundingBoxFill",
     "tags": [
       "BoundingBoxFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "brackets angle",
-    "safeName": "BracketsAngle",
-    "tags": [
-      "BracketsAngle"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "brackets angle fill",
-    "safeName": "BracketsAngleFill",
-    "tags": [
-      "BracketsAngleFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -4995,6 +4959,24 @@
     "variant": "regular"
   },
   {
+    "name": "chevron up down",
+    "safeName": "ChevronUpDown",
+    "tags": [
+      "ChevronUpDown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chevron up down fill",
+    "safeName": "ChevronUpDownFill",
+    "tags": [
+      "ChevronUpDownFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "chevron up fill",
     "safeName": "ChevronUpFill",
     "tags": [
@@ -5827,6 +5809,24 @@
     "safeName": "ConfettiFill",
     "tags": [
       "ConfettiFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "container",
+    "safeName": "Container",
+    "tags": [
+      "Container"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "container fill",
+    "safeName": "ContainerFill",
+    "tags": [
+      "ContainerFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11623,24 +11623,6 @@
     "safeName": "MagnetStraightFill",
     "tags": [
       "MagnetStraightFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "magnifying glass",
-    "safeName": "MagnifyingGlass",
-    "tags": [
-      "MagnifyingGlass"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "magnifying glass fill",
-    "safeName": "MagnifyingGlassFill",
-    "tags": [
-      "MagnifyingGlassFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18018,42 +18000,6 @@
     "variant": "fill"
   },
   {
-    "name": "tote",
-    "safeName": "Tote",
-    "tags": [
-      "Tote"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "tote fill",
-    "safeName": "ToteFill",
-    "tags": [
-      "ToteFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "tote simple",
-    "safeName": "ToteSimple",
-    "tags": [
-      "ToteSimple"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "tote simple fill",
-    "safeName": "ToteSimpleFill",
-    "tags": [
-      "ToteSimpleFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
     "name": "trademark registered",
     "safeName": "TrademarkRegistered",
     "tags": [
@@ -19381,6 +19327,24 @@
     "safeName": "WineFill",
     "tags": [
       "WineFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "wire guardlogo",
+    "safeName": "WireGuardlogo",
+    "tags": [
+      "WireGuardlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "wire guardlogo fill",
+    "safeName": "WireGuardlogoFill",
+    "tags": [
+      "WireGuardlogoFill"
     ],
     "categories": [],
     "variant": "fill"
