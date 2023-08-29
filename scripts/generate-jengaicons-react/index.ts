@@ -7,7 +7,7 @@ import { TVariants } from "./types"
 const args = getCLIArgs()
 const PATH_TO_ASSETS = args.assets
 const PATH_TO_WRITE_FOLDER = path.join(args.rootPath, args.outputFolderName)
-const PATH_TO_SRC_FOLDER = path.join(args.rootPath, "src")
+const PATH_TO_SRC_FOLDER = path.join(args.rootPath)
 const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, "index.tsx")
 
 const pathPresent = (path: string) => fs.existsSync(path)
@@ -82,11 +82,11 @@ async function main() {
   fs.mkdirSync(PATH_TO_WRITE_FOLDER)
 
   // create variant folders in WRITE TO PATH FOLDER
-  for (const items of itemsInDirectory) {
-    const variant_folder_path = path.join(PATH_TO_WRITE_FOLDER, items.name)
+  // for (const items of itemsInDirectory) {
+  //   const variant_folder_path = path.join(PATH_TO_WRITE_FOLDER, items.name)
 
-    if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
-  }
+  //   if (!pathPresent(variant_folder_path)) fs.mkdirSync(variant_folder_path)
+  // }
 
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as Lowercase<TVariants>
@@ -113,13 +113,13 @@ async function main() {
        * Write the component to the packages/icons folder
        */
       fs.writeFileSync(
-        path.join(PATH_TO_WRITE_FOLDER, variantFolder, `${componentName}.tsx`),
+        path.join(PATH_TO_WRITE_FOLDER, `${componentName}.tsx`),
         svgComponent,
       )
 
       fs.appendFileSync(
         PATH_TO_SRC_INDEX_FILE,
-        `export { default as ${componentName} } from "../${args.outputFolderName}/${variantFolder}/${componentName}";\n`,
+        `export { default as ${componentName} } from "./${args.outputFolderName}/${componentName}";\n`,
       )
     })
   }
@@ -127,9 +127,8 @@ async function main() {
   fs.appendFileSync(
     PATH_TO_SRC_INDEX_FILE,
     [
-      `export { JengaIconContext } from "./base";`,
-      `export type { JengaIconProps }  from "./base"`,
-      `export type { JengaIconRegularProps } from "./base"`,
+      `export { JengaIconContext } from "./context";`,
+      `export type *  from "./types"`,
     ].join("\n"),
   )
 }

@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.ts",
   "scripts": {
-    "build": "pnpm write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react --output-folder-name icons",
+    "build": "pnpm write-icons --assets ../../optimized --root-path ../../packages/jengaicons-react/src --output-folder-name icons",
     "write-icons": "ts-node --transpileOnly index",
     "make:webicons": "ts-node --transpileOnly scripts"
   },

@@ -1,18 +1,24 @@
-import resolve from "@rollup/plugin-node-resolve"
-import includePaths from "rollup-plugin-includepaths"
-import typescript from "rollup-plugin-typescript2"
-import terser from "@rollup/plugin-terser"
 import summary from "rollup-plugin-summary"
 import progress from "rollup-plugin-progress"
 import externals from "rollup-plugin-node-externals"
 import { rimrafSync } from "rimraf"
+import { swc, defineRollupSwcOption } from "rollup-plugin-swc3"
+import swcPreserveDirectives from "rollup-swc-preserve-directives"
+
+import path from "node:path"
+import { fileURLToPath } from "node:url"
+
+const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 rimrafSync("dist")
 
-let includePathOptions = {
-  paths: ["./"],
-  extensions: [".js", ".ts", ".tsx", ".jsx"],
-}
+/**@type {import('rollup').RollupOptions} */
+const SWC_OPTIONS = defineRollupSwcOption({
+  minify: true,
+  jsc: {
+    baseUrl: __dirname,
+  },
+})
 
 /**@type {import('rollup').RollupOptions} */
 const prodConfig_CJS = {
@@ -20,25 +26,22 @@ const prodConfig_CJS = {
   output: {
     format: "cjs",
     sourcemap: false,
-    dir: "dist",
+    dir: "dist/cjs",
     preserveModules: true,
+    strict: false,
   },
 
   external: [/node_modules/],
   plugins: [
     progress({
-      clearLine: false, // default: true
+      clearLine: true,
     }),
     externals({
       deps: true,
       devDeps: true,
     }),
-    includePaths(includePathOptions),
-    resolve(),
-    typescript({
-      tsconfig: "tsconfig-cjs.json",
-    }),
-    terser(),
+    swc(SWC_OPTIONS),
+    swcPreserveDirectives(),
     summary({
       showBrotliSize: true,
       showGzippedSize: true,
@@ -52,7 +55,7 @@ const prodConfig_ESM = {
   output: {
     format: "esm",
     sourcemap: false,
-    dir: "dist",
+    dir: "dist/esm",
     preserveModules: true,
     entryFileNames: "[name].mjs",
   },
@@ -60,18 +63,14 @@ const prodConfig_ESM = {
   external: [/node_modules/],
   plugins: [
     progress({
-      clearLine: false, // default: true
+      clearLine: true,
     }),
     externals({
       deps: true,
       devDeps: true,
     }),
-    includePaths(includePathOptions),
-    resolve(),
-    typescript({
-      tsconfig: "tsconfig-esm.json",
-    }),
-    terser(),
+    swc(SWC_OPTIONS),
+    swcPreserveDirectives(),
     summary({
       showBrotliSize: true,
       showGzippedSize: true,

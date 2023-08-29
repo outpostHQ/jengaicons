@@ -1,4 +1,3 @@
-import { createContext } from "react"
 import type { SVGProps } from "react"
 
 export interface JengaIconCommonProps {
@@ -33,7 +32,4 @@ export interface JengaIconFillProps extends JengaIconCommonProps {
 }
 
 export type JengaIconProps = JengaIconRegularProps | JengaIconFillProps
-
-type TJengaIconContext = Partial<JengaIconProps | JengaIconRegularProps>
-
-export const JengaIconContext = createContext<TJengaIconContext>({})
+export type TJengaIconContext = Partial<JengaIconProps | JengaIconRegularProps>

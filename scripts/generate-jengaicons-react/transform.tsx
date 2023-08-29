@@ -52,9 +52,10 @@ const getRegularComponent = (
   return `
     import * as React from 'react'
     import { forwardRef, useContext } from 'react'
+    import { JengaIconContext } from '../context'
+    
     import type { Context } from 'react'
-    import { JengaIconContext } from '../../src/base'
-    import type { JengaIconRegularProps } from '../../src/base'
+    import type { JengaIconRegularProps } from '../types'
 
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconRegularProps>(
 
@@ -111,9 +112,11 @@ const getFillComponent = (
   return `
     import * as React from 'react'
     import { forwardRef, useContext } from 'react'
-    import { JengaIconContext } from '../../src/base'
-    import type { JengaIconFillProps } from '../../src/base'
-
+    import { JengaIconContext } from '../context'
+    
+    import type { Context } from 'react'
+    import type { JengaIconFillProps } from '../types'   
+    
     const ${componentName} =  forwardRef<SVGSVGElement, JengaIconFillProps>(
 
             ( props, ref )=>{
@@ -188,7 +191,13 @@ const transform = (transformData: TransformData) => {
 
   svgAST.attributes.viewBox = `0 0 ${defaultSize} ${defaultSize}`
 
-  const ComponentFileContent = getComponent(transformData, svgAST)
+  const ComponentFileContent = `"use client";\n${getComponent(
+    transformData,
+    svgAST,
+  )}`
+
+  return ComponentFileContent
+
   // @ts-expect-error
   return prettier.format(ComponentFileContent, {
     ...prettierConfig,
