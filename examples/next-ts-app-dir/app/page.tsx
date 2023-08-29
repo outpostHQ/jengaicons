@@ -1,10 +1,11 @@
-import { Activity } from "@jengaicons/react"
+import { ActivityFill } from "@jengaicons/react"
 
 export default function Home() {
   return (
     <main>
-      <Activity />
-      <div>{/* <ActivityFill color='blue' size={300} /> */}</div>
+      <div>
+        <ActivityFill color='blue' />
+      </div>
     </main>
   )
 }
