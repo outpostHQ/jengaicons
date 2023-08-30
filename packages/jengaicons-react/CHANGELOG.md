@@ -1,5 +1,23 @@
 # @jengaicons/react
 
+## 0.9.0
+
+### Minor Changes
+
+- [#50](https://github.com/OutpostHQ/jengaicons/pull/50)
+  [`39eb811b`](https://github.com/OutpostHQ/jengaicons/commit/39eb811b0eac5261e230c1ab677086b7d34a7009)
+  Thanks [@sahilshahane](https://github.com/sahilshahane)! - - Added `SWC`
+  bundler that resulted in very fast builds
+  - Changed build output structure - `cjs` and `esm` types will have their own
+    directory
+  - Added Next.js 13 App-Directory support
+  - Added Next.js 13
+    [Modularize Import](https://nextjs.org/docs/architecture/nextjs-compiler#modularize-imports)
+    support to fix tree shaking for app-directory
+    - This also fixes memory issues, only the icons that are being used are
+      loaded in runtime ( significantly reduces time to compile pages during
+      development)
+
 ## 0.8.0
 
 ### Minor Changes
