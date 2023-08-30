@@ -12,7 +12,6 @@ const __dirname = path.dirname(fileURLToPath(import.meta.url))
 
 rimrafSync("dist")
 
-/**@type {import('rollup').RollupOptions} */
 const SWC_OPTIONS = defineRollupSwcOption({
   minify: true,
   jsc: {
@@ -50,6 +49,7 @@ const prodConfig_CJS = {
   ],
 }
 
+/**@type {import('rollup').RollupOptions} */
 const prodConfig_ESM = {
   input: "./src/index.tsx",
   output: {
@@ -59,7 +59,6 @@ const prodConfig_ESM = {
     preserveModules: true,
     entryFileNames: "[name].mjs",
   },
-
   external: [/node_modules/],
   plugins: [
     progress({
