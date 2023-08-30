@@ -396,6 +396,24 @@
     "variant": "fill"
   },
   {
+    "name": "amonzonlogo",
+    "safeName": "Amonzonlogo",
+    "tags": [
+      "Amonzonlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "amonzonlogo fill",
+    "safeName": "AmonzonlogoFill",
+    "tags": [
+      "AmonzonlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "anchor",
     "safeName": "Anchor",
     "tags": [
@@ -2407,6 +2425,42 @@
     "safeName": "AtomFill",
     "tags": [
       "AtomFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "a w slogo",
+    "safeName": "AWSlogo",
+    "tags": [
+      "AWSlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "a w slogo fill",
+    "safeName": "AWSlogoFill",
+    "tags": [
+      "AWSlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "azurelogo",
+    "safeName": "Azurelogo",
+    "tags": [
+      "Azurelogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "azurelogo fill",
+    "safeName": "AzurelogoFill",
+    "tags": [
+      "AzurelogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -5526,6 +5580,24 @@
     "variant": "fill"
   },
   {
+    "name": "cloudstacklogo",
+    "safeName": "Cloudstacklogo",
+    "tags": [
+      "Cloudstacklogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "cloudstacklogo fill",
+    "safeName": "CloudstacklogoFill",
+    "tags": [
+      "CloudstacklogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "cloud sun",
     "safeName": "CloudSun",
     "tags": [
@@ -5742,6 +5814,24 @@
     "variant": "fill"
   },
   {
+    "name": "cometlogo",
+    "safeName": "Cometlogo",
+    "tags": [
+      "Cometlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "cometlogo fill",
+    "safeName": "CometlogoFill",
+    "tags": [
+      "CometlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "command",
     "safeName": "Command",
     "tags": [
@@ -5809,6 +5899,24 @@
     "safeName": "ConfettiFill",
     "tags": [
       "ConfettiFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "confluxlogo",
+    "safeName": "Confluxlogo",
+    "tags": [
+      "Confluxlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "confluxlogo fill",
+    "safeName": "ConfluxlogoFill",
+    "tags": [
+      "ConfluxlogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6781,6 +6889,24 @@
     "safeName": "DiceTwoFill",
     "tags": [
       "DiceTwoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "digital ocean",
+    "safeName": "DigitalOcean",
+    "tags": [
+      "DigitalOcean"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "digital oceanlogo fill",
+    "safeName": "DigitalOceanlogoFill",
+    "tags": [
+      "DigitalOceanlogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -10597,6 +10723,24 @@
     "safeName": "HouseSimpleFill",
     "tags": [
       "HouseSimpleFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "i b mlogo",
+    "safeName": "IBMlogo",
+    "tags": [
+      "IBMlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "i b mlogo fill",
+    "safeName": "IBMlogoFill",
+    "tags": [
+      "IBMlogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -17874,6 +18018,15 @@
     "variant": "fill"
   },
   {
+    "name": "thumbs up fill",
+    "safeName": "ThumbsUpFill",
+    "tags": [
+      "ThumbsUpFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "ticket",
     "safeName": "Ticket",
     "tags": [
@@ -19096,6 +19249,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "weather nature",
+    "safeName": "WeatherNature",
+    "tags": [
+      "WeatherNature"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "webcam",
