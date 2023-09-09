@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 0.10.0
+
+### Minor Changes
+
+- [#52](https://github.com/OutpostHQ/jengaicons/pull/52)
+  [`f8c68282`](https://github.com/OutpostHQ/jengaicons/commit/f8c68282cc5eb4cc90b4f9f5e77b773509604158)
+  Thanks [@sahilshahane](https://github.com/sahilshahane)! - fix: width / height
+  discrepancies in icons
+
 ## 0.9.0
 
 ### Minor Changes
