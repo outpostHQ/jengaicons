@@ -189,8 +189,6 @@ const transform = (transformData: TransformData) => {
   delete svgAST.attributes.width
   delete svgAST.attributes.height
 
-  svgAST.attributes.viewBox = `0 0 ${defaultSize} ${defaultSize}`
-
   const ComponentFileContent = `"use client";\n${getComponent(
     transformData,
     svgAST,
