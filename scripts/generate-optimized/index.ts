@@ -1,7 +1,7 @@
 import fs from "fs"
 import fsP from "fs/promises"
 import path from "path"
-import { optimize } from "svgo"
+import svgo from "svgo"
 import {
   IconMetadata,
   TVariants,
@@ -110,8 +110,18 @@ async function main() {
       /**
        * Optimize the svg, this will remove all the unnecessary
        */
-      const optimizedSvgString = optimize(svgString, {
+      const optimizedSvgString = svgo.optimize(svgString, {
         path: pathToOptimized,
+        plugins: [
+          {
+            name: "preset-default",
+            params: {
+              overrides: {
+                removeViewBox: false,
+              },
+            },
+          },
+        ],
       })
 
       /**
@@ -137,23 +147,23 @@ async function main() {
       // )
     }
   }
-  const WEBSITE_FOLDER = path.join("..", "..", "website")
+  // const WEBSITE_FOLDER = path.join("..", "..", "website")
 
-  const WEBSITE_PUBLIC_FOLDER = path.join(WEBSITE_FOLDER, "public")
-  const PATH_TO_ZIP_FILE = path.join(WEBSITE_PUBLIC_FOLDER, "jengaicons.zip")
+  // const WEBSITE_PUBLIC_FOLDER = path.join(WEBSITE_FOLDER, "public")
+  // const PATH_TO_ZIP_FILE = path.join(WEBSITE_PUBLIC_FOLDER, "jengaicons.zip")
   // Create a zip file
-  await zip(pathToOptimized, PATH_TO_ZIP_FILE, {
-    compression: COMPRESSION_LEVEL.high,
-  })
+  // await zip(pathToOptimized, PATH_TO_ZIP_FILE, {
+  //   compression: COMPRESSION_LEVEL.high,
+  // })
 
-  const PATH_TO_PUBLIC_ICON_FOLDER = path.join(
-    WEBSITE_PUBLIC_FOLDER,
-    "iconSVGs",
-  )
+  // const PATH_TO_PUBLIC_ICON_FOLDER = path.join(
+  //   WEBSITE_PUBLIC_FOLDER,
+  //   "iconSVGs",
+  // )
   // Copy Optimized folder to Website public folder
-  await fsP.cp(pathToOptimized, PATH_TO_PUBLIC_ICON_FOLDER, {
-    recursive: true,
-  })
+  // await fsP.cp(pathToOptimized, PATH_TO_PUBLIC_ICON_FOLDER, {
+  //   recursive: true,
+  // })
 
   // sort by name imports
   allIcons.sort((a, b) => a.safeName.localeCompare(b.safeName))
