@@ -1,4 +1,5 @@
 const jengaIconsImportConditions = `{{#if (eq member "JengaIconContext" )}}/dist/esm/context{{else}}/dist/esm/icons/{{member}}{{/if}}`
-module.exports.nextJsModularizeImport = {
+
+export const nextJsModularizeImport = {
   transform: `@jengaicons/react${jengaIconsImportConditions}`,
-}
+} as const
