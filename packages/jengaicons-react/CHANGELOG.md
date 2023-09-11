@@ -1,5 +1,21 @@
 # @jengaicons/react
 
+## 1.0.0
+
+### Major Changes
+
+- [#57](https://github.com/OutpostHQ/jengaicons/pull/57)
+  [`1ab1e5d1`](https://github.com/OutpostHQ/jengaicons/commit/1ab1e5d17995209bb70ab0c234f4cf221f1ea241)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - fix/nextjs
+  imports
+
+### Minor Changes
+
+- [#57](https://github.com/OutpostHQ/jengaicons/pull/57)
+  [`1ab1e5d1`](https://github.com/OutpostHQ/jengaicons/commit/1ab1e5d17995209bb70ab0c234f4cf221f1ea241)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - fixed nextjs
+  modularized imports
+
 ## 0.11.0
 
 ### Minor Changes
