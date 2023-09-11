@@ -6,7 +6,7 @@ export default function Home() {
       <div>
         <ActivityFill color='blue' />
         <Record />
-        <RecordFill size={300} />
+        <RecordFill size={300} className='stroke-black' />
       </div>
     </main>
   )
