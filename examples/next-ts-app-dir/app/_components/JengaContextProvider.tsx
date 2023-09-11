@@ -7,7 +7,7 @@ export const JengaIconsContextProvider = ({ children }: { children: any }) => {
   return (
     <JengaIconContext.Provider
       value={{
-        size: 300,
+        size: 100,
         color: "red",
       }}
     >

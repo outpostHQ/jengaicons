@@ -1,4 +1,4 @@
-const { nextJsModularizeImport } = require("@jengaicons/react")
+const { nextJsModularizeImport } = require("@jengaicons/react/nextjs")
 
 /** @type {import('next').NextConfig} */
 const nextConfig = {

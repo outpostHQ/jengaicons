@@ -43,6 +43,15 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
     .join("")
 }
 
+const CommonSVGRootProps = `
+{...props}
+transform={(props.transform || "") + (mirrored || mirroredCtx ? " scale(-1, 1)" : "")}
+style={{
+  ...styleCtx,
+  ...style,
+  ...props.style,
+}}`
+
 const getRegularComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
@@ -77,16 +86,10 @@ const getRegularComponent = (
               return  <svg
                        width={size || sizeCtx || ${defaultSize}}
                        height={size || sizeCtx || ${defaultSize}}
-                       transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        strokeWidth={weight || weightCtx || ${defaultWeight}}
                        ref={ref}
-
-                       style={{
-                        ...styleCtx,
-                        ...style,
-                       }}
-
                        ${genAttrString(svgAST.attributes)}
+                       ${CommonSVGRootProps}
                         >
                             {(!!altCtx || !!alt) ? <title>{alt || altCtx}</title> : null}
 
@@ -136,15 +139,9 @@ const getFillComponent = (
               return  <svg
                        width={size || sizeCtx || ${defaultSize}}
                        height={size || sizeCtx || ${defaultSize}}
-                       transform={mirrored || mirroredCtx ? 'scale(-1, 1)' : undefined}
                        ref={ref}
-
-                       style={{
-                        ...styleCtx,
-                        ...style,
-                       }}
-
                        ${genAttrString(svgAST.attributes)}
+                       ${CommonSVGRootProps}
                         >
                             {(!!altCtx || !!alt) ? <title>{alt || altCtx}</title> : null}
 
