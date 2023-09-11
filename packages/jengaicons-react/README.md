@@ -38,7 +38,29 @@ const App = () => {
 ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-## Context
+## Optimization
+
+Tired of icons hogging your memory by loading all icons ? \
+Solution for NextJS is to use [modularizeImports feature](https://nextjs.org/docs/architecture/nextjs-compiler#modularize-imports)
+
+```ts
+// next.config.mjs
+import { nextJsModularizeImport } from "@jengaicons/react"
+
+const nextConfig = {
+  modularizeImports: {
+    "@jengaicons/react": nextJsModularizeImport,
+  },
+}
+
+export default nextConfig
+```
+
+At Outpost, we use nextjs as our primary frontend framework so we've added
+solution only for it but we would love to know, what framework you use so we can
+add support for those too! Just create a issue
+
+## Global Configuration (uses React Context API)
 
 Jenga Icons simplifies the process of applying a default style to all icons by
 utilizing React Context. By creating an `JengaIconContext.Provider` at the root
