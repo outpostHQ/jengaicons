@@ -44,14 +44,16 @@ Tired of icons hogging your memory by loading all icons ? \
 Solution for NextJS is to use [modularizeImports feature](https://nextjs.org/docs/architecture/nextjs-compiler#modularize-imports)
 
 ```ts
-// next.config.js
-const { nextJsModularizeImport } = require("@jengaicons/react/nextjs")
+// next.config.mjs
+import { nextJsModularizeImport } from "@jengaicons/react"
 
 const nextConfig = {
   modularizeImports: {
     "@jengaicons/react": nextJsModularizeImport,
   },
 }
+
+export default nextConfig
 ```
 
 At Outpost, we use nextjs as our primary frontend framework so we've added

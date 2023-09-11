@@ -129,6 +129,7 @@ async function main() {
     [
       `export { JengaIconContext } from "./context";`,
       `export type *  from "./types"`,
+      `export *  from "./nextjs"`,
     ].join("\n"),
   )
 }
