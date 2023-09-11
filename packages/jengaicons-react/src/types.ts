@@ -1,6 +1,6 @@
 import type { SVGProps } from "react"
 
-export interface JengaIconCommonProps {
+export interface JengaIconCommonProps extends SVGProps<SVGSVGElement> {
   /** Set the size of the Svg in px*/
   size?: number | string
 
@@ -12,11 +12,6 @@ export interface JengaIconCommonProps {
 
   /** Mirror the icon for RTL support */
   mirrored?: boolean
-
-  /** Change the style prop of svg element */
-  style?: SVGProps<SVGSVGElement>["style"]
-
-  children?: SVGProps<SVGSVGElement>["children"]
 }
 
 export interface JengaIconRegularProps extends JengaIconCommonProps {
