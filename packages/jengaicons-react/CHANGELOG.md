@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 0.11.0
+
+### Minor Changes
+
+- [#54](https://github.com/OutpostHQ/jengaicons/pull/54)
+  [`4157d6c9`](https://github.com/OutpostHQ/jengaicons/commit/4157d6c9b27b44062d8593a4af086aaa8b8dbfc2)
+  Thanks [@sahilshahane](https://github.com/sahilshahane)! - all svg props can
+  be passed to root svg element
+
 ## 0.10.0
 
 ### Minor Changes
