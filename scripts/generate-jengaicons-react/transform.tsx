@@ -24,14 +24,12 @@ const genSVG = (childrenAST: svgson.INode[], data: TransformData) => {
             case "stroke":
             case "fill":
               // check if the value is a hex color
-              if (/^#.+/.test(attrVal))
-                _attrVal = `{color || colorCtx || "${data.defaultColor}"}`
+              if (/^#.+/.test(attrVal)) _attrVal = `{_color}`
               break
 
             // Replace StrokeWidth for weight prop
             case "strokeWidth":
-              if (data.variant === "regular")
-                _attrVal = `{weight || weightCtx || "${data.defaultWeight}"}`
+              if (data.variant === "regular") _attrVal = `{_weight}`
               else _attrVal = `"${data.defaultWeight}"`
               break
           }
@@ -50,13 +48,16 @@ style={{
   ...styleCtx,
   ...style,
   ...props.style,
-}}`
+}}
+color={_color}
+`
 
 const getRegularComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
 ) => {
-  const { componentName, defaultSize, defaultWeight } = transformData
+  const { componentName, defaultSize, defaultWeight, defaultColor } =
+    transformData
 
   return `
     import * as React from 'react'
@@ -82,10 +83,13 @@ const getRegularComponent = (
                 style: styleCtx
               } = useContext(JengaIconContext as Context<JengaIconRegularProps>)
 
+              const _size = size || sizeCtx || ${defaultSize}
+              const _weight = weight || weightCtx || ${defaultWeight}
+              const _color = color || colorCtx || "${defaultColor}"
 
               return  <svg
-                       width={size || sizeCtx || ${defaultSize}}
-                       height={size || sizeCtx || ${defaultSize}}
+                       width={_size}
+                       height={_size}
                        strokeWidth={weight || weightCtx || ${defaultWeight}}
                        ref={ref}
                        ${genAttrString(svgAST.attributes)}
@@ -110,7 +114,7 @@ const getFillComponent = (
   transformData: TransformData,
   svgAST: svgson.INode,
 ) => {
-  const { componentName, defaultSize } = transformData
+  const { componentName, defaultSize, defaultColor } = transformData
 
   return `
     import * as React from 'react'
@@ -135,10 +139,14 @@ const getFillComponent = (
                 style: styleCtx
               } = useContext(JengaIconContext)
 
+              
+              const _size = size || sizeCtx || ${defaultSize}
+              const _color = color || colorCtx || "${defaultColor}"
+
 
               return  <svg
-                       width={size || sizeCtx || ${defaultSize}}
-                       height={size || sizeCtx || ${defaultSize}}
+                       width={_size}
+                       height={_size}
                        ref={ref}
                        ${genAttrString(svgAST.attributes)}
                        ${CommonSVGRootProps}
