@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 1.1.0
+
+### Minor Changes
+
+- [#60](https://github.com/OutpostHQ/jengaicons/pull/60)
+  [`85abaf22`](https://github.com/OutpostHQ/jengaicons/commit/85abaf2279be25ba785a00794903761eaca30fa4)
+  Thanks [@sahilshahane](https://github.com/sahilshahane)! - fix: classname
+  color not applying
+
 ## 1.0.0
 
 ### Major Changes

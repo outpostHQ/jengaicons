@@ -1,5 +1,13 @@
 # next-ts-example
 
+## 0.2.7
+
+### Patch Changes
+
+- Updated dependencies
+  [[`85abaf22`](https://github.com/OutpostHQ/jengaicons/commit/85abaf2279be25ba785a00794903761eaca30fa4)]:
+  - @jengaicons/react@1.1.0
+
 ## 0.2.6
 
 ### Patch Changes
