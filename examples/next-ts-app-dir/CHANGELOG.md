@@ -1,5 +1,13 @@
 # next-ts-app-dir
 
+## 0.2.2
+
+### Patch Changes
+
+- Updated dependencies
+  [[`249df5c8`](https://github.com/OutpostHQ/jengaicons/commit/249df5c8cd5d5210bf56aae74c5efa9ac7b1b9f5)]:
+  - @jengaicons/react@1.2.0
+
 ## 0.2.1
 
 ### Patch Changes
