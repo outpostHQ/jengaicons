@@ -5,6 +5,14 @@
 ### Patch Changes
 
 - Updated dependencies
+  [[`0eab80f4`](https://github.com/outpostHQ/jengaicons/commit/0eab80f4c05883ea05792fb4c2fcb666aef077af)]:
+  - @jengaicons/react@1.3.0
+
+## null
+
+### Patch Changes
+
+- Updated dependencies
   [[`249df5c8`](https://github.com/OutpostHQ/jengaicons/commit/249df5c8cd5d5210bf56aae74c5efa9ac7b1b9f5)]:
   - @jengaicons/react@1.2.0
 
