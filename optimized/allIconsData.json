@@ -486,6 +486,24 @@
     "variant": "fill"
   },
   {
+    "name": "anthropiclogo",
+    "safeName": "Anthropiclogo",
+    "tags": [
+      "Anthropiclogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "anthropiclogo fill",
+    "safeName": "AnthropiclogoFill",
+    "tags": [
+      "AnthropiclogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "aperture",
     "safeName": "Aperture",
     "tags": [
@@ -625,6 +643,24 @@
     "safeName": "ArchiveTrayFill",
     "tags": [
       "ArchiveTrayFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "a r m 6 4",
+    "safeName": "ARM64",
+    "tags": [
+      "ARM64"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "a r m 6 4 fill",
+    "safeName": "ARM64Fill",
+    "tags": [
+      "ARM64Fill"
     ],
     "categories": [],
     "variant": "fill"
@@ -1053,6 +1089,24 @@
     "variant": "regular"
   },
   {
+    "name": "arrow down",
+    "safeName": "ArrowDown",
+    "tags": [
+      "ArrowDown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow down",
+    "safeName": "ArrowDown",
+    "tags": [
+      "ArrowDown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow down fill",
     "safeName": "ArrowDownFill",
     "tags": [
@@ -1071,6 +1125,24 @@
     "variant": "regular"
   },
   {
+    "name": "arrow down left",
+    "safeName": "ArrowDownLeft",
+    "tags": [
+      "ArrowDownLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow down left",
+    "safeName": "ArrowDownLeft",
+    "tags": [
+      "ArrowDownLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow down left fill",
     "safeName": "ArrowDownLeftFill",
     "tags": [
@@ -1078,6 +1150,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrow down right",
+    "safeName": "ArrowDownRight",
+    "tags": [
+      "ArrowDownRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow down right",
+    "safeName": "ArrowDownRight",
+    "tags": [
+      "ArrowDownRight"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow down right",
@@ -1503,6 +1593,24 @@
     "variant": "regular"
   },
   {
+    "name": "arrow left",
+    "safeName": "ArrowLeft",
+    "tags": [
+      "ArrowLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow left",
+    "safeName": "ArrowLeft",
+    "tags": [
+      "ArrowLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow left fill",
     "safeName": "ArrowLeftFill",
     "tags": [
@@ -1654,6 +1762,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrow right",
+    "safeName": "ArrowRight",
+    "tags": [
+      "ArrowRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow right",
+    "safeName": "ArrowRight",
+    "tags": [
+      "ArrowRight"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow right",
@@ -2169,6 +2295,24 @@
     "variant": "regular"
   },
   {
+    "name": "arrow up",
+    "safeName": "ArrowUp",
+    "tags": [
+      "ArrowUp"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow up",
+    "safeName": "ArrowUp",
+    "tags": [
+      "ArrowUp"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow up fill",
     "safeName": "ArrowUpFill",
     "tags": [
@@ -2187,6 +2331,24 @@
     "variant": "regular"
   },
   {
+    "name": "arrow up left",
+    "safeName": "ArrowUpLeft",
+    "tags": [
+      "ArrowUpLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow up left",
+    "safeName": "ArrowUpLeft",
+    "tags": [
+      "ArrowUpLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow up left fill",
     "safeName": "ArrowUpLeftFill",
     "tags": [
@@ -2194,6 +2356,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrow up right",
+    "safeName": "ArrowUpRight",
+    "tags": [
+      "ArrowUpRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow up right",
+    "safeName": "ArrowUpRight",
+    "tags": [
+      "ArrowUpRight"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow up right",
@@ -2430,6 +2610,24 @@
     "variant": "fill"
   },
   {
+    "name": "autoscaling",
+    "safeName": "Autoscaling",
+    "tags": [
+      "Autoscaling"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "autoscaling fill",
+    "safeName": "AutoscalingFill",
+    "tags": [
+      "AutoscalingFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "a w slogo",
     "safeName": "AWSlogo",
     "tags": [
@@ -2443,6 +2641,24 @@
     "safeName": "AWSlogoFill",
     "tags": [
       "AWSlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "a w s s 3logo",
+    "safeName": "AWSS3logo",
+    "tags": [
+      "AWSS3logo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "a w s s 3logo fill",
+    "safeName": "AWSS3logoFill",
+    "tags": [
+      "AWSS3logoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -2479,6 +2695,24 @@
     "safeName": "BabyFill",
     "tags": [
       "BabyFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "backing services",
+    "safeName": "BackingServices",
+    "tags": [
+      "BackingServices"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "backing services fill",
+    "safeName": "BackingServicesFill",
+    "tags": [
+      "BackingServicesFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -3109,6 +3343,24 @@
     "safeName": "BicycleFill",
     "tags": [
       "BicycleFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "big querylogo",
+    "safeName": "BigQuerylogo",
+    "tags": [
+      "BigQuerylogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "big querylogo fill",
+    "safeName": "BigQuerylogoFill",
+    "tags": [
+      "BigQuerylogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -4446,6 +4698,24 @@
     "variant": "regular"
   },
   {
+    "name": "chat circle clear",
+    "safeName": "ChatCircleClear",
+    "tags": [
+      "ChatCircleClear"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chat circle clear fill",
+    "safeName": "ChatCircleClearFill",
+    "tags": [
+      "ChatCircleClearFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "chat circle dots",
     "safeName": "ChatCircleDots",
     "tags": [
@@ -4486,6 +4756,24 @@
     "safeName": "ChatCircleTextFill",
     "tags": [
       "ChatCircleTextFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "chat clear",
+    "safeName": "ChatClear",
+    "tags": [
+      "ChatClear"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chat clear fill",
+    "safeName": "ChatClearFill",
+    "tags": [
+      "ChatClearFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -4567,6 +4855,24 @@
     "safeName": "ChatsTeardropFill",
     "tags": [
       "ChatsTeardropFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "chat tear clear",
+    "safeName": "ChatTearClear",
+    "tags": [
+      "ChatTearClear"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chat tear clear fill",
+    "safeName": "ChatTearClearFill",
+    "tags": [
+      "ChatTearClearFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -5274,6 +5580,24 @@
     "variant": "fill"
   },
   {
+    "name": "click houselogo",
+    "safeName": "ClickHouselogo",
+    "tags": [
+      "ClickHouselogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "click houselogo fill",
+    "safeName": "ClickHouselogoFill",
+    "tags": [
+      "ClickHouselogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "clipboard",
     "safeName": "Clipboard",
     "tags": [
@@ -5407,6 +5731,24 @@
     ],
     "categories": [],
     "variant": "regular"
+  },
+  {
+    "name": "cloud agnostics",
+    "safeName": "CloudAgnostics",
+    "tags": [
+      "CloudAgnostics"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "cloud agnostics fill",
+    "safeName": "CloudAgnosticsFill",
+    "tags": [
+      "CloudAgnosticsFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "cloud arrow down",
@@ -5742,6 +6084,24 @@
     "variant": "fill"
   },
   {
+    "name": "coherelogo",
+    "safeName": "Coherelogo",
+    "tags": [
+      "Coherelogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "coherelogo fill",
+    "safeName": "CoherelogoFill",
+    "tags": [
+      "CoherelogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "coin",
     "safeName": "Coin",
     "tags": [
@@ -5899,6 +6259,24 @@
     "safeName": "ConfettiFill",
     "tags": [
       "ConfettiFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "config",
+    "safeName": "Config",
+    "tags": [
+      "Config"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "configuration fill",
+    "safeName": "ConfigurationFill",
+    "tags": [
+      "ConfigurationFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6079,6 +6457,24 @@
     "safeName": "CornersOutFill",
     "tags": [
       "CornersOutFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "cost monitoring",
+    "safeName": "CostMonitoring",
+    "tags": [
+      "CostMonitoring"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "cost monitoring fill",
+    "safeName": "CostMonitoringFill",
+    "tags": [
+      "CostMonitoringFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6534,6 +6930,24 @@
     "variant": "fill"
   },
   {
+    "name": "custom env",
+    "safeName": "CustomEnv",
+    "tags": [
+      "CustomEnv"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "custom env fill",
+    "safeName": "CustomEnvFill",
+    "tags": [
+      "CustomEnvFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "cylinder",
     "safeName": "Cylinder",
     "tags": [
@@ -6565,6 +6979,42 @@
     "safeName": "DatabaseFill",
     "tags": [
       "DatabaseFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "databrickslogo",
+    "safeName": "Databrickslogo",
+    "tags": [
+      "Databrickslogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "databrickslogo fill",
+    "safeName": "DatabrickslogoFill",
+    "tags": [
+      "DatabrickslogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "data warehouse",
+    "safeName": "DataWarehouse",
+    "tags": [
+      "DataWarehouse"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "data warehouse fill",
+    "safeName": "DataWarehouseFill",
+    "tags": [
+      "DataWarehouseFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6637,6 +7087,24 @@
     "safeName": "DetectiveFill",
     "tags": [
       "DetectiveFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "developer",
+    "safeName": "Developer",
+    "tags": [
+      "Developer"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "developer fill",
+    "safeName": "DeveloperFill",
+    "tags": [
+      "DeveloperFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6997,6 +7465,24 @@
     "safeName": "DogFill",
     "tags": [
       "DogFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "domain",
+    "safeName": "Domain",
+    "tags": [
+      "Domain"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "domain fill",
+    "safeName": "DomainFill",
+    "tags": [
+      "DomainFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -7735,6 +8221,24 @@
     "safeName": "FadersHorizontalFill",
     "tags": [
       "FadersHorizontalFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "fan",
+    "safeName": "Fan",
+    "tags": [
+      "Fan"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "fan fill",
+    "safeName": "FanFill",
+    "tags": [
+      "FanFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -8707,6 +9211,24 @@
     "safeName": "FlaskFill",
     "tags": [
       "FlaskFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "flexible nodepool",
+    "safeName": "FlexibleNodepool",
+    "tags": [
+      "FlexibleNodepool"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "flexible nodepool fill",
+    "safeName": "FlexibleNodepoolFill",
+    "tags": [
+      "FlexibleNodepoolFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -9756,6 +10278,24 @@
     "variant": "fill"
   },
   {
+    "name": "git visibility",
+    "safeName": "GitVisibility",
+    "tags": [
+      "GitVisibility"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "git visibility fill",
+    "safeName": "GitVisibilityFill",
+    "tags": [
+      "GitVisibilityFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "globe",
     "safeName": "Globe",
     "tags": [
@@ -9859,6 +10399,24 @@
     "safeName": "GoogleChromeLogoFill",
     "tags": [
       "GoogleChromeLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "google cloudlogo",
+    "safeName": "GoogleCloudlogo",
+    "tags": [
+      "GoogleCloudlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "google cloudlogo fill",
+    "safeName": "GoogleCloudlogoFill",
+    "tags": [
+      "GoogleCloudlogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -10458,6 +11016,24 @@
     "variant": "fill"
   },
   {
+    "name": "helm logo",
+    "safeName": "HelmLogo",
+    "tags": [
+      "HelmLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "helm logo fill",
+    "safeName": "HelmLogoFill",
+    "tags": [
+      "HelmLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "herokulogo",
     "safeName": "Herokulogo",
     "tags": [
@@ -10728,6 +11304,24 @@
     "variant": "fill"
   },
   {
+    "name": "hugging facelogo",
+    "safeName": "HuggingFacelogo",
+    "tags": [
+      "HuggingFacelogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "hugging facelogo fill",
+    "safeName": "HuggingFacelogoFill",
+    "tags": [
+      "HuggingFacelogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "i b mlogo",
     "safeName": "IBMlogo",
     "tags": [
@@ -10818,6 +11412,24 @@
     "variant": "fill"
   },
   {
+    "name": "inferencelogo",
+    "safeName": "Inferencelogo",
+    "tags": [
+      "Inferencelogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "inferencelogo fill",
+    "safeName": "InferencelogoFill",
+    "tags": [
+      "InferencelogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "infinity",
     "safeName": "Infinity",
     "tags": [
@@ -10849,6 +11461,24 @@
     "safeName": "InfoFill",
     "tags": [
       "InfoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "infra as code",
+    "safeName": "InfraAsCode",
+    "tags": [
+      "InfraAsCode"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "infra as code fill",
+    "safeName": "InfraAsCodeFill",
+    "tags": [
+      "InfraAsCodeFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -10939,6 +11569,24 @@
     "safeName": "JeepFill",
     "tags": [
       "JeepFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "kafkalogo",
+    "safeName": "Kafkalogo",
+    "tags": [
+      "Kafkalogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "kafkalogo fill",
+    "safeName": "KafkalogoFill",
+    "tags": [
+      "KafkalogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11047,6 +11695,24 @@
     "safeName": "KnifeFill",
     "tags": [
       "KnifeFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "kuberneteslogo",
+    "safeName": "Kuberneteslogo",
+    "tags": [
+      "Kuberneteslogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "kuberneteslogo fill",
+    "safeName": "KuberneteslogoFill",
+    "tags": [
+      "KuberneteslogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11461,6 +12127,24 @@
     "safeName": "LinuxLogoFill",
     "tags": [
       "LinuxLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "liquid compute",
+    "safeName": "LiquidCompute",
+    "tags": [
+      "LiquidCompute"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "liquid compute fill",
+    "safeName": "LiquidComputeFill",
+    "tags": [
+      "LiquidComputeFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -12042,6 +12726,24 @@
     "variant": "fill"
   },
   {
+    "name": "memcachedlogo",
+    "safeName": "Memcachedlogo",
+    "tags": [
+      "Memcachedlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "memcachedlogo fill",
+    "safeName": "MemcachedlogoFill",
+    "tags": [
+      "MemcachedlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "messenger logo",
     "safeName": "MessengerLogo",
     "tags": [
@@ -12055,6 +12757,24 @@
     "safeName": "MessengerLogoFill",
     "tags": [
       "MessengerLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "meta logo",
+    "safeName": "MetaLogo",
+    "tags": [
+      "MetaLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "meta logo fill",
+    "safeName": "MetaLogoFill",
+    "tags": [
+      "MetaLogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -12384,6 +13104,24 @@
     "variant": "fill"
   },
   {
+    "name": "multi tenant",
+    "safeName": "MultiTenant",
+    "tags": [
+      "MultiTenant"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "multi tenant fill",
+    "safeName": "MultiTenantFill",
+    "tags": [
+      "MultiTenantFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "music note",
     "safeName": "MusicNote",
     "tags": [
@@ -12600,6 +13338,24 @@
     "variant": "fill"
   },
   {
+    "name": "nodeless",
+    "safeName": "Nodeless",
+    "tags": [
+      "Nodeless"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "nodeless fill",
+    "safeName": "NodelessFill",
+    "tags": [
+      "NodelessFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "nodelogo",
     "safeName": "Nodelogo",
     "tags": [
@@ -12613,6 +13369,24 @@
     "safeName": "NodelogoFill",
     "tags": [
       "NodelogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "no ops",
+    "safeName": "NoOps",
+    "tags": [
+      "NoOps"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "no ops fill",
+    "safeName": "NoOpsFill",
+    "tags": [
+      "NoOpsFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -13356,6 +14130,60 @@
     "variant": "fill"
   },
   {
+    "name": "onnxlogo",
+    "safeName": "Onnxlogo",
+    "tags": [
+      "Onnxlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "onnxlogo fill",
+    "safeName": "OnnxlogoFill",
+    "tags": [
+      "OnnxlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "open a ilogo",
+    "safeName": "OpenAIlogo",
+    "tags": [
+      "OpenAIlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "open a ilogo fill",
+    "safeName": "OpenAIlogoFill",
+    "tags": [
+      "OpenAIlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "outpostlogo",
+    "safeName": "Outpostlogo",
+    "tags": [
+      "Outpostlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "outpostlogo fill",
+    "safeName": "OutpostlogoFill",
+    "tags": [
+      "OutpostlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "package",
     "safeName": "Package",
     "tags": [
@@ -13675,6 +14503,24 @@
     "safeName": "PawPrintFill",
     "tags": [
       "PawPrintFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "payment gateway",
+    "safeName": "PaymentGateway",
+    "tags": [
+      "PaymentGateway"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "payment gateway fill",
+    "safeName": "PaymentGatewayFill",
+    "tags": [
+      "PaymentGatewayFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -14283,6 +15129,24 @@
     "variant": "fill"
   },
   {
+    "name": "play pause",
+    "safeName": "PlayPause",
+    "tags": [
+      "PlayPause"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "play pause fill",
+    "safeName": "PlayPauseFill",
+    "tags": [
+      "PlayPauseFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "plug",
     "safeName": "Plug",
     "tags": [
@@ -14607,6 +15471,24 @@
     "variant": "fill"
   },
   {
+    "name": "project",
+    "safeName": "Project",
+    "tags": [
+      "Project"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "project fill",
+    "safeName": "ProjectFill",
+    "tags": [
+      "ProjectFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "projector screen",
     "safeName": "ProjectorScreen",
     "tags": [
@@ -14751,6 +15633,24 @@
     "variant": "fill"
   },
   {
+    "name": "pytorchlogo",
+    "safeName": "Pytorchlogo",
+    "tags": [
+      "Pytorchlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "pytorchlogo fill",
+    "safeName": "PytorchlogoFill",
+    "tags": [
+      "PytorchlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "qr code",
     "safeName": "QrCode",
     "tags": [
@@ -14818,6 +15718,24 @@
     "safeName": "QuotesFill",
     "tags": [
       "QuotesFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "rabbit m qlogo",
+    "safeName": "RabbitMQlogo",
+    "tags": [
+      "RabbitMQlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "rabbit m qlogo fill",
+    "safeName": "RabbitMQlogoFill",
+    "tags": [
+      "RabbitMQlogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -15412,6 +16330,24 @@
     "safeName": "SearchFill",
     "tags": [
       "SearchFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "secure config",
+    "safeName": "SecureConfig",
+    "tags": [
+      "SecureConfig"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "secure config fill",
+    "safeName": "SecureConfigFill",
+    "tags": [
+      "SecureConfigFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -16344,6 +17280,24 @@
     "variant": "fill"
   },
   {
+    "name": "snoflakelogo",
+    "safeName": "Snoflakelogo",
+    "tags": [
+      "Snoflakelogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "snoflakelogo fill",
+    "safeName": "SnoflakelogoFill",
+    "tags": [
+      "SnoflakelogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "snowflake",
     "safeName": "Snowflake",
     "tags": [
@@ -16735,6 +17689,42 @@
     "safeName": "SpotifyLogoFill",
     "tags": [
       "SpotifyLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "spot instance",
+    "safeName": "SpotInstance",
+    "tags": [
+      "SpotInstance"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "spot instance fill",
+    "safeName": "SpotInstanceFill",
+    "tags": [
+      "SpotInstanceFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "spot management",
+    "safeName": "SpotManagement",
+    "tags": [
+      "SpotManagement"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "spot management fill",
+    "safeName": "SpotManagementFill",
+    "tags": [
+      "SpotManagementFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -17478,6 +18468,24 @@
     "variant": "fill"
   },
   {
+    "name": "tensorflowlogo",
+    "safeName": "Tensorflowlogo",
+    "tags": [
+      "Tensorflowlogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "tensorflowlogo fill",
+    "safeName": "TensorflowlogoFill",
+    "tags": [
+      "TensorflowlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "terminal",
     "safeName": "Terminal",
     "tags": [
@@ -18018,15 +19026,6 @@
     "variant": "fill"
   },
   {
-    "name": "thumbs up fill",
-    "safeName": "ThumbsUpFill",
-    "tags": [
-      "ThumbsUpFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
     "name": "ticket",
     "safeName": "Ticket",
     "tags": [
@@ -18238,6 +19237,42 @@
     "safeName": "TrainFill",
     "tags": [
       "TrainFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "training",
+    "safeName": "Training",
+    "tags": [
+      "Training"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "training fill",
+    "safeName": "TrainingFill",
+    "tags": [
+      "TrainingFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "training simple",
+    "safeName": "TrainingSimple",
+    "tags": [
+      "TrainingSimple"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "training simple fill",
+    "safeName": "TrainingSimpleFill",
+    "tags": [
+      "TrainingSimpleFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18531,19 +19566,37 @@
     "variant": "fill"
   },
   {
-    "name": "twitter logo",
-    "safeName": "TwitterLogo",
+    "name": "twitter new logo",
+    "safeName": "TwitterNewLogo",
     "tags": [
-      "TwitterLogo"
+      "TwitterNewLogo"
     ],
     "categories": [],
     "variant": "regular"
   },
   {
-    "name": "twitter logo fill",
-    "safeName": "TwitterLogoFill",
+    "name": "twitter new logo fill",
+    "safeName": "TwitterNewLogoFill",
     "tags": [
-      "TwitterLogoFill"
+      "TwitterNewLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "twitter old logo",
+    "safeName": "TwitterOldLogo",
+    "tags": [
+      "TwitterOldLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "twitter old logo fill",
+    "safeName": "TwitterOldLogoFill",
+    "tags": [
+      "TwitterOldLogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18999,6 +20052,24 @@
     "variant": "fill"
   },
   {
+    "name": "virtual machine",
+    "safeName": "VirtualMachine",
+    "tags": [
+      "VirtualMachine"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "virtual machine fill",
+    "safeName": "VirtualMachineFill",
+    "tags": [
+      "VirtualMachineFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "voicemail",
     "safeName": "Voicemail",
     "tags": [
@@ -19030,6 +20101,24 @@
     "safeName": "VolleyballFill",
     "tags": [
       "VolleyballFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "vpn",
+    "safeName": "Vpn",
+    "tags": [
+      "Vpn"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "vpn fill",
+    "safeName": "VpnFill",
+    "tags": [
+      "VpnFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -19249,15 +20338,6 @@
     ],
     "categories": [],
     "variant": "fill"
-  },
-  {
-    "name": "weather nature",
-    "safeName": "WeatherNature",
-    "tags": [
-      "WeatherNature"
-    ],
-    "categories": [],
-    "variant": "regular"
   },
   {
     "name": "webcam",
@@ -19537,6 +20617,24 @@
     ],
     "categories": [],
     "variant": "regular"
+  },
+  {
+    "name": "x 8 6",
+    "safeName": "x86",
+    "tags": [
+      "x86"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "x 8 6 fill",
+    "safeName": "x86Fill",
+    "tags": [
+      "x86Fill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "x circle",
