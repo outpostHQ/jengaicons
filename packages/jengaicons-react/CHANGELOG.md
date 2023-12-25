@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 1.3.0
+
+### Minor Changes
+
+- [#64](https://github.com/outpostHQ/jengaicons/pull/64)
+  [`0eab80f4`](https://github.com/outpostHQ/jengaicons/commit/0eab80f4c05883ea05792fb4c2fcb666aef077af)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - Expanded our
+  regular icon sets with variations in Arrows, Brands, and Development.
+
 ## 1.2.0
 
 ### Minor Changes
