@@ -36,6 +36,24 @@
     "variant": "fill"
   },
   {
+    "name": "agritech",
+    "safeName": "Agritech",
+    "tags": [
+      "Agritech"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "agritech fill",
+    "safeName": "AgritechFill",
+    "tags": [
+      "AgritechFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "airplane",
     "safeName": "Airplane",
     "tags": [
@@ -486,6 +504,24 @@
     "variant": "fill"
   },
   {
+    "name": "anscer robotics logo",
+    "safeName": "AnscerRoboticsLogo",
+    "tags": [
+      "AnscerRoboticsLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "anscer robotics logo fill",
+    "safeName": "AnscerRoboticsLogoFill",
+    "tags": [
+      "AnscerRoboticsLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "anthropiclogo",
     "safeName": "Anthropiclogo",
     "tags": [
@@ -828,6 +864,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrow bend right down",
+    "safeName": "ArrowBendRightDown",
+    "tags": [
+      "ArrowBendRightDown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow bend right down fill",
     "safeName": "ArrowBendRightDownFill",
     "tags": [
@@ -835,15 +880,6 @@
     ],
     "categories": [],
     "variant": "fill"
-  },
-  {
-    "name": "arrow bend right downv",
-    "safeName": "ArrowBendRightDownv",
-    "tags": [
-      "ArrowBendRightDownv"
-    ],
-    "categories": [],
-    "variant": "regular"
   },
   {
     "name": "arrow bend right up",
@@ -1075,114 +1111,6 @@
     "safeName": "ArrowCounterClockwiseFill",
     "tags": [
       "ArrowCounterClockwiseFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "arrow down",
-    "safeName": "ArrowDown",
-    "tags": [
-      "ArrowDown"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down",
-    "safeName": "ArrowDown",
-    "tags": [
-      "ArrowDown"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down",
-    "safeName": "ArrowDown",
-    "tags": [
-      "ArrowDown"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down fill",
-    "safeName": "ArrowDownFill",
-    "tags": [
-      "ArrowDownFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "arrow down left",
-    "safeName": "ArrowDownLeft",
-    "tags": [
-      "ArrowDownLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down left",
-    "safeName": "ArrowDownLeft",
-    "tags": [
-      "ArrowDownLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down left",
-    "safeName": "ArrowDownLeft",
-    "tags": [
-      "ArrowDownLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down left fill",
-    "safeName": "ArrowDownLeftFill",
-    "tags": [
-      "ArrowDownLeftFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "arrow down right",
-    "safeName": "ArrowDownRight",
-    "tags": [
-      "ArrowDownRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down right",
-    "safeName": "ArrowDownRight",
-    "tags": [
-      "ArrowDownRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down right",
-    "safeName": "ArrowDownRight",
-    "tags": [
-      "ArrowDownRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow down right fill",
-    "safeName": "ArrowDownRightFill",
-    "tags": [
-      "ArrowDownRightFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -1593,24 +1521,6 @@
     "variant": "regular"
   },
   {
-    "name": "arrow left",
-    "safeName": "ArrowLeft",
-    "tags": [
-      "ArrowLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow left",
-    "safeName": "ArrowLeft",
-    "tags": [
-      "ArrowLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
     "name": "arrow left fill",
     "safeName": "ArrowLeftFill",
     "tags": [
@@ -1762,24 +1672,6 @@
     ],
     "categories": [],
     "variant": "fill"
-  },
-  {
-    "name": "arrow right",
-    "safeName": "ArrowRight",
-    "tags": [
-      "ArrowRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow right",
-    "safeName": "ArrowRight",
-    "tags": [
-      "ArrowRight"
-    ],
-    "categories": [],
-    "variant": "regular"
   },
   {
     "name": "arrow right",
@@ -2286,114 +2178,6 @@
     "variant": "fill"
   },
   {
-    "name": "arrow up",
-    "safeName": "ArrowUp",
-    "tags": [
-      "ArrowUp"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up",
-    "safeName": "ArrowUp",
-    "tags": [
-      "ArrowUp"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up",
-    "safeName": "ArrowUp",
-    "tags": [
-      "ArrowUp"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up fill",
-    "safeName": "ArrowUpFill",
-    "tags": [
-      "ArrowUpFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "arrow up left",
-    "safeName": "ArrowUpLeft",
-    "tags": [
-      "ArrowUpLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up left",
-    "safeName": "ArrowUpLeft",
-    "tags": [
-      "ArrowUpLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up left",
-    "safeName": "ArrowUpLeft",
-    "tags": [
-      "ArrowUpLeft"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up left fill",
-    "safeName": "ArrowUpLeftFill",
-    "tags": [
-      "ArrowUpLeftFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
-    "name": "arrow up right",
-    "safeName": "ArrowUpRight",
-    "tags": [
-      "ArrowUpRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up right",
-    "safeName": "ArrowUpRight",
-    "tags": [
-      "ArrowUpRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up right",
-    "safeName": "ArrowUpRight",
-    "tags": [
-      "ArrowUpRight"
-    ],
-    "categories": [],
-    "variant": "regular"
-  },
-  {
-    "name": "arrow up right fill",
-    "safeName": "ArrowUpRightFill",
-    "tags": [
-      "ArrowUpRightFill"
-    ],
-    "categories": [],
-    "variant": "fill"
-  },
-  {
     "name": "arrow u right down",
     "safeName": "ArrowURightDown",
     "tags": [
@@ -2605,6 +2389,24 @@
     "safeName": "AtomFill",
     "tags": [
       "AtomFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "auto m l",
+    "safeName": "AutoML",
+    "tags": [
+      "AutoML"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "auto m l fill",
+    "safeName": "AutoMLFill",
+    "tags": [
+      "AutoMLFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -3510,6 +3312,42 @@
     "variant": "fill"
   },
   {
+    "name": "boltchem logo",
+    "safeName": "BoltchemLogo",
+    "tags": [
+      "BoltchemLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "boltchem logo fill",
+    "safeName": "BoltchemLogoFill",
+    "tags": [
+      "BoltchemLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "boltzmann logo",
+    "safeName": "BoltzmannLogo",
+    "tags": [
+      "BoltzmannLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "boltzmann logo fill",
+    "safeName": "BoltzmannLogoFill",
+    "tags": [
+      "BoltzmannLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "book",
     "safeName": "Book",
     "tags": [
@@ -4099,6 +3937,24 @@
     "safeName": "CalendarXFill",
     "tags": [
       "CalendarXFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "callout",
+    "safeName": "Callout",
+    "tags": [
+      "Callout"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "callout fill",
+    "safeName": "CalloutFill",
+    "tags": [
+      "CalloutFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -4801,6 +4657,24 @@
     "safeName": "ChatFill",
     "tags": [
       "ChatFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "chat notifications",
+    "safeName": "ChatNotifications",
+    "tags": [
+      "ChatNotifications"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chat notifications fill",
+    "safeName": "ChatNotificationsFill",
+    "tags": [
+      "ChatNotificationsFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -6534,6 +6408,24 @@
     "variant": "fill"
   },
   {
+    "name": "crew scale logo",
+    "safeName": "CrewScaleLogo",
+    "tags": [
+      "CrewScaleLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "crew scale logo fill",
+    "safeName": "CrewScaleLogoFill",
+    "tags": [
+      "CrewScaleLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "crop",
     "safeName": "Crop",
     "tags": [
@@ -7866,6 +7758,15 @@
     "variant": "fill"
   },
   {
+    "name": "env",
+    "safeName": "Env",
+    "tags": [
+      "Env"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "envelope",
     "safeName": "Envelope",
     "tags": [
@@ -7933,6 +7834,15 @@
     "safeName": "EnvelopeSimpleOpenFill",
     "tags": [
       "EnvelopeSimpleOpenFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "env fill",
+    "safeName": "EnvFill",
+    "tags": [
+      "EnvFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -8280,6 +8190,24 @@
     "variant": "fill"
   },
   {
+    "name": "fibr logo",
+    "safeName": "FibrLogo",
+    "tags": [
+      "FibrLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "fibr logo fill",
+    "safeName": "FibrLogoFill",
+    "tags": [
+      "FibrLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "figma logo",
     "safeName": "FigmaLogo",
     "tags": [
@@ -8473,6 +8401,24 @@
     "safeName": "FileFill",
     "tags": [
       "FileFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "file gear",
+    "safeName": "FileGear",
+    "tags": [
+      "FileGear"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file gear fill",
+    "safeName": "FileGearFill",
+    "tags": [
+      "FileGearFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -10242,6 +10188,24 @@
     "variant": "fill"
   },
   {
+    "name": "git l f s",
+    "safeName": "GitLFS",
+    "tags": [
+      "GitLFS"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "git l f s fill",
+    "safeName": "GitLFSFill",
+    "tags": [
+      "GitLFSFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "git merge",
     "safeName": "GitMerge",
     "tags": [
@@ -10255,6 +10219,24 @@
     "safeName": "GitMergeFill",
     "tags": [
       "GitMergeFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "git open issue",
+    "safeName": "GitOpenIssue",
+    "tags": [
+      "GitOpenIssue"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "git open issue fill",
+    "safeName": "GitOpenIssueFill",
+    "tags": [
+      "GitOpenIssueFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11412,19 +11394,19 @@
     "variant": "fill"
   },
   {
-    "name": "inferencelogo",
-    "safeName": "Inferencelogo",
+    "name": "inference endpoint",
+    "safeName": "InferenceEndpoint",
     "tags": [
-      "Inferencelogo"
+      "InferenceEndpoint"
     ],
     "categories": [],
     "variant": "regular"
   },
   {
-    "name": "inferencelogo fill",
-    "safeName": "InferencelogoFill",
+    "name": "inference endpoint fill",
+    "safeName": "InferenceEndpointFill",
     "tags": [
-      "InferencelogoFill"
+      "InferenceEndpointFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11952,6 +11934,24 @@
     "variant": "fill"
   },
   {
+    "name": "line",
+    "safeName": "Line",
+    "tags": [
+      "Line"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "line fill",
+    "safeName": "LineFill",
+    "tags": [
+      "LineFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "line segment",
     "safeName": "LineSegment",
     "tags": [
@@ -12240,6 +12240,24 @@
     "variant": "fill"
   },
   {
+    "name": "list play",
+    "safeName": "ListPlay",
+    "tags": [
+      "ListPlay"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "list play fill",
+    "safeName": "ListPlayFill",
+    "tags": [
+      "ListPlayFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "list plus",
     "safeName": "ListPlus",
     "tags": [
@@ -12253,6 +12271,24 @@
     "safeName": "ListPlusFill",
     "tags": [
       "ListPlusFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "l l m",
+    "safeName": "LLM",
+    "tags": [
+      "LLM"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "l l m fill",
+    "safeName": "LLMFill",
+    "tags": [
+      "LLMFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -12559,6 +12595,24 @@
     "safeName": "MariaDBlogoFill",
     "tags": [
       "MariaDBlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "markdown",
+    "safeName": "Markdown",
+    "tags": [
+      "Markdown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "markdown fill",
+    "safeName": "MarkdownFill",
+    "tags": [
+      "MarkdownFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -14688,6 +14742,24 @@
     "variant": "regular"
   },
   {
+    "name": "personal access token",
+    "safeName": "PersonalAccessToken",
+    "tags": [
+      "PersonalAccessToken"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "personal access token fill",
+    "safeName": "PersonalAccessTokenFill",
+    "tags": [
+      "PersonalAccessTokenFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "person fill",
     "safeName": "PersonFill",
     "tags": [
@@ -14931,6 +15003,24 @@
     "variant": "fill"
   },
   {
+    "name": "pickle file",
+    "safeName": "PickleFile",
+    "tags": [
+      "PickleFile"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "pickle file fill",
+    "safeName": "PickleFileFill",
+    "tags": [
+      "PickleFileFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "picture in picture",
     "safeName": "PictureInPicture",
     "tags": [
@@ -15075,6 +15165,24 @@
     "variant": "fill"
   },
   {
+    "name": "plaxonic logo",
+    "safeName": "PlaxonicLogo",
+    "tags": [
+      "PlaxonicLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "plaxonic logo fill",
+    "safeName": "PlaxonicLogoFill",
+    "tags": [
+      "PlaxonicLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "play",
     "safeName": "Play",
     "tags": [
@@ -15082,6 +15190,24 @@
     ],
     "categories": [],
     "variant": "regular"
+  },
+  {
+    "name": "playback speed",
+    "safeName": "PlaybackSpeed",
+    "tags": [
+      "PlaybackSpeed"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "playback speed fill",
+    "safeName": "PlaybackSpeedFill",
+    "tags": [
+      "PlaybackSpeedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "play circle",
@@ -15952,6 +16078,24 @@
     "safeName": "RedislogoFill",
     "tags": [
       "RedislogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "red pluto analytics logo",
+    "safeName": "RedPlutoAnalyticsLogo",
+    "tags": [
+      "RedPlutoAnalyticsLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "red pluto analytics logo fill",
+    "safeName": "RedPlutoAnalyticsLogoFill",
+    "tags": [
+      "RedPlutoAnalyticsLogoFill"
     ],
     "categories": [],
     "variant": "fill"
