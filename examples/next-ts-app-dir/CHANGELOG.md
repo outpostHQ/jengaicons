@@ -1,5 +1,20 @@
 # next-ts-app-dir
 
+## 0.3.0
+
+### Minor Changes
+
+- [#66](https://github.com/outpostHQ/jengaicons/pull/66)
+  [`5c326981`](https://github.com/outpostHQ/jengaicons/commit/5c326981053fde23aa9978113523ab07a91e090e)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - Add new set
+  of icons
+
+### Patch Changes
+
+- Updated dependencies
+  [[`5c326981`](https://github.com/outpostHQ/jengaicons/commit/5c326981053fde23aa9978113523ab07a91e090e)]:
+  - @jengaicons/react@1.4.0
+
 ## 0.2.3
 
 ### Patch Changes
