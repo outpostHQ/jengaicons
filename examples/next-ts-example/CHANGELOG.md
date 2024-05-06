@@ -1,5 +1,20 @@
 # next-ts-example
 
+## 0.4.0
+
+### Minor Changes
+
+- [#69](https://github.com/outpostHQ/jengaicons/pull/69)
+  [`d8272459`](https://github.com/outpostHQ/jengaicons/commit/d82724599949552ca3b514d66f77ed41aec1a4f2)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - Fix Icon
+  Namings
+
+### Patch Changes
+
+- Updated dependencies
+  [[`d8272459`](https://github.com/outpostHQ/jengaicons/commit/d82724599949552ca3b514d66f77ed41aec1a4f2)]:
+  - @jengaicons/react@1.5.0
+
 ## 0.3.0
 
 ### Minor Changes

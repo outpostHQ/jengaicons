@@ -1,5 +1,14 @@
 # generate-jengaicons-react
 
+## 2.2.0
+
+### Minor Changes
+
+- [#69](https://github.com/outpostHQ/jengaicons/pull/69)
+  [`d8272459`](https://github.com/outpostHQ/jengaicons/commit/d82724599949552ca3b514d66f77ed41aec1a4f2)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - Fix Icon
+  Namings
+
 ## 2.1.0
 
 ### Minor Changes
