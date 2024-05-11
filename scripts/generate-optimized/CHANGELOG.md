@@ -1,5 +1,14 @@
 # generate-optimized
 
+## 1.4.0
+
+### Minor Changes
+
+- [#71](https://github.com/outpostHQ/jengaicons/pull/71)
+  [`796dbef0`](https://github.com/outpostHQ/jengaicons/commit/796dbef05783f46fa98cae0ab798efc493b90032)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - update
+  outpost glyph icon
+
 ## 1.3.0
 
 ### Minor Changes
