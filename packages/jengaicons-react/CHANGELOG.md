@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 1.7.0
+
+### Minor Changes
+
+- [#73](https://github.com/outpostHQ/jengaicons/pull/73)
+  [`0867bd2`](https://github.com/outpostHQ/jengaicons/commit/0867bd25fc122f0cf178d890aa723d69c63e5a7e)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - upgrade
+  dependencies
+
 ## 1.6.0
 
 ### Minor Changes
