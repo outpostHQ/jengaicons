@@ -12,14 +12,14 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@types/node": "^20.2.3",
-    "svgo": "^3.0.2",
-    "ts-node": "10.9.1",
+    "@types/node": "^20.14.2",
+    "svgo": "^3.3.2",
+    "ts-node": "10.9.2",
     "typescript": "^5.4.5"
   },
   "dependencies": {
-    "@svgr/core": "^8.0.0",
-    "fp-ts": "^2.15.0",
-    "zip-a-folder": "1.1.5"
+    "@svgr/core": "^8.1.0",
+    "fp-ts": "^2.16.6",
+    "zip-a-folder": "3.1.6"
   }
 }
