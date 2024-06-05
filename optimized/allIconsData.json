@@ -12069,6 +12069,15 @@
     "variant": "regular"
   },
   {
+    "name": "java script logo",
+    "safeName": "JavaScriptLogo",
+    "tags": [
+      "JavaScriptLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "java script logo fill",
     "safeName": "JavaScriptLogoFill",
     "tags": [
@@ -12091,6 +12100,24 @@
     "safeName": "JeepFill",
     "tags": [
       "JeepFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "jupyter notebook logo",
+    "safeName": "JupyterNotebookLogo",
+    "tags": [
+      "JupyterNotebookLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "jupyter notebook logo fill",
+    "safeName": "JupyterNotebookLogoFill",
+    "tags": [
+      "JupyterNotebookLogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -13675,6 +13702,42 @@
     "safeName": "MouseFill",
     "tags": [
       "MouseFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "mouse pointer",
+    "safeName": "MousePointer",
+    "tags": [
+      "MousePointer"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "mouse pointer dash",
+    "safeName": "MousePointerDash",
+    "tags": [
+      "MousePointerDash"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "mouse pointer dash fill",
+    "safeName": "MousePointerDashFill",
+    "tags": [
+      "MousePointerDashFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "mouse pointer fill",
+    "safeName": "MousePointerFill",
+    "tags": [
+      "MousePointerFill"
     ],
     "categories": [],
     "variant": "fill"

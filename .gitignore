@@ -29,3 +29,4 @@ packages/jengaicons-react/src/icons/*
 .parcel-cache
 size-report
 __compare
+.turbo
