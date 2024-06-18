@@ -3,7 +3,8 @@ version = 1
 exclude_patterns = [  
   "scripts/**",  
   "**/node_modules/",  
-  "examples/**"
+  "examples/**",
+  "docs/**"
 ]
 
 [[analyzers]]
