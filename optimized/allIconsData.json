@@ -12105,6 +12105,24 @@
     "variant": "fill"
   },
   {
+    "name": "jobs",
+    "safeName": "Jobs",
+    "tags": [
+      "Jobs"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "jobs fill",
+    "safeName": "JobsFill",
+    "tags": [
+      "JobsFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "jupyter notebook logo",
     "safeName": "JupyterNotebookLogo",
     "tags": [
@@ -14877,6 +14895,24 @@
     "variant": "fill"
   },
   {
+    "name": "open source",
+    "safeName": "OpenSource",
+    "tags": [
+      "OpenSource"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "open source fill",
+    "safeName": "OpenSourceFill",
+    "tags": [
+      "OpenSourceFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "outpostlogo",
     "safeName": "Outpostlogo",
     "tags": [
@@ -16218,6 +16254,24 @@
     "variant": "fill"
   },
   {
+    "name": "product hunt",
+    "safeName": "ProductHunt",
+    "tags": [
+      "ProductHunt"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "product hunt fill",
+    "safeName": "ProductHuntFill",
+    "tags": [
+      "ProductHuntFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "prohibit",
     "safeName": "Prohibit",
     "tags": [
@@ -17293,6 +17347,24 @@
     "safeName": "SelectionSlashFill",
     "tags": [
       "SelectionSlashFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "service",
+    "safeName": "Service",
+    "tags": [
+      "Service"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "service fill",
+    "safeName": "ServiceFill",
+    "tags": [
+      "ServiceFill"
     ],
     "categories": [],
     "variant": "fill"
