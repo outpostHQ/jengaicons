@@ -1,5 +1,14 @@
 # @jengaicons/react
 
+## 1.9.0
+
+### Minor Changes
+
+- [#78](https://github.com/outpostHQ/jengaicons/pull/78)
+  [`baa0f7d`](https://github.com/outpostHQ/jengaicons/commit/baa0f7d4a345ae090801eb35bd2070ee094f1ca2)
+  Thanks [@shubham-kaushal](https://github.com/shubham-kaushal)! - Add new set
+  of icons for brand logos.
+
 ## 1.8.0
 
 ### Minor Changes
