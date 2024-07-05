@@ -9,16 +9,8 @@ jobs:
       - name: Git Checkout
         uses: actions/checkout@v1
 
-      - name: PNPM Package manager install
-        uses: pnpm/action-setup@v2
-        with:
-          version: 7
-
-      - name: Install Node.js 16
-        uses: actions/setup-node@v3
-        with:
-          node-version: '16'
-          cache: 'pnpm'
+      - name: Install
+        uses: ./.github/composite-actions/install
 
       - name: Install Dependencies
         run: pnpm install

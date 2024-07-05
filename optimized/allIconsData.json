@@ -11052,6 +11052,15 @@
     "variant": "fill"
   },
   {
+    "name": "group 1 0 0 0 0 0 1 1 9 6",
+    "safeName": "Group1000001196",
+    "tags": [
+      "Group1000001196"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "hamburger",
     "safeName": "Hamburger",
     "tags": [
@@ -12352,6 +12361,24 @@
     "safeName": "LampFill",
     "tags": [
       "LampFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "lang chain logo",
+    "safeName": "LangChainLogo",
+    "tags": [
+      "LangChainLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "lang chain logo fill",
+    "safeName": "LangChainLogoFill",
+    "tags": [
+      "LangChainLogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -15750,6 +15777,24 @@
     "variant": "fill"
   },
   {
+    "name": "pinecone logo",
+    "safeName": "PineconeLogo",
+    "tags": [
+      "PineconeLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "pinecone logo fill",
+    "safeName": "PineconeLogoFill",
+    "tags": [
+      "PineconeLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "pinterest logo",
     "safeName": "PinterestLogo",
     "tags": [
@@ -18981,6 +19026,15 @@
     "variant": "fill"
   },
   {
+    "name": "subtract fill",
+    "safeName": "SubtractFill",
+    "tags": [
+      "SubtractFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "suitcase",
     "safeName": "Suitcase",
     "tags": [
@@ -20475,6 +20529,24 @@
     "variant": "fill"
   },
   {
+    "name": "twilio logo",
+    "safeName": "TwilioLogo",
+    "tags": [
+      "TwilioLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "twilio logo fill",
+    "safeName": "TwilioLogoFill",
+    "tags": [
+      "TwilioLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "twitch logo",
     "safeName": "TwitchLogo",
     "tags": [
@@ -21163,6 +21235,24 @@
     "safeName": "WallFill",
     "tags": [
       "WallFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "wand b logo",
+    "safeName": "WandBLogo",
+    "tags": [
+      "WandBLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "wand b logo fill",
+    "safeName": "WandBLogoFill",
+    "tags": [
+      "WandBLogoFill"
     ],
     "categories": [],
     "variant": "fill"
