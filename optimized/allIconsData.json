@@ -11052,6 +11052,15 @@
     "variant": "fill"
   },
   {
+    "name": "group 1 0 0 0 0 0 1 1 9 6",
+    "safeName": "Group1000001196",
+    "tags": [
+      "Group1000001196"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "hamburger",
     "safeName": "Hamburger",
     "tags": [
@@ -12105,6 +12114,24 @@
     "variant": "fill"
   },
   {
+    "name": "jobs",
+    "safeName": "Jobs",
+    "tags": [
+      "Jobs"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "jobs fill",
+    "safeName": "JobsFill",
+    "tags": [
+      "JobsFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "jupyter notebook logo",
     "safeName": "JupyterNotebookLogo",
     "tags": [
@@ -12334,6 +12361,24 @@
     "safeName": "LampFill",
     "tags": [
       "LampFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "lang chain logo",
+    "safeName": "LangChainLogo",
+    "tags": [
+      "LangChainLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "lang chain logo fill",
+    "safeName": "LangChainLogoFill",
+    "tags": [
+      "LangChainLogoFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -14877,6 +14922,24 @@
     "variant": "fill"
   },
   {
+    "name": "open source",
+    "safeName": "OpenSource",
+    "tags": [
+      "OpenSource"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "open source fill",
+    "safeName": "OpenSourceFill",
+    "tags": [
+      "OpenSourceFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "outpostlogo",
     "safeName": "Outpostlogo",
     "tags": [
@@ -15714,6 +15777,24 @@
     "variant": "fill"
   },
   {
+    "name": "pinecone logo",
+    "safeName": "PineconeLogo",
+    "tags": [
+      "PineconeLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "pinecone logo fill",
+    "safeName": "PineconeLogoFill",
+    "tags": [
+      "PineconeLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "pinterest logo",
     "safeName": "PinterestLogo",
     "tags": [
@@ -16213,6 +16294,24 @@
     "safeName": "PrinterFill",
     "tags": [
       "PrinterFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "product hunt",
+    "safeName": "ProductHunt",
+    "tags": [
+      "ProductHunt"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "product hunt fill",
+    "safeName": "ProductHuntFill",
+    "tags": [
+      "ProductHuntFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -17293,6 +17392,24 @@
     "safeName": "SelectionSlashFill",
     "tags": [
       "SelectionSlashFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "service",
+    "safeName": "Service",
+    "tags": [
+      "Service"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "service fill",
+    "safeName": "ServiceFill",
+    "tags": [
+      "ServiceFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18909,6 +19026,15 @@
     "variant": "fill"
   },
   {
+    "name": "subtract fill",
+    "safeName": "SubtractFill",
+    "tags": [
+      "SubtractFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "suitcase",
     "safeName": "Suitcase",
     "tags": [
@@ -20403,6 +20529,24 @@
     "variant": "fill"
   },
   {
+    "name": "twilio logo",
+    "safeName": "TwilioLogo",
+    "tags": [
+      "TwilioLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "twilio logo fill",
+    "safeName": "TwilioLogoFill",
+    "tags": [
+      "TwilioLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "twitch logo",
     "safeName": "TwitchLogo",
     "tags": [
@@ -21091,6 +21235,24 @@
     "safeName": "WallFill",
     "tags": [
       "WallFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "wand b logo",
+    "safeName": "WandBLogo",
+    "tags": [
+      "WandBLogo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "wand b logo fill",
+    "safeName": "WandBLogoFill",
+    "tags": [
+      "WandBLogoFill"
     ],
     "categories": [],
     "variant": "fill"
