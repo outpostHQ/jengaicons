@@ -1,0 +1,27 @@
+{
+  "name": "generate-icon-nodes",
+  "private": true,
+  "version": "1.5.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "build": "pnpm write-icon-nodes",
+    "write-icon-nodes": "ts-node index ../../assets --transpileOnly"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^20.14.2",
+    "svgo": "^3.3.2",
+    "xml2js": "^0.6.2",
+    "fs-extra": "^11.2.0",
+    "ts-node": "10.9.2",
+    "typescript": "^5.4.5"
+  },
+  "dependencies": {
+    "@svgr/core": "^8.1.0",
+    "fp-ts": "^2.16.6",
+    "zip-a-folder": "3.1.6"
+  }
+}

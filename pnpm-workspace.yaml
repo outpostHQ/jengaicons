@@ -3,3 +3,4 @@ packages:
   - "examples/*"
   - "scripts/*"
   - "website"
+  - "docs"
