@@ -1,0 +1,50 @@
+{
+  "name": "@jengaicons/svelte",
+  "version": "1.0.0",
+  "keywords": [
+    "jenga-icons",
+    "svelte-icons",
+    "icons",
+    "svelte",
+    "typescript",
+    "svg",
+    "svg-icons",
+    "icon-pack",
+    "icon-font"
+  ],
+  "homepage": "https://github.com/outposthq/jengaicons",
+  "bugs": "https://github.com/outposthq/jengaicons",
+  "repository": "outposthq/jengaicons",
+  "license": "MIT",
+  "sideEffects": false,
+  "main": "./dist/cjs/index.js",
+  "module": "./dist/esm/index.mjs",
+  "types": "./dist/@types/index.d.ts",
+  "source": "src/index.tsx",
+  "files": [
+    "dist/**"
+  ],
+  "scripts": {
+    "build": "cross-env NODE_ENV=production rollup --config rollup.config.mjs && pnpm gen-types",
+    "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
+    "gen-types": "tsc"
+  },
+  "devDependencies": {
+    "@rollup/plugin-node-resolve": "15.2.3",
+    "@swc/core": "1.5.25",
+    "@types/node": "^20.14.2",
+    "cross-env": "7.0.3",
+    "rimraf": "5.0.7",
+    "rollup": "4.18.0",
+    "rollup-plugin-node-externals": "7.1.2",
+    "rollup-plugin-progress": "1.1.2",
+    "rollup-plugin-summary": "2.0.1",
+    "rollup-plugin-swc3": "0.11.2",
+    "rollup-swc-preserve-directives": "0.7.0",
+    "tslib": "2.6.3",
+    "typescript": "^5.4.5"
+  },
+  "publishConfig": {
+    "access": "public"
+  }
+}

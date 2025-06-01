@@ -1,0 +1,18 @@
+{
+  "compilerOptions": {
+    "baseUrl": ".",
+    "rootDir": "src",
+    "declaration": true,
+    "jsx": "react",
+    "skipLibCheck": true,
+    "moduleResolution": "node",
+    "lib": ["esnext", "dom"],
+    "module": "ESNext",
+    "target": "ESNext",
+    "emitDeclarationOnly": true,
+    "declarationDir": "./dist/@types"
+  },
+  "compileOnSave": false,
+  "exclude": ["node_modules"],
+  "include": ["src/**/*"]
+}
