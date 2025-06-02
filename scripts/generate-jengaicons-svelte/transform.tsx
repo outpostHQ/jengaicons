@@ -1,7 +1,7 @@
 import * as svgson from "svgson"
 import { TVariants } from "./types"
 
-const removeAttrs = ["fill", "stroke", "strokeWidth", "stroke-width"]
+const removeAttrs = ["stroke", "strokeWidth", "stroke-width"]
 
 const cleanNode = (node) => {
   // Remove specified attributes

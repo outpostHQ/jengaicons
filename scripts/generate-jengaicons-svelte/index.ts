@@ -8,7 +8,7 @@ const args = getCLIArgs()
 const PATH_TO_ASSETS = args.assets
 const PATH_TO_WRITE_FOLDER = path.join(args.rootPath, args.outputFolderName)
 const PATH_TO_SRC_FOLDER = path.join(args.rootPath)
-const PATH_TO_SRC_INDEX_FILE = path.join(PATH_TO_SRC_FOLDER, "index.tsx")
+const PATH_TO_INDEX_ICON_FILE = path.join(PATH_TO_WRITE_FOLDER, "index.js")
 
 const pathPresent = (path: string) => fs.existsSync(path)
 const capitalize = (str: string) => `${str[0].toUpperCase()}${str.slice(1)}`
@@ -48,21 +48,8 @@ const getSvelteSVGContent = (svgFileName: string, variant: string) => {
   )
 }
 
-const getSafeComponentName = (svgFileName: string, variant: string) => {
-  // const componentName = `${svgFileName.replace('.svg', '')}${capitalize(
-  //   variant
-  // )}`
-
-  // let safeComponentName = componentName
-  //   .replace(/\./g, '')
-  //   .replace(/-/g, '')
-  //   .replace(/\s*/g, '')
-  //   .replace(/&/g, '')
-
-  // return safeComponentName
-
-  return svgFileName.replace(/\.svg$/i, "")
-}
+const getSafeComponentName = (svgFileName: string, variant: string) =>
+  svgFileName.replace(/\.svg$/i, "")
 
 async function main() {
   const itemsInDirectory = getIconDirs()
@@ -70,7 +57,7 @@ async function main() {
   if (pathPresent(PATH_TO_WRITE_FOLDER))
     fs.rmSync(PATH_TO_WRITE_FOLDER, { recursive: true })
 
-  if (pathPresent(PATH_TO_SRC_INDEX_FILE)) fs.rmSync(PATH_TO_SRC_INDEX_FILE)
+  if (pathPresent(PATH_TO_INDEX_ICON_FILE)) fs.rmSync(PATH_TO_INDEX_ICON_FILE)
 
   if (!pathPresent(PATH_TO_SRC_FOLDER)) fs.mkdirSync(PATH_TO_SRC_FOLDER)
 
@@ -114,10 +101,54 @@ async function main() {
           svgComponent.output,
         )
 
-        // fs.appendFileSync(
-        //   PATH_TO_SRC_INDEX_FILE,
-        //   `export { default as ${componentName} } from "./${args.outputFolderName}/${componentName}";\n`,
-        // )
+        /** create js file of the respective icon*/
+        fs.writeFileSync(
+          path.join(PATH_TO_WRITE_FOLDER, `${componentName}.js`),
+          `export { default } from "./${componentName}.svelte";`,
+        )
+
+        /** create typescript file of .js file*/
+        fs.writeFileSync(
+          path.join(PATH_TO_WRITE_FOLDER, `${componentName}.d.ts`),
+          `export { default } from "./${componentName}.svelte";`,
+        )
+
+        /** create typescript file of .svelte file*/
+        fs.writeFileSync(
+          path.join(PATH_TO_WRITE_FOLDER, `${componentName}.svelte.d.ts`),
+          `
+            import { SvelteComponentTyped } from "svelte";
+            import type { IconProps } from '../types.js';
+            declare const __propDef: {
+                props: IconProps;
+                events: {
+                    [evt: string]: CustomEvent<any>;
+                };
+                slots: {
+                    default: {};
+                };
+            };
+            export type ${componentName}Props = typeof __propDef.props;
+            export type ${componentName}Events = typeof __propDef.events;
+            export type ${componentName}Slots = typeof __propDef.slots;
+
+            export default class ${componentName} extends SvelteComponentTyped<${componentName}Props, ${componentName}Events, ${componentName}Slots> {
+            }
+            export {};
+`.trim(),
+        )
+
+        // append component to index file
+        fs.appendFileSync(
+          PATH_TO_INDEX_ICON_FILE,
+          `export { default as ${componentName} } from "./${componentName}.js";\n`,
+        )
+
+        // append component to index typescript file
+        fs.appendFileSync(
+          PATH_TO_INDEX_ICON_FILE + ".d.ts",
+          `export { default as ${componentName} } from "./${componentName}.js";\n`,
+        )
       })
   }
 

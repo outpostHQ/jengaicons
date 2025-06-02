@@ -16,13 +16,28 @@
   "bugs": "https://github.com/outposthq/jengaicons",
   "repository": "outposthq/jengaicons",
   "license": "MIT",
+  "type": "module",
+  "main": "dist/index.js",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js",
+      "default": "./dist/index.js"
+    },
+    "./icons": {
+      "types": "./dist/index.d.ts",
+      "svelte": "./dist/index.js"
+    },
+    "./icons/*": {
+      "types": "./dist/icons/*.svelte.d.ts",
+      "svelte": "./dist/icons/*.js",
+      "default": "./dist/icons/*.js"
+    }
+  },
+  "typings": "dist/index.d.ts",
   "sideEffects": false,
-  "main": "./dist/cjs/index.js",
-  "module": "./dist/esm/index.mjs",
-  "types": "./dist/@types/index.d.ts",
-  "source": "src/index.tsx",
   "files": [
-    "dist/**"
+    "dist"
   ],
   "scripts": {
     "build": "cross-env NODE_ENV=production rollup --config rollup.config.mjs && pnpm gen-types",

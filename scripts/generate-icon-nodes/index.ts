@@ -75,6 +75,8 @@ const main = async () => {
 
   await fs.ensureDir(OUTPUT_DIR)
 
+  console.log(INPUT_DIR, OUTPUT_DIR)
+
   await processDirectory(INPUT_DIR)
 
   console.log("Icon nodes generated successfully!")

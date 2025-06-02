@@ -91,7 +91,7 @@ async function main() {
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as Lowercase<TVariants>
 
-    getSVGFileNames(variantFolder).map((svgFileName) => {
+    ;[getSVGFileNames(variantFolder)[0]].map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
