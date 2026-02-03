@@ -40,8 +40,8 @@
     "dist"
   ],
   "scripts": {
-    "build": "pnpm --filter generate-jengaicons-svelte build && cross-env NODE_ENV=production rollup --config rollup.config.mjs && node scripts/copy-assets.mjs",
-    "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
+    "build": "bun run --filter generate-jengaicons-svelte build && cross-env NODE_ENV=production rollup --config rollup.config.mjs && node scripts/copy-assets.mjs",
+    "clean": "rm -rf dist && rm -rf node_modules",
     "gen-types": "tsc"
   },
   "devDependencies": {

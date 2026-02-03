@@ -1,26 +1,26 @@
 name: 'Install'
-description: 'Sets up Node.js and runs install'
+description: 'Sets up Bun and runs install'
 
 runs:
   using: composite
   steps:
-    - name: Install dependencies
-      uses: pnpm/action-setup@v4
+    - name: Setup Bun
+      uses: oven-sh/setup-bun@v2
       with:
-        version: 10.28.2
+        bun-version: latest
 
     - name: Setup Node.js
       uses: actions/setup-node@v4
       with:
         node-version-file: '.nvmrc'
         registry-url: 'https://registry.npmjs.org'
-        cache: 'pnpm'
 
     - name: Setup Git User
       shell: bash
       run: |
         git config --global user.email "nsk9195@gmail.com"
-        git config --global user.name "Shubham Kaushal"zzz
+        git config --global user.name "Shubham Kaushal"
+
     - name: Install dependencies
       shell: bash
-      run: pnpm install
+      run: bun install

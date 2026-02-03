@@ -5,7 +5,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "pnpm write-icons",
+    "build": "bun run write-icons",
     "write-icons": "ts-node index ../../assets --transpileOnly"
   },
   "keywords": [],

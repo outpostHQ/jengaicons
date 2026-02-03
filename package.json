@@ -1,37 +1,35 @@
 {
   "name": "jenga-icons",
   "private": true,
+  "workspaces": [
+    "packages/*",
+    "examples/*",
+    "scripts/*",
+    "docs"
+  ],
   "scripts": {
-    "build": "pnpm -r --filter \"./packages/**\" build && pnpm -r --filter \"./examples/**\" --filter \"docs\" build",
-    "build:react": "pnpm generate:react && pnpm --filter @jengaicons/react build",
-    "build:svelte": "pnpm generate:svelte && pnpm --filter @jengaicons/svelte build",
-    "changeset": "changeset",
-    "clean": "pnpm -r run clean || true && rm -rf node_modules",
-    "generate:optimized": "pnpm --filter generate-optimized build",
-    "generate:icon-nodes": "pnpm --filter generate-icon-nodes build",
-    "generate:react": "pnpm --filter generate-jengaicons-react build",
-    "generate:svelte": "pnpm --filter generate-jengaicons-svelte build",
-    "release": "changeset publish",
-    "release:dev": "changeset publish --tag dev",
-    "test": "pnpm -r test",
-    "version": "changeset version",
-    "version:dev": "changeset version --snapshot dev",
-    "example:build": "pnpm --filter next-ts-app-dir build",
-    "example:dev": "pnpm --filter next-ts-app-dir dev",
-    "example:start": "pnpm --filter next-ts-app-dir start",
-    "docs:build": "pnpm --filter docs build",
-    "docs:dev": "pnpm --filter docs dev",
-    "docs:start": "pnpm --filter docs start",
-    "prepare": "husky install",
-    "format": "npx pretty-quick --pattern \"**/*.*(js|jsx|ts|tsx)\"",
-    "format:staged": "npx pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\"",
-    "website:fix": "pnpm --filter jengaicon-website fix"
+    "build": "bun run --filter './packages/**' build && bun run --filter './examples/**' --filter 'docs' build",
+    "build:react": "bun run generate:react && bun run --filter @jengaicons/react build",
+    "build:svelte": "bun run generate:svelte && bun run --filter @jengaicons/svelte build",
+    "clean": "bun run --filter '*' clean || true && rm -rf node_modules",
+    "generate:optimized": "bun run --filter generate-optimized build",
+    "generate:icon-nodes": "bun run --filter generate-icon-nodes build",
+    "generate:react": "bun run --filter generate-jengaicons-react build",
+    "generate:svelte": "bun run --filter generate-jengaicons-svelte build",
+    "release": "bun run build:react && bun run build:svelte && npm publish --workspace=@jengaicons/react && npm publish --workspace=@jengaicons/svelte",
+    "release:react": "bun run build:react && npm publish --workspace=@jengaicons/react",
+    "release:svelte": "bun run build:svelte && npm publish --workspace=@jengaicons/svelte",
+    "test": "bun run --filter '*' test",
+    "example:build": "bun run --filter next-ts-app-dir build",
+    "example:dev": "bun run --filter next-ts-app-dir dev",
+    "example:start": "bun run --filter next-ts-app-dir start",
+    "docs:build": "bun run --filter docs build",
+    "docs:dev": "bun run --filter docs dev",
+    "docs:start": "bun run --filter docs start",
+    "format": "bunx pretty-quick --pattern \"**/*.*(js|jsx|ts|tsx)\"",
+    "format:staged": "bunx pretty-quick --staged --pattern \"**/*.*(js|jsx|ts|tsx)\""
   },
   "devDependencies": {
-    "@changesets/changelog-github": "0.5.2",
-    "@changesets/cli": "2.29.8",
-    "@commitlint/cli": "20.4.1",
-    "@commitlint/config-conventional": "20.4.1",
     "@size-limit/preset-big-lib": "12.0.0",
     "@size-limit/webpack": "12.0.0",
     "@size-limit/webpack-why": "12.0.0",
@@ -39,7 +37,6 @@
     "@types/node": "^25.2.0",
     "@types/react": "^19.2.10",
     "@types/react-dom": "^19.2.3",
-    "husky": "^9.1.7",
     "prettier": "3.8.1",
     "pretty-quick": "4.2.2",
     "size-limit": "12.0.0",
@@ -59,10 +56,7 @@
       "import": "{ Activity }"
     }
   ],
-  "packageManager": "pnpm@10.28.2",
-  "pnpm": {
-    "onlyBuiltDependencies": [
-      "esbuild"
-    ]
-  }
+  "trustedDependencies": [
+    "esbuild"
+  ]
 }

@@ -7,7 +7,7 @@
     "build": "next build",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .next && rm -rf node_modules && rm -rf .turbo"
+    "clean": "rm -rf .next && rm -rf node_modules"
   },
   "dependencies": {
     "@heroicons/react": "2.2.0",

@@ -4,7 +4,6 @@ logs
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 lerna-debug.log*
 
 node_modules
@@ -29,6 +28,4 @@ packages/jengaicons-react/src/icons/*
 .parcel-cache
 size-report
 __compare
-.turbo
 docs/data
-.pnpm-store
