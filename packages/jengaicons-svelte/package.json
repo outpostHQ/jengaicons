@@ -1,6 +1,6 @@
 {
   "name": "@jengaicons/svelte",
-  "version": "0.2.0",
+  "version": "0.3.0",
   "keywords": [
     "jenga-icons",
     "svelte-icons",
@@ -14,7 +14,11 @@
   ],
   "homepage": "https://github.com/outposthq/jengaicons",
   "bugs": "https://github.com/outposthq/jengaicons",
-  "repository": "outposthq/jengaicons",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/outposthq/jengaicons.git",
+    "directory": "packages/jengaicons-svelte"
+  },
   "license": "MIT",
   "type": "module",
   "main": "dist/index.js",
