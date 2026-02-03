@@ -152,10 +152,12 @@ All standard SVG attributes are passed through to the `<svg>` element.
 
 Icons are optimized for minimal bundle size with full tree-shaking support:
 
-| Package | Per Icon | Gzipped |
-|---------|----------|---------|
+| Package | Per Icon (uncompressed) | Gzipped |
+|---------|------------------------|---------|
 | React | ~800 bytes | ~400 bytes |
-| Svelte | ~400 bytes | ~200 bytes |
+| Svelte | ~250 bytes | ~150 bytes |
+
+*Svelte icons are highly optimized - smaller than alternatives like Lucide.*
 
 ---
 

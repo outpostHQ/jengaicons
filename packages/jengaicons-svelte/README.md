@@ -1,6 +1,6 @@
 # Jenga Icons for Svelte
 
-Jenga Icons is a collection of over 2,500 beautifully crafted icons designed for use in interfaces, diagrams, and other applications.
+Jenga Icons is a collection of over 2,500 beautifully crafted icons designed for use in interfaces, diagrams, and other applications. **Fully compatible with Svelte 5 runes.**
 
 [![NPM Version](https://img.shields.io/npm/v/@jengaicons/svelte.svg?style=flat)](https://www.npmjs.com/package/@jengaicons/svelte)
 [![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
@@ -164,15 +164,15 @@ Works out of the box with SvelteKit:
 
 ## Bundle Size
 
-Each icon adds approximately **300-700 bytes** (uncompressed) to your bundle. With tree-shaking, only the icons you import are included.
+Each icon adds approximately **200-500 bytes** (uncompressed) to your bundle. With tree-shaking, only the icons you import are included.
 
-| Import | Approximate Size |
-|--------|-----------------|
-| 1 icon | ~1.3 KB |
-| 10 icons | ~5 KB |
-| 100 icons | ~50 KB |
+| Import | Approximate Size (uncompressed) | Gzipped |
+|--------|--------------------------------|---------|
+| 1 icon | ~1 KB | ~400 bytes |
+| 10 icons | ~4 KB | ~1.5 KB |
+| 100 icons | ~40 KB | ~15 KB |
 
-*Sizes are uncompressed. Gzipped sizes are ~60-70% smaller.*
+*Our icons are optimized to be smaller than alternatives like Lucide.*
 
 ## License
 
