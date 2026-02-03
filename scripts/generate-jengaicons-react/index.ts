@@ -127,7 +127,7 @@ async function main() {
   fs.appendFileSync(
     PATH_TO_SRC_INDEX_FILE,
     [
-      `export { JengaIconContext } from "./context";`,
+      `export { JengaIconContext, default as JengaIconContextDefault } from "./context";`,
       `export type *  from "./types"`,
       `export *  from "./nextjs"`,
     ].join("\n"),
