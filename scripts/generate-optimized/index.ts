@@ -113,14 +113,11 @@ async function main() {
       const optimizedSvgString = svgo.optimize(svgString, {
         path: pathToOptimized,
         plugins: [
+          "preset-default",
           {
-            name: "preset-default",
-            params: {
-              overrides: {
-                removeViewBox: false,
-              },
-            },
-          },
+            name: "removeViewBox",
+            active: false,
+          } as svgo.PluginConfig,
         ],
       })
 
