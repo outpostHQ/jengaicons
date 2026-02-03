@@ -171,6 +171,7 @@ const getComponent = (transformData: TransformData, svgAST: svgson.INode) => {
     case "regular":
       return getRegularComponent(transformData, svgAST)
     case "fill":
+    case "mono":
       return getFillComponent(transformData, svgAST)
     default:
       throw new Error(`Invalid Variant : ${transformData.variant}`)

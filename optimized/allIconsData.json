@@ -162,6 +162,15 @@
     "variant": "fill"
   },
   {
+    "name": "airplay mono",
+    "safeName": "AirplayMono",
+    "tags": [
+      "AirplayMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "alarm",
     "safeName": "Alarm",
     "tags": [
@@ -576,6 +585,15 @@
     "variant": "fill"
   },
   {
+    "name": "a p i mono",
+    "safeName": "APIMono",
+    "tags": [
+      "APIMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "apple logo",
     "safeName": "AppleLogo",
     "tags": [
@@ -646,6 +664,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "appwindow mono",
+    "safeName": "AppwindowMono",
+    "tags": [
+      "AppwindowMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "archive",
@@ -1224,6 +1251,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowdown mono",
+    "safeName": "ArrowdownMono",
+    "tags": [
+      "ArrowdownMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrow down right lg",
     "safeName": "ArrowDownRightLg",
     "tags": [
@@ -1294,6 +1330,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrowdownup mono",
+    "safeName": "ArrowdownupMono",
+    "tags": [
+      "ArrowdownupMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "arrow elbow down left",
@@ -1728,6 +1773,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowleft mono",
+    "safeName": "ArrowleftMono",
+    "tags": [
+      "ArrowleftMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrow left sm",
     "safeName": "ArrowLeftSm",
     "tags": [
@@ -1836,6 +1890,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowlineright mono",
+    "safeName": "ArrowlinerightMono",
+    "tags": [
+      "ArrowlinerightMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrow line up",
     "safeName": "ArrowLineUp",
     "tags": [
@@ -1924,6 +1987,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrowright mono",
+    "safeName": "ArrowrightMono",
+    "tags": [
+      "ArrowrightMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "arrow right sm",
@@ -2286,6 +2358,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowsquareout mono",
+    "safeName": "ArrowsquareoutMono",
+    "tags": [
+      "ArrowsquareoutMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrow square right",
     "safeName": "ArrowSquareRight",
     "tags": [
@@ -2520,6 +2601,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowup mono",
+    "safeName": "ArrowupMono",
+    "tags": [
+      "ArrowupMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrow up right lg",
     "safeName": "ArrowUpRightLg",
     "tags": [
@@ -2736,6 +2826,15 @@
     "variant": "fill"
   },
   {
+    "name": "asterisk mono",
+    "safeName": "AsteriskMono",
+    "tags": [
+      "AsteriskMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "asterisk simple",
     "safeName": "AsteriskSimple",
     "tags": [
@@ -2806,6 +2905,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "audio mono",
+    "safeName": "AudioMono",
+    "tags": [
+      "AudioMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "auto m l",
@@ -3600,6 +3708,24 @@
     "variant": "fill"
   },
   {
+    "name": "binary mono",
+    "safeName": "BinaryMono",
+    "tags": [
+      "BinaryMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "bin mono",
+    "safeName": "BinMono",
+    "tags": [
+      "BinMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "binoculars",
     "safeName": "Binoculars",
     "tags": [
@@ -3834,6 +3960,15 @@
     "variant": "fill"
   },
   {
+    "name": "bookmark mono",
+    "safeName": "BookmarkMono",
+    "tags": [
+      "BookmarkMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "bookmarks",
     "safeName": "Bookmarks",
     "tags": [
@@ -3886,6 +4021,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "book mono",
+    "safeName": "BookMono",
+    "tags": [
+      "BookMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "book open",
@@ -3942,6 +4086,24 @@
     "variant": "fill"
   },
   {
+    "name": "boundingbox mono",
+    "safeName": "BoundingboxMono",
+    "tags": [
+      "BoundingboxMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "bracket curly mono",
+    "safeName": "BracketCurlyMono",
+    "tags": [
+      "BracketCurlyMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "brackets curly",
     "safeName": "BracketsCurly",
     "tags": [
@@ -3958,6 +4120,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "bracketsquare mono",
+    "safeName": "BracketsquareMono",
+    "tags": [
+      "BracketsquareMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "brackets round",
@@ -4176,6 +4347,24 @@
     "variant": "fill"
   },
   {
+    "name": "bug mono",
+    "safeName": "BugMono",
+    "tags": [
+      "BugMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "building mono",
+    "safeName": "BuildingMono",
+    "tags": [
+      "BuildingMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "buildings",
     "safeName": "Buildings",
     "tags": [
@@ -4338,6 +4527,15 @@
     "variant": "fill"
   },
   {
+    "name": "calendar mono",
+    "safeName": "CalendarMono",
+    "tags": [
+      "CalendarMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "calendar plus",
     "safeName": "CalendarPlus",
     "tags": [
@@ -4489,6 +4687,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "card mono",
+    "safeName": "CardMono",
+    "tags": [
+      "CardMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "cards",
@@ -4842,6 +5049,15 @@
     "variant": "fill"
   },
   {
+    "name": "chartbar mono",
+    "safeName": "ChartbarMono",
+    "tags": [
+      "ChartbarMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "chart line",
     "safeName": "ChartLine",
     "tags": [
@@ -5094,6 +5310,15 @@
     "variant": "fill"
   },
   {
+    "name": "chat mono",
+    "safeName": "ChatMono",
+    "tags": [
+      "ChatMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "chat notifications",
     "safeName": "ChatNotifications",
     "tags": [
@@ -5283,6 +5508,15 @@
     "variant": "fill"
   },
   {
+    "name": "checkcircle mono",
+    "safeName": "CheckcircleMono",
+    "tags": [
+      "CheckcircleMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "check fill",
     "safeName": "CheckFill",
     "tags": [
@@ -5290,6 +5524,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "check mono",
+    "safeName": "CheckMono",
+    "tags": [
+      "CheckMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "checks",
@@ -5544,6 +5787,15 @@
     "variant": "fill"
   },
   {
+    "name": "chevrondoubleright mono",
+    "safeName": "ChevrondoublerightMono",
+    "tags": [
+      "ChevrondoublerightMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "chevron double up",
     "safeName": "ChevronDoubleUp",
     "tags": [
@@ -5580,6 +5832,15 @@
     "variant": "fill"
   },
   {
+    "name": "chevrondown mono",
+    "safeName": "ChevrondownMono",
+    "tags": [
+      "ChevrondownMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "chevron left",
     "safeName": "ChevronLeft",
     "tags": [
@@ -5598,6 +5859,15 @@
     "variant": "fill"
   },
   {
+    "name": "chevronleft mono",
+    "safeName": "ChevronleftMono",
+    "tags": [
+      "ChevronleftMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "chevron right",
     "safeName": "ChevronRight",
     "tags": [
@@ -5614,6 +5884,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "chevronright mono",
+    "safeName": "ChevronrightMono",
+    "tags": [
+      "ChevronrightMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "chevron up",
@@ -5650,6 +5929,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "chevronup mono",
+    "safeName": "ChevronupMono",
+    "tags": [
+      "ChevronupMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "circle",
@@ -5812,6 +6100,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "circlethreeplus mono",
+    "safeName": "CirclethreeplusMono",
+    "tags": [
+      "CirclethreeplusMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "circle wavy",
@@ -6012,6 +6309,15 @@
     "variant": "fill"
   },
   {
+    "name": "clock mono",
+    "safeName": "ClockMono",
+    "tags": [
+      "ClockMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "closed captioning",
     "safeName": "ClosedCaptioning",
     "tags": [
@@ -6154,6 +6460,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "cloud mono",
+    "safeName": "CloudMono",
+    "tags": [
+      "CloudMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "cloud moon",
@@ -6318,6 +6633,15 @@
     "variant": "fill"
   },
   {
+    "name": "code mono",
+    "safeName": "CodeMono",
+    "tags": [
+      "CodeMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "codepen logo",
     "safeName": "CodepenLogo",
     "tags": [
@@ -6460,6 +6784,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "colorpalette mono",
+    "safeName": "ColorpaletteMono",
+    "tags": [
+      "ColorpaletteMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "columns",
@@ -6624,6 +6957,15 @@
     "variant": "fill"
   },
   {
+    "name": "contrast mono",
+    "safeName": "ContrastMono",
+    "tags": [
+      "ContrastMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "cookie",
     "safeName": "Cookie",
     "tags": [
@@ -6640,6 +6982,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "cookie mono",
+    "safeName": "CookieMono",
+    "tags": [
+      "CookieMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "cooking pot",
@@ -6694,6 +7045,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "copy mono",
+    "safeName": "CopyMono",
+    "tags": [
+      "CopyMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "copyright",
@@ -6768,6 +7128,15 @@
     "variant": "fill"
   },
   {
+    "name": "cornersout mono",
+    "safeName": "CornersoutMono",
+    "tags": [
+      "CornersoutMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "cost monitoring",
     "safeName": "CostMonitoring",
     "tags": [
@@ -6820,6 +7189,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "c p u mono",
+    "safeName": "CPUMono",
+    "tags": [
+      "CPUMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "credit card",
@@ -6964,6 +7342,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "cube mono",
+    "safeName": "CubeMono",
+    "tags": [
+      "CubeMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "currency btc",
@@ -7324,6 +7711,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "database mono",
+    "safeName": "DatabaseMono",
+    "tags": [
+      "DatabaseMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "databrickslogo",
@@ -7812,6 +8208,15 @@
     "variant": "fill"
   },
   {
+    "name": "docaudio mono",
+    "safeName": "DocaudioMono",
+    "tags": [
+      "DocaudioMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "dockerlogo",
     "safeName": "Dockerlogo",
     "tags": [
@@ -7828,6 +8233,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "doc mono",
+    "safeName": "DocMono",
+    "tags": [
+      "DocMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "docplus mono",
+    "safeName": "DocplusMono",
+    "tags": [
+      "DocplusMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "dog",
@@ -7882,6 +8305,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "dot nine mono",
+    "safeName": "DotNineMono",
+    "tags": [
+      "DotNineMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "dotsix mono",
+    "safeName": "DotsixMono",
+    "tags": [
+      "DotsixMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "dots nine",
@@ -7974,6 +8415,15 @@
     "variant": "fill"
   },
   {
+    "name": "dotsthreehorizontal mono",
+    "safeName": "DotsthreehorizontalMono",
+    "tags": [
+      "DotsthreehorizontalMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "dots three outline",
     "safeName": "DotsThreeOutline",
     "tags": [
@@ -8010,6 +8460,15 @@
     "variant": "fill"
   },
   {
+    "name": "dotsthreevertical mono",
+    "safeName": "DotsthreeverticalMono",
+    "tags": [
+      "DotsthreeverticalMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "download",
     "safeName": "Download",
     "tags": [
@@ -8026,6 +8485,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "download mono",
+    "safeName": "DownloadMono",
+    "tags": [
+      "DownloadMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "download simple",
@@ -8134,6 +8602,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "dropzone mono",
+    "safeName": "DropzoneMono",
+    "tags": [
+      "DropzoneMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "ear",
@@ -8269,6 +8746,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "envelope mono",
+    "safeName": "EnvelopeMono",
+    "tags": [
+      "EnvelopeMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "envelope open",
@@ -8451,6 +8937,15 @@
     "variant": "fill"
   },
   {
+    "name": "eyeclosed mono",
+    "safeName": "EyeclosedMono",
+    "tags": [
+      "EyeclosedMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "eyedropper",
     "safeName": "Eyedropper",
     "tags": [
@@ -8512,6 +9007,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "eye mono",
+    "safeName": "EyeMono",
+    "tags": [
+      "EyeMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "eye slash",
@@ -9378,6 +9882,15 @@
     "variant": "fill"
   },
   {
+    "name": "film strip mono",
+    "safeName": "FilmStripMono",
+    "tags": [
+      "FilmStripMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "fingerprint",
     "safeName": "Fingerprint",
     "tags": [
@@ -9394,6 +9907,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "fingerprint mono",
+    "safeName": "FingerprintMono",
+    "tags": [
+      "FingerprintMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "fingerprint simple",
@@ -9592,6 +10114,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "flag mono",
+    "safeName": "FlagMono",
+    "tags": [
+      "FlagMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "flame",
@@ -9844,6 +10375,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "folder mono",
+    "safeName": "FolderMono",
+    "tags": [
+      "FolderMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "folder notch",
@@ -10386,6 +10926,15 @@
     "variant": "fill"
   },
   {
+    "name": "gear mono",
+    "safeName": "GearMono",
+    "tags": [
+      "GearMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "gear six",
     "safeName": "GearSix",
     "tags": [
@@ -10834,6 +11383,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "globe mono",
+    "safeName": "GlobeMono",
+    "tags": [
+      "GlobeMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "globe simple",
@@ -11295,6 +11853,15 @@
     "variant": "fill"
   },
   {
+    "name": "happy mono",
+    "safeName": "HappyMono",
+    "tags": [
+      "HappyMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "hard drive",
     "safeName": "HardDrive",
     "tags": [
@@ -11331,6 +11898,15 @@
     "variant": "fill"
   },
   {
+    "name": "harddrives mono",
+    "safeName": "HarddrivesMono",
+    "tags": [
+      "HarddrivesMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "hashtag",
     "safeName": "Hashtag",
     "tags": [
@@ -11347,6 +11923,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "hashtag mono",
+    "safeName": "HashtagMono",
+    "tags": [
+      "HashtagMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "hashtag straight",
@@ -11637,6 +12222,15 @@
     "variant": "fill"
   },
   {
+    "name": "hourglasshigh mono",
+    "safeName": "HourglasshighMono",
+    "tags": [
+      "HourglasshighMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "hourglass low",
     "safeName": "HourglassLow",
     "tags": [
@@ -11653,6 +12247,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "hourglasslow mono",
+    "safeName": "HourglasslowMono",
+    "tags": [
+      "HourglasslowMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "hourglass medium",
@@ -11781,6 +12384,15 @@
     "variant": "fill"
   },
   {
+    "name": "house mono",
+    "safeName": "HouseMono",
+    "tags": [
+      "HouseMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "house simple",
     "safeName": "HouseSimple",
     "tags": [
@@ -11889,6 +12501,15 @@
     "variant": "fill"
   },
   {
+    "name": "image mono",
+    "safeName": "ImageMono",
+    "tags": [
+      "ImageMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "image square",
     "safeName": "ImageSquare",
     "tags": [
@@ -11943,6 +12564,15 @@
     "variant": "fill"
   },
   {
+    "name": "infinity mono",
+    "safeName": "InfinityMono",
+    "tags": [
+      "InfinityMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "info",
     "safeName": "Info",
     "tags": [
@@ -11959,6 +12589,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "info mono",
+    "safeName": "InfoMono",
+    "tags": [
+      "InfoMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "infra as code",
@@ -12240,6 +12879,15 @@
     "variant": "fill"
   },
   {
+    "name": "key mono",
+    "safeName": "KeyMono",
+    "tags": [
+      "KeyMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "key return",
     "safeName": "KeyReturn",
     "tags": [
@@ -12438,6 +13086,15 @@
     "variant": "fill"
   },
   {
+    "name": "layout mono",
+    "safeName": "LayoutMono",
+    "tags": [
+      "LayoutMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "leaf",
     "safeName": "Leaf",
     "tags": [
@@ -12454,6 +13111,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "library mono",
+    "safeName": "LibraryMono",
+    "tags": [
+      "LibraryMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "lifebuoy",
@@ -12654,6 +13320,15 @@
     "variant": "fill"
   },
   {
+    "name": "link mono",
+    "safeName": "LinkMono",
+    "tags": [
+      "LinkMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "link simple",
     "safeName": "LinkSimple",
     "tags": [
@@ -12771,6 +13446,15 @@
     "variant": "regular"
   },
   {
+    "name": "listbullet mono",
+    "safeName": "ListbulletMono",
+    "tags": [
+      "ListbulletMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "list bullets",
     "safeName": "ListBullets",
     "tags": [
@@ -12787,6 +13471,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "listcheck mono",
+    "safeName": "ListcheckMono",
+    "tags": [
+      "ListcheckMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "list checks",
@@ -12870,6 +13563,15 @@
     "variant": "fill"
   },
   {
+    "name": "listplay mono",
+    "safeName": "ListplayMono",
+    "tags": [
+      "ListplayMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "list plus",
     "safeName": "ListPlus",
     "tags": [
@@ -12886,6 +13588,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "listplus mono",
+    "safeName": "ListplusMono",
+    "tags": [
+      "ListplusMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "l l m",
@@ -13176,6 +13887,15 @@
     "variant": "fill"
   },
   {
+    "name": "map pin mono",
+    "safeName": "MapPinMono",
+    "tags": [
+      "MapPinMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "map trifold",
     "safeName": "MapTrifold",
     "tags": [
@@ -13228,6 +13948,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "markdown mono",
+    "safeName": "MarkdownMono",
+    "tags": [
+      "MarkdownMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "marker circle",
@@ -13464,6 +14193,15 @@
     "variant": "fill"
   },
   {
+    "name": "microphone mono",
+    "safeName": "MicrophoneMono",
+    "tags": [
+      "MicrophoneMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "microphone slash",
     "safeName": "MicrophoneSlash",
     "tags": [
@@ -13599,6 +14337,15 @@
     "variant": "fill"
   },
   {
+    "name": "minuscircle mono",
+    "safeName": "MinuscircleMono",
+    "tags": [
+      "MinuscircleMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "minus fill",
     "safeName": "MinusFill",
     "tags": [
@@ -13698,6 +14445,15 @@
     "variant": "fill"
   },
   {
+    "name": "moon mono",
+    "safeName": "MoonMono",
+    "tags": [
+      "MoonMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "moon stars",
     "safeName": "MoonStars",
     "tags": [
@@ -13750,6 +14506,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "mouse mono",
+    "safeName": "MouseMono",
+    "tags": [
+      "MouseMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "mouse pointer",
@@ -13822,6 +14587,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "multitenant mono",
+    "safeName": "MultitenantMono",
+    "tags": [
+      "MultitenantMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "music note",
@@ -14002,6 +14776,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "neutral mono",
+    "safeName": "NeutralMono",
+    "tags": [
+      "NeutralMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "newspaper",
@@ -14200,6 +14983,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "notepen mono",
+    "safeName": "NotepenMono",
+    "tags": [
+      "NotepenMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "notification",
@@ -15372,6 +16164,15 @@
     "variant": "fill"
   },
   {
+    "name": "pencil mono",
+    "safeName": "PencilMono",
+    "tags": [
+      "PencilMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "pencil simple",
     "safeName": "PencilSimple",
     "tags": [
@@ -15631,6 +16432,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "phone mono",
+    "safeName": "PhoneMono",
+    "tags": [
+      "PhoneMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "phone outgoing",
@@ -15975,6 +16785,15 @@
     "variant": "fill"
   },
   {
+    "name": "playground mono",
+    "safeName": "PlaygroundMono",
+    "tags": [
+      "PlaygroundMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "playlist",
     "safeName": "Playlist",
     "tags": [
@@ -15991,6 +16810,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "play mono",
+    "safeName": "PlayMono",
+    "tags": [
+      "PlayMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "play pause",
@@ -16351,6 +17179,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "prohibit mono",
+    "safeName": "ProhibitMono",
+    "tags": [
+      "ProhibitMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "project",
@@ -16857,6 +17694,15 @@
     "variant": "fill"
   },
   {
+    "name": "refresh mono",
+    "safeName": "RefreshMono",
+    "tags": [
+      "RefreshMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "repeat",
     "safeName": "Repeat",
     "tags": [
@@ -16965,6 +17811,15 @@
     "variant": "fill"
   },
   {
+    "name": "robot mono",
+    "safeName": "RobotMono",
+    "tags": [
+      "RobotMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "rocket",
     "safeName": "Rocket",
     "tags": [
@@ -16999,6 +17854,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "rocketlaunch mono",
+    "safeName": "RocketlaunchMono",
+    "tags": [
+      "RocketlaunchMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "rows",
@@ -17127,6 +17991,15 @@
     "variant": "fill"
   },
   {
+    "name": "sad mono",
+    "safeName": "SadMono",
+    "tags": [
+      "SadMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "scales",
     "safeName": "Scales",
     "tags": [
@@ -17235,6 +18108,15 @@
     "variant": "fill"
   },
   {
+    "name": "sdk mono",
+    "safeName": "SdkMono",
+    "tags": [
+      "SdkMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "search",
     "safeName": "Search",
     "tags": [
@@ -17251,6 +18133,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "search mono",
+    "safeName": "SearchMono",
+    "tags": [
+      "SearchMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "secure config",
@@ -17433,6 +18324,15 @@
     "variant": "fill"
   },
   {
+    "name": "share mono",
+    "safeName": "ShareMono",
+    "tags": [
+      "ShareMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "share network",
     "safeName": "ShareNetwork",
     "tags": [
@@ -17521,6 +18421,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "shield mono",
+    "safeName": "ShieldMono",
+    "tags": [
+      "ShieldMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "shield plus",
@@ -18036,6 +18945,15 @@
     "variant": "fill"
   },
   {
+    "name": "slider mono",
+    "safeName": "SliderMono",
+    "tags": [
+      "SliderMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "sliders",
     "safeName": "Sliders",
     "tags": [
@@ -18306,6 +19224,15 @@
     "variant": "fill"
   },
   {
+    "name": "sort ascending mono",
+    "safeName": "SortAscendingMono",
+    "tags": [
+      "SortAscendingMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "sort descending",
     "safeName": "SortDescending",
     "tags": [
@@ -18394,6 +19321,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "sparkle mono",
+    "safeName": "SparkleMono",
+    "tags": [
+      "SparkleMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "speaker high",
@@ -18702,6 +19638,15 @@
     "variant": "fill"
   },
   {
+    "name": "squarefour mono",
+    "safeName": "SquarefourMono",
+    "tags": [
+      "SquarefourMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "square half",
     "safeName": "SquareHalf",
     "tags": [
@@ -18882,6 +19827,15 @@
     "variant": "fill"
   },
   {
+    "name": "star four mono",
+    "safeName": "StarFourMono",
+    "tags": [
+      "StarFourMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "star half",
     "safeName": "StarHalf",
     "tags": [
@@ -18898,6 +19852,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "star mono",
+    "safeName": "StarMono",
+    "tags": [
+      "StarMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
+    "name": "stealth mono",
+    "safeName": "StealthMono",
+    "tags": [
+      "StealthMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "sticker",
@@ -18988,6 +19960,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "strategy mono",
+    "safeName": "StrategyMono",
+    "tags": [
+      "StrategyMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "stripe logo",
@@ -19143,6 +20124,15 @@
     "variant": "fill"
   },
   {
+    "name": "sun mono",
+    "safeName": "SunMono",
+    "tags": [
+      "SunMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "svelte kitlogo",
     "safeName": "SvelteKitlogo",
     "tags": [
@@ -19251,6 +20241,15 @@
     "variant": "fill"
   },
   {
+    "name": "table mono",
+    "safeName": "TableMono",
+    "tags": [
+      "TableMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "tabs",
     "safeName": "Tabs",
     "tags": [
@@ -19303,6 +20302,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "tag mono",
+    "safeName": "TagMono",
+    "tags": [
+      "TagMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "tag simple",
@@ -19465,6 +20473,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "terminal mono",
+    "safeName": "TerminalMono",
+    "tags": [
+      "TerminalMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "terminal window",
@@ -19791,6 +20808,15 @@
     "variant": "fill"
   },
   {
+    "name": "text mono",
+    "safeName": "TextMono",
+    "tags": [
+      "TextMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "text outdent",
     "safeName": "TextOutdent",
     "tags": [
@@ -20061,6 +21087,15 @@
     "variant": "fill"
   },
   {
+    "name": "timer mono",
+    "safeName": "TimerMono",
+    "tags": [
+      "TimerMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "toggle left",
     "safeName": "ToggleLeft",
     "tags": [
@@ -20311,6 +21346,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "translate mono",
+    "safeName": "TranslateMono",
+    "tags": [
+      "TranslateMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "trash",
@@ -20835,6 +21879,15 @@
     "variant": "fill"
   },
   {
+    "name": "user mono",
+    "safeName": "UserMono",
+    "tags": [
+      "UserMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "user plus",
     "safeName": "UserPlus",
     "tags": [
@@ -21294,6 +22347,15 @@
     "variant": "fill"
   },
   {
+    "name": "warning mono",
+    "safeName": "WarningMono",
+    "tags": [
+      "WarningMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "warning octagon",
     "safeName": "WarningOctagon",
     "tags": [
@@ -21310,6 +22372,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "warningoctagon mono",
+    "safeName": "WarningoctagonMono",
+    "tags": [
+      "WarningoctagonMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "watch",
@@ -21454,6 +22525,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "webhook mono",
+    "safeName": "WebhookMono",
+    "tags": [
+      "WebhookMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "whatsapp logo",
@@ -21735,6 +22815,15 @@
     "variant": "fill"
   },
   {
+    "name": "xcircle mono",
+    "safeName": "XcircleMono",
+    "tags": [
+      "XcircleMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "x fill",
     "safeName": "XFill",
     "tags": [
@@ -21742,6 +22831,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "x mono",
+    "safeName": "XMono",
+    "tags": [
+      "XMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "x square",

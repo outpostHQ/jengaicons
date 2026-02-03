@@ -33,7 +33,12 @@ const mergeClasses = (...classes) => classes.filter((className, index, array) =>
   }
 >
   {#each iconNode as [tag, attrs]}
-    <svelte:element this={tag} {...attrs}/>
+    <svelte:element
+      this={tag}
+      {...attrs}
+      fill={attrs.fill != null ? color : undefined}
+      stroke={attrs.stroke != null ? color : undefined}
+    />
   {/each}
   <slot />
 </svg>
