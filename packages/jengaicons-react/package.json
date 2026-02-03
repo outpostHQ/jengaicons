@@ -25,29 +25,29 @@
     "dist/**"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup --config rollup.config.mjs && pnpm gen-types",
+    "build": "pnpm --filter generate-jengaicons-react build && cross-env NODE_ENV=production rollup --config rollup.config.mjs && pnpm gen-types",
     "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
     "gen-types": "tsc"
   },
   "devDependencies": {
-    "@rollup/plugin-node-resolve": "15.2.3",
-    "@swc/core": "1.5.25",
-    "@types/node": "^20.14.2",
-    "@types/react": "^18.3.3",
-    "@types/react-dom": "^18.3.0",
-    "cross-env": "7.0.3",
+    "@rollup/plugin-node-resolve": "16.0.3",
+    "@swc/core": "1.15.11",
+    "@types/node": "^25.2.0",
+    "@types/react": "^19.2.10",
+    "@types/react-dom": "^19.2.3",
+    "cross-env": "10.1.0",
     "generate-jengaicons-react": "workspace:*",
-    "react": "^18.3.1",
-    "react-dom": "^18.3.1",
-    "rimraf": "5.0.7",
-    "rollup": "4.18.0",
-    "rollup-plugin-node-externals": "7.1.2",
+    "react": "^19.2.4",
+    "react-dom": "^19.2.4",
+    "rimraf": "6.1.2",
+    "rollup": "4.57.1",
+    "rollup-plugin-node-externals": "8.1.2",
     "rollup-plugin-progress": "1.1.2",
-    "rollup-plugin-summary": "2.0.1",
-    "rollup-plugin-swc3": "0.11.2",
+    "rollup-plugin-summary": "3.0.1",
+    "rollup-plugin-swc3": "0.12.1",
     "rollup-swc-preserve-directives": "0.7.0",
-    "tslib": "2.6.3",
-    "typescript": "^5.4.5"
+    "tslib": "2.8.1",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "react": ">=16"

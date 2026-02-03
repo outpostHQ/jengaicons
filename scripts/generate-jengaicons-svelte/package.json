@@ -1,0 +1,29 @@
+{
+  "name": "generate-jengaicons-svelte",
+  "private": true,
+  "version": "2.6.0",
+  "description": "",
+  "main": "index.ts",
+  "scripts": {
+    "build": "pnpm write-icons --assets ../../optimized --root-path ../../packages/jengaicons-svelte/src --output-folder-name icons",
+    "write-icons": "ts-node --transpileOnly index",
+    "make:webicons": "ts-node --transpileOnly scripts"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "@types/node": "^25.2.0",
+    "@types/prettier": "3.0.0",
+    "generate-optimized": "workspace:*",
+    "prettier": "3.8.1",
+    "svgson": "5.3.1",
+    "typescript": "^5.9.3"
+  },
+  "dependencies": {
+    "@svgr/core": "^8.1.0",
+    "commander": "14.0.3",
+    "svgo": "^4.0.0",
+    "ts-node": "10.9.2"
+  }
+}

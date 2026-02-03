@@ -91,7 +91,7 @@ async function main() {
   for (const item of itemsInDirectory) {
     const variantFolder = item.name as Lowercase<TVariants>
 
-    getSVGFileNames(variantFolder).map((svgFileName) => {
+    ;[getSVGFileNames(variantFolder)[0]].map((svgFileName) => {
       const svgFileContent = getReactSVGContent(svgFileName, variantFolder)
 
       let componentName = getSafeComponentName(svgFileName, variantFolder)
@@ -127,7 +127,7 @@ async function main() {
   fs.appendFileSync(
     PATH_TO_SRC_INDEX_FILE,
     [
-      `export { JengaIconContext } from "./context";`,
+      `export { JengaIconContext, default as JengaIconContextDefault } from "./context";`,
       `export type *  from "./types"`,
       `export *  from "./nextjs"`,
     ].join("\n"),
