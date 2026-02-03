@@ -20,46 +20,19 @@ const SWC_OPTIONS = defineRollupSwcOption({
 })
 
 /**@type {import('rollup').RollupOptions} */
-const prodConfig_CJS = {
-  input: "./src/index.tsx",
-  output: {
-    format: "cjs",
-    sourcemap: false,
-    dir: "dist/cjs",
-    preserveModules: true,
-    strict: false,
-  },
-
-  external: [/node_modules/],
-  plugins: [
-    progress({
-      clearLine: true,
-    }),
-    externals({
-      deps: true,
-      devDeps: true,
-    }),
-    swc(SWC_OPTIONS),
-    swcPreserveDirectives(),
-    summary({
-      showBrotliSize: true,
-      showGzippedSize: true,
-      showMinifiedSize: true,
-    }),
-  ],
-}
-
-/**@type {import('rollup').RollupOptions} */
-const prodConfig_ESM = {
-  input: "./src/index.tsx",
+const prodConfig = {
+  input: "./src/index.js",
   output: {
     format: "esm",
     sourcemap: false,
-    dir: "dist/esm",
+    dir: "dist",
     preserveModules: true,
-    entryFileNames: "[name].mjs",
+    entryFileNames: "[name].js",
   },
-  external: [/node_modules/],
+
+  external: (id) => {
+    return /node_modules/.test(id) || id.endsWith('.svelte')
+  },
   plugins: [
     progress({
       clearLine: true,
@@ -78,4 +51,4 @@ const prodConfig_ESM = {
   ],
 }
 
-export default [prodConfig_CJS, prodConfig_ESM]
+export default prodConfig

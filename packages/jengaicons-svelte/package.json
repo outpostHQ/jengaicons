@@ -40,7 +40,7 @@
     "dist"
   ],
   "scripts": {
-    "build": "cross-env NODE_ENV=production rollup --config rollup.config.mjs && pnpm gen-types",
+    "build": "cross-env NODE_ENV=production rollup --config rollup.config.mjs && node scripts/copy-assets.mjs",
     "clean": "rm -rf .turbo && rm -rf dist && rm -rf node_modules",
     "gen-types": "tsc"
   },
@@ -56,6 +56,7 @@
     "rollup-plugin-summary": "2.0.1",
     "rollup-plugin-swc3": "0.11.2",
     "rollup-swc-preserve-directives": "0.7.0",
+    "svelte": "^5.0.0",
     "tslib": "2.6.3",
     "typescript": "^5.4.5"
   },
