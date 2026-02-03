@@ -1,20 +1,22 @@
 name: Check Size Limit
 on: [pull_request]
 jobs:
-  check-size-limit-react:
+  check-size-limit:
     runs-on: ubuntu-latest
     env:
       CI_JOB_NUMBER: 1
     steps:
       - name: Git Checkout
-        uses: actions/checkout@v1
+        uses: actions/checkout@v4
 
       - name: Install
         uses: ./.github/composite-actions/install
 
+      - name: Build React Package
+        run: bun run build:react
 
-      - name: Install Dependencies
-        run: bun install
+      - name: Build Svelte Package
+        run: bun run build:svelte
 
       - name: Perform Size limit Checkup
         uses: andresz1/size-limit-action@v1.7.0

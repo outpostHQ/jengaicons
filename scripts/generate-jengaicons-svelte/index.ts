@@ -116,25 +116,11 @@ async function main() {
         /** create typescript file of .svelte file*/
         fs.writeFileSync(
           path.join(PATH_TO_WRITE_FOLDER, `${componentName}.svelte.d.ts`),
-          `
-            import { SvelteComponentTyped } from "svelte";
-            import type { IconProps } from '../types.js';
-            declare const __propDef: {
-                props: IconProps;
-                events: {
-                    [evt: string]: CustomEvent<any>;
-                };
-                slots: {
-                    default: {};
-                };
-            };
-            export type ${componentName}Props = typeof __propDef.props;
-            export type ${componentName}Events = typeof __propDef.events;
-            export type ${componentName}Slots = typeof __propDef.slots;
+          `import type { Component } from 'svelte';
+import type { IconProps } from '../types.js';
 
-            export default class ${componentName} extends SvelteComponentTyped<${componentName}Props, ${componentName}Events, ${componentName}Slots> {
-            }
-            export {};
+declare const ${componentName}: Component<IconProps>;
+export default ${componentName};
 `.trim(),
         )
 

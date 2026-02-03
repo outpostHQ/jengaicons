@@ -54,6 +54,12 @@
       "limit": "3 kb",
       "path": "./packages/jengaicons-react/dist/cjs/index.js",
       "import": "{ Activity }"
+    },
+    {
+      "name": "@jengaicons/svelte Build",
+      "limit": "3 kb",
+      "path": "./packages/jengaicons-svelte/dist/index.js",
+      "import": "{ Activity }"
     }
   ],
   "trustedDependencies": [

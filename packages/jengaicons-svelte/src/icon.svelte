@@ -1,44 +1,51 @@
-<script>import defaultAttributes from './defaultAttributes';
-export let name = undefined;
-export let color = 'currentColor';
-export let size = 32;
-export let strokeWidth = 1;
-export let absoluteStrokeWidth = false;
-export let iconNode = [];
+<script lang="ts">
+  import defaultAttributes from './defaultAttributes.js';
+  import type { Snippet } from 'svelte';
 
-const mergeClasses = (...classes) => classes.filter((className, index, array) => {
-    return Boolean(className) && array.indexOf(className) === index;
-})
-    .join(' ');
+  let {
+    name = undefined,
+    color = 'currentColor',
+    size = 32,
+    strokeWidth = 1,
+    absoluteStrokeWidth = false,
+    iconNode = [],
+    class: className,
+    children,
+    ...rest
+  }: {
+    name?: string;
+    color?: string;
+    size?: number;
+    strokeWidth?: number;
+    absoluteStrokeWidth?: boolean;
+    iconNode?: [string, Record<string, unknown>][];
+    class?: string;
+    children?: Snippet;
+    [key: string]: unknown;
+  } = $props();
+
+  const mergeClasses = (...classes: (string | undefined)[]) =>
+    classes
+      .filter((cls, index, array) => Boolean(cls) && array.indexOf(cls) === index)
+      .join(' ');
 </script>
 
 <svg
   {...defaultAttributes}
-  {...$$restProps}
+  {...rest}
   width={size}
   height={size}
   stroke={color}
-  stroke-width={
-    absoluteStrokeWidth
-      ? Number(strokeWidth) * 32 / Number(size)
-      : strokeWidth
-  }
-  class={
-    mergeClasses(
-      'jenga-icon',
-      'jengaicons',
-      name ? `jengaicons-${name}`: '',
-      $$props.class
-    )
-  }
+  stroke-width={absoluteStrokeWidth ? Number(strokeWidth) * 32 / Number(size) : strokeWidth}
+  class={mergeClasses('jenga-icon', 'jengaicons', name ? `jengaicons-${name}` : '', className)}
 >
   {#each iconNode as [tag, attrs]}
-    <svelte:element
-      this={tag}
-      {...attrs}
-      fill={attrs.fill != null ? color : undefined}
-      stroke={attrs.stroke != null ? color : undefined}
-    />
+    {@const elementAttrs = {
+      ...attrs,
+      fill: attrs.fill != null ? color : undefined,
+      stroke: attrs.stroke != null ? color : undefined
+    }}
+    <svelte:element this={tag} {...elementAttrs} />
   {/each}
-  <slot />
+  {@render children?.()}
 </svg>
