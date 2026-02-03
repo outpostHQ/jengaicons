@@ -59,7 +59,7 @@
       "import": "{ Activity }"
     }
   ],
-  "packageManager": "pnpm@9.1.4",
+  "packageManager": "pnpm@10.28.2",
   "pnpm": {
     "onlyBuiltDependencies": [
       "esbuild"
