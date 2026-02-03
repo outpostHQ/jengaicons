@@ -1,7 +1,6 @@
 "use client"
 
 import { JengaIconContext } from "@jengaicons/react"
-import { ReactNode } from "react"
 
 export const JengaIconsContextProvider = ({ children }: { children: any }) => {
   return (

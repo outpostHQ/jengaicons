@@ -11,10 +11,10 @@
   "author": "",
   "license": "ISC",
   "devDependencies": {
-    "@actions/core": "1.10.1",
-    "@actions/exec": "1.1.1",
-    "commander": "12.1.0",
-    "markdown-table": "3.0.3",
-    "size-limit": "11.1.4"
+    "@actions/core": "3.0.0",
+    "@actions/exec": "3.0.0",
+    "commander": "14.0.3",
+    "markdown-table": "3.0.4",
+    "size-limit": "12.0.0"
   }
 }

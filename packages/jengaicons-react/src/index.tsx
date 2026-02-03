@@ -1,6 +1,6 @@
 export { default as ActivityFill } from "./icons/ActivityFill"
 export { default as AirplayMono } from "./icons/AirplayMono"
 export { default as Activity } from "./icons/Activity"
-export { JengaIconContext } from "./context"
+export { JengaIconContext, default as JengaIconContextDefault } from "./context"
 export type * from "./types"
 export * from "./nextjs"

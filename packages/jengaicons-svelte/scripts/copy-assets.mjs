@@ -18,7 +18,6 @@ function copyAssets(src, dest) {
     const destPath = path.join(dest, entry.name)
 
     if (entry.isDirectory()) {
-      if (entry.name === 'icons') continue
       copyAssets(srcPath, destPath)
     } else if (
       entry.name.endsWith('.svelte') ||

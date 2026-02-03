@@ -31,3 +31,4 @@ size-report
 __compare
 .turbo
 docs/data
+.pnpm-store
