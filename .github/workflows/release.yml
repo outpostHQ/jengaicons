@@ -2,11 +2,19 @@ name: Release
 
 on:
   push:
-    paths:
-      - '.changeset/**'
-      - 'packages/**'
-    branches:
-      - main
+    tags:
+      - 'v*'
+  workflow_dispatch:
+    inputs:
+      package:
+        description: 'Package to release'
+        required: true
+        default: 'all'
+        type: choice
+        options:
+          - all
+          - react
+          - svelte
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.ref }}
@@ -22,27 +30,23 @@ jobs:
       - name: Install
         uses: ./.github/composite-actions/install
 
-      - name: Build
-        run: pnpm build
-
-      - name: Create release Pull Request or publish to NPM
-        id: changesets
-        uses: changesets/action@v1
-        with:
-          publish: pnpm release
-          commit: 'ci(changesets): version packages'
-          setupGitUser: false
+      - name: Build and Publish All
+        if: github.event_name == 'push' || github.event.inputs.package == 'all'
+        run: bun run release
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
-          NPM_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
 
-      - name: Create @dev release
-        if: steps.changesets.outputs.published != 'true'
-        run: |
-          git checkout main
-          pnpm version:dev
-          pnpm release:dev
+      - name: Build and Publish React
+        if: github.event.inputs.package == 'react'
+        run: bun run release:react
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+      - name: Build and Publish Svelte
+        if: github.event.inputs.package == 'svelte'
+        run: bun run release:svelte
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_AUTH_TOKEN }}
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
