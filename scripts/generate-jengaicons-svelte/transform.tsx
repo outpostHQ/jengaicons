@@ -31,17 +31,16 @@ const transform = (transformData: TransformData) => {
 
   const svgAST = cleanNode(svgson.parseSync(svgContent))
 
-  const ComponentFileContent = `
-  <script>
-    import Icon from '../icon.svelte'
-    const iconNode = ${JSON.stringify(svgAST.children.map((e) => [e.name, e.attributes]))}
-  </script>
+  const ComponentFileContent = `<script>
+  import Icon from '../Icon.svelte';
+  const iconNode = ${JSON.stringify(svgAST.children.map((e) => [e.name, e.attributes]))};
+  let { children, ...props } = $props();
+</script>
 
-
-    <Icon  name="${transformData.componentName}" {...$$props} iconNode={iconNode}>
-        <slot />
-    </Icon>
-  `.trim()
+<Icon name="${transformData.componentName}" {...props} {iconNode}>
+  {@render children?.()}
+</Icon>
+`.trim()
 
   return { output: ComponentFileContent }
 }

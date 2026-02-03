@@ -3,10 +3,22 @@
 Jenga Icons is a collection of adaptable icons designed for use in interfaces,
 diagrams, and other applications.
 
-[![NPM Version](https://img.shields.io/npm/v/@jengaicons/react.svg?style=flat)](https://www.npmjs.com/package/@jengaicons/react)
+[![NPM Version - React](https://img.shields.io/npm/v/@jengaicons/react.svg?style=flat&label=react)](https://www.npmjs.com/package/@jengaicons/react)
+[![NPM Version - Svelte](https://img.shields.io/npm/v/@jengaicons/svelte.svg?style=flat&label=svelte)](https://www.npmjs.com/package/@jengaicons/svelte)
 [![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
 
-## Installation
+## Packages
+
+| Package | Version | Description |
+|---------|---------|-------------|
+| [@jengaicons/react](./packages/jengaicons-react) | [![npm](https://img.shields.io/npm/v/@jengaicons/react.svg)](https://www.npmjs.com/package/@jengaicons/react) | React components |
+| [@jengaicons/svelte](./packages/jengaicons-svelte) | [![npm](https://img.shields.io/npm/v/@jengaicons/svelte.svg)](https://www.npmjs.com/package/@jengaicons/svelte) | Svelte components |
+
+---
+
+## React
+
+### Installation
 
 ```sh
 # with npm
@@ -15,33 +27,28 @@ npm install @jengaicons/react
 # with yarn
 yarn add @jengaicons/react
 
-# with pnpm
-pnpm add @jengaicons/react
+# with bun
+bun add @jengaicons/react
 ```
 
-## Usage
+### Usage
 
 ```tsx
-import React from "react"
-import ReactDOM from "react-dom"
 import { Activity, ActivityFill } from "@jengaicons/react"
 
-const App = () => {
+function App() {
   return (
     <div>
       <Activity />
-      <ActivityFill color='#6864d4' size={32} />
+      <ActivityFill color="#6864d4" size={32} />
     </div>
   )
 }
-
-ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-## Optimization
+### Next.js Optimization
 
-Tired of icons hogging your memory by loading all icons ? \
-Solution for NextJS is to use [modularizeImports feature](https://nextjs.org/docs/architecture/nextjs-compiler#modularize-imports)
+Use the [modularizeImports feature](https://nextjs.org/docs/architecture/nextjs-compiler#modularize-imports) for better tree-shaking:
 
 ```ts
 // next.config.mjs
@@ -56,69 +63,94 @@ const nextConfig = {
 export default nextConfig
 ```
 
-At Outpost, we use nextjs as our primary frontend framework so we've added
-solution only for it but we would love to know, what framework you use so we can
-add support for those too! Just create a issue
+### Global Configuration (React Context)
 
-## Global Configuration (uses React Context API)
-
-Jenga Icons simplifies the process of applying a default style to all icons by
-utilizing React Context. By creating an `JengaIconContext.Provider` at the root
-of the application or at a higher level in the component tree than the icons,
-you can pass a configuration object with properties that will serve as the
-default style for all icons.
+Apply default styles to all icons using React Context:
 
 ```tsx
-import React from "react"
-import ReactDOM from "react-dom"
 import { Activity, ActivityFill, JengaIconContext } from "@jengaicons/react"
 
-const App = () => {
+function App() {
   return (
-    <div>
-      <JengaIconContext.Provider
-        value={{
-          color: "red",
-        }}
-      >
-        <Activity /> {/** icon with red color */}
-        <ActivityFill color='blue' /> {/** icon with blue color */}
-      </JengaIconContext.Provider>
-    </div>
+    <JengaIconContext.Provider value={{ color: "red", size: 24 }}>
+      <Activity />
+      <ActivityFill color="blue" /> {/* Override with blue */}
+    </JengaIconContext.Provider>
   )
 }
-
-ReactDOM.render(<App />, document.getElementById("root"))
 ```
 
-In order to style icons differently in different areas of an application, you
-have the option to create multiple Contexts. Each Context will define a specific
-styling for icons within its respective region. Icons will utilize the nearest
-Context above them in the component tree to determine their individual style.
+---
 
-> Important: The context will additionally transmit any supplied SVG props to
-> icon instances, offering utility in tasks such as including accessible
-> `aria-label`s, `classNames`, and more.
+## Svelte
+
+### Installation
+
+```sh
+# with npm
+npm install @jengaicons/svelte
+
+# with yarn
+yarn add @jengaicons/svelte
+
+# with bun
+bun add @jengaicons/svelte
+```
+
+### Usage
+
+```svelte
+<script>
+  import { Activity, ActivityFill } from "@jengaicons/svelte"
+</script>
+
+<Activity />
+<ActivityFill color="#6864d4" size={32} />
+```
+
+### Individual Imports
+
+For better tree-shaking:
+
+```svelte
+<script>
+  import Activity from "@jengaicons/svelte/icons/Activity.svelte"
+</script>
+
+<Activity />
+```
+
+---
 
 ## Props
 
-The icon components can receive all the props that a standard SVG element can,
-which includes inline `style` objects, `onClick` handlers, and other properties.
-Generally, the key props used to style the icons are:
+Both React and Svelte packages share the same props API:
 
-- **color?**: `string` determines the color of the icon's stroke and fill. It
-  accepts CSS color strings, including `hex`, `rgb`, `rgba`, `hsl`, `hsla`,
-  named colors. `currentColor` is the default color.
-- **size?**: `number | string` specifies the height and width of the icon. It
-  accepts values as a number or a string with units in `px`, `%`, `em`, `rem`,
-  `pt`, `cm`, `mm`, or `in`.
-- **weight?**: `number | string` changes the thinkness / stroke-width of icons.
-  Default is `2px` (only applies to regular icons)
-- **mirrored?**: `boolean` flips the icon horizontally, which can be helpful in
-  languages that use RTL text orientation.
-- **alt?**: `string` provides accessible alt text for the icon.
-- **style?**: `object` specifies the style prop object which will be passed to
-  underlying `<svg />` element
+| Prop | Type | Default | Description |
+|------|------|---------|-------------|
+| `color` | `string` | `currentColor` | Color of the icon's stroke and fill. Accepts CSS color strings (`hex`, `rgb`, `rgba`, `hsl`, `hsla`, named colors). |
+| `size` | `number \| string` | `24` | Height and width of the icon. Accepts a number or string with units (`px`, `%`, `em`, `rem`, `pt`, `cm`, `mm`, `in`). |
+| `weight` | `number \| string` | `2` | Stroke width of the icon (only applies to regular/outline icons). |
+| `mirrored` | `boolean` | `false` | Flips the icon horizontally. Useful for RTL languages. |
+| `alt` | `string` | - | Accessible alt text for the icon. |
+| `style` | `object` | - | Style object passed to the underlying `<svg>` element. |
+
+All standard SVG attributes are also supported and passed through to the `<svg>` element.
+
+---
+
+## Icon Variants
+
+Each icon comes in multiple variants:
+
+- **Regular** (outline): `Activity`, `Airplay`, `Archive`, ...
+- **Fill** (solid): `ActivityFill`, `AirplayFill`, `ArchiveFill`, ...
+
+---
+
+## Contributing
+
+We welcome contributions! Please see our [Contributing Guide](./CONTRIBUTING.md) for details.
 
 ## License
 
