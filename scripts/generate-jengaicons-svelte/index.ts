@@ -132,18 +132,11 @@ export default ${componentName};
 
         // append component to index typescript file
         fs.appendFileSync(
-          PATH_TO_INDEX_ICON_FILE + ".d.ts",
+          PATH_TO_INDEX_ICON_FILE.replace(".js", ".d.ts"),
           `export { default as ${componentName} } from "./${componentName}.js";\n`,
         )
       })
   }
-
-  // fs.appendFileSync(
-  //   PATH_TO_SRC_INDEX_FILE,
-  //   [
-  //     `export type *  from "./types"`,
-  //   ].join("\n"),
-  // )
 }
 
 main()
