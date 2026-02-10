@@ -59,7 +59,7 @@ const transform = (transformData: TransformData) => {
   const iconNode = svgAST.children.map((e: any) => [e.name, e.attributes])
 
   const ComponentFileContent = `<script>
-  import Icon from '../Icon.svelte';
+  import Icon from '../icon.svelte';
   const iconNode = ${JSON.stringify(iconNode)};
   let { children, ...props } = $props();
 </script>
