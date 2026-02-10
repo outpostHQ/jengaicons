@@ -1,4 +1,5 @@
-import type { Snippet, SVGAttributes } from "svelte/elements"
+import { Snippet } from "svelte"
+import type { SVGAttributes } from "svelte/elements"
 
 export interface IconProps extends SVGAttributes<SVGSVGElement> {
   /** Icon name for CSS class */
