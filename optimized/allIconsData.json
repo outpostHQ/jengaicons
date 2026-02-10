@@ -2250,6 +2250,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrowsout mono",
+    "safeName": "ArrowsoutMono",
+    "tags": [
+      "ArrowsoutMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "arrows out simple",
     "safeName": "ArrowsOutSimple",
     "tags": [
@@ -14409,6 +14418,15 @@
     "variant": "fill"
   },
   {
+    "name": "monitor mono",
+    "safeName": "MonitorMono",
+    "tags": [
+      "MonitorMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "monitor play",
     "safeName": "MonitorPlay",
     "tags": [
@@ -16920,6 +16938,15 @@
     "variant": "fill"
   },
   {
+    "name": "pluscircle mono",
+    "safeName": "PluscircleMono",
+    "tags": [
+      "PluscircleMono"
+    ],
+    "categories": [],
+    "variant": "mono"
+  },
+  {
     "name": "plus fill",
     "safeName": "PlusFill",
     "tags": [
@@ -17053,6 +17080,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "power mono",
+    "safeName": "PowerMono",
+    "tags": [
+      "PowerMono"
+    ],
+    "categories": [],
+    "variant": "mono"
   },
   {
     "name": "prescription",
