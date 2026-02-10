@@ -1,6 +1,5 @@
 {
   "lockfileVersion": 1,
-  "configVersion": 0,
   "workspaces": {
     "": {
       "name": "jenga-icons",
@@ -147,7 +146,7 @@
     },
     "packages/jengaicons-svelte": {
       "name": "@jengaicons/svelte",
-      "version": "0.4.0",
+      "version": "0.5.0",
       "devDependencies": {
         "@rollup/plugin-node-resolve": "16.0.3",
         "@swc/core": "1.15.11",
