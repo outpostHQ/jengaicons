@@ -6,7 +6,7 @@
     name = undefined,
     color = 'currentColor',
     size = 32,
-    strokeWidth = 1,
+    strokeWidth = 2,
     absoluteStrokeWidth = false,
     iconNode = [],
     class: className,
@@ -43,7 +43,7 @@
     {@const elementAttrs = {
       ...attrs,
       fill: attrs.fill != null ? color : undefined,
-      stroke: attrs.stroke != null ? color : undefined
+      stroke: attrs.stroke != null ? color : (attrs.fill != null ? 'none' : undefined)
     }}
     <svelte:element this={tag} {...elementAttrs} />
   {/each}
