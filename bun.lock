@@ -147,7 +147,7 @@
     },
     "packages/jengaicons-svelte": {
       "name": "@jengaicons/svelte",
-      "version": "0.9.0",
+      "version": "0.10.0",
       "devDependencies": {
         "@rollup/plugin-node-resolve": "16.0.3",
         "@swc/core": "1.15.41",
