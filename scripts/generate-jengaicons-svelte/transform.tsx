@@ -12,10 +12,9 @@ const removeAttrs = [
 ]
 
 // Attributes with default values that can be omitted
-const defaultValues: Record<string, string> = {
-  "fill-rule": "evenodd",
-  "clip-rule": "evenodd",
-}
+// Note: fill-rule and clip-rule default to "nonzero" in SVG spec,
+// NOT "evenodd" — they must be preserved when present.
+const defaultValues: Record<string, string> = {}
 
 const cleanNode = (node: any): any => {
   if (node.attributes) {
