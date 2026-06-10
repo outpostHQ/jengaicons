@@ -28,8 +28,7 @@
     [key: string]: unknown;
   } = $props();
 
-  // Tags whose subtree *defines* graphics (masks, gradients, …). Their contents
-  // are rendered verbatim — no color/stroke remapping — so they keep working.
+  // Definition tags (mask/gradient/…) are kept verbatim, no color remapping.
   const DEF_TAGS = new Set([
     'mask',
     'linearGradient',
@@ -43,6 +42,34 @@
     classes
       .filter((cls, index, array) => Boolean(cls) && array.indexOf(cls) === index)
       .join(' ');
+
+  const escapeAttr = (value: unknown) =>
+    String(value).replace(/&/g, '&amp;').replace(/"/g, '&quot;').replace(/</g, '&lt;');
+
+  function serializeNode(node: IconChild, insideDef: boolean): string {
+    const tag = node[0];
+    const attrs = (node[1] ?? {}) as Record<string, unknown>;
+    const childNodes = (node[2] ?? []) as IconChild[];
+    const isDef = insideDef || DEF_TAGS.has(tag);
+    const elementAttrs: Record<string, unknown> = isDef
+      ? { stroke: 'none', ...attrs }
+      : {
+          ...attrs,
+          fill: attrs.fill != null ? color : undefined,
+          stroke: attrs.stroke != null ? color : (attrs.fill != null ? 'none' : undefined)
+        };
+    const attrString = Object.entries(elementAttrs)
+      .filter(([, value]) => value != null)
+      .map(([key, value]) => `${key}="${escapeAttr(value)}"`)
+      .join(' ');
+    const open = attrString ? `${tag} ${attrString}` : tag;
+    if (!childNodes.length) return `<${open}/>`;
+    return `<${open}>${childNodes.map((child) => serializeNode(child, isDef)).join('')}</${tag}>`;
+  }
+
+  // Render via {@html} inside <svg> so nodes resolve to the SVG namespace.
+  // <svelte:element> from a snippet would create HTML-namespace paths that never paint.
+  const innerSvg = $derived(iconNode.map((node) => serializeNode(node, false)).join(''));
 </script>
 
 <svg
@@ -55,35 +82,6 @@
   stroke-width={absoluteStrokeWidth ? Number(strokeWidth) * 32 / Number(size) : strokeWidth}
   class={mergeClasses('jenga-icon', 'jengaicons', name ? `jengaicons-${name}` : '', className)}
 >
-  {#each iconNode as node, i (i)}
-    {@render renderNode(node, false)}
-  {/each}
+  {@html innerSvg}
   {@render children?.()}
 </svg>
-
-{#snippet renderNode(node: IconChild, insideDef: boolean)}
-  {@const tag = node[0]}
-  {@const attrs = node[1] ?? {}}
-  {@const childNodes = (node[2] ?? []) as IconChild[]}
-  {@const isDef = insideDef || DEF_TAGS.has(tag)}
-  {@const childInsideDef = isDef}
-  {@const elementAttrs = isDef
-    ? // Definition subtree (mask/gradient/…): keep attrs verbatim so the
-      // definition still works; default stroke to 'none' so it doesn't inherit
-      // the root <svg>'s stroke and erode the mask/shape.
-      { stroke: 'none', ...attrs }
-    : {
-        ...attrs,
-        fill: attrs.fill != null ? color : undefined,
-        stroke: attrs.stroke != null ? color : (attrs.fill != null ? 'none' : undefined)
-      }}
-  {#if childNodes.length}
-    <svelte:element this={tag} {...elementAttrs}>
-      {#each childNodes as child, i (i)}
-        {@render renderNode(child, childInsideDef)}
-      {/each}
-    </svelte:element>
-  {:else}
-    <svelte:element this={tag} {...elementAttrs} />
-  {/if}
-{/snippet}
