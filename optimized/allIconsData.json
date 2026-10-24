@@ -1,5 +1,14 @@
 [
   {
+    "name": "a 1 1y",
+    "safeName": "A11y",
+    "tags": [
+      "A11y"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "activity",
     "safeName": "Activity",
     "tags": [
@@ -241,6 +250,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "align center",
+    "safeName": "AlignCenter",
+    "tags": [
+      "AlignCenter"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "align center horizontal",
@@ -531,6 +549,15 @@
     "variant": "fill"
   },
   {
+    "name": "annotate",
+    "safeName": "Annotate",
+    "tags": [
+      "Annotate"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "anscer robotics logo",
     "safeName": "AnscerRoboticsLogo",
     "tags": [
@@ -594,6 +621,15 @@
     "variant": "mono"
   },
   {
+    "name": "app",
+    "safeName": "App",
+    "tags": [
+      "App"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "apple logo",
     "safeName": "AppleLogo",
     "tags": [
@@ -630,6 +666,24 @@
     "variant": "fill"
   },
   {
+    "name": "approved",
+    "safeName": "Approved",
+    "tags": [
+      "Approved"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "approved arrow",
+    "safeName": "ApprovedArrow",
+    "tags": [
+      "ApprovedArrow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "app store logo",
     "safeName": "AppStoreLogo",
     "tags": [
@@ -646,6 +700,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "app toolbar",
+    "safeName": "AppToolbar",
+    "tags": [
+      "AppToolbar"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "app window",
@@ -700,6 +763,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "archived",
+    "safeName": "Archived",
+    "tags": [
+      "Archived"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "archive fill",
@@ -763,6 +835,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "array",
+    "safeName": "Array",
+    "tags": [
+      "Array"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow",
+    "safeName": "Arrow",
+    "tags": [
+      "Arrow"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow arc left",
@@ -1260,6 +1350,15 @@
     "variant": "mono"
   },
   {
+    "name": "arrow down right",
+    "safeName": "ArrowDownRight",
+    "tags": [
+      "ArrowDownRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow down right lg",
     "safeName": "ArrowDownRightLg",
     "tags": [
@@ -1737,6 +1836,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrow left bar",
+    "safeName": "ArrowLeftBar",
+    "tags": [
+      "ArrowLeftBar"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow left lg",
     "safeName": "ArrowLeftLg",
     "tags": [
@@ -1953,6 +2061,24 @@
     "variant": "fill"
   },
   {
+    "name": "arrow right",
+    "safeName": "ArrowRight",
+    "tags": [
+      "ArrowRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow right bar",
+    "safeName": "ArrowRightBar",
+    "tags": [
+      "ArrowRightBar"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow right lg",
     "safeName": "ArrowRightLg",
     "tags": [
@@ -1996,6 +2122,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "arrow right short",
+    "safeName": "ArrowRightShort",
+    "tags": [
+      "ArrowRightShort"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow right sm",
@@ -2068,6 +2203,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "arrows expand",
+    "safeName": "ArrowsExpand",
+    "tags": [
+      "ArrowsExpand"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow short",
+    "safeName": "ArrowShort",
+    "tags": [
+      "ArrowShort"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrows in",
@@ -2448,6 +2601,15 @@
     "variant": "fill"
   },
   {
+    "name": "arrows up down",
+    "safeName": "ArrowsUpDown",
+    "tags": [
+      "ArrowsUpDown"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "arrow u down left",
     "safeName": "ArrowUDownLeft",
     "tags": [
@@ -2617,6 +2779,24 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "arrow up right",
+    "safeName": "ArrowUpRight",
+    "tags": [
+      "ArrowUpRight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "arrow up right circle",
+    "safeName": "ArrowUpRightCircle",
+    "tags": [
+      "ArrowUpRightCircle"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "arrow up right lg",
@@ -2862,6 +3042,15 @@
     "variant": "fill"
   },
   {
+    "name": "asterisk squircle",
+    "safeName": "AsteriskSquircle",
+    "tags": [
+      "AsteriskSquircle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "astrologo",
     "safeName": "Astrologo",
     "tags": [
@@ -2884,6 +3073,15 @@
     "safeName": "At",
     "tags": [
       "At"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "at 2",
+    "safeName": "At2",
+    "tags": [
+      "At2"
     ],
     "categories": [],
     "variant": "regular"
@@ -3141,6 +3339,15 @@
     "variant": "fill"
   },
   {
+    "name": "ban",
+    "safeName": "Ban",
+    "tags": [
+      "Ban"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "bandaids",
     "safeName": "Bandaids",
     "tags": [
@@ -3193,6 +3400,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "bar chart",
+    "safeName": "BarChart",
+    "tags": [
+      "BarChart"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "bar chart 2",
+    "safeName": "BarChart2",
+    "tags": [
+      "BarChart2"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "barcode",
@@ -3645,6 +3870,24 @@
     "variant": "fill"
   },
   {
+    "name": "bell unread",
+    "safeName": "BellUnread",
+    "tags": [
+      "BellUnread"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "bell unread fill",
+    "safeName": "BellUnreadFill",
+    "tags": [
+      "BellUnreadFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "bell z",
     "safeName": "BellZ",
     "tags": [
@@ -3717,6 +3960,15 @@
     "variant": "fill"
   },
   {
+    "name": "bin",
+    "safeName": "Bin",
+    "tags": [
+      "Bin"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "binary mono",
     "safeName": "BinaryMono",
     "tags": [
@@ -3724,6 +3976,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "bin fill",
+    "safeName": "BinFill",
+    "tags": [
+      "BinFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "bin mono",
@@ -3861,6 +4122,15 @@
     "variant": "fill"
   },
   {
+    "name": "board",
+    "safeName": "Board",
+    "tags": [
+      "Board"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "boat",
     "safeName": "Boat",
     "tags": [
@@ -3877,6 +4147,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "bolt",
+    "safeName": "Bolt",
+    "tags": [
+      "Bolt"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "boltchem logo",
@@ -3940,6 +4219,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "book closed",
+    "safeName": "BookClosed",
+    "tags": [
+      "BookClosed"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "book fill",
@@ -4104,6 +4392,42 @@
     "variant": "mono"
   },
   {
+    "name": "box",
+    "safeName": "Box",
+    "tags": [
+      "Box"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "box tape",
+    "safeName": "BoxTape",
+    "tags": [
+      "BoxTape"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "braces",
+    "safeName": "Braces",
+    "tags": [
+      "Braces"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "braces at",
+    "safeName": "BracesAt",
+    "tags": [
+      "BracesAt"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "bracket curly mono",
     "safeName": "BracketCurlyMono",
     "tags": [
@@ -4111,6 +4435,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "brackets",
+    "safeName": "Brackets",
+    "tags": [
+      "Brackets"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "brackets curly",
@@ -4194,6 +4527,141 @@
     "variant": "fill"
   },
   {
+    "name": "branch",
+    "safeName": "Branch",
+    "tags": [
+      "Branch"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand buildkite",
+    "safeName": "BrandBuildkite",
+    "tags": [
+      "BrandBuildkite"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand cursor",
+    "safeName": "BrandCursor",
+    "tags": [
+      "BrandCursor"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand discord",
+    "safeName": "BrandDiscord",
+    "tags": [
+      "BrandDiscord"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand git",
+    "safeName": "BrandGit",
+    "tags": [
+      "BrandGit"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand github",
+    "safeName": "BrandGithub",
+    "tags": [
+      "BrandGithub"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand google",
+    "safeName": "BrandGoogle",
+    "tags": [
+      "BrandGoogle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand linear",
+    "safeName": "BrandLinear",
+    "tags": [
+      "BrandLinear"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand notion",
+    "safeName": "BrandNotion",
+    "tags": [
+      "BrandNotion"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand shiki",
+    "safeName": "BrandShiki",
+    "tags": [
+      "BrandShiki"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand storybook",
+    "safeName": "BrandStorybook",
+    "tags": [
+      "BrandStorybook"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand twitter",
+    "safeName": "BrandTwitter",
+    "tags": [
+      "BrandTwitter"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand twitter x",
+    "safeName": "BrandTwitterX",
+    "tags": [
+      "BrandTwitterX"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand vercel",
+    "safeName": "BrandVercel",
+    "tags": [
+      "BrandVercel"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "brand vs code",
+    "safeName": "BrandVsCode",
+    "tags": [
+      "BrandVsCode"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "brandy",
     "safeName": "Brandy",
     "tags": [
@@ -4210,6 +4678,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "brand zed",
+    "safeName": "BrandZed",
+    "tags": [
+      "BrandZed"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "briefcase",
@@ -4302,6 +4779,15 @@
     "variant": "fill"
   },
   {
+    "name": "brush",
+    "safeName": "Brush",
+    "tags": [
+      "Brush"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "bug",
     "safeName": "Bug",
     "tags": [
@@ -4365,6 +4851,15 @@
     "variant": "mono"
   },
   {
+    "name": "building",
+    "safeName": "Building",
+    "tags": [
+      "Building"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "building mono",
     "safeName": "BuildingMono",
     "tags": [
@@ -4372,6 +4867,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "building plus",
+    "safeName": "BuildingPlus",
+    "tags": [
+      "BuildingPlus"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "buildings",
@@ -4387,6 +4891,24 @@
     "safeName": "BuildingsFill",
     "tags": [
       "BuildingsFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "bulb",
+    "safeName": "Bulb",
+    "tags": [
+      "Bulb"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "bulb fill",
+    "safeName": "BulbFill",
+    "tags": [
+      "BulbFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -5499,6 +6021,42 @@
     "variant": "regular"
   },
   {
+    "name": "checkbox",
+    "safeName": "Checkbox",
+    "tags": [
+      "Checkbox"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "checkbox fill",
+    "safeName": "CheckboxFill",
+    "tags": [
+      "CheckboxFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "checkbox half",
+    "safeName": "CheckboxHalf",
+    "tags": [
+      "CheckboxHalf"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "check check",
+    "safeName": "CheckCheck",
+    "tags": [
+      "CheckCheck"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "check circle",
     "safeName": "CheckCircle",
     "tags": [
@@ -5596,6 +6154,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "chevron",
+    "safeName": "Chevron",
+    "tags": [
+      "Chevron"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "chevron circle double down",
@@ -5850,6 +6417,15 @@
     "variant": "mono"
   },
   {
+    "name": "chevron flat",
+    "safeName": "ChevronFlat",
+    "tags": [
+      "ChevronFlat"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "chevron left",
     "safeName": "ChevronLeft",
     "tags": [
@@ -5904,6 +6480,51 @@
     "variant": "mono"
   },
   {
+    "name": "chevrons",
+    "safeName": "Chevrons",
+    "tags": [
+      "Chevrons"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chevrons close",
+    "safeName": "ChevronsClose",
+    "tags": [
+      "ChevronsClose"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chevron sm",
+    "safeName": "ChevronSm",
+    "tags": [
+      "ChevronSm"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chevrons narrow",
+    "safeName": "ChevronsNarrow",
+    "tags": [
+      "ChevronsNarrow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "chevrons narrow close",
+    "safeName": "ChevronsNarrowClose",
+    "tags": [
+      "ChevronsNarrowClose"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "chevron up",
     "safeName": "ChevronUp",
     "tags": [
@@ -5947,6 +6568,42 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "ci failed",
+    "safeName": "CiFailed",
+    "tags": [
+      "CiFailed"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "ci failed fill",
+    "safeName": "CiFailedFill",
+    "tags": [
+      "CiFailedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "ci failed octagon",
+    "safeName": "CiFailedOctagon",
+    "tags": [
+      "CiFailedOctagon"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "ci failed octagon fill",
+    "safeName": "CiFailedOctagonFill",
+    "tags": [
+      "CiFailedOctagonFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "circle",
@@ -6192,6 +6849,24 @@
     "variant": "fill"
   },
   {
+    "name": "ci warning",
+    "safeName": "CiWarning",
+    "tags": [
+      "CiWarning"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "ci warning fill",
+    "safeName": "CiWarningFill",
+    "tags": [
+      "CiWarningFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "click houselogo",
     "safeName": "ClickHouselogo",
     "tags": [
@@ -6271,6 +6946,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "clock arrow",
+    "safeName": "ClockArrow",
+    "tags": [
+      "ClockArrow"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "clock clockwise",
@@ -6633,6 +7317,33 @@
     "variant": "regular"
   },
   {
+    "name": "code block",
+    "safeName": "CodeBlock",
+    "tags": [
+      "CodeBlock"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "code block fill",
+    "safeName": "CodeBlockFill",
+    "tags": [
+      "CodeBlockFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "code comments",
+    "safeName": "CodeComments",
+    "tags": [
+      "CodeComments"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "code fill",
     "safeName": "CodeFill",
     "tags": [
@@ -6640,6 +7351,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "code folder",
+    "safeName": "CodeFolder",
+    "tags": [
+      "CodeFolder"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "code mono",
@@ -6687,6 +7407,15 @@
     "variant": "fill"
   },
   {
+    "name": "code search",
+    "safeName": "CodeSearch",
+    "tags": [
+      "CodeSearch"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "code simple",
     "safeName": "CodeSimple",
     "tags": [
@@ -6703,6 +7432,33 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "code style bars",
+    "safeName": "CodeStyleBars",
+    "tags": [
+      "CodeStyleBars"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "code style bg",
+    "safeName": "CodeStyleBg",
+    "tags": [
+      "CodeStyleBg"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "code style inline",
+    "safeName": "CodeStyleInline",
+    "tags": [
+      "CodeStyleInline"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "coffee",
@@ -6795,6 +7551,42 @@
     "variant": "fill"
   },
   {
+    "name": "collapsed row",
+    "safeName": "CollapsedRow",
+    "tags": [
+      "CollapsedRow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "color auto",
+    "safeName": "ColorAuto",
+    "tags": [
+      "ColorAuto"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "color dark",
+    "safeName": "ColorDark",
+    "tags": [
+      "ColorDark"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "color light",
+    "safeName": "ColorLight",
+    "tags": [
+      "ColorLight"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "colorpalette mono",
     "safeName": "ColorpaletteMono",
     "tags": [
@@ -6856,6 +7648,78 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "comment",
+    "safeName": "Comment",
+    "tags": [
+      "Comment"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "comment add",
+    "safeName": "CommentAdd",
+    "tags": [
+      "CommentAdd"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "comment fill",
+    "safeName": "CommentFill",
+    "tags": [
+      "CommentFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "comment issue",
+    "safeName": "CommentIssue",
+    "tags": [
+      "CommentIssue"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "comment right resolved fill",
+    "safeName": "CommentRightResolvedFill",
+    "tags": [
+      "CommentRightResolvedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "comment suggest",
+    "safeName": "CommentSuggest",
+    "tags": [
+      "CommentSuggest"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "commit",
+    "safeName": "Commit",
+    "tags": [
+      "Commit"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "commit arrow",
+    "safeName": "CommitArrow",
+    "tags": [
+      "CommitArrow"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "compass",
@@ -6930,6 +7794,15 @@
     "variant": "fill"
   },
   {
+    "name": "conflict",
+    "safeName": "Conflict",
+    "tags": [
+      "Conflict"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "confluxlogo",
     "safeName": "Confluxlogo",
     "tags": [
@@ -6973,6 +7846,24 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "convo",
+    "safeName": "Convo",
+    "tags": [
+      "Convo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "convo fill",
+    "safeName": "ConvoFill",
+    "tags": [
+      "ConvoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "cookie",
@@ -8145,6 +9036,96 @@
     "variant": "fill"
   },
   {
+    "name": "diff add",
+    "safeName": "DiffAdd",
+    "tags": [
+      "DiffAdd"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "diff add fill",
+    "safeName": "DiffAddFill",
+    "tags": [
+      "DiffAddFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "diff deleted",
+    "safeName": "DiffDeleted",
+    "tags": [
+      "DiffDeleted"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "diff deleted fill",
+    "safeName": "DiffDeletedFill",
+    "tags": [
+      "DiffDeletedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "diff modified",
+    "safeName": "DiffModified",
+    "tags": [
+      "DiffModified"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "diff modified fill",
+    "safeName": "DiffModifiedFill",
+    "tags": [
+      "DiffModifiedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "diff renamed",
+    "safeName": "DiffRenamed",
+    "tags": [
+      "DiffRenamed"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "diff renamed fill",
+    "safeName": "DiffRenamedFill",
+    "tags": [
+      "DiffRenamedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "diff split",
+    "safeName": "DiffSplit",
+    "tags": [
+      "DiffSplit"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "diff unified",
+    "safeName": "DiffUnified",
+    "tags": [
+      "DiffUnified"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "digital ocean",
     "safeName": "DigitalOcean",
     "tags": [
@@ -8224,6 +9205,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "dock",
+    "safeName": "Dock",
+    "tags": [
+      "Dock"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "dockerlogo",
@@ -8523,6 +9513,15 @@
     "variant": "fill"
   },
   {
+    "name": "draft",
+    "safeName": "Draft",
+    "tags": [
+      "Draft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "drag drop",
     "safeName": "DragDrop",
     "tags": [
@@ -8536,6 +9535,24 @@
     "safeName": "DragDropFill",
     "tags": [
       "DragDropFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "dragonball",
+    "safeName": "Dragonball",
+    "tags": [
+      "Dragonball"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "dragonball fill",
+    "safeName": "DragonballFill",
+    "tags": [
+      "DragonballFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -8730,6 +9747,51 @@
     "variant": "fill"
   },
   {
+    "name": "ellipsis",
+    "safeName": "Ellipsis",
+    "tags": [
+      "Ellipsis"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "ellipsis sm",
+    "safeName": "EllipsisSm",
+    "tags": [
+      "EllipsisSm"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "emoji smile",
+    "safeName": "EmojiSmile",
+    "tags": [
+      "EmojiSmile"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "emoji smile dashed",
+    "safeName": "EmojiSmileDashed",
+    "tags": [
+      "EmojiSmileDashed"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "emoji smile fill",
+    "safeName": "EmojiSmileFill",
+    "tags": [
+      "EmojiSmileFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "env",
     "safeName": "Env",
     "tags": [
@@ -8892,6 +9954,15 @@
     "variant": "regular"
   },
   {
+    "name": "expand all",
+    "safeName": "ExpandAll",
+    "tags": [
+      "ExpandAll"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "expand fill",
     "safeName": "ExpandFill",
     "tags": [
@@ -8899,6 +9970,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "expand row",
+    "safeName": "ExpandRow",
+    "tags": [
+      "ExpandRow"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "export",
@@ -8917,6 +9997,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "extensions",
+    "safeName": "Extensions",
+    "tags": [
+      "Extensions"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "eye",
@@ -9396,6 +10485,15 @@
     "variant": "fill"
   },
   {
+    "name": "file export",
+    "safeName": "FileExport",
+    "tags": [
+      "FileExport"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "file fill",
     "safeName": "FileFill",
     "tags": [
@@ -9522,6 +10620,15 @@
     "variant": "regular"
   },
   {
+    "name": "file locked",
+    "safeName": "FileLocked",
+    "tags": [
+      "FileLocked"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "file lock fill",
     "safeName": "FileLockFill",
     "tags": [
@@ -9621,6 +10728,15 @@
     "variant": "fill"
   },
   {
+    "name": "file rich text",
+    "safeName": "FileRichText",
+    "tags": [
+      "FileRichText"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "file rs",
     "safeName": "FileRs",
     "tags": [
@@ -9675,6 +10791,69 @@
     "variant": "fill"
   },
   {
+    "name": "file status a",
+    "safeName": "FileStatusA",
+    "tags": [
+      "FileStatusA"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status d",
+    "safeName": "FileStatusD",
+    "tags": [
+      "FileStatusD"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status dot",
+    "safeName": "FileStatusDot",
+    "tags": [
+      "FileStatusDot"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status m",
+    "safeName": "FileStatusM",
+    "tags": [
+      "FileStatusM"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status square",
+    "safeName": "FileStatusSquare",
+    "tags": [
+      "FileStatusSquare"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status triangle",
+    "safeName": "FileStatusTriangle",
+    "tags": [
+      "FileStatusTriangle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file status u",
+    "safeName": "FileStatusU",
+    "tags": [
+      "FileStatusU"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "file tax",
     "safeName": "FileTax",
     "tags": [
@@ -9706,6 +10885,24 @@
     "safeName": "FileTextFill",
     "tags": [
       "FileTextFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "file tree",
+    "safeName": "FileTree",
+    "tags": [
+      "FileTree"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "file tree fill",
+    "safeName": "FileTreeFill",
+    "tags": [
+      "FileTreeFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -9898,6 +11095,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "filter",
+    "safeName": "Filter",
+    "tags": [
+      "Filter"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "fingerprint",
@@ -10768,6 +11974,24 @@
     "safeName": "FramerLogoFill",
     "tags": [
       "FramerLogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "fullscreen",
+    "safeName": "Fullscreen",
+    "tags": [
+      "Fullscreen"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "fullscreen fill",
+    "safeName": "FullscreenFill",
+    "tags": [
+      "FullscreenFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -11916,6 +13140,15 @@
     "variant": "mono"
   },
   {
+    "name": "hash",
+    "safeName": "Hash",
+    "tags": [
+      "Hash"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "hashtag",
     "safeName": "Hashtag",
     "tags": [
@@ -12172,6 +13405,24 @@
     "safeName": "HighlighterCircleFill",
     "tags": [
       "HighlighterCircleFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "home",
+    "safeName": "Home",
+    "tags": [
+      "Home"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "home fill",
+    "safeName": "HomeFill",
+    "tags": [
+      "HomeFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -12438,6 +13689,15 @@
     "variant": "fill"
   },
   {
+    "name": "hunk divider",
+    "safeName": "HunkDivider",
+    "tags": [
+      "HunkDivider"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "i b mlogo",
     "safeName": "IBMlogo",
     "tags": [
@@ -12510,6 +13770,15 @@
     "variant": "fill"
   },
   {
+    "name": "image gif",
+    "safeName": "ImageGif",
+    "tags": [
+      "ImageGif"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "image mono",
     "safeName": "ImageMono",
     "tags": [
@@ -12535,6 +13804,33 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "inbox",
+    "safeName": "Inbox",
+    "tags": [
+      "Inbox"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "inbox unread",
+    "safeName": "InboxUnread",
+    "tags": [
+      "InboxUnread"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "indent",
+    "safeName": "Indent",
+    "tags": [
+      "Indent"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "inference endpoint",
@@ -12622,6 +13918,60 @@
     "safeName": "InfraAsCodeFill",
     "tags": [
       "InfraAsCodeFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "in progress",
+    "safeName": "InProgress",
+    "tags": [
+      "InProgress"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "in progress arrow",
+    "safeName": "InProgressArrow",
+    "tags": [
+      "InProgressArrow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "input selection",
+    "safeName": "InputSelection",
+    "tags": [
+      "InputSelection"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "in review",
+    "safeName": "InReview",
+    "tags": [
+      "InReview"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "in review arrow",
+    "safeName": "InReviewArrow",
+    "tags": [
+      "InReviewArrow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "in review right fill",
+    "safeName": "InReviewRightFill",
+    "tags": [
+      "InReviewRightFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -12715,6 +14065,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "issue",
+    "safeName": "Issue",
+    "tags": [
+      "Issue"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "java script logo",
@@ -13077,6 +14436,87 @@
     "variant": "fill"
   },
   {
+    "name": "laurel",
+    "safeName": "Laurel",
+    "tags": [
+      "Laurel"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers",
+    "safeName": "Layers",
+    "tags": [
+      "Layers"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 2",
+    "safeName": "Layers2",
+    "tags": [
+      "Layers2"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 2 bottom",
+    "safeName": "Layers2Bottom",
+    "tags": [
+      "Layers2Bottom"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 2 outline",
+    "safeName": "Layers2Outline",
+    "tags": [
+      "Layers2Outline"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 2 top",
+    "safeName": "Layers2Top",
+    "tags": [
+      "Layers2Top"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 3 bottom",
+    "safeName": "Layers3Bottom",
+    "tags": [
+      "Layers3Bottom"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 3 middle",
+    "safeName": "Layers3Middle",
+    "tags": [
+      "Layers3Middle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "layers 3 top",
+    "safeName": "Layers3Top",
+    "tags": [
+      "Layers3Top"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "layout",
     "safeName": "Layout",
     "tags": [
@@ -13147,6 +14587,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "life raft",
+    "safeName": "LifeRaft",
+    "tags": [
+      "LifeRaft"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "lightbulb",
@@ -13230,6 +14679,42 @@
     "variant": "regular"
   },
   {
+    "name": "linear 1",
+    "safeName": "Linear1",
+    "tags": [
+      "Linear1"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "linear 2",
+    "safeName": "Linear2",
+    "tags": [
+      "Linear2"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "linear 3",
+    "safeName": "Linear3",
+    "tags": [
+      "Linear3"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "linear done",
+    "safeName": "LinearDone",
+    "tags": [
+      "LinearDone"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "line fill",
     "safeName": "LineFill",
     "tags": [
@@ -13237,6 +14722,42 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "line graph",
+    "safeName": "LineGraph",
+    "tags": [
+      "LineGraph"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "line graph area",
+    "safeName": "LineGraphArea",
+    "tags": [
+      "LineGraphArea"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "line graph axis",
+    "safeName": "LineGraphAxis",
+    "tags": [
+      "LineGraphAxis"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "line graph base",
+    "safeName": "LineGraphBase",
+    "tags": [
+      "LineGraphBase"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "line segment",
@@ -13482,6 +15003,15 @@
     "variant": "fill"
   },
   {
+    "name": "list check",
+    "safeName": "ListCheck",
+    "tags": [
+      "ListCheck"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "listcheck mono",
     "safeName": "ListcheckMono",
     "tags": [
@@ -13554,6 +15084,15 @@
     "variant": "fill"
   },
   {
+    "name": "list ordered",
+    "safeName": "ListOrdered",
+    "tags": [
+      "ListOrdered"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "list play",
     "safeName": "ListPlay",
     "tags": [
@@ -13608,6 +15147,15 @@
     "variant": "mono"
   },
   {
+    "name": "list unordered",
+    "safeName": "ListUnordered",
+    "tags": [
+      "ListUnordered"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "l l m",
     "safeName": "LLM",
     "tags": [
@@ -13660,6 +15208,24 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "lock keyhole",
+    "safeName": "LockKeyhole",
+    "tags": [
+      "LockKeyhole"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "lock keyhole open",
+    "safeName": "LockKeyholeOpen",
+    "tags": [
+      "LockKeyholeOpen"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "lock key open",
@@ -13770,6 +15336,15 @@
     "variant": "fill"
   },
   {
+    "name": "logs",
+    "safeName": "Logs",
+    "tags": [
+      "Logs"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "magic wand",
     "safeName": "MagicWand",
     "tags": [
@@ -13824,6 +15399,15 @@
     "variant": "fill"
   },
   {
+    "name": "magnifying glass focus",
+    "safeName": "MagnifyingGlassFocus",
+    "tags": [
+      "MagnifyingGlassFocus"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "magnifying glass minus",
     "safeName": "MagnifyingGlassMinus",
     "tags": [
@@ -13855,6 +15439,24 @@
     "safeName": "MagnifyingGlassPlusFill",
     "tags": [
       "MagnifyingGlassPlusFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "map",
+    "safeName": "Map",
+    "tags": [
+      "Map"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "map fill",
+    "safeName": "MapFill",
+    "tags": [
+      "MapFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -14143,6 +15745,42 @@
     "safeName": "MemcachedlogoFill",
     "tags": [
       "MemcachedlogoFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "menu",
+    "safeName": "Menu",
+    "tags": [
+      "Menu"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "merged",
+    "safeName": "Merged",
+    "tags": [
+      "Merged"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "merged continuous",
+    "safeName": "MergedContinuous",
+    "tags": [
+      "MergedContinuous"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "merged fill",
+    "safeName": "MergedFill",
+    "tags": [
+      "MergedFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -14893,6 +16531,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "no new line",
+    "safeName": "NoNewLine",
+    "tags": [
+      "NoNewLine"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "no ops",
@@ -15750,6 +17397,15 @@
     "variant": "fill"
   },
   {
+    "name": "outdent",
+    "safeName": "Outdent",
+    "tags": [
+      "Outdent"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "outpostlogo",
     "safeName": "Outpostlogo",
     "tags": [
@@ -16002,6 +17658,33 @@
     "variant": "fill"
   },
   {
+    "name": "paragraph",
+    "safeName": "Paragraph",
+    "tags": [
+      "Paragraph"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "paragraph plus",
+    "safeName": "ParagraphPlus",
+    "tags": [
+      "ParagraphPlus"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "parentheses",
+    "safeName": "Parentheses",
+    "tags": [
+      "Parentheses"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "password",
     "safeName": "Password",
     "tags": [
@@ -16209,6 +17892,15 @@
     "variant": "fill"
   },
   {
+    "name": "pencil squircle",
+    "safeName": "PencilSquircle",
+    "tags": [
+      "PencilSquircle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "pen fill",
     "safeName": "PenFill",
     "tags": [
@@ -16252,6 +17944,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "people",
+    "safeName": "People",
+    "tags": [
+      "People"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "percent",
@@ -16360,6 +18061,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "person status",
+    "safeName": "PersonStatus",
+    "tags": [
+      "PersonStatus"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "perspective",
@@ -16603,6 +18313,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "pin",
+    "safeName": "Pin",
+    "tags": [
+      "Pin"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "pinecone logo",
@@ -17280,6 +18999,15 @@
     "variant": "fill"
   },
   {
+    "name": "pushed",
+    "safeName": "Pushed",
+    "tags": [
+      "Pushed"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "push pin",
     "safeName": "PushPin",
     "tags": [
@@ -17458,6 +19186,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "quote block",
+    "safeName": "QuoteBlock",
+    "tags": [
+      "QuoteBlock"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "quotes",
@@ -17730,6 +19467,15 @@
     "variant": "fill"
   },
   {
+    "name": "refresh",
+    "safeName": "Refresh",
+    "tags": [
+      "Refresh"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "refresh mono",
     "safeName": "RefreshMono",
     "tags": [
@@ -17737,6 +19483,24 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "regex",
+    "safeName": "Regex",
+    "tags": [
+      "Regex"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "reload",
+    "safeName": "Reload",
+    "tags": [
+      "Reload"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "repeat",
@@ -17770,6 +19534,42 @@
     "safeName": "RepeatOnceFill",
     "tags": [
       "RepeatOnceFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "replace",
+    "safeName": "Replace",
+    "tags": [
+      "Replace"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "replace all",
+    "safeName": "ReplaceAll",
+    "tags": [
+      "ReplaceAll"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "reply",
+    "safeName": "Reply",
+    "tags": [
+      "Reply"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "reply fill",
+    "safeName": "ReplyFill",
+    "tags": [
+      "ReplyFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18324,6 +20124,15 @@
     "variant": "fill"
   },
   {
+    "name": "server",
+    "safeName": "Server",
+    "tags": [
+      "Server"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "service",
     "safeName": "Service",
     "tags": [
@@ -18454,6 +20263,24 @@
     "safeName": "ShieldFill",
     "tags": [
       "ShieldFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "shield keyhole",
+    "safeName": "ShieldKeyhole",
+    "tags": [
+      "ShieldKeyhole"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "shield keyhole fill",
+    "safeName": "ShieldKeyholeFill",
+    "tags": [
+      "ShieldKeyholeFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -18736,6 +20563,33 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "sidebar left",
+    "safeName": "SidebarLeft",
+    "tags": [
+      "SidebarLeft"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "sidebar left open",
+    "safeName": "SidebarLeftOpen",
+    "tags": [
+      "SidebarLeftOpen"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "sidebar open",
+    "safeName": "SidebarOpen",
+    "tags": [
+      "SidebarOpen"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "sidebar playful",
@@ -19368,6 +21222,15 @@
     "variant": "mono"
   },
   {
+    "name": "sparkles",
+    "safeName": "Sparkles",
+    "tags": [
+      "Sparkles"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "speaker high",
     "safeName": "SpeakerHigh",
     "tags": [
@@ -19546,6 +21409,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "spelling",
+    "safeName": "Spelling",
+    "tags": [
+      "Spelling"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "spinner",
@@ -19750,6 +21622,33 @@
     "safeName": "SquaresFourFill",
     "tags": [
       "SquaresFourFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "squircle",
+    "safeName": "Squircle",
+    "tags": [
+      "Squircle"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "squircle lg",
+    "safeName": "SquircleLg",
+    "tags": [
+      "SquircleLg"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "squircle lg fill",
+    "safeName": "SquircleLgFill",
+    "tags": [
+      "SquircleLgFill"
     ],
     "categories": [],
     "variant": "fill"
@@ -20223,6 +22122,24 @@
     "variant": "fill"
   },
   {
+    "name": "switch",
+    "safeName": "Switch",
+    "tags": [
+      "Switch"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "switches",
+    "safeName": "Switches",
+    "tags": [
+      "Switches"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "sword",
     "safeName": "Sword",
     "tags": [
@@ -20239,6 +22156,240 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "symbol added",
+    "safeName": "SymbolAdded",
+    "tags": [
+      "SymbolAdded"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol added duo",
+    "safeName": "SymbolAddedDuo",
+    "tags": [
+      "SymbolAddedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol added fill",
+    "safeName": "SymbolAddedFill",
+    "tags": [
+      "SymbolAddedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol deleted",
+    "safeName": "SymbolDeleted",
+    "tags": [
+      "SymbolDeleted"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol deleted duo",
+    "safeName": "SymbolDeletedDuo",
+    "tags": [
+      "SymbolDeletedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol deleted fill",
+    "safeName": "SymbolDeletedFill",
+    "tags": [
+      "SymbolDeletedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol diffstat",
+    "safeName": "SymbolDiffstat",
+    "tags": [
+      "SymbolDiffstat"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol diffstat duo",
+    "safeName": "SymbolDiffstatDuo",
+    "tags": [
+      "SymbolDiffstatDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol diffstat fill",
+    "safeName": "SymbolDiffstatFill",
+    "tags": [
+      "SymbolDiffstatFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol extracted duo",
+    "safeName": "SymbolExtractedDuo",
+    "tags": [
+      "SymbolExtractedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol extracted fill",
+    "safeName": "SymbolExtractedFill",
+    "tags": [
+      "SymbolExtractedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol ignored",
+    "safeName": "SymbolIgnored",
+    "tags": [
+      "SymbolIgnored"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol ignored duo",
+    "safeName": "SymbolIgnoredDuo",
+    "tags": [
+      "SymbolIgnoredDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol ignored fill",
+    "safeName": "SymbolIgnoredFill",
+    "tags": [
+      "SymbolIgnoredFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol inlined duo",
+    "safeName": "SymbolInlinedDuo",
+    "tags": [
+      "SymbolInlinedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol inlined fill",
+    "safeName": "SymbolInlinedFill",
+    "tags": [
+      "SymbolInlinedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol map",
+    "safeName": "SymbolMap",
+    "tags": [
+      "SymbolMap"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol modified",
+    "safeName": "SymbolModified",
+    "tags": [
+      "SymbolModified"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol modified duo",
+    "safeName": "SymbolModifiedDuo",
+    "tags": [
+      "SymbolModifiedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol modified fill",
+    "safeName": "SymbolModifiedFill",
+    "tags": [
+      "SymbolModifiedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol moved",
+    "safeName": "SymbolMoved",
+    "tags": [
+      "SymbolMoved"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol moved duo",
+    "safeName": "SymbolMovedDuo",
+    "tags": [
+      "SymbolMovedDuo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol moved fill",
+    "safeName": "SymbolMovedFill",
+    "tags": [
+      "SymbolMovedFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
+    "name": "symbol placeholder",
+    "safeName": "SymbolPlaceholder",
+    "tags": [
+      "SymbolPlaceholder"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol ref",
+    "safeName": "SymbolRef",
+    "tags": [
+      "SymbolRef"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "symbol resolved",
+    "safeName": "SymbolResolved",
+    "tags": [
+      "SymbolResolved"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "syringe",
@@ -20268,6 +22419,33 @@
     "variant": "regular"
   },
   {
+    "name": "table column add",
+    "safeName": "TableColumnAdd",
+    "tags": [
+      "TableColumnAdd"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "table column delete",
+    "safeName": "TableColumnDelete",
+    "tags": [
+      "TableColumnDelete"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "table column header",
+    "safeName": "TableColumnHeader",
+    "tags": [
+      "TableColumnHeader"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "table fill",
     "safeName": "TableFill",
     "tags": [
@@ -20284,6 +22462,42 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "table row add",
+    "safeName": "TableRowAdd",
+    "tags": [
+      "TableRowAdd"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "table row delete",
+    "safeName": "TableRowDelete",
+    "tags": [
+      "TableRowDelete"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "table row header",
+    "safeName": "TableRowHeader",
+    "tags": [
+      "TableRowHeader"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "tablet",
+    "safeName": "Tablet",
+    "tags": [
+      "Tablet"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "tabs",
@@ -20502,6 +22716,24 @@
     "variant": "regular"
   },
   {
+    "name": "terminal bash",
+    "safeName": "TerminalBash",
+    "tags": [
+      "TerminalBash"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "terminal bash fill",
+    "safeName": "TerminalBashFill",
+    "tags": [
+      "TerminalBashFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "terminal fill",
     "safeName": "TerminalFill",
     "tags": [
@@ -20554,6 +22786,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "text",
+    "safeName": "Text",
+    "tags": [
+      "Text"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "text aa",
@@ -20646,6 +22887,15 @@
     "variant": "fill"
   },
   {
+    "name": "text bold",
+    "safeName": "TextBold",
+    "tags": [
+      "TextBold"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "text bolder",
     "safeName": "TextBolder",
     "tags": [
@@ -20686,6 +22936,15 @@
     "safeName": "TextH",
     "tags": [
       "TextH"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "text h 1",
+    "safeName": "TextH1",
+    "tags": [
+      "TextH1"
     ],
     "categories": [],
     "variant": "regular"
@@ -20844,6 +23103,15 @@
     "variant": "fill"
   },
   {
+    "name": "text italics",
+    "safeName": "TextItalics",
+    "tags": [
+      "TextItalics"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "text mono",
     "safeName": "TextMono",
     "tags": [
@@ -20869,6 +23137,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "text strike",
+    "safeName": "TextStrike",
+    "tags": [
+      "TextStrike"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "text strikethrough",
@@ -20941,6 +23218,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "themes",
+    "safeName": "Themes",
+    "tags": [
+      "Themes"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "thermometer",
@@ -21132,6 +23418,15 @@
     "variant": "mono"
   },
   {
+    "name": "todo",
+    "safeName": "Todo",
+    "tags": [
+      "Todo"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "toggle left",
     "safeName": "ToggleLeft",
     "tags": [
@@ -21202,6 +23497,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "token",
+    "safeName": "Token",
+    "tags": [
+      "Token"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "trademark registered",
@@ -21681,6 +23985,24 @@
     "variant": "fill"
   },
   {
+    "name": "type",
+    "safeName": "Type",
+    "tags": [
+      "Type"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "type word",
+    "safeName": "TypeWord",
+    "tags": [
+      "TypeWord"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "umbrella",
     "safeName": "Umbrella",
     "tags": [
@@ -21715,6 +24037,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "unlink",
+    "safeName": "Unlink",
+    "tags": [
+      "Unlink"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "upload",
@@ -22050,6 +24381,15 @@
     "variant": "fill"
   },
   {
+    "name": "variable",
+    "safeName": "Variable",
+    "tags": [
+      "Variable"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "vault",
     "safeName": "Vault",
     "tags": [
@@ -22293,6 +24633,24 @@
     "variant": "fill"
   },
   {
+    "name": "waiting",
+    "safeName": "Waiting",
+    "tags": [
+      "Waiting"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "waiting fill",
+    "safeName": "WaitingFill",
+    "tags": [
+      "WaitingFill"
+    ],
+    "categories": [],
+    "variant": "fill"
+  },
+  {
     "name": "wall",
     "safeName": "Wall",
     "tags": [
@@ -22417,6 +24775,15 @@
     ],
     "categories": [],
     "variant": "mono"
+  },
+  {
+    "name": "warning octogon fill",
+    "safeName": "WarningOctogonFill",
+    "tags": [
+      "WarningOctogonFill"
+    ],
+    "categories": [],
+    "variant": "fill"
   },
   {
     "name": "watch",
@@ -22788,6 +25155,24 @@
     "variant": "fill"
   },
   {
+    "name": "word wrap",
+    "safeName": "WordWrap",
+    "tags": [
+      "WordWrap"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
+    "name": "workflow",
+    "safeName": "Workflow",
+    "tags": [
+      "Workflow"
+    ],
+    "categories": [],
+    "variant": "regular"
+  },
+  {
     "name": "wrench",
     "safeName": "Wrench",
     "tags": [
@@ -22894,6 +25279,15 @@
     ],
     "categories": [],
     "variant": "fill"
+  },
+  {
+    "name": "x squircle",
+    "safeName": "XSquircle",
+    "tags": [
+      "XSquircle"
+    ],
+    "categories": [],
+    "variant": "regular"
   },
   {
     "name": "yin yang",
