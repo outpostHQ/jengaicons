@@ -1,0 +1,5 @@
+--- a/packages/jengaicons-rust/src/lib.rs
++++ b/packages/jengaicons-rust/src/lib.rs
+@@ -42 +42 @@
+-            None => out.push_str(" aria-hidden=\"true\""),
++            None => {}

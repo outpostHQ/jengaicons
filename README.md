@@ -1,6 +1,6 @@
 # Jenga Icons
 
-A collection of **2,500+ beautifully crafted icons** in three variants, designed for React and Svelte applications.
+A collection of **2,800+ beautifully crafted icons** in three variants, designed for React and Svelte applications.
 
 [![NPM Version - React](https://img.shields.io/npm/v/@jengaicons/react.svg?style=flat&label=react)](https://www.npmjs.com/package/@jengaicons/react)
 [![NPM Version - Svelte](https://img.shields.io/npm/v/@jengaicons/svelte.svg?style=flat&label=svelte)](https://www.npmjs.com/package/@jengaicons/svelte)
@@ -12,6 +12,7 @@ A collection of **2,500+ beautifully crafted icons** in three variants, designed
 |---------|---------|-------------|
 | [@jengaicons/react](./packages/jengaicons-react) | [![npm](https://img.shields.io/npm/v/@jengaicons/react.svg)](https://www.npmjs.com/package/@jengaicons/react) | React components |
 | [@jengaicons/svelte](./packages/jengaicons-svelte) | [![npm](https://img.shields.io/npm/v/@jengaicons/svelte.svg)](https://www.npmjs.com/package/@jengaicons/svelte) | Svelte 5 components |
+| [jengaicons](./packages/jengaicons-rust) | [![crates.io](https://img.shields.io/crates/v/jengaicons.svg)](https://crates.io/crates/jengaicons) | Rust constants, inline SVG |
 
 ---
 
@@ -21,9 +22,9 @@ All icons come in **three variants**:
 
 | Variant | Count | Naming Convention | Description |
 |---------|-------|-------------------|-------------|
-| **Regular** | 1,208 | `Activity`, `Bell` | Outline/stroke icons with adjustable weight |
-| **Fill** | 1,205 | `ActivityFill`, `BellFill` | Solid filled icons |
-| **Mono** | 122 | `GithubMono`, `TwitterMono` | Brand logos and monochrome icons |
+| **Regular** | 1,437 | `Activity`, `Bell` | Outline/stroke icons with adjustable weight |
+| **Fill** | 1,242 | `ActivityFill`, `BellFill` | Solid filled icons |
+| **Mono** | 126 | `AirplayMono`, `BookMono` | Monochrome icons |
 
 ---
 
@@ -42,7 +43,7 @@ bun add @jengaicons/react
 ### Usage
 
 ```tsx
-import { Activity, ActivityFill, GithubMono } from "@jengaicons/react"
+import { Activity, ActivityFill, BookMono } from "@jengaicons/react"
 
 function App() {
   return (
@@ -53,8 +54,8 @@ function App() {
       {/* Fill (solid) */}
       <ActivityFill size={24} color="#6864d4" />
 
-      {/* Mono (brand) */}
-      <GithubMono size={24} />
+      {/* Mono */}
+      <BookMono size={24} />
     </div>
   )
 }
@@ -107,7 +108,7 @@ bun add @jengaicons/svelte
 
 ```svelte
 <script>
-  import { Activity, ActivityFill, GithubMono } from "@jengaicons/svelte"
+  import { Activity, ActivityFill, BookMono } from "@jengaicons/svelte"
 </script>
 
 <!-- Regular (outline) -->
@@ -116,8 +117,8 @@ bun add @jengaicons/svelte
 <!-- Fill (solid) -->
 <ActivityFill size={24} color="#6864d4" />
 
-<!-- Mono (brand) -->
-<GithubMono size={24} />
+<!-- Mono -->
+<BookMono size={24} />
 ```
 
 ### Individual Imports (Best for Tree-Shaking)
@@ -128,6 +129,25 @@ bun add @jengaicons/svelte
   import ActivityFill from "@jengaicons/svelte/icons/ActivityFill"
 </script>
 ```
+
+---
+
+## Rust
+
+```toml
+[dependencies]
+jengaicons = "0.1"
+```
+
+```rust
+let mut html = String::new();
+jengaicons::regular::ARROW_LINE_LEFT.write(&mut html, Some("Back"));
+jengaicons::fill::BELL.write(&mut html, None);
+```
+
+Names are the icon names in capitals: `Activity` is `regular::ACTIVITY`, `ActivityFill` is
+`fill::ACTIVITY`, `BookMono` is `mono::BOOK`. A binary carries only the icons it names. See
+[the package README](./packages/jengaicons-rust) for the checks on every icon.
 
 ---
 

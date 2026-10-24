@@ -1,6 +1,6 @@
 # Jenga Icons for Svelte
 
-Jenga Icons is a collection of over 2,500 beautifully crafted icons designed for use in interfaces, diagrams, and other applications. **Fully compatible with Svelte 5 runes.**
+Jenga Icons is a collection of over 2,800 beautifully crafted icons designed for use in interfaces, diagrams, and other applications. **Fully compatible with Svelte 5 runes.**
 
 [![NPM Version](https://img.shields.io/npm/v/@jengaicons/svelte.svg?style=flat)](https://www.npmjs.com/package/@jengaicons/svelte)
 [![Discord](https://img.shields.io/discord/793832892781690891?color=7389D8&label=chat%20on%20Discord&logo=Discord&logoColor=ffffff)](https://discord.gg/sHnHPnAPZj)
@@ -36,9 +36,9 @@ Jenga Icons comes with **three variants** to suit different design needs:
 
 | Variant | Count | Naming | Description |
 |---------|-------|--------|-------------|
-| **Regular** | 1,208 | `Activity`, `AddressBook` | Outline/stroke icons with customizable weight |
-| **Fill** | 1,205 | `ActivityFill`, `AddressBookFill` | Solid filled icons |
-| **Mono** | 122 | `AirplayMono`, `GithubMono` | Brand logos and monochrome icons |
+| **Regular** | 1,437 | `Activity`, `AddressBook` | Outline/stroke icons with customizable weight |
+| **Fill** | 1,242 | `ActivityFill`, `AddressBookFill` | Solid filled icons |
+| **Mono** | 126 | `AirplayMono`, `BookMono` | Monochrome icons |
 
 ### Regular (Outline) Icons
 ```svelte
@@ -62,15 +62,15 @@ Jenga Icons comes with **three variants** to suit different design needs:
 <CalendarFill color="#6864d4" />
 ```
 
-### Mono (Brand) Icons
+### Mono Icons
 ```svelte
 <script>
-  import { GithubMono, TwitterMono, FigmaMono } from "@jengaicons/svelte"
+  import { BookMono, AirplayMono, APIMono } from "@jengaicons/svelte"
 </script>
 
-<GithubMono />
-<TwitterMono size={32} />
-<FigmaMono color="black" />
+<BookMono />
+<AirplayMono size={32} />
+<APIMono color="black" />
 ```
 
 ## Tree-Shaking & Individual Imports
@@ -152,13 +152,13 @@ Works out of the box with SvelteKit:
 ```svelte
 <!-- src/routes/+page.svelte -->
 <script>
-  import { Activity, Bell, Settings } from "@jengaicons/svelte"
+  import { Activity, Bell, Gear } from "@jengaicons/svelte"
 </script>
 
 <nav>
   <Activity size={20} />
   <Bell size={20} />
-  <Settings size={20} />
+  <Gear size={20} />
 </nav>
 ```
 

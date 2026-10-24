@@ -29,3 +29,5 @@ packages/jengaicons-react/src/icons/*
 size-report
 __compare
 docs/data
+# Rust
+target

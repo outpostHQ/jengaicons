@@ -1,0 +1,15 @@
+[package]
+name = "jengaicons"
+version = "0.1.0"
+edition = "2024"
+rust-version = "1.85"
+description = "The Jenga icon set for Rust: 2805 SVG icons in three styles, as constants a binary links only when it uses them."
+license = "MIT"
+repository = "https://github.com/outpostHQ/jengaicons"
+readme = "README.md"
+keywords = ["icons", "svg", "html", "web"]
+categories = ["web-programming", "graphics"]
+include = ["src/**", "README.md"]
+
+[lints.rust]
+unexpected_cfgs = { level = "warn", check-cfg = ["cfg(kani)"] }

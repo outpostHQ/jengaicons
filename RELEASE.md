@@ -1,6 +1,7 @@
 # Release Guide
 
-This guide covers how to release `@jengaicons/react` and `@jengaicons/svelte` packages to npm.
+This guide covers how to release `@jengaicons/react` and `@jengaicons/svelte` packages to npm, and
+the `jengaicons` crate to crates.io.
 
 ## Prerequisites
 
@@ -205,7 +206,28 @@ bun run build:svelte
 
 ---
 
+## Rust Package
+
+The Rust crate needs a crates.io token (`cargo login`) and, for the proofs, Kani.
+
+```bash
+# 1. Regenerate the modules after the optimized SVGs change
+cargo run -p generate-jengaicons-rust
+
+# 2. Check every icon, the generator and the docs
+cargo test --workspace
+
+# 3. Prove `write`; each patch in packages/jengaicons-rust/mutants must make its proof fail
+cargo kani -p jengaicons
+
+# 4. Set the version in packages/jengaicons-rust/Cargo.toml, then publish
+cargo publish -p jengaicons
+```
+
+---
+
 ## Package URLs
 
 - React: https://www.npmjs.com/package/@jengaicons/react
 - Svelte: https://www.npmjs.com/package/@jengaicons/svelte
+- Rust: https://crates.io/crates/jengaicons

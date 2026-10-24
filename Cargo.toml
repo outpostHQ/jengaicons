@@ -1,0 +1,3 @@
+[workspace]
+members = ["packages/jengaicons-rust", "scripts/generate-jengaicons-rust"]
+resolver = "3"
