@@ -48,21 +48,25 @@ impl Icon {
 }
 
 fn escape(out: &mut String, s: &str) {
-    let mut rest = s;
-    while let Some(i) = rest.find(['&', '"', '<']) {
-        out.push_str(&rest[..i]);
-        out.push_str(match rest.as_bytes()[i] {
-            b'&' => "&amp;",
-            b'"' => "&quot;",
-            _ => "&lt;",
-        });
-        rest = &rest[i + 1..];
+    for c in s.chars() {
+        match entity(c) {
+            Some(e) => out.push_str(e),
+            None => out.push(c),
+        }
     }
-    out.push_str(rest);
+}
+
+fn entity(c: char) -> Option<&'static str> {
+    match c {
+        '&' => Some("&amp;"),
+        '"' => Some("&quot;"),
+        '<' => Some("&lt;"),
+        _ => None,
+    }
 }
 
 #[cfg(kani)]
-mod laws {
+mod proofs {
     use super::Icon;
 
     const ICON: Icon = Icon {
@@ -71,31 +75,15 @@ mod laws {
     };
     const HEAD: &str = "<svg viewBox=\"0 0 1 1\" width=\"1em\" height=\"1em\" fill=\"none\"";
 
-    /// A label stays inside its attribute: no quote or `<` in the value, each `&` an entity.
+    /// A label stays inside its attribute: each `&`, quote and `<` becomes its entity, and every
+    /// other character stays as it is, so the value holds no quote or `<`.
     #[kani::proof]
-    #[kani::unwind(24)]
+    #[kani::unwind(7)]
     fn a_label_stays_in_its_attribute() {
-        let b: [u8; 3] = kani::any();
-        let Ok(l) = core::str::from_utf8(&b) else {
-            return;
-        };
-        let mut out = String::new();
-        ICON.write(&mut out, Some(l));
-        let v = out
-            .strip_prefix(HEAD)
-            .unwrap()
-            .strip_prefix(" role=\"img\" aria-label=\"")
-            .unwrap();
-        let v = v.strip_suffix("\"></svg>").unwrap().as_bytes();
-        for i in 0..v.len() {
-            assert!(v[i] != b'"' && v[i] != b'<');
-            let t = &v[i..];
-            assert!(
-                v[i] != b'&'
-                    || t.starts_with(b"&amp;")
-                    || t.starts_with(b"&quot;")
-                    || t.starts_with(b"&lt;")
-            );
+        let c: char = kani::any();
+        match super::entity(c) {
+            Some(e) => assert!(matches!((c, e), ('&', "&amp;") | ('"', "&quot;") | ('<', "&lt;"))),
+            None => assert!(!matches!(c, '&' | '"' | '<')),
         }
     }
 

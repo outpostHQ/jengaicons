@@ -1,5 +1,5 @@
 --- a/packages/jengaicons-rust/src/lib.rs
 +++ b/packages/jengaicons-rust/src/lib.rs
-@@ -52 +52 @@
--    while let Some(i) = rest.find(['&', '"', '<']) {
-+    while let Some(i) = rest.find(['"', '<']) {
+@@ -61 +61 @@
+-        '&' => Some("&amp;"),
++        '&' => None,
